@@ -1,0 +1,67 @@
+{% extends "cpm2013/base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="span7">
+    <div id="index-about">
+      <p><strong>“Cinema Perpetuum mobile”</strong> is an international cinema cooperation festival that gathers independent film makers and their groups to work under the theme of the perpetual motion. The authors are free to artistically interpret the theme and develop their ideas on what the “perpetuum mobile” is.</p>
+
+      <p>The project is aimed at cinema cultural diversity and the promotion of independent auteur movies. Festival co-operation aims to cover all countries and continents from Scandinavia to the Cape of Good Hope and from Patagonia to the Aleutian Islands.</p>
+
+      <p>“Cinema Perpetuum mobile” is a <strong>non-commercial project</strong>, so the organizers aspire only to cover their expenses on the festival while the participants whose films are included into a short list, are likely to receive dividends in case the collection of “Perpetuum Mobile” films is shown in cinemas after festival. The participation in our cinema cooperation festival is free. Organizer of the festival is an independent association «Kinaklub.org», with the following principles: cinemania, self-organization, decentralization, mutual aid.</p>
+    </div>
+  </div>
+  <div class="span5">
+    <div class="well">
+      <h3>Latest news</h3>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="span4">
+    <div style="background-color: #ffffff"><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FCinema-Perpetuum-Mobile%2F272854246075203&amp;width=250&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;height=290" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:290px;" allowTransparency="true"></iframe></div>
+  </div>
+  <div class="span4">
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 5,
+        interval: 30000,
+        width: 250,
+        height: 250,
+        theme: {
+          shell: {
+            background: '#bda055',
+            color: '#000000'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#000000',
+            links: '#0790eb'
+          }
+        },
+        features: {
+          scrollbar: true,
+          loop: false,
+          live: true,
+          hashtags: true,
+          timestamp: true,
+          avatars: true,
+          behavior: 'all'
+        }
+      }).render().setUser('CinemaPM').start();
+    </script>
+  </div>
+  <div class="span4">
+    <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
+
+    <!-- VK Widget -->
+    <div id="vk_groups"></div>
+    <script type="text/javascript">
+      VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "290"}, 29200596);
+    </script>
+  </div>
+</div>
+{% endblock %}

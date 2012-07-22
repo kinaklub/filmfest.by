@@ -1,0 +1,296 @@
+body {
+    background: url('fon1.jpg');
+    margin: 20px;
+}
+a, a:hover, a:visited {
+    color: #AAAA00;
+}
+.container {
+    position: relative;
+}
+#header-container {
+    height: 300px;
+}
+#content-container {
+    background: #FFFFFF;
+    padding: 10px;
+}
+/* header */
+#header {
+    margin: 40px 0 50px 50px;
+    width: 450px;
+  -webkit-transform: rotate(10.5deg);  /* Saf3.1+, Chrome */
+     -moz-transform: rotate(10.5deg);  /* FF3.5+ */
+      -ms-transform: rotate(10.5deg);  /* IE9 */
+       -o-transform: rotate(10.5deg);  /* Opera */
+          transform: rotate(10.5deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9  */
+                     M11=0.9832549075639546, M12=-0.18223552549214747,M21=0.18223552549214747, M22=0.9832549075639546, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+#international-festival {
+    position: absolute;
+    top: 95px;
+    left: -92px;
+    display: block;
+    width: 230px;
+    height: 40px;
+    background: #FFFFFF;
+    color: #000000;
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px 0 0 0;
+    text-align: center;
+
+  -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+     -moz-transform: rotate(-90deg);  /* FF3.5+ */
+      -ms-transform: rotate(-90deg);  /* IE9 */
+       -o-transform: rotate(-90deg);  /* Opera */
+          transform: rotate(-90deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9  */
+                     M11=0, M12=1,M21=-1, M22=0, sizingMethod='auto expand');
+               zoom: 1;
+
+}
+
+#CinemaPerpetuumMobile {
+    position: absolute;
+    top: 0;
+    left: 56px;
+    display: block;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 70px;
+    line-height: 40px;
+    width: 280px;
+    height: 160px;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+#CinemaPerpetuumMobile #Perpetuum {
+    font-size: 47px;
+    line-height: 50px;
+}
+#CinemaPerpetuumMobile #Mobile {
+    font-size: 77px;
+    line-height: 50px;
+}
+
+#filmfest-by {
+    position: absolute;
+    top: 180px;
+    left: 56px;
+    margin-top: 10px;
+    display: block;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 50px;
+    line-height: 40px;
+    width: 280px;
+    text-align: center;
+}
+
+#how-2012 {
+    margin: 60px 0 0 0;
+    display: block;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 160px;
+    line-height: 80px;
+    text-align: center;
+}
+#how-2012 .year {
+    display: inline;
+    text-shadow: -5px 0 #555555, 0 5px #555555, 5px 0 #555555, 0 -5px #555555;
+}
+#how-2012 small {
+    display: inline;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-shadow: 0;
+    font-size: 60px;
+}
+/* end header */
+
+h3 {
+    font-size: 36px;
+    line-height: 54px;
+}
+.yellow {
+    margin-bottom: 20px;
+}
+.foreword {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 25px;
+}
+.padding10 {
+    padding: 10px;
+}
+.underborder {
+    border-bottom: 1px solid #AAAAAA;
+}
+.fact {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: normal;
+    padding: 15px 0;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.fact strong {
+    display: block;
+    font-size: 75px;
+    line-height: 75px;
+}
+
+.screenshot img {
+    padding: 0 0 20px 0;
+}
+
+#places {
+    margin: 0;
+    list-style: none;
+}
+#places li {
+    margin: 0 0 5px 0;
+    position: relative;
+}
+
+#places span {
+    display: block;
+    position: absolute;
+    width: 210px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 3px 5px;
+}
+#places span address {
+    font-weight: normal;
+    font-size: small;
+    display: inline;
+    margin: 0;
+}
+
+#place-museum-nat {
+    background-image: url('places/1_museum_nat.jpg');
+    width: 220px;
+    height: 165px;
+}
+#place-museum-nat span {
+    bottom: 0;
+}
+#place-palac {
+    background-image: url('places/2_palac.jpg');
+    width: 220px;
+    height: 146px;
+}
+#place-rubin {
+    background-image: url('places/3_rubin.jpg');
+    width: 220px;
+    height: 146px;
+}
+#place-museum-cin {
+    background-image: url('places/4_museum_cin.jpg');
+    width: 220px;
+    height: 146px;
+}
+#place-museum-cin span {
+    bottom: 0;
+}
+#place-schamialiova {
+    background-image: url('places/5_schamialiova.jpg');
+    width: 220px;
+    height: 151px;
+}
+#place-schamialiova span {
+    bottom: 0;
+}
+#place-ddm {
+    background-image: url('places/6_ddm.jpg');
+    width: 220px;
+    height: 127px;
+}
+#place-la-mora {
+    background-image: url('places/7_la_mora.jpg');
+    width: 220px;
+    height: 147px;
+}
+#place-la-mora span {
+    bottom: 0;
+}
+#place-kalyan {
+    background-image: url('places/8_kalyan.jpg');
+    width: 220px;
+    height: 147px;
+}
+#place-kalyan span {
+    bottom: 0;
+}
+/* partners */
+.line140 {
+    line-height: 140px;
+}
+.line90 {
+    line-height: 90px;
+}
+.line140 img, .line90 img {
+    vertical-align: middle;
+}
+
+#jury .span4 {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    position: relative;
+}
+#jury-mcabee {
+    background-image: url('jury/mcabee300.jpg');
+}
+#jury-bohdana {
+    background-image: url('jury/bohdana300.jpg');
+}
+#jury-krasikov {
+    background-image: url('jury/krasikov300.jpg');
+}
+#jury-kureychik {
+    background-image: url('jury/kureychik300.jpg');
+}
+#jury-igrusha {
+    background-image: url('jury/igrusha300.jpg');
+}
+#jury-ivanov {
+    background-image: url('jury/ivanov300.jpg');
+}
+#jury-gil {
+    background-image: url('jury/gil300.jpg');
+}
+#jury-asliuk {
+    background-image: url('jury/asliuk300.jpg');
+}
+#jury-agricola {
+    background-image: url('jury/agricola300.jpg');
+}
+.jury-info {
+    display: block;
+    position: absolute;
+    width: 290px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    padding: 3px 5px;
+    bottom: 0;
+    text-align: justify;
+    height: 72px;
+    overflow: hidden;
+}
+.jury-info h4 {
+    color: #FFFFFF;
+}

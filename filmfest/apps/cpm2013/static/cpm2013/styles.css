@@ -1,0 +1,194 @@
+body {
+    background: url('fon1.jpg');
+    margin: 20px;
+}
+a, a:hover, a:visited {
+    color: #AAAA00;
+}
+.container {
+    position: relative;
+}
+#header-container {
+    height: 300px;
+}
+#content-container {
+    background: #FFFFFF;
+    padding: 10px;
+}
+.subnav {
+    background-color: #FFFFFF;
+    background-repeat: repeat-x;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px 4px 4px 4px;
+    height: 36px;
+    width: 960px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.subnav .nav {
+    margin-bottom: 0;
+}
+.subnav .nav > li > a {
+    border-left: 1px solid #F5F5F5;
+    border-radius: 0 0 0 0;
+    border-right: 1px solid #E5E5E5;
+    margin: 0;
+    padding-bottom: 11px;
+    padding-top: 11px;
+}
+.subnav .nav > .active > a, .subnav .nav > .active > a:hover {
+    background-color: #E9E9E9;
+    border-left: 0 none;
+    border-right-color: #DDDDDD;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05) inset;
+    color: #777777;
+    padding-left: 13px;
+}
+.subnav .nav > .active > a .caret, .subnav .nav > .active > a:hover .caret {
+    border-top-color: #777777;
+}
+.subnav .nav > li:first-child > a, .subnav .nav > li:first-child > a:hover {
+    border-left: 0 none;
+    border-radius: 4px 0 0 4px;
+    padding-left: 12px;
+}
+.subnav .nav > li:last-child > a {
+    border-right: 0 none;
+}
+.subnav .dropdown-menu {
+    border-radius: 0 0 4px 4px;
+}
+.subnav-fixed {
+    border-color: #D5D5D5;
+    border-radius: 0 0 0 0;
+    border-width: 0 0 1px;
+    box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 5px rgba(0, 0, 0, 0.1);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    z-index: 1020;
+}
+.subnav-fixed .nav {
+    margin: 0 auto;
+    padding: 0 1px;
+    width: 938px;
+}
+.subnav .nav > li:first-child > a, .subnav .nav > li:first-child > a:hover {
+    border-radius: 0 0 0 0;
+}
+/* header */
+#header {
+    margin: 40px 0 50px 50px;
+    width: 450px;
+  -webkit-transform: rotate(10.5deg);  /* Saf3.1+, Chrome */
+     -moz-transform: rotate(10.5deg);  /* FF3.5+ */
+      -ms-transform: rotate(10.5deg);  /* IE9 */
+       -o-transform: rotate(10.5deg);  /* Opera */
+          transform: rotate(10.5deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9  */
+                     M11=0.9832549075639546, M12=-0.18223552549214747,M21=0.18223552549214747, M22=0.9832549075639546, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+#international-festival {
+    position: absolute;
+    top: 95px;
+    left: -92px;
+    display: block;
+    width: 230px;
+    height: 40px;
+    background: #FFFFFF;
+    color: #000000;
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px 0 0 0;
+    text-align: center;
+
+  -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+     -moz-transform: rotate(-90deg);  /* FF3.5+ */
+      -ms-transform: rotate(-90deg);  /* IE9 */
+       -o-transform: rotate(-90deg);  /* Opera */
+          transform: rotate(-90deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9  */
+                     M11=0, M12=1,M21=-1, M22=0, sizingMethod='auto expand');
+               zoom: 1;
+
+}
+
+#CinemaPerpetuumMobile {
+    position: absolute;
+    top: 0;
+    left: 56px;
+    display: block;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 70px;
+    line-height: 40px;
+    width: 280px;
+    height: 160px;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+#CinemaPerpetuumMobile #Perpetuum {
+    font-size: 47px;
+    line-height: 50px;
+}
+#CinemaPerpetuumMobile #Mobile {
+    font-size: 77px;
+    line-height: 50px;
+}
+
+#filmfest-by {
+    position: absolute;
+    top: 180px;
+    left: 56px;
+    margin-top: 10px;
+    display: block;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 50px;
+    line-height: 40px;
+    width: 280px;
+    text-align: center;
+}
+
+#how-2012 {
+    margin: 60px 0 0 0;
+    display: block;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 160px;
+    line-height: 80px;
+    text-align: center;
+}
+#how-2012 .year {
+    display: inline;
+    text-shadow: -5px 0 #555555, 0 5px #555555, 5px 0 #555555, 0 -5px #555555;
+}
+#how-2012 small {
+    display: inline;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-shadow: 0;
+    font-size: 60px;
+}
+/* end header */
+
+#submission-form input, #submission-form select, #submission-form textarea {
+    width: 500px;
+}
+#submission-form label {
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 140px;
+}
+
+#index-about {
+    padding: 19px;
+    font-size: large;
+    line-height: 22px;
+    text-align: justify;
+}

@@ -1,0 +1,424 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Cinema Perpetuum Mobile 2012: {% trans 'как это было' %}</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- styles -->
+    <link href="{{ STATIC_URL }}cpm2012/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}cpm2012/styles.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {'packages': ['geochart']});
+      google.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '{% trans "Страна" %}');
+        data.addColumn('number', '{% trans "Участников" %}');
+        data.addRows([
+          ['{% trans "Сербия" %}', 1],
+          ['{% trans "Тайланд" %}', 1],
+          ['{% trans "Латвия" %}', 1],
+          ['{% trans "Франция" %}', 1],
+          ['{% trans "Азербайджан" %}', 1],
+          ['{% trans "ОАЭ" %}', 1],
+          ['{% trans "Бразилия" %}', 1],
+          ['{% trans "Сирия" %}', 1],
+          ['{% trans "Швеция" %}', 1],
+          ['{% trans "Новая Зеландия" %}', 1],
+          ['{% trans "Австралия" %}', 1],
+          ['{% trans "Бангладеш" %}', 1],
+          ['{% trans "Израиль" %}', 1],
+          ['{% trans "Грузия" %}', 1],
+          ['{% trans "Казахстан" %}', 1],
+          ['{% trans "Канада" %}', 1],
+          ['{% trans "Швейцария" %}', 1],
+          ['{% trans "Финляндия" %}', 1],
+          ['{% trans "Португалия" %}', 1],
+          ['{% trans "Румыния" %}', 1],
+          ['{% trans "Кыргызстан" %}', 2],
+          ['{% trans "Хорватия" %}', 2],
+          ['{% trans "Индия" %}', 2],
+          ['{% trans "Армения" %}', 2],
+          ['{% trans "Чехия" %}', 2],
+          ['{% trans "Эстония" %}', 2],
+          ['{% trans "Италия" %}', 4],
+          ['{% trans "Великобритания" %}', 5],
+          ['{% trans "США" %}', 9],
+          ['{% trans "Украина" %}', 9],
+          ['{% trans "Германия" %}', 10],
+          ['{% trans "Польша" %}', 19],
+          ['{% trans "Испания" %}', 23],
+          ['{% trans "Беларусь" %}', 29],
+          ['{% trans "Россия" %}', 57]
+        ]);
+
+        var options = {colorAxis: {minValue: 0,  colors: ['#FFFF99', '#DDDD00']}};
+
+        var geomap = new google.visualization.GeoChart(document.getElementById('map-chart'));
+        geomap.draw(data, options);
+      };
+    </script>
+
+  </head>
+
+  <body>
+    <div id="header-container" class="container">
+      <div class="row">
+	<div class="span6">
+	  <div id="header">
+	    <h2 id="international-festival">{% trans 'международный фестиваль' %}<br />{% trans 'короткометражного кино' %}</h2>
+	    <h1 id="CinemaPerpetuumMobile">
+	      Cinema<br />
+	      <span id="Perpetuum">Perpetuum</span><br />
+	      <span id="Mobile">Mobile</span>
+	    </h1>
+	    <a href="http://filmfest.by" id="filmfest-by">filmfest.by</a>
+	  </div>
+	</div>
+	<div class="span6">
+	  <h3 id="how-2012">
+	    <span class="year">2012</span><br /><small>{% trans 'как это было' %}</small>
+	  </h3>
+	</div>
+      </div>
+    </div>
+    <div id="content-container" class="container">
+      <div class="row">
+	<div class="span9 yellow">
+	  <p class="foreword">{% trans 'В <em>январе 2012</em> года состоялось поистине уникальное событие для культурной жизни <em>города Минска</em> – был проведен Международный кинофестиваль короткометражного кино <strong>«Cinema Perpetuum Mobile»</strong>.' %}</p>
+	  <p class="foreword">{% trans 'На фестиваль было прислано более <em>190-ти авторских фильмов</em> из более чем <em>30 стран мира</em>. Именитое жюри, в которое входили и представители Беларуси, оценивало и выбирало лучшие фильмы. Показы собрали большую аудиторию заинтересованных зрителей и получили широкую огласку в прессе.' %}</p>
+
+	  <h3>{% trans 'Победители' %}</h3>
+
+	  <div class="row-fluid">
+	    <div class="span6 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/1_great_race.jpg" width="342px" alt="{% trans 'The Great Race' %}"/>
+	    </div>
+	    <div class="span6">
+	      <h4>{% trans 'Гран-при' %}: {% trans 'The Great Race' %}</h4>
+	      ({% trans 'K. Camacho, Испания' %})<br /><br />
+	      {% trans 'The year 1914. The Lasarte racetrack announces a race with a never-before-seen prize for the winning horse. Eight of the best horses and mares in the world have registered. Fance and heavy betters from all continents gather to participate in the great event: the Half Million Grand Prize.' %}
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum historia' %}: {% trans '1937' %}</h4>
+	      ({% trans 'С.Головлев, Россия' %})<br /><br />
+	      {% trans 'Год 1937.  Молодая чета едет тайно крестить ребёнка в Подмосковье. Мимо станции, на которую они прибыли проходит поезд с заключенными. Из вагона проезжающего поезда, вылетает письмо. Герои выясняют, что это весточка домой. Весь дальнейший путь героев превращается в мучительную борьбу страха с совестью. Так как отправка письма является пособничеством и карается, по всей строгости законна.' %}
+	    </div>
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/2_1937.jpg" width="400px" alt="{% trans '1937' %}"/>
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/3_playground.jpg" width="400px" alt="{% trans 'PLayground' %}"/>
+	    </div>
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum adversi' %}: {% trans 'Playground' %}</h4>
+	      ({% trans 'Еlad Primo, Израиль' %})<br /><br />
+	      {% trans 'This Film reflects emotions and memories of growing-up in Israel. Its the Israeli version of a kids growing up story. I found it ironic that children in Israel who play "hide and seek" and video games are exposed to weapon on a daily basis: On the streets, in their homes (while their big brothers and sisters come back from the military), and unreasonably it became trivial for them. (From the director’s statement of E.Primo).' %}
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum libertas' %}: {% trans '(en)terrados' %}</h4>
+	      ({% trans 'Aex Lora, Испания' %}) <br /><br />
+	      {% trans 'In a city… finding an apartment is no longer possible.' %}
+	    </div>
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/4_en_terrados.jpg" width="400px" alt="{% trans '(en)terrados' %}"/>
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span6 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/5_night_school.jpg" width="342px" alt="{% trans 'Night School' %}"/>
+	    </div>
+	    <div class="span6">
+	      <h4>{% trans 'Номинация Perpetuum amor' %}: {% trans 'Night School' %}</h4>
+	      ({% trans 'Ben Soper, Великобритания' %}) <br /><br />
+	      {% trans 'Late at night, a young couple find themselves alone together for the first time. She wants to be more intimate. He knows just the right place. Leading her to an abandoned school he finds an open window and climbs in. She’s reluctant to follow. He leans out and offers her a hand. She decides to trust him and together they disappear into the shadows.' %}
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum mobile' %}: {% trans 'Perpetuum mobile' %}</h4>
+	      ({% trans 'Agnieszka Burszewska, Польша' %}) <br /><br />
+	      {% trans 'In s dark Laboratory the Engineer works on his greatest invention yet. He doesn’t give up his face adversities. He knows that the only way to discower the limits of the impossible is to go beyond them. The passion of creation becomes his obsession. And every obsession demands a sacrifice...' %}
+	    </div>
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/6_perpetuum_mobile.jpg" width="400px" alt="{% trans 'Perpetuum mobile' %}"/>
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/7_scene.jpg" width="400px" alt="{% trans 'Scene' %}"/>
+	    </div>
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum arts' %}: {% trans 'Scene' %}</h4>
+	      ({% trans 'Stephen Rousselin, Франция' %}) <br /><br />
+	      {% trans 'Любовь и смерть, чувства и игра догоняют друг-друга и смешиваются в водовороте жизни. Правда на сцене все расставит на свои места.' %}
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum idea' %}: {% trans 'Flock' %}</h4>
+	      ({% trans 'Asier Altuna, Испания' %}) <br /><br />
+	      {% trans 'A shepherd, lost in the city, searches for his flock. His callattracts the attention of some people, who decide to follow him.' %}
+	    </div>
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/8_flock.jpg" width="400px" alt="{% trans 'Flock' %}"/>
+	    </div>
+	  </div>
+
+	  <div class="row-fluid">
+	    <div class="span7 screenshot">
+	      <img src="{{ STATIC_URL }}cpm2012/winners/9_po_obrazu.jpg" width="400px" alt="{% trans 'По образу и подобию' %}"/>
+	    </div>
+	    <div class="span5">
+	      <h4>{% trans 'Номинация Perpetuum vita' %}: {% trans 'По образу и подобию…' %}</h4>
+	      ({% trans 'Никита Тихонов-Рау, Россия/Испания' %}) <br /><br />
+	      {% trans 'Документальный фильм о лифтере по имени Иисус, который большую часть жизни провел в лифте. И если бы не ипотека за квартиру…' %}
+	    </div>
+	  </div>
+
+	  <br />
+	  <br />
+	  {% trans 'Также были отмечены фильмы' %}:<br />
+	  {% trans 'Perpetuum mobile' %} ({% trans 'E.Garcia & R.Ajofrin, Испания' %})<br />
+	  {% trans 'The Stain' %} ({% trans 'I.Chojna, Польша' %})<br />
+	  {% trans 'Friendship Is Something Beautiful' %} ({% trans 'J. R. de Arcaute, Испания' %})<br />
+	  {% trans 'Сумерки' %} ({% trans 'A.Лобач, Беларусь' %})<br />
+	  {% trans 'Голубая кость' %} ({% trans 'К. Востриков, Россия' %})<br />
+	  {% trans 'Капусторуб' %} ({% trans 'В. Винер, Россия' %})<br />
+	  <br />
+	  {% trans 'Специальный диплом оргкомитета' %}:<br />
+	  {% trans 'Дед Маргар' %} ({% trans 'Г.Тадевосян, Армения' %})<br />
+
+	</div>
+	<div class="span3 yellow">
+	  <div class="fact underborder">
+	    <strong>2012</strong>
+	    {% trans 'январь' %}
+	  </div>
+	  <div class="fact underborder">
+	    <strong>7</strong>
+	    {% trans 'дней' %}
+	  </div>
+	  <div class="fact underborder">
+	    <strong>35</strong>
+	    {% trans 'стран' %}
+	  </div>
+	  <div class="fact underborder">
+	    <strong>197</strong>
+	    {% trans 'участников' %}
+	  </div>
+	  <div class="fact underborder">
+	    <strong>$0</strong>
+	    {% trans 'бюджет' %}
+	  </div>
+	  <div class="fact underborder">
+	    <strong>9</strong>
+	    {% trans 'членов жюри' %}
+	  </div>
+	  <div class="fact underborder">
+	    <strong>42</strong>
+	    {% trans 'волонтера' %}
+	  </div>
+	  <div class="fact">
+	    <strong>8</strong>
+	    {% trans 'площадок' %}
+	  </div>
+
+	  <ul id="places">
+	    <li id="place-museum-nat">
+	      <span>{% trans 'Национальный художественный музей' %},<br />
+		<address>{% trans 'ул. Ленина, 20' %}</address>
+	      </span>
+	    </li>
+	    <li id="place-palac">
+	      <span>{% trans 'Дворец Искусств' %},<br />
+		<address>{% trans 'ул. Козлова, 3' %}</address>
+	      </span>
+	    </li>
+	    <li id="place-rubin">
+	      <span>{% trans 'Арткинотеатр Рубин-Плаза' %}
+	      </span>
+	    </li>
+	    <li id="place-museum-cin">
+	      <span>{% trans 'Музей истории белорусского кино' %},
+		<address>{% trans 'ул. Свердлова, 4' %}</address>
+	      </span>
+	    </li>
+	    <li id="place-schamialiova">
+	      <span>{% trans 'Галерея Щемелева' %},<br />
+		<address>{% trans 'пр. Рокоссовского, 49' %}</address>
+	      </span>
+	    </li>
+	    <li id="place-ddm">
+	      <span>{% trans 'Дворец детей и молодежи' %},<br />
+		<address>{% trans 'Старовиленский тракт, 41' %}</address>
+	      </span>
+	    </li>
+	    <li id="place-la-mora">
+	      <span>{% trans 'ДК «La мора»' %},
+		<a href="http://la-mora.info">la-mora.info</a>
+	      </span>
+	    </li>
+	    <li id="place-kalyan">
+	      <span>{% trans 'Кальянная №1' %},
+		<address>{% trans 'ул. К.Маркса, 33' %}</address>
+	      </span>
+	    </li>
+	  </ul>
+	</div>
+      </div>
+      <div id="jury">
+	<h3>Жюри</h3>
+	<div class="row">
+	  <div id="jury-mcabee" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Кори Макеби (США)' %}</h4>
+	      {% trans 'Писатель и режиссер ("Американский астронавт", "Stingray Sam"), вокалист группы Billy Nayer Show.' %}
+	    </div>
+	  </div>
+	  <div id="jury-bohdana" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Богдана Смирнова (Украина)' %}</h4>
+	      {% trans 'Независимый режиссер и сценарист. Первая украинка, которая попала в престижную Резиденцию Каннского Фестиваля.' %}
+	    </div>
+	  </div>
+	  <div id="jury-krasikov" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Сергей Красиков (Нью-Йорк)' %}</h4>
+	      {% trans 'Родился в Минске. В 2004 году переехал в Бруклин и самостоятельно занялся кинопроизводством.' %}
+	    </div>
+	  </div>
+	</div>
+	<div class="row">
+	  <div id ="jury-kureychik" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Андрей Курейчик (Беларусь)' %}</h4>
+	      {% trans 'Сценарист, драматург, режиссёр, публицист. К своим 30 годам написал 25 пьес, поставленых в 9 странах мира.' %}
+	    </div>
+	  </div>
+	  <div id ="jury-igrusha" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Юрий Игруша (Беларусь)' %}</h4>
+	      {% trans 'Продюсер, режиссер, сценарист. В настоящее время - директор РУП "Белорусский видеоцентр".' %}
+	    </div>
+	  </div>
+	  <div id ="jury-ivanov" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Павел Иванов (Беларусь)' %}</h4>
+	      {% trans 'Режиссер высшей категории, участник и лауреат многих кинотелефестивалей. Декан факультета экранных искусств БГАИ.' %}
+	    </div>
+	  </div>
+	</div>
+	<div class="row">
+	  <div id ="jury-gil" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Мацей Гиль (Польша)' %}</h4>
+	      {% trans 'Историк кино, организатор различных киномероприятий. Президент Польской Федерации Киноклубов.' %}
+	    </div>
+	  </div>
+	  <div id ="jury-asliuk" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Виктор Аслюк (Беларусь)' %}</h4>
+	      {% trans 'Режиссер и сценарист, поставил более 30 документальных фильмов. Является членом европейской киноакадемии с 2003 года.' %}
+	    </div>
+	  </div>
+	  <div id ="jury-agricola" class="span4">
+	    <div class="jury-info">
+	      <h4>{% trans 'Agricola de Cologne (Германия)' %}</h4>
+	      {% trans 'Директор международного фестиваля кино и видеоарта CologneOFF, главный руководитель виртуального видеоканала (VideoChannel).' %}
+	    </div>
+	  </div>
+	</div>
+      </div>
+      <div class="row">
+	<div class="span12 yellow">
+	  <h3>{% trans 'География участников' %}</h3>
+	  <div id="map-chart" style="width: 940px; height: 500px;"></div>
+	</div>
+      </div>
+      <div class="row">
+	<div class="span12 yellow">
+	  <h3>Команда</h3>
+	  {% trans 'Ничего не произошло бы без наших замечательных волонтеров. Им даже посвящена' %} <a href="/2012/cast">{% trans 'отдельная страница' %}</a>.
+	</div>
+      </div>
+      <div class="row">
+	<div class="span12 yellow">
+
+	  <h3>{% trans 'Партнеры' %}</h3>
+	  <div class="row">
+	    <div class="span2 line140">
+	      <img src="{{ STATIC_URL }}cpm2012/partners/belvideocentr.jpg" width="140px" />
+	    </div>
+	    <div class="span2 line140">
+	      <a href="http://www.quest-europe.eu/"><img src="{{ STATIC_URL }}cpm2012/partners/qe.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line140">
+	      <a href="http://video.mediaartcologne.org/"><img src="{{ STATIC_URL }}cpm2012/partners/artvideokoeln.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line140">
+	      <a href="http://filmschool.by/"><img src="{{ STATIC_URL }}cpm2012/partners/filmschoolby.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line140">
+	      <a href="http://kinoamatorskie.pl/"><img src="{{ STATIC_URL }}cpm2012/partners/banner_ka_pl.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line140">
+	      <a href="http://vimeo.com/byzondpictures"><img src="{{ STATIC_URL }}cpm2012/partners/byzond.png" width="140px" /></a>
+	    </div>
+	  </div>	  
+
+	  <h3>{% trans 'Медиапартнеры' %}</h3>
+	  <div class="row">
+	    <div class="span2 line90">
+	      <a href="http://afisha.tut.by/"><img src="{{ STATIC_URL }}cpm2012/partners/atutby.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line90">
+	      <a href="http://open.by/"><img src="{{ STATIC_URL }}cpm2012/partners/openby.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line90">
+	      <a href="http://relax.by/"><img src="{{ STATIC_URL }}cpm2012/partners/relaxby.jpg" width="140px" /></a>
+	    </div>
+	    <div class="span2 line90">
+	      <a href="http://radio.aplus.by/"><img src="{{ STATIC_URL }}cpm2012/partners/aplus.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line90">
+	      <a href="http://urban.by/"><img src="{{ STATIC_URL }}cpm2012/partners/urbanby.png" width="140px" /></a>
+	    </div>
+	    <div class="span2 line90">
+	      <img src="{{ STATIC_URL }}cpm2012/partners/prlab.png" width="140px" />
+	    </div>
+	  </div>	  
+	  <div class="row">
+	    <div class="span2 line90">
+	      <a href="http://menscity.by/"><img src="{{ STATIC_URL }}cpm2012/partners/menscity.png" width="140px" /></a>
+	    </div>
+	  </div>
+
+	</div>
+      </div>
+    </div>
+    {% include "piwik.html" %}
+  </body>
+</html>

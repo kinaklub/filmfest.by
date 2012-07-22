@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Волонтеры Cinema Perpetuum Mobile 2012</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- styles -->
+    <link href="{{ STATIC_URL }}cpm2012/bootstrap/css/bootstrap.min.css'" rel="stylesheet">
+    <style type="text/css" media="all">
+      body {
+          background: #000000;
+          color: #FFFFFF;
+          font-size: 40px;
+      }
+      body, dd, dt {
+          line-height: 50px;
+      }
+      #cast {
+          width: 940px;
+          height: 0;
+          overflow: hidden;
+          margin: auto;
+      }
+      h1 {
+          font-size: 50px;
+          line-height: 60px;
+      }
+      dl {
+          display: block;
+          position:relative;
+          width: 800px;
+          margin: auto;
+      }
+      dt {
+          margin: 50px 0 0 0;
+          color: #AAAAAA;
+      }
+      dt:first-child {
+          margin-top: 0;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("#cast").height($(document).height());
+          $("#volunteers").css("top", $(document).height());
+          $("#volunteers").animate({top: -$("#volunteers").height() - 200}, 50000, "linear");
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="cast">
+      <h1>Cinema Perpetuum Mobile 2012</h1>
+      <dl id="volunteers">
+	<dt>Автор идеи, председатель оргкомитета</dt>
+	<dd>Александр Мартынюк</dd>
+	<dt>Арт-директор</dt>
+	<dd>Вера Антипова</dd>
+	<dt>PR директор</dt>
+	<dd>Татьяна Янушко</dd>
+	<dt>Координатор комьюнити</dt>
+	<dd>Денис Шеко</dd>
+	<dt>Веб-мастер</dt>
+	<dd>Стас Рудаков</dd>
+	<dt>Разработка фирменного стиля</dt>
+	<dd>Людмилка Шидловская</dd>
+	<dt>PR-менеджер</dt>
+	<dd>Яна Буюклы</dd>
+
+	<dt>Интернет-координаторы</dt>
+	<dd>Александр Полубинский</dd>
+	<dd>Ксения Максимова</dd>
+	<dd>Ольга Кастраминова</dd>
+	<dd>Евгения Осколкова</dd>
+	<dd>Татьяна Дячок</dd>
+	<dd>Василий Цыбулько</dd>
+	<dd>Никита Максимчик</dd>
+	<dd>Татьяна Мейкшане (социальные сети)</dd>
+	<dd>Анна Роженцова (социальные сети)</dd>
+
+	<dt>Переводчики:</dt>
+	<dd>Анна Роженцова (Английский, Немецкий)</dd>
+	<dd>Татьяна Мейкшане (Французский, Английский)</dd>
+	<dd>Ксения Максимова (Английский)</dd>
+	<dd>Лина Медведева (Французский)</dd>
+	<dd>Юлия Когол (Испанский)</dd>
+	<dd>Татьяна Дячок (Итальянский)</dd>
+	<dd>Полина Довнар (Китайский)</dd>
+
+	<dt>Автор промо-ролика, видеоинженер, фотограф:</dt>
+	<dd>Василий Цыбулько</dd>
+	<dt>Автор промо-ролика</dt>
+	<dd>Роберт Сенека</dd>
+	<dt>Видеооператор</dt>
+	<dd>Наталья Фигуровская</dd>
+
+	<dt>Составители субтитров:</dt>
+	<dd>Василий Цыбулько</dd>
+	<dd>Ксения Максимова</dd>
+	<dd>Яна Буюклы</dd>
+
+	<dt>Дизайнеры</dt>
+	<dd>Алена Ясинская</dd>
+	<dd>Юлия Лисковец</dd>
+	<dd>Алексадра Давыденко</dd>
+	<dd>Татьяна Мартынюк</dd>
+	<dd>Юрий Рыженков</dd>
+
+	<dt>Отдельное спасибо вьюерам, волонтерам, друзьям фестиваля:</dt>
+	<dd>Филиппу Морозову</dd>
+	<dd>Лине Медведевой</dd>
+	<dd>Дине Юркевич</dd>
+	<dd>Анатолию Бородич</dd>
+	<dd>Кристине Гуд</dd>
+	<dd>Вере Рабкиной</dd>
+	<dd>Лене Рабкиной</dd>
+	<dd>Максиму Карпитскому</dd>
+	<dd>Лене Крушевской</dd>
+      </dl>
+    </div>
+    {% include "piwik.html" %}
+  </body>
+</html>

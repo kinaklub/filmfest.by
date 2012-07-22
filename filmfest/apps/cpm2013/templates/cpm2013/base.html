@@ -1,0 +1,55 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Cinema Perpetuum Mobile 2013: {{ title }}</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- styles -->
+    <link href="{{ STATIC_URL }}cpm2013/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}cpm2013/styles.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    </script>
+
+  </head>
+
+  <body>
+    <div id="header-container" class="container">
+      <div class="row">
+	<div class="span6">
+	  <div id="header">
+	    <h2 id="international-festival">{% trans 'международный фестиваль' %}<br />{% trans 'короткометражного кино' %}</h2>
+	    <h1 id="CinemaPerpetuumMobile">
+	      Cinema<br />
+	      <span id="Perpetuum">Perpetuum</span><br />
+	      <span id="Mobile">Mobile</span>
+	    </h1>
+	    <a href="http://filmfest.by" id="filmfest-by">filmfest.by</a>
+	  </div>
+	</div>
+	<div class="span6">
+	  <h3 id="how-2012">
+	    <span class="year">2013</span><br /><small>январь</small>
+	  </h3>
+	</div>
+      </div>
+    </div>
+
+    <div class="subnav">
+      <ul class="nav nav-pills">
+	<li><a href="{% url index %}">Home</a></li>
+	<li><a href="{% url cpm2013:rules %}">Rules</a></li>
+	<li><a href="{% url cpm2013:submit %}">Submission form</a></li>
+      </ul>
+    </div>
+    <div id="content-container" class="container">
+      {% block content %}{% endblock %}
+    </div>
+    {% include "piwik.html" %}
+  </body>
+</html>
