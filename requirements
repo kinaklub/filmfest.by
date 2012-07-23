@@ -1,0 +1,14 @@
+Django==1.4
+MySQL-python==1.2.3
+South==0.7.5
+amqplib==1.0.2
+anyjson==0.3.3
+billiard==2.7.3.10
+celery==3.0.3
+django-celery==3.0.1
+django-form-utils==0.2.0
+ipython==0.13
+kombu==2.2.6
+pycountry==0.14.2
+python-dateutil==1.5
+wsgiref==0.1.2
