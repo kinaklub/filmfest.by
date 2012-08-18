@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext as _
 
+from hvad.models import TranslatableModel, TranslatedFields
+
 from constants import YESNO, YESNOMAYBE, COUNTRIES, LANGUAGES,\
      SECTIONS, BACKLINKS
 
@@ -115,3 +117,11 @@ class Submission(models.Model):
     def __repr__(self):
         return '<Film %s>' % (self.title)
 
+class NewsEntry(TranslatableModel):
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    translations = TranslatedFields(
+        title = models.CharField(verbose_name=_('Title'), max_length=100),
+        short_text = models.TextField(verbose_name=_('Short text'), max_length=1000),
+        text = models.TextField(verbose_name=_('Text'), max_length=1000),
+    )

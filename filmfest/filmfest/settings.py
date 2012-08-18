@@ -1,4 +1,5 @@
 # Django settings for filmfest project.
+from django.utils.translation import ugettext_lazy as _
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,8 +12,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'database.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -31,7 +32,12 @@ TIME_ZONE = 'Europe/Minsk'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'be'
+LANGUAGES = (
+    ('be', _('Belarussian')),
+    ('ru', _('Russian')),
+    ('en', _('English')),
+)
 
 SITE_ID = 1
 
@@ -90,6 +96,18 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    "django.core.context_processors.request",
+)
+
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -118,12 +136,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
     'djcelery',
+    'hvad',
     
     'apps.cpm2012',
     'apps.cpm2013',

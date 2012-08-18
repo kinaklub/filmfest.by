@@ -7,4 +7,4 @@ def get_urls():
         (r'^cast/$', direct_to_template, {'template': 'cpm2012/cast.html'}),
     )
 
-urls = (get_urls, 'cpm2012', 'cpm2012')
+urls = (get_urls(), 'cpm2012', 'cpm2012')

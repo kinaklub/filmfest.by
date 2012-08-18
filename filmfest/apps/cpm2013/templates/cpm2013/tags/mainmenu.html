@@ -1,0 +1,18 @@
+<div class="nav-collapse">
+  <ul class="nav">
+    {% for title, url, active in mainmenu_items %}
+    <li {% if active %}class="active"{% endif %}>
+      <a href="{{ url }}">{{ title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <ul class="nav pull-right">
+    <li class="dropdown">
+      <a data-toggle="dropdown" class="dropdown-toggle" href="#">English <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Русский</a></li>
+        <li><a href="#">Беларуская</a></li>
+      </ul>
+    </li>
+  </ul>
+</div><!-- /.nav-collapse -->
