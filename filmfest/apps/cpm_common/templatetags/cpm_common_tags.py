@@ -15,7 +15,7 @@ MAINMENU_ITEMS = [
     (_('2012: good memories'), reverse('cpm2012:index')),
 ]
 
-@register.inclusion_tag('cpm2013/tags/mainmenu.html')
+@register.inclusion_tag('cpm_common/tags/mainmenu.html')
 def mainmenu(request):
     cur_lang = translation.get_language().split('-')[0]
     lang_url = '/%%s%s' % request.get_full_path()
