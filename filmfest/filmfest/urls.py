@@ -21,6 +21,7 @@ urlpatterns = patterns('',
 
     url(r'^2012/', include(cpm2012_urls)),
     url(r'^2013/', include(cpm2013_urls)),
-    (r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^(?P<lang_code>[\-\w]+)/.*', 'apps.cpm_common.views.set_language', name='cpm_set_language'),
+
     url(r'^$', 'filmfest.views.index', name='index'),
 )

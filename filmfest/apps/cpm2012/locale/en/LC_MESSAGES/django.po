@@ -1,0 +1,703 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-23 23:40+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/cpm2012/index.html:5 templates/cpm2012/index.html.py:89
+msgid "как это было"
+msgstr "how it was"
+
+#: templates/cpm2012/index.html:24
+msgid "Страна"
+msgstr "Countries"
+
+#: templates/cpm2012/index.html:25
+msgid "Участников"
+msgstr "Participants"
+
+#: templates/cpm2012/index.html:27
+msgid "Сербия"
+msgstr "Serbia"
+
+#: templates/cpm2012/index.html:28
+msgid "Тайланд"
+msgstr "Thailand"
+
+#: templates/cpm2012/index.html:29
+msgid "Латвия"
+msgstr "Latvia"
+
+#: templates/cpm2012/index.html:30
+msgid "Франция"
+msgstr "France"
+
+#: templates/cpm2012/index.html:31
+msgid "Азербайджан"
+msgstr "Azerbaijan"
+
+#: templates/cpm2012/index.html:32
+msgid "ОАЭ"
+msgstr "UAE"
+
+#: templates/cpm2012/index.html:33
+msgid "Бразилия"
+msgstr "Brasil"
+
+#: templates/cpm2012/index.html:34
+msgid "Сирия"
+msgstr "Siria"
+
+#: templates/cpm2012/index.html:35
+msgid "Швеция"
+msgstr "Sweden"
+
+#: templates/cpm2012/index.html:36
+msgid "Новая Зеландия"
+msgstr "New Zeland"
+
+#: templates/cpm2012/index.html:37
+msgid "Австралия"
+msgstr "Australia"
+
+#: templates/cpm2012/index.html:38
+msgid "Бангладеш"
+msgstr "Bangladesh"
+
+#: templates/cpm2012/index.html:39
+msgid "Израиль"
+msgstr "Israel"
+
+#: templates/cpm2012/index.html:40
+msgid "Грузия"
+msgstr "Georgia"
+
+#: templates/cpm2012/index.html:41
+msgid "Казахстан"
+msgstr "Kazakhstan"
+
+#: templates/cpm2012/index.html:42
+msgid "Канада"
+msgstr "Canada"
+
+#: templates/cpm2012/index.html:43
+msgid "Швейцария"
+msgstr "Switzerland"
+
+#: templates/cpm2012/index.html:44
+msgid "Финляндия"
+msgstr "Finland"
+
+#: templates/cpm2012/index.html:45
+msgid "Португалия"
+msgstr "Portugal"
+
+#: templates/cpm2012/index.html:46
+msgid "Румыния"
+msgstr "Romania"
+
+#: templates/cpm2012/index.html:47
+msgid "Кыргызстан"
+msgstr "Kyrgyzstan"
+
+#: templates/cpm2012/index.html:48
+msgid "Хорватия"
+msgstr "Croatia"
+
+#: templates/cpm2012/index.html:49
+msgid "Индия"
+msgstr "India"
+
+#: templates/cpm2012/index.html:50
+msgid "Армения"
+msgstr "Armenia"
+
+#: templates/cpm2012/index.html:51
+msgid "Чехия"
+msgstr "Czech Republic"
+
+#: templates/cpm2012/index.html:52
+msgid "Эстония"
+msgstr "Estonia"
+
+#: templates/cpm2012/index.html:53
+msgid "Италия"
+msgstr "Italy"
+
+#: templates/cpm2012/index.html:54
+msgid "Великобритания"
+msgstr "Great Britain"
+
+#: templates/cpm2012/index.html:55
+msgid "США"
+msgstr "USA"
+
+#: templates/cpm2012/index.html:56
+msgid "Украина"
+msgstr "Ukraine"
+
+#: templates/cpm2012/index.html:57
+msgid "Германия"
+msgstr "Germany"
+
+#: templates/cpm2012/index.html:58
+msgid "Польша"
+msgstr "Poland"
+
+#: templates/cpm2012/index.html:59
+msgid "Испания"
+msgstr "Spain"
+
+#: templates/cpm2012/index.html:60
+msgid "Беларусь"
+msgstr "Belarus"
+
+#: templates/cpm2012/index.html:61
+msgid "Россия"
+msgstr "Russia"
+
+#: templates/cpm2012/index.html:78
+msgid "международный фестиваль"
+msgstr "international"
+
+#: templates/cpm2012/index.html:78
+msgid "короткометражного кино"
+msgstr "short film festival"
+
+#: templates/cpm2012/index.html:97
+msgid ""
+"В <em>январе 2012</em> года состоялось поистине уникальное событие для "
+"культурной жизни <em>города Минска</em> – был проведен Международный "
+"кинофестиваль короткометражного кино <strong>«Cinema Perpetuum Mobile»</"
+"strong>."
+msgstr ""
+"In <em>January 2012</em> there was held a unique event "
+"in cultural life of <em> Minsk </em>.It was International "
+"Short Film Festival <strong>«Cinema Perpetuum "
+"Mobile»</strong>."
+
+#: templates/cpm2012/index.html:98
+msgid ""
+"На фестиваль было прислано более <em>190-ти авторских фильмов</em> из более "
+"чем <em>30 стран мира</em>. Именитое жюри, в которое входили и представители "
+"Беларуси, оценивало и выбирало лучшие фильмы. Показы собрали большую "
+"аудиторию заинтересованных зрителей и получили широкую огласку в прессе."
+msgstr ""
+"More than <em>190 movies </em> from "
+"more than <em>30 countries of the world </em>. Eminent jury, which included also "
+"representatives of Belarus, was estimating and choosing the best movies. Showings "
+"gathered a large audience of interested spectators and recieved wide "
+"publicity in press."
+
+#: templates/cpm2012/index.html:100
+msgid "Победители"
+msgstr "Winners"
+
+#: templates/cpm2012/index.html:104 templates/cpm2012/index.html.py:107
+msgid "The Great Race"
+msgstr "The Great Race"
+
+#: templates/cpm2012/index.html:107
+msgid "Гран-при"
+msgstr "Grand-prix"
+
+#: templates/cpm2012/index.html:108
+msgid "K. Camacho, Испания"
+msgstr "K. Camacho, Spain"
+
+#: templates/cpm2012/index.html:109
+msgid ""
+"The year 1914. The Lasarte racetrack announces a race with a never-before-"
+"seen prize for the winning horse. Eight of the best horses and mares in the "
+"world have registered. Fance and heavy betters from all continents gather to "
+"participate in the great event: the Half Million Grand Prize."
+msgstr ""
+"The year 1914. The Lasarte racetrack announces a race with a never-"
+"before-seen prize for the winning horse. Eight of the best horses and "
+"mares in the world have registered. Fance and heavy betters from all "
+"continents gather to participate in the great event: the Half Million "
+"Grand Prize."
+
+#: templates/cpm2012/index.html:115
+msgid "Номинация Perpetuum historia"
+msgstr "Nomination Perpetuum historia"
+
+#: templates/cpm2012/index.html:115 templates/cpm2012/index.html.py:120
+msgid "1937"
+msgstr "1937"
+
+#: templates/cpm2012/index.html:116
+msgid "С.Головлев, Россия"
+msgstr "S. Golovlev, Russia"
+
+#: templates/cpm2012/index.html:117
+msgid ""
+"Год 1937.  Молодая чета едет тайно крестить ребёнка в Подмосковье. Мимо "
+"станции, на которую они прибыли проходит поезд с заключенными. Из вагона "
+"проезжающего поезда, вылетает письмо. Герои выясняют, что это весточка "
+"домой. Весь дальнейший путь героев превращается в мучительную борьбу страха "
+"с совестью. Так как отправка письма является пособничеством и карается, по "
+"всей строгости законна."
+msgstr ""
+"1937. The young couple goes to the vicinities of Moscow to baptize a child. By  "
+"station, at which they came a train with prisoners was passing "
+"A letter fells out from a passing train.A couple finds out that this is a letter "
+"home. The rest of the way turns into a harrowing struggle of "
+"fear with conscience. Since sending the letter is considered as aiding "
+"it's punished according to the law."
+
+#: templates/cpm2012/index.html:126
+msgid "PLayground"
+msgstr "Playground"
+
+#: templates/cpm2012/index.html:129
+msgid "Номинация Perpetuum adversi"
+msgstr "Nomination Perpetuum adversi"
+
+#: templates/cpm2012/index.html:129
+msgid "Playground"
+msgstr "Playground"
+
+#: templates/cpm2012/index.html:130
+msgid "Еlad Primo, Израиль"
+msgstr "Еlad Primo, Israel"
+
+#: templates/cpm2012/index.html:131
+msgid ""
+"This Film reflects emotions and memories of growing-up in Israel. Its the "
+"Israeli version of a kids growing up story. I found it ironic that children "
+"in Israel who play \"hide and seek\" and video games are exposed to weapon "
+"on a daily basis: On the streets, in their homes (while their big brothers "
+"and sisters come back from the military), and unreasonably it became trivial "
+"for them. (From the director’s statement of E.Primo)."
+msgstr ""
+"This Film reflects emotions and memories of growing-up in Israel. It's "
+"the Israeli version of a kid's growing up story. I found it ironic that "
+"children in Israel who play \"hide and seek\" and video games are exposed"
+" to weapon on a daily basis: On the streets, in their homes (while their "
+"big brothers and sisters come back from the military), and unreasonably "
+"it became trivial for them. (From the director’s statement of E.Primo)."
+
+#: templates/cpm2012/index.html:137
+msgid "Номинация Perpetuum libertas"
+msgstr "Nomination Perpetuum libertas"
+
+#: templates/cpm2012/index.html:137 templates/cpm2012/index.html.py:142
+msgid "(en)terrados"
+msgstr "(en)terrados"
+
+#: templates/cpm2012/index.html:138
+msgid "Aex Lora, Испания"
+msgstr "Aex Lora, Spain"
+
+#: templates/cpm2012/index.html:139
+msgid "In a city… finding an apartment is no longer possible."
+msgstr "In a city… finding an apartment is no longer possible."
+
+#: templates/cpm2012/index.html:148 templates/cpm2012/index.html.py:151
+msgid "Night School"
+msgstr "Night School"
+
+#: templates/cpm2012/index.html:151
+msgid "Номинация Perpetuum amor"
+msgstr "Nomination Perpetuum amor"
+
+#: templates/cpm2012/index.html:152
+msgid "Ben Soper, Великобритания"
+msgstr "Ben Soper, Great Britain"
+
+#: templates/cpm2012/index.html:153
+msgid ""
+"Late at night, a young couple find themselves alone together for the first "
+"time. She wants to be more intimate. He knows just the right place. Leading "
+"her to an abandoned school he finds an open window and climbs in. She’s "
+"reluctant to follow. He leans out and offers her a hand. She decides to "
+"trust him and together they disappear into the shadows."
+msgstr ""
+"Late at night, a young couple find themselves alone together for the "
+"first time. She wants to be more intimate. He knows just the right place."
+" Leading her to an abandoned school he finds an open window and climbs "
+"in. She’s reluctant to follow. He leans out and offers her a hand. She "
+"decides to trust him and together they disappear into the shadows."
+
+#: templates/cpm2012/index.html:159
+msgid "Номинация Perpetuum mobile"
+msgstr "Nomination Perpetuum mobile"
+
+#: templates/cpm2012/index.html:159 templates/cpm2012/index.html.py:164
+#: templates/cpm2012/index.html:204
+msgid "Perpetuum mobile"
+msgstr "Perpetuum mobile"
+
+#: templates/cpm2012/index.html:160
+msgid "Agnieszka Burszewska, Польша"
+msgstr "Agnieszka Burszewska, Poland"
+
+#: templates/cpm2012/index.html:161
+msgid ""
+"In s dark Laboratory the Engineer works on his greatest invention yet. He "
+"doesn’t give up his face adversities. He knows that the only way to discower "
+"the limits of the impossible is to go beyond them. The passion of creation "
+"becomes his obsession. And every obsession demands a sacrifice..."
+msgstr ""
+"In s dark Laboratory the Engineer works on his greatest invention yet. He"
+" doesn’t give up his face adversities. He knows that the only way to "
+"discower the limits of the impossible is to go beyond them. The passion "
+"of creation becomes his obsession. And every obsession demands a "
+"sacrifice..."
+
+#: templates/cpm2012/index.html:170 templates/cpm2012/index.html.py:173
+msgid "Scene"
+msgstr "Scene"
+
+#: templates/cpm2012/index.html:173
+msgid "Номинация Perpetuum arts"
+msgstr "Nomination Perpetuum arts"
+
+#: templates/cpm2012/index.html:174
+msgid "Stephen Rousselin, Франция"
+msgstr "Stephen Rousselin, France"
+
+#: templates/cpm2012/index.html:175
+msgid ""
+"Любовь и смерть, чувства и игра догоняют друг-друга и смешиваются в "
+"водовороте жизни. Правда на сцене все расставит на свои места."
+msgstr ""
+"Love and death, feelings and game follow each other catch up with one another and mix "
+"in a whirlpool of life. The truth on the stage will put everything on its places"
+
+#: templates/cpm2012/index.html:181
+msgid "Номинация Perpetuum idea"
+msgstr "Nomination Perpetuum idea"
+
+#: templates/cpm2012/index.html:181 templates/cpm2012/index.html.py:186
+msgid "Flock"
+msgstr "Flock"
+
+#: templates/cpm2012/index.html:182
+msgid "Asier Altuna, Испания"
+msgstr "Asier Altuna, Spain"
+
+#: templates/cpm2012/index.html:183
+msgid ""
+"A shepherd, lost in the city, searches for his flock. His callattracts the "
+"attention of some people, who decide to follow him."
+msgstr ""
+"A shepherd, lost in the city, searches for his flock. His callattracts "
+"the attention of some people, who decide to follow him."
+
+#: templates/cpm2012/index.html:192
+msgid "По образу и подобию"
+msgstr "In image and likeness"
+
+#: templates/cpm2012/index.html:195
+msgid "Номинация Perpetuum vita"
+msgstr "Nomination Perpetuum vita"
+
+#: templates/cpm2012/index.html:195
+msgid "По образу и подобию…"
+msgstr "In image and likeness…"
+
+#: templates/cpm2012/index.html:196
+msgid "Никита Тихонов-Рау, Россия/Испания"
+msgstr "Nikita Tikhonov-Ray, Russia/Spain"
+
+#: templates/cpm2012/index.html:197
+msgid ""
+"Документальный фильм о лифтере по имени Иисус, который большую часть жизни "
+"провел в лифте. И если бы не ипотека за квартиру…"
+msgstr ""
+"It's a documentary about elevator operator Jesus, who spent most of"
+"his life in elevator. And if it was not for the flat mortrage…"
+
+#: templates/cpm2012/index.html:203
+msgid "Также были отмечены фильмы"
+msgstr "Also the following films got special reviews:"
+
+#: templates/cpm2012/index.html:204
+msgid "E.Garcia & R.Ajofrin, Испания"
+msgstr "E.Garcia & R.Ajofrin, Spain"
+
+#: templates/cpm2012/index.html:205
+msgid "The Stain"
+msgstr "The Stain"
+
+#: templates/cpm2012/index.html:205
+msgid "I.Chojna, Польша"
+msgstr "I.Chojna, Poland"
+
+#: templates/cpm2012/index.html:206
+msgid "Friendship Is Something Beautiful"
+msgstr "Friendship Is Something Beautiful"
+
+#: templates/cpm2012/index.html:206
+msgid "J. R. de Arcaute, Испания"
+msgstr "J. R. de Arcaute, Spain"
+
+#: templates/cpm2012/index.html:207
+msgid "Сумерки"
+msgstr "Twillight"
+
+#: templates/cpm2012/index.html:207
+msgid "A.Лобач, Беларусь"
+msgstr "A.Lobach, Belarus"
+
+#: templates/cpm2012/index.html:208
+msgid "Голубая кость"
+msgstr "Blue bone"
+
+#: templates/cpm2012/index.html:208
+msgid "К. Востриков, Россия"
+msgstr "k. Vostrikov, Russia"
+
+#: templates/cpm2012/index.html:209
+msgid "Капусторуб"
+msgstr "Cabbagecutter"
+
+#: templates/cpm2012/index.html:209
+msgid "В. Винер, Россия"
+msgstr "V. Viner, Russia"
+
+#: templates/cpm2012/index.html:211
+msgid "Специальный диплом оргкомитета"
+msgstr "Special diploma of organizing commitee"
+
+#: templates/cpm2012/index.html:212
+msgid "Дед Маргар"
+msgstr "Grandfather Margar"
+
+#: templates/cpm2012/index.html:212
+msgid "Г.Тадевосян, Армения"
+msgstr "G.Tadevosyan, Armenia"
+
+#: templates/cpm2012/index.html:218
+msgid "январь"
+msgstr "january"
+
+#: templates/cpm2012/index.html:222
+msgid "дней"
+msgstr "days"
+
+#: templates/cpm2012/index.html:226
+msgid "стран"
+msgstr "country"
+
+#: templates/cpm2012/index.html:230
+msgid "участников"
+msgstr "participants"
+
+#: templates/cpm2012/index.html:234
+msgid "бюджет"
+msgstr "budget"
+
+#: templates/cpm2012/index.html:238
+msgid "членов жюри"
+msgstr "jury members"
+
+#: templates/cpm2012/index.html:242
+msgid "волонтера"
+msgstr "volunteers"
+
+#: templates/cpm2012/index.html:246
+msgid "площадок"
+msgstr "showing stages"
+
+#: templates/cpm2012/index.html:251
+msgid "Национальный художественный музей"
+msgstr "National Art Museum"
+
+#: templates/cpm2012/index.html:252
+msgid "ул. Ленина, 20"
+msgstr "Lenin str. 20"
+
+#: templates/cpm2012/index.html:256
+msgid "Дворец Искусств"
+msgstr "Palace of Arts"
+
+#: templates/cpm2012/index.html:257
+msgid "ул. Козлова, 3"
+msgstr "Kozlov str. 3"
+
+#: templates/cpm2012/index.html:261
+msgid "Арткинотеатр Рубин-Плаза"
+msgstr "Rubin-plaza artcinema"
+
+#: templates/cpm2012/index.html:265
+msgid "Музей истории белорусского кино"
+msgstr "Museum of Belarusian Cinema History"
+
+#: templates/cpm2012/index.html:266
+msgid "ул. Свердлова, 4"
+msgstr "Sverdlov str. 4"
+
+#: templates/cpm2012/index.html:270
+msgid "Галерея Щемелева"
+msgstr "Schemelev gallery"
+
+#: templates/cpm2012/index.html:271
+msgid "пр. Рокоссовского, 49"
+msgstr "Rokossovsky ave. 49"
+
+#: templates/cpm2012/index.html:275
+msgid "Дворец детей и молодежи"
+msgstr "Palace of children and youth"
+
+#: templates/cpm2012/index.html:276
+msgid "Старовиленский тракт, 41"
+msgstr "Starovilensky trakt 41"
+
+#: templates/cpm2012/index.html:280
+msgid "ДК «La мора»"
+msgstr "Сultural centre «La Mora»"
+
+#: templates/cpm2012/index.html:285
+msgid "Кальянная №1"
+msgstr "Kalyannaya 1"
+
+#: templates/cpm2012/index.html:286
+msgid "ул. К.Маркса, 33"
+msgstr "K.Marks str. 33"
+
+#: templates/cpm2012/index.html:297
+msgid "Кори Макеби (США)"
+msgstr "Cory McAbee (USA)"
+
+#: templates/cpm2012/index.html:298
+msgid ""
+"Писатель и режиссер (\"Американский астронавт\", \"Stingray Sam\"), вокалист "
+"группы Billy Nayer Show."
+msgstr ""
+"Writer, film director (\"American Astronaut\", \"Stingray Sam\"), "
+"a frontman of Billy Nayer Show band."
+
+#: templates/cpm2012/index.html:303
+msgid "Богдана Смирнова (Украина)"
+msgstr "Bohdana Smirnova (Ukraine)"
+
+#: templates/cpm2012/index.html:304
+msgid ""
+"Независимый режиссер и сценарист. Первая украинка, которая попала в "
+"престижную Резиденцию Каннского Фестиваля."
+msgstr ""
+"Independent film director and scriptwriter. Firts ukranian, who got to"
+"prestigious residence of Cannes Film Festival."
+
+#: templates/cpm2012/index.html:309
+msgid "Сергей Красиков (Нью-Йорк)"
+msgstr "Sergey Krasikov (USA)"
+
+#: templates/cpm2012/index.html:310
+msgid ""
+"Родился в Минске. В 2004 году переехал в Бруклин и самостоятельно занялся "
+"кинопроизводством."
+msgstr ""
+"Born in Minsk. In 2004 moved to Brooklin and  started making films"
+" by himself."
+
+#: templates/cpm2012/index.html:317
+msgid "Андрей Курейчик (Беларусь)"
+msgstr "Andrew Kureichik (Belarus)"
+
+#: templates/cpm2012/index.html:318
+msgid ""
+"Сценарист, драматург, режиссёр, публицист. К своим 30 годам написал 25 пьес, "
+"поставленых в 9 странах мира."
+msgstr ""
+"Script writer, playwright, director, writer. In his 30 years he wrote 25 "
+"plays, which were staged in nine countries."
+
+#: templates/cpm2012/index.html:323
+msgid "Юрий Игруша (Беларусь)"
+msgstr "Igrusha Yuri (Belarus)"
+
+#: templates/cpm2012/index.html:324
+msgid ""
+"Продюсер, режиссер, сценарист. В настоящее время - директор РУП "
+"\"Белорусский видеоцентр\"."
+msgstr ""
+"Producer, director and screenwriter. Currently - Director of RUE"
+"\" The Belarusian Video Center \"."
+
+#: templates/cpm2012/index.html:329
+msgid "Павел Иванов (Беларусь)"
+msgstr "Pavel Ivanov (Belarus)"
+
+#: templates/cpm2012/index.html:330
+msgid ""
+"Режиссер высшей категории, участник и лауреат многих кинотелефестивалей. "
+"Декан факультета экранных искусств БГАИ."
+msgstr ""
+"Film director of the highest category, the participant and winner of a number of movie festivals. "
+"Dean of the Faculty of Arts BSAA screen."
+
+#: templates/cpm2012/index.html:337
+msgid "Мацей Гиль (Польша)"
+msgstr "Maciej Gil (Poland)"
+
+#: templates/cpm2012/index.html:338
+msgid ""
+"Историк кино, организатор различных киномероприятий. Президент Польской "
+"Федерации Киноклубов."
+msgstr ""
+"Cinema historian, organizer of the various film events. President of the Polish "
+"Federation of Film Clubs."
+
+#: templates/cpm2012/index.html:343
+msgid "Виктор Аслюк (Беларусь)"
+msgstr "Victor Aslyuk (Belarus)"
+
+#: templates/cpm2012/index.html:344
+msgid ""
+"Режиссер и сценарист, поставил более 30 документальных фильмов. Является "
+"членом европейской киноакадемии с 2003 года."
+msgstr ""
+"Director and screenwriter, shot more than 30 documentaries. "
+"A member of the European Film Academy since 2003."
+
+#: templates/cpm2012/index.html:349
+msgid "Agricola de Cologne (Германия)"
+msgstr "Agricola de Cologne (Germany)"
+
+#: templates/cpm2012/index.html:350
+msgid ""
+"Директор международного фестиваля кино и видеоарта CologneOFF, главный "
+"руководитель виртуального видеоканала (VideoChannel)."
+msgstr ""
+"Director of the International Festival of Film and Video Art CologneOFF, "
+"the head of a virtual video channel (VideoChannel)."
+
+#: templates/cpm2012/index.html:357
+msgid "География участников"
+msgstr "Geography of participants"
+
+#: templates/cpm2012/index.html:364
+msgid ""
+"Ничего не произошло бы без наших замечательных волонтеров. Им даже посвящена"
+msgstr ""
+"Nothing would have happened without our wonderful volunteers. We devoted a "
+
+
+#: templates/cpm2012/index.html:364
+msgid "отдельная страница"
+msgstr "separate page for them"
+
+#: templates/cpm2012/index.html:370
+msgid "Партнеры"
+msgstr "Parthners"
+
+#: templates/cpm2012/index.html:392
+msgid "Медиапартнеры"
+msgstr "Mediaparthners"

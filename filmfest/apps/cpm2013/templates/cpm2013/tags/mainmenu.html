@@ -8,11 +8,17 @@
   </ul>
   <ul class="nav pull-right">
     <li class="dropdown">
-      <a data-toggle="dropdown" class="dropdown-toggle" href="#">English <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Русский</a></li>
-        <li><a href="#">Беларуская</a></li>
-      </ul>
+      {% for lang_code, lang, url in languages %}
+        {% if forloop.first %}
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ lang }} <b class="caret"></b></a>
+	  <ul class="dropdown-menu">
+	{% else %}
+            <li><a href="{{ url }}">{{ lang }}</a></li>
+	    {% if forloop.last %}
+	      </ul>
+	    {% endif %}
+	{% endif %}
+      {% endfor %}
     </li>
   </ul>
-</div><!-- /.nav-collapse -->
+</div>

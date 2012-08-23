@@ -1,5 +1,10 @@
 # Django settings for filmfest project.
+import os.path
 from django.utils.translation import ugettext_lazy as _
+
+PROJECT_ROOT = os.path.normpath(os.path.join(
+    os.path.dirname(__file__), '..'
+))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -34,9 +39,12 @@ TIME_ZONE = 'Europe/Minsk'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'be'
 LANGUAGES = (
-    ('be', _('Belarussian')),
-    ('ru', _('Russian')),
     ('en', _('English')),
+    ('ru', _('Russian')),
+    ('be', _('Belarussian')),
+)
+LOCALE_PATHS = (
+    os.path.join(PROJECT_ROOT, 'locale'),
 )
 
 SITE_ID = 1
@@ -114,8 +122,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'filmfest.urls'
@@ -137,7 +145,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
+    'django.contrib.markup',    # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
     'djcelery',
@@ -145,6 +153,7 @@ INSTALLED_APPS = (
     
     'apps.cpm2012',
     'apps.cpm2013',
+    'apps.cpm_common',
 )
 
 # A sample logging configuration. The only tangible logging

@@ -1,1 +1,6 @@
 {% extends "cpm2013/base.html" %}
+{% load markup %}
+
+{% block content %}
+{{ rules|markdown }}
+{% endblock %}
