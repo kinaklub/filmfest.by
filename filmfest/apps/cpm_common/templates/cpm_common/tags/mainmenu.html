@@ -1,11 +1,27 @@
 <div class="nav-collapse">
   <ul class="nav">
-    {% for title, url, active in mainmenu_items %}
-    <li {% if active %}class="active"{% endif %}>
-      <a href="{{ url }}">{{ title }}</a>
+    {% for title, url, children, active in mainmenu_items %}
+    <li class="{% if active %}active{% endif %} {% if children %}dropdown{% endif %}">
+      <a
+	 {% if children %}data-toggle="dropdown" class="dropdown-toggle"{% endif %}
+	 href="{{ url|default:"#" }}">
+	{{ title }}
+	{% if children %}<b class="caret"></b>{% endif %}
+      </a>
+
+      {% if children %}
+	<ul class="dropdown-menu">
+	{% for sub_title, sub_url, sub_active in children %}
+          <li class="{% if sub_active %}active{% endif %}">
+	    <a href="{{ sub_url }}">{{ sub_title }}</a>
+	  </li>
+	{% endfor %}
+	</ul>
+      {% endif %}
     </li>
     {% endfor %}
   </ul>
+
   <ul class="nav pull-right">
     <li class="dropdown">
       {% for lang_code, lang, url in languages %}

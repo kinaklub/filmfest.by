@@ -125,3 +125,11 @@ class NewsEntry(TranslatableModel):
         short_text = models.TextField(verbose_name=_('Short text'), max_length=1000),
         text = models.TextField(verbose_name=_('Text'), max_length=1000),
     )
+
+class Page(TranslatableModel):
+    slug = models.SlugField(max_length=50)
+
+    translations = TranslatedFields(
+        title = models.CharField(verbose_name=_('Title'), max_length=100),
+        text = models.TextField(verbose_name=_('Text')),
+    )

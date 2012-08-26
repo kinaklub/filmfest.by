@@ -148,6 +148,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',    # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
+    'south',
     'djcelery',
     'hvad',
     

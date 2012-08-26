@@ -9,10 +9,14 @@ register = template.Library()
 
 
 MAINMENU_ITEMS = [
-    (_('Home'), reverse('cpm2013:index')),
-    (_('Rules'), reverse('cpm2013:rules')),
-#    (_('Submit your film!'), reverse('cpm2013:submit')),
-    (_('2012: good memories'), reverse('cpm2012:index')),
+    (_('Home'), reverse('cpm2013:index'), ()),
+    (_('Rules'), reverse('cpm2013:rules'), ()),
+#    (_('Submit your film!'), reverse('cpm2013:submit'), ()),
+    (_('2012: good memories'), reverse('cpm2012:index'), ()),
+    (_('Volunteers'), '', (
+        (_('Memo'), reverse('cpm2013:page', args=['memo_volunteers'])),
+        (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire'))
+    )),
 ]
 
 @register.inclusion_tag('cpm_common/tags/mainmenu.html')
@@ -24,9 +28,17 @@ def mainmenu(request):
         key=lambda lang: lang[0] != cur_lang
     )]
 
-    mainmenu_items = [
-        (title, url, url == request.path) for title, url in MAINMENU_ITEMS
-    ]
+    mainmenu_items = []
+    for title, url, children in MAINMENU_ITEMS:
+        active = False
+        new_children = []
+        for sub_title, sub_url in children:
+            sub_active = (sub_url == request.path)
+            active = active or sub_active
+            new_children = (sub_title, sub_url, sub_active)
+
+        active = active or (url == request.path)
+        mainmenu_items.append((title, url, children, active))
     
     return {
         'mainmenu_items': mainmenu_items,

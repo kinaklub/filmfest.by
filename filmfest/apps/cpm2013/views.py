@@ -3,12 +3,12 @@ import os
 
 from django.http import HttpResponse
 from django.views.generic.create_update import create_object
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.utils import translation
 from django.conf import settings
 
-from apps.cpm2013.models import Submission, NewsEntry
+from apps.cpm2013.models import Submission, NewsEntry, Page
 from apps.cpm2013.forms import SubmissionForm
 
 def index(request):
@@ -29,6 +29,26 @@ def submit(request):
     return create_object(
         request, model=Submission, form_class=SubmissionForm,
         template_name='cpm2013/submit.html'
+    )
+
+def page(request, slug):
+    base_page = get_object_or_404(Page, slug=slug)
+    pages = base_page._meta.translations_model.objects.all()
+    pages = dict((t.language_code, t) for t in pages)
+
+    current_lang = translation.get_language()
+    if current_lang in pages:
+        page = pages[current_lang]
+    else:
+        for lang_code in ['en', 'ru', 'be']:
+            if lang_code in pages:
+                page = pages[lang_code]
+                break
+
+    return render_to_response(
+        'cpm2013/page.html',
+        {'page': page},
+        context_instance=RequestContext(request),
     )
 
 class Rules:
