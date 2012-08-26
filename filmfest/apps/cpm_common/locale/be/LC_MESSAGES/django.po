@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-26 08:43+0300\n"
+"POT-Creation-Date: 2012-08-26 13:43+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,3 +28,15 @@ msgstr "Рэгламент"
 #: templatetags/cpm_common_tags.py:15
 msgid "2012: good memories"
 msgstr "2012: добрыя ўспаміны"
+
+#: templatetags/cpm_common_tags.py:16
+msgid "Volunteers"
+msgstr "Валанторам"
+
+#: templatetags/cpm_common_tags.py:17
+msgid "Memo"
+msgstr "Памятка"
+
+#: templatetags/cpm_common_tags.py:18
+msgid "Queistionnaire"
+msgstr "Анкета"

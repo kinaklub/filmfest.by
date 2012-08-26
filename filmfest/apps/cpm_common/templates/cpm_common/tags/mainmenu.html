@@ -12,7 +12,7 @@
       {% if children %}
 	<ul class="dropdown-menu">
 	{% for sub_title, sub_url, sub_active in children %}
-          <li class="{% if sub_active %}active{% endif %}">
+          <li {% if sub_active %}class="active"{% endif %}>
 	    <a href="{{ sub_url }}">{{ sub_title }}</a>
 	  </li>
 	{% endfor %}

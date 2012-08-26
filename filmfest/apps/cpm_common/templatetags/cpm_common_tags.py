@@ -35,10 +35,10 @@ def mainmenu(request):
         for sub_title, sub_url in children:
             sub_active = (sub_url == request.path)
             active = active or sub_active
-            new_children = (sub_title, sub_url, sub_active)
+            new_children.append((sub_title, sub_url, sub_active))
 
         active = active or (url == request.path)
-        mainmenu_items.append((title, url, children, active))
+        mainmenu_items.append((title, url, new_children, active))
     
     return {
         'mainmenu_items': mainmenu_items,
