@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-26 08:19+0300\n"
+"POT-Creation-Date: 2012-08-26 08:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1283,4 +1283,41 @@ msgstr ""
 
 #: templates/cpm2013/base.html:36
 msgid "updates soon!"
+msgstr ""
+
+#: templates/cpm2013/index.html:8
+msgid ""
+"<strong>“Cinema Perpetuum mobile”</strong> is an international cinema "
+"cooperation festival that gathers independent film makers and their groups "
+"to work under the theme of the perpetual motion. The authors are free to "
+"artistically interpret the theme and develop their ideas on what the "
+"“perpetuum mobile” is."
+msgstr ""
+
+#: templates/cpm2013/index.html:10
+msgid ""
+"The project is aimed at cinema cultural diversity and the promotion of "
+"independent auteur movies. Festival co-operation aims to cover all countries "
+"and continents from Scandinavia to the Cape of Good Hope and from Patagonia "
+"to the Aleutian Islands."
+msgstr ""
+
+#: templates/cpm2013/index.html:12
+msgid ""
+"“Cinema Perpetuum mobile” is a <strong>non-commercial project</strong>, so "
+"the organizers aspire only to cover their expenses on the festival while the "
+"participants whose films are included into a short list, are likely to "
+"receive dividends in case the collection of “Perpetuum Mobile” films is "
+"shown in cinemas after festival. The participation in our cinema cooperation "
+"festival is free. Organizer of the festival is an independent association "
+"«Kinaklub.org», with the following principles: cinemania, self-organization, "
+"decentralization, mutual aid."
+msgstr ""
+
+#: templates/cpm2013/submit_temp.html:5
+msgid "Dear firends!"
+msgstr ""
+
+#: templates/cpm2013/submit_temp.html:6
+msgid "Submission form opens on September 2, 2012"
 msgstr ""

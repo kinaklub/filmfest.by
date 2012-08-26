@@ -6,7 +6,7 @@ def get_urls():
     return patterns('',
         url(r'^$', views.index, name='index'),
         url(r'^rules/$', views.Rules(), name='rules'),
-#        url(r'^submit/$', views.submit, name='submit'),
+        url(r'^submit/$', views.submit, name='submit'),
 #        url(r'^test/$', views.test, name='test'),
     )
 

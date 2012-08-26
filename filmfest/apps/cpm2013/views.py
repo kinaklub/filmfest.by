@@ -20,6 +20,12 @@ def index(request):
     )
 
 def submit(request):
+    return render_to_response(
+        'cpm2013/submit_temp.html',
+        {},
+        context_instance=RequestContext(request),
+    )
+
     return create_object(
         request, model=Submission, form_class=SubmissionForm,
         template_name='cpm2013/submit.html'
