@@ -1330,7 +1330,7 @@ msgstr ""
 "ўзаемадапамога."
 
 #: templates/cpm2013/submit_temp.html:5
-msgid "Dear firends!"
+msgid "Dear friends!"
 msgstr "Шаноўныя сябры!"
 
 #: templates/cpm2013/submit_temp.html:6

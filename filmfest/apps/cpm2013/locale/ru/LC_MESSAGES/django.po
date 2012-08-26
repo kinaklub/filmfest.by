@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-26 08:46+0300\n"
+"POT-Creation-Date: 2012-08-26 08:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1332,7 +1332,7 @@ msgstr ""
 "взаимопомощь."
 
 #: templates/cpm2013/submit_temp.html:5
-msgid "Dear firends!"
+msgid "Dear friends!"
 msgstr "Дорогие друзья!"
 
 #: templates/cpm2013/submit_temp.html:6
