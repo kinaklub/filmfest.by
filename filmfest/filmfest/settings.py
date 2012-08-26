@@ -186,6 +186,6 @@ LOGGING = {
 }
 
 try:
-    from setting_local import *
+    from settings_local import *
 except ImportError:
     pass

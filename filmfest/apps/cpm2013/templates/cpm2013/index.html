@@ -1,14 +1,15 @@
 {% extends "cpm2013/base.html" %}
+{% load i18n %}
 
 {% block content %}
 <div class="row">
   <div class="span7">
     <div id="index-about">
-      <p><strong>“Cinema Perpetuum mobile”</strong> is an international cinema cooperation festival that gathers independent film makers and their groups to work under the theme of the perpetual motion. The authors are free to artistically interpret the theme and develop their ideas on what the “perpetuum mobile” is.</p>
+      <p>{% trans "<strong>“Cinema Perpetuum mobile”</strong> is an international cinema cooperation festival that gathers independent film makers and their groups to work under the theme of the perpetual motion. The authors are free to artistically interpret the theme and develop their ideas on what the “perpetuum mobile” is." %}</p>
 
-      <p>The project is aimed at cinema cultural diversity and the promotion of independent auteur movies. Festival co-operation aims to cover all countries and continents from Scandinavia to the Cape of Good Hope and from Patagonia to the Aleutian Islands.</p>
+      <p>{% trans "The project is aimed at cinema cultural diversity and the promotion of independent auteur movies. Festival co-operation aims to cover all countries and continents from Scandinavia to the Cape of Good Hope and from Patagonia to the Aleutian Islands." %}</p>
 
-      <p>“Cinema Perpetuum mobile” is a <strong>non-commercial project</strong>, so the organizers aspire only to cover their expenses on the festival while the participants whose films are included into a short list, are likely to receive dividends in case the collection of “Perpetuum Mobile” films is shown in cinemas after festival. The participation in our cinema cooperation festival is free. Organizer of the festival is an independent association «Kinaklub.org», with the following principles: cinemania, self-organization, decentralization, mutual aid.</p>
+      <p>{% trans "“Cinema Perpetuum mobile” is a <strong>non-commercial project</strong>, so the organizers aspire only to cover their expenses on the festival while the participants whose films are included into a short list, are likely to receive dividends in case the collection of “Perpetuum Mobile” films is shown in cinemas after festival. The participation in our cinema cooperation festival is free. Organizer of the festival is an independent association «Kinaklub.org», with the following principles: cinemania, self-organization, decentralization, mutual aid." %}</p>
     </div>
   </div>
   <div class="span5">
