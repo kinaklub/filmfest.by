@@ -14,7 +14,7 @@ def set_language(request, lang_code):
     if lang_code not in allowed_languages:# or not check_for_language(lang_code):
         raise Http404
         
-    next = request.get_full_path()[len(lang_code) + 1]
+    next = request.get_full_path()[len(lang_code) + 1:]
     response = HttpResponseRedirect(next)
     
     if hasattr(request, 'session'):
