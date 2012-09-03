@@ -1065,7 +1065,7 @@ msgstr ""
 
 #: forms.py:24
 msgid "I have read the rules of the festival and agree to its terms"
-msgstr "Я проел регламент фестиваля и согласен с его условиями"
+msgstr "Я прочел регламент фестиваля и согласен с его условиями"
 
 #: forms.py:28
 msgid ""
@@ -1095,7 +1095,7 @@ msgstr "Заявитель"
 
 #: forms.py:77 pdf.py:49
 msgid "Permissions"
-msgstr "Права и ращрешения"
+msgstr "Права и разрешения"
 
 #: models.py:12
 msgid "Original title"
