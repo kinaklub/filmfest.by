@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-03 10:05+0300\n"
+"POT-Creation-Date: 2012-09-03 23:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1069,7 +1069,9 @@ msgstr "Я прачытаў рэгламент фестываля і згодн�
 msgid ""
 "I declare that I am the legal owner of all rights relating to the submitted "
 "movie"
-msgstr "Я заяўляю, што з'яўляюся легальным уладальнікам усіх правоў, датычных на адпраўлены фільм"
+msgstr ""
+"Я заяўляю, што з'яўляюся легальным уладальнікам усіх правоў, датычных на "
+"адпраўлены фільм"
 
 #: forms.py:51 pdf.py:36
 msgid "Film"
@@ -1200,10 +1202,13 @@ msgid "Other credits"
 msgstr "Іншыя ўдзельнікі"
 
 #: models.py:77
+#, fuzzy, python-format
 msgid ""
 "Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
-msgstr "Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10% даўжыні фільма) па тэлебачанні"
+msgstr ""
+"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10% даўжыні фільма) па "
+"тэлебачанні"
 
 #: models.py:80
 msgid ""
@@ -1215,7 +1220,9 @@ msgstr "Дазвол уключаць фільм у каллекцыю фест�
 msgid ""
 "Authorization to screen the film at film festivals from CinemaPerpetuum "
 "Mobile partner network"
-msgstr "Дазвол паказваць фільм на фестывалях з пертнёрскай сеткі Cinema Perpetuum Mobile"
+msgstr ""
+"Дазвол паказваць фільм на фестывалях з пертнёрскай сеткі Cinema Perpetuum "
+"Mobile"
 
 #: models.py:98
 msgid "Submission language"
@@ -1247,7 +1254,7 @@ msgstr ""
 
 #: templates/cpm2013/base.html:36
 msgid "submit your film!"
-msgstr ""
+msgstr "дашлі фільм!"
 
 #: templates/cpm2013/index.html:8
 msgid ""
@@ -1312,19 +1319,25 @@ msgstr "Запоўніць заяўку на сайце"
 msgid ""
 "A copy of the application form will be sent via e-mail, you need to print "
 "it, sign and send in the mail."
-msgstr "Копія заяўкі будзе адпраўлена вам па электроннай пошце; вам патрэбна раздрукаваць як, падпісаць і адправіць па пошце."
+msgstr ""
+"Копія заяўкі будзе адпраўлена вам па электроннай пошце; вам патрэбна "
+"раздрукаваць як, падпісаць і адправіць па пошце."
 
 #: templates/cpm2013/submit.html:46
 msgid ""
 "Transfer a copy of the film (on disk by mail or via the Internet) to the "
 "organizing committee."
-msgstr "Перадаць копію фільма(на дыске поштай ці праз інтэрнэт) арганізацыйнаму камітэту."
+msgstr ""
+"Перадаць копію фільма(на дыске поштай ці праз інтэрнэт) арганізацыйнаму "
+"камітэту."
 
 #: templates/cpm2013/submit.html:49
 msgid ""
 "The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
 "file) should be the film only (without menus, etc.)."
-msgstr "Фільм павінен быць дасланым на DVD ці праз інтэрнэт. На дыске (у файле) мусіць быць толькі фільм (без меню і г.д.)"
+msgstr ""
+"Фільм павінен быць дасланым на DVD ці праз інтэрнэт. На дыске (у файле) "
+"мусіць быць толькі фільм (без меню і г.д.)"
 
 #: templates/cpm2013/submit.html:50
 msgid "Film copies and signed application forms are accepted at:"
@@ -1333,6 +1346,14 @@ msgstr "Копіі фільма і падпісаныя заяўкі прыма�
 #: templates/cpm2013/submit.html:53
 msgid "PO Box 74, Minsk"
 msgstr "а/c 74, Мінск"
+
+#: templates/cpm2013/submit.html:56
+msgid "Deadline: <strong>November 15, 2012</strong>"
+msgstr "Крайні тэрмін: <strong>15 лістапада 2012</strong>"
+
+#: templates/cpm2013/submit.html:57
+msgid "Complete festival rules can be found here:"
+msgstr "Поўны рэгламент фестываля можна знайсці тут:"
 
 #: templates/cpm2013/submit_done.html:5
 msgid "Thank you for submission!"
@@ -1344,7 +1365,10 @@ msgid ""
 "\n"
 "Submission form along with further instructions will be sent to %(email)s "
 "soon.\n"
-msgstr "\nЗапоўненная заяўка разам з інстукцыямі будзе адпраўлена на %(email)s як мага хутчэй.\n"
+msgstr ""
+"\n"
+"Запоўненная заяўка разам з інстукцыямі будзе адпраўлена на %(email)s як мага "
+"хутчэй.\n"
 
 #: templates/cpm2013/submit_temp.html:5
 msgid "Dear friends!"

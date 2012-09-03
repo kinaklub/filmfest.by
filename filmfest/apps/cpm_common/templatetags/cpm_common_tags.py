@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django import template
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -28,7 +29,11 @@ def mainmenu(request):
     cur_lang = translation.get_language().split('-')[0]
     lang_url = '/%%s%s' % request.get_full_path()
     languages = [(code, name, lang_url % code) for code, name in sorted(
-        settings.LANGUAGES,
+        [
+            ('en', 'English'),
+            ('ru', 'Русский'),
+            ('be', 'Беларуская'),
+        ],
         key=lambda lang: lang[0] != cur_lang
     )]
 

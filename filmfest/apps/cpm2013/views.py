@@ -67,7 +67,7 @@ def page(request, slug):
 class Rules:
     BE = 'rules_ru.md'
     RU = 'rules_ru.md'
-    EN = 'rules_ru.md'
+    EN = 'rules_en.md'
 
     PATH = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs')
 

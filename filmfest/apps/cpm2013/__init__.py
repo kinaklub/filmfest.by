@@ -6,12 +6,12 @@ def get_urls():
 
     return patterns('',
         url(r'^$', views.index, name='index'),
-        url(r'^page/(?P<slug>[\w\d_]+)$', views.page, name='page'),
+        url(r'^page/(?P<slug>[\w\d_]+)', views.page, name='page'),
         url(r'^volunteers/questionnaire', direct_to_template,
             {'template': 'cpm2013/volunteers_questionnaire.html'},
             name='volunteers_questionnaire'),
-        url(r'^rules/$', views.Rules(), name='rules'),
-        url(r'^submit/$', views.submit, name='submit'),
+        url(r'^rules', views.Rules(), name='rules'),
+        url(r'^submit', views.submit, name='submit'),
     )
 
 urls = (get_urls(), 'cpm2013', 'cpm2013')
