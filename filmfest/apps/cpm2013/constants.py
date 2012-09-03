@@ -280,9 +280,14 @@ COUNTRIES = (
     ('ZW', _('Zimbabwe')),
     ('ZZ', _('Other')),
 )
+COUNTRIES = sorted(COUNTRIES, key=lambda x: x[1])
 
-LANGUAGES = tuple(
-    (lang.alpha2, _(lang.name)) \
-    for lang in pycountry.languages \
-    if hasattr(lang, 'alpha2')
+
+LANGUAGES = sorted(
+    (
+        (lang.alpha2, _(lang.name)) \
+        for lang in pycountry.languages \
+        if hasattr(lang, 'alpha2')
+    ),
+    key=lambda x: x[1]
 )
