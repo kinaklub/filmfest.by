@@ -14,7 +14,7 @@ MAINMENU_ITEMS = [
     (_('Festival'), '', (
         (_('2012: good memories'), reverse('cpm2012:index')),
     )),
-    (_('Participnats'), '', (
+    (_('Participants'), '', (
         (_('Rules'), reverse('cpm2013:rules')),
         (_('Submit your film!'), reverse('cpm2013:submit')),
     )),
