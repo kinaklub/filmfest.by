@@ -1,8 +1,13 @@
+import logging
+
 from django.core.mail import EmailMessage
 from django.utils import translation
 from django.template import loader
 
 from celery import Task
+
+logger = logging.getLogger('cpm2013.tasks')
+
 
 class SendSubmissionEmail(Task):
     def create_pdf(self, submission):
@@ -19,6 +24,9 @@ class SendSubmissionEmail(Task):
         )
         
     def run(self, submission):
+        logger.info('SendSubmissionEmail for submission %s %r' % (
+            submission.id, submission
+        ))
         try:
             translation.activate(submission.submission_language)
 
@@ -35,6 +43,8 @@ class SendSubmissionEmail(Task):
             )
 
             email.send()
-
+        except:
+            logger.exception('')
+            raise
         finally:
             translation.deactivate()
