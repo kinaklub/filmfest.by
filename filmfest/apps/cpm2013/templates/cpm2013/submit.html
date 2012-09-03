@@ -1,6 +1,10 @@
 {% extends "cpm2013/base.html" %}
+{% load i18n %}
 
 {% block content %}
+<div class="row-fluid">
+  <div class="span9">
+
 <form id="submission-form" class="form-horizontal" method="POST">
 {% csrf_token %}
 
@@ -29,6 +33,30 @@
 <div class="form-actions">
 <button class="btn btn-primary" type="submit">Submit</button>
 </div>
-
 </form>
+
+  </div>
+  <div class="span3">
+    <h4>{% trans "Terms of participation" %}</h4>
+
+<p>{% trans "You need to complete 3 steps:" %}</p>
+<ol>
+    <li>{% trans "Make a request (fill in a form on the website)." %}.</li>
+    <li>{% trans "A copy of the application form will be sent via e-mail, you need to print it, sign and send in the mail." %}
+    <li>{% trans "Transfer a copy of the film (on disk by mail or via the Internet) to the organizing committee." %}</li>
+</ol>
+
+<p>{% trans "The film need to be sent on a DVD by mail or via the Internet. On disk (in a file) should be the film only (without menus, etc.)." %}</p>
+<p>{% trans "Film copies and signed application forms are accepted at:" %}</p>
+<blockquote>
+  Cinema Perpetuum Mobile<br />
+  {% trans "PO Box 74, Minsk" %}<br />
+  220050, {% trans "Belarus" %}<br />
+</blockquote>
+
+
+  </div>
+</div>
+
+
 {% endblock %}

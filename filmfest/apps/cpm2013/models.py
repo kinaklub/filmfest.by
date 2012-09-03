@@ -1,5 +1,6 @@
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 from hvad.models import TranslatableModel, TranslatedFields
 
@@ -8,112 +9,96 @@ from constants import YESNO, YESNOMAYBE, COUNTRIES, LANGUAGES,\
 
 
 class Submission(models.Model):
-    title = models.CharField(verbose_name=_('Title'), max_length=1000)
-    title_en = models.CharField(verbose_name=_('Title in English'),
+    title = models.CharField(verbose_name=_('Original title'), max_length=1000)
+    title_en = models.CharField(verbose_name=_('English title'),
                                 max_length=1000)
-    country = models.CharField(verbose_name=_('Country'),
+    country = models.CharField(verbose_name=_('Country of production'),
                                 max_length=2, choices=COUNTRIES)
-    language = models.CharField(verbose_name=_('Language'),
+    language = models.CharField(verbose_name=_('Language of original version'),
                                 max_length=10, choices=LANGUAGES)
+    genre = models.CharField(verbose_name=_('Genre'),
+                             max_length=1000, blank=True, null=True)
     section = models.IntegerField(verbose_name=_('Section'),
                                   choices=SECTIONS)
     synopsis = models.TextField(verbose_name=_('Synopsis'))
-    length = models.IntegerField(verbose_name=_('Length in minutes'))
+    length = models.IntegerField(verbose_name=_('Runtime (in minutes)'))
     aspect_ratio = models.CharField(verbose_name=_('Aspect ratio'),
                                     max_length=1000)
-    year = models.IntegerField(verbose_name=_('Year'))
-    premiere = models.IntegerField(verbose_name=_('Premiere'), choices=YESNO)
-    film_awards = models.TextField(
-        verbose_name=_('Film awards'), blank=True)
+    year = models.IntegerField(verbose_name=_('Year of production'))
+    premiere = models.IntegerField(verbose_name=_('Premiere'), choices=YESNO) ##
+    film_awards = models.TextField(verbose_name=_('Film awards'), blank=True)
     director_awards = models.TextField(
         verbose_name=_('Director awards'), blank=True)
-    budget = models.CharField(verbose_name=_('Budget'), max_length=1000)
+    budget = models.CharField(verbose_name=_('Film budget'), max_length=1000)
     attend = models.IntegerField(
-        verbose_name=_('Are you going to attend the festival?'),
+        verbose_name=_('I intend to visit final part of festival'),
         choices=YESNOMAYBE, default=0)
     backlink = models.IntegerField(
         verbose_name=_('The source of information about '\
                        'Cinema Perpetuum Mobile'),
         choices=BACKLINKS
-    )
+    )##
 
-    director = models.CharField(verbose_name=_('Director'),
+    director = models.CharField(verbose_name=_('Name'),
                                 max_length=1000)
-    director_address = models.TextField(verbose_name=_('Director\'s address'))
-    director_email = models.CharField(verbose_name=_('Director\'s email'),
+    director_address = models.TextField(verbose_name=_('Address'))
+    director_email = models.CharField(verbose_name=_('Email'),
                                       max_length=1000)
-    director_site = models.CharField(verbose_name=_('Director\'s website'),
+    director_site = models.CharField(verbose_name=_('Website'),
                                       max_length=1000, blank=True)
     director_phone = models.CharField(
-        verbose_name=_('Director\'s phone number'),
+        verbose_name=_('Tel.'),
         max_length=1000, blank=True)
 
-    producer = models.CharField(verbose_name=_('Producer'),
+    producer = models.CharField(verbose_name=_('Name'),
                                 max_length=1000, blank=True)
-    producer_address = models.TextField(
-        verbose_name=_('Producer\'s address'), blank=True)
+    producer_address = models.TextField(verbose_name=_('Address'), blank=True)
     producer_email = models.CharField(
-        verbose_name=_('Producer\'s email'), max_length=1000, blank=True)
+        verbose_name=_('Email'), max_length=1000, blank=True)
     producer_site = models.CharField(
-        verbose_name=_('Producer\'s website'), max_length=1000, blank=True)
+        verbose_name=_('Website'), max_length=1000, blank=True)
     producer_phone = models.CharField(
-        verbose_name=_('Producer\'s phone number'),
+        verbose_name=_('Tel.'),
         max_length=1000, blank=True)
 
-    screenwriter = models.CharField(verbose_name=_('Screenwriter'),
+    screenwriter = models.CharField(verbose_name=_('Script writer'),
                                     max_length=1000, blank=True)
     editor = models.CharField(verbose_name=_('Editor'),
                                  max_length=1000, blank=True)
-    music = models.CharField(verbose_name=_('Composer'),
+    music = models.CharField(verbose_name=_('Music composer'),
                                 max_length=1000, blank=True)
     director_photography = models.CharField(
         verbose_name=_('Director of photography'),
         max_length=1000, blank=True)
+    other_credits = models.TextField(verbose_name=_('Other credits'), blank=True)
 
-    owner = models.CharField(
-        verbose_name=_('Owner'), max_length=1000, blank=True)
-    owner_address = models.TextField(
-        verbose_name=_('Owner\'s address'), blank=True)
-    owner_email = models.CharField(
-        verbose_name=_('Owner\'s email'), max_length=1000, blank=True)
-    owner_site = models.CharField(
-        verbose_name=_('Owner\'s website'), max_length=1000, blank=True)
-    owner_phone = models.CharField(
-        verbose_name=_('Owner\'s phone number'), max_length=1000, blank=True)
-
-    distributor = models.CharField(
-        verbose_name=_('Distributor'), max_length=1000, blank=True)
-    distributor_address = models.TextField(
-        verbose_name=_('Distributor\'s address'), blank=True)
-    distributor_email = models.CharField(
-        verbose_name=_('Distributor\'s email'), max_length=1000, blank=True)
-    distributor_site = models.CharField(
-        verbose_name=_('Distributor\'s website'), max_length=1000, blank=True)
-    distributor_phone = models.CharField(
-        verbose_name=_('Distributor\'s phone number'),
-        max_length=1000, blank=True)
     
     allow_tv = models.IntegerField(
-        verbose_name=_('Allow usage in festival TV commercials'),
+        verbose_name=_('Authorization to use excerpts of the film for promotion (max 10% of the total length) in television'),
         choices=YESNO, default=1)
     allow_noncommercial = models.IntegerField(
-        verbose_name=_('Allow non commercial screenings'),
+        verbose_name=_('Authorization to include the film in the festival video collection for non-commercial screenings'),
         choices=YESNO, default=1)
     allow_network = models.IntegerField(
-        verbose_name=_('Allow screenings at partner\'s festivals'),
+        verbose_name=_('Authorization to screen the film at film festivals from CinemaPerpetuum Mobile partner network'),
         choices=YESNO, default=1)
 
-    applicant = models.CharField(verbose_name=_('Applicant'),
+    applicant = models.CharField(verbose_name=_('Name'),
                                 max_length=1000)
-    applicant_address = models.TextField(verbose_name=_('Applicant\'s address'))
-    applicant_email = models.CharField(verbose_name=_('Applicant\'s email'),
+    applicant_address = models.TextField(verbose_name=_('Address'))
+    applicant_email = models.CharField(verbose_name=_('Email'),
                                       max_length=1000)
-    applicant_site = models.CharField(verbose_name=_('Applicant\'s website'),
+    applicant_site = models.CharField(verbose_name=_('Website'),
                                       max_length=1000, blank=True)
     applicant_phone = models.CharField(
-        verbose_name=_('Applicant\'s phone number'),
+        verbose_name=_('Tel.'),
         max_length=1000, blank=True)
-    
+
+    submission_language = models.CharField(
+        verbose_name=_('Submission language'),
+        max_length=2, choices=settings.LANGUAGES,
+        default=settings.LANGUAGES[0][0])
+
     def __repr__(self):
         return '<Film %s>' % (self.title)
 

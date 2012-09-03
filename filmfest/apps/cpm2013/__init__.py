@@ -12,7 +12,6 @@ def get_urls():
             name='volunteers_questionnaire'),
         url(r'^rules/$', views.Rules(), name='rules'),
         url(r'^submit/$', views.submit, name='submit'),
-#        url(r'^test/$', views.test, name='test'),
     )
 
 urls = (get_urls(), 'cpm2013', 'cpm2013')

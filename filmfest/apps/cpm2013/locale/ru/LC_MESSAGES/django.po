@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-26 08:51+0300\n"
+"POT-Creation-Date: 2012-09-03 09:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,47 +21,47 @@ msgstr ""
 
 #: constants.py:7 constants.py:13
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: constants.py:8 constants.py:14
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: constants.py:12
 msgid "Maybe"
-msgstr ""
+msgstr "Возможно"
 
 #: constants.py:18
 msgid "Fiction"
-msgstr ""
+msgstr "Игровой"
 
 #: constants.py:19
 msgid "Animation"
-msgstr ""
+msgstr "Анимация"
 
 #: constants.py:20
 msgid "Documentary"
-msgstr ""
+msgstr "Документальный"
 
 #: constants.py:21
 msgid "Experimental"
-msgstr ""
+msgstr "Эксперимент"
 
 #: constants.py:22
 msgid "Musical video"
-msgstr ""
+msgstr "Музыкальное видео"
 
 #: constants.py:23
 msgid "Ecology"
-msgstr ""
+msgstr "Экология"
 
 #: constants.py:24
 msgid "Children"
-msgstr ""
+msgstr "Детский фильм"
 
 #: constants.py:28
 msgid "festival website"
-msgstr ""
+msgstr "сайт фестиваля"
 
 #: constants.py:29
 msgid "Facebook"
@@ -81,31 +81,31 @@ msgstr ""
 
 #: constants.py:33
 msgid "internet search"
-msgstr ""
+msgstr "поиск в интернете"
 
 #: constants.py:34
 msgid "friends"
-msgstr ""
+msgstr "друзья"
 
 #: constants.py:35
 msgid "festivals database"
-msgstr ""
+msgstr "база фестивалей"
 
 #: constants.py:36
 msgid "I participated in CPM'2012"
-msgstr ""
+msgstr "Я принимал участие в CPM'2012"
 
 #: constants.py:37
 msgid "place of study"
-msgstr ""
+msgstr "место учебы"
 
 #: constants.py:38
 msgid "work"
-msgstr ""
+msgstr "работа"
 
 #: constants.py:39
 msgid "other"
-msgstr ""
+msgstr "другое"
 
 #: constants.py:43
 msgid "Andorra"
@@ -239,7 +239,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76
+#: constants.py:76 templates/cpm2013/submit.html:54
 msgid "Belarus"
 msgstr ""
 
@@ -1063,217 +1063,181 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: forms.py:36
+#: forms.py:24
+msgid "I have read the rules of the festival and agree to its terms"
+msgstr "Я проел регламент фестиваля и согласен с его условиями"
+
+#: forms.py:28
+msgid ""
+"I declare that I am the legal owner of all rights relating to the submitted "
+"movie"
+msgstr "Я заявляю, что являюсь легальным обладателем всех прав на отправленный фильм"
+
+#: forms.py:51 pdf.py:36
 msgid "Film"
-msgstr ""
+msgstr "Фильм"
 
-#: forms.py:42 models.py:40
+#: forms.py:57 pdf.py:40
 msgid "Director"
-msgstr ""
+msgstr "Режиссер"
 
-#: forms.py:47 models.py:51
+#: forms.py:62 pdf.py:43
 msgid "Producer"
-msgstr ""
+msgstr "Продюсер"
 
-#: forms.py:52
-msgid "Rights holder"
-msgstr ""
+#: forms.py:67
+msgid "Credits"
+msgstr "Участники"
 
-#: forms.py:58 models.py:85
-msgid "Distributor"
-msgstr ""
-
-#: forms.py:63 models.py:106
+#: forms.py:72 pdf.py:46
 msgid "Applicant"
-msgstr ""
+msgstr "Заявитель"
 
-#: forms.py:68
+#: forms.py:77 pdf.py:49
 msgid "Permissions"
-msgstr ""
-
-#: models.py:11 models.py:124
-msgid "Title"
-msgstr ""
+msgstr "Права и ращрешения"
 
 #: models.py:12
-msgid "Title in English"
-msgstr ""
+msgid "Original title"
+msgstr "Название на языке оригинала"
 
-#: models.py:14
-msgid "Country"
-msgstr ""
+#: models.py:13
+msgid "English title"
+msgstr "Английское название"
 
-#: models.py:16
-msgid "Language"
-msgstr ""
+#: models.py:15
+msgid "Country of production"
+msgstr "Страна производства"
 
-#: models.py:18
-msgid "Section"
-msgstr ""
+#: models.py:17
+msgid "Language of original version"
+msgstr "Язык оригинала"
 
-#: models.py:20
-msgid "Synopsis"
-msgstr ""
+#: models.py:19
+msgid "Genre"
+msgstr "Жанр"
 
 #: models.py:21
-msgid "Length in minutes"
-msgstr ""
+msgid "Section"
+msgstr "Секция"
 
-#: models.py:22
-msgid "Aspect ratio"
-msgstr ""
+#: models.py:23
+msgid "Synopsis"
+msgstr "Синопсис"
 
 #: models.py:24
-msgid "Year"
-msgstr ""
+msgid "Runtime (in minutes)"
+msgstr "Продолжительность (в минутах)"
 
 #: models.py:25
-msgid "Premiere"
-msgstr ""
+msgid "Aspect ratio"
+msgstr "Отношение сторон"
 
 #: models.py:27
-msgid "Film awards"
-msgstr ""
+msgid "Year of production"
+msgstr "Год производства"
+
+#: models.py:28
+msgid "Premiere"
+msgstr "Премьерный показ"
 
 #: models.py:29
-msgid "Director awards"
-msgstr ""
+msgid "Film awards"
+msgstr "Награды фильма"
 
-#: models.py:30
-msgid "Budget"
-msgstr ""
+#: models.py:31
+msgid "Director awards"
+msgstr "Награды режиссера"
 
 #: models.py:32
-msgid "Are you going to attend the festival?"
-msgstr ""
+msgid "Film budget"
+msgstr "Бюджет фильма"
 
-#: models.py:35
+#: models.py:34
+msgid "I intend to visit final part of festival"
+msgstr "Я намерен посетить заключительный этап фестиваля"
+
+#: models.py:37
 msgid "The source of information about Cinema Perpetuum Mobile"
+msgstr "Источник информации о Cinema Perpetuum Mobile"
+
+#: models.py:42 models.py:53 models.py:86
+msgid "Name"
+msgstr "Имя"
+
+#: models.py:44 models.py:55 models.py:88
+msgid "Address"
+msgstr "Адрес"
+
+#: models.py:45 models.py:57 models.py:89
+msgid "Email"
 msgstr ""
 
-#: models.py:42
-msgid "Director's address"
-msgstr ""
+#: models.py:47 models.py:59 models.py:91
+msgid "Website"
+msgstr "Интернет сайт"
 
-#: models.py:43
-msgid "Director's email"
-msgstr ""
+#: models.py:50 models.py:61 models.py:94
+msgid "Tel."
+msgstr "Тел."
 
-#: models.py:45
-msgid "Director's website"
-msgstr ""
+#: models.py:64
+msgid "Script writer"
+msgstr "Сценарист"
 
-#: models.py:48
-msgid "Director's phone number"
-msgstr ""
-
-#: models.py:54
-msgid "Producer's address"
-msgstr ""
-
-#: models.py:56
-msgid "Producer's email"
-msgstr ""
-
-#: models.py:58
-msgid "Producer's website"
-msgstr ""
-
-#: models.py:60
-msgid "Producer's phone number"
-msgstr ""
-
-#: models.py:63
-msgid "Screenwriter"
-msgstr ""
-
-#: models.py:65
+#: models.py:66
 msgid "Editor"
-msgstr ""
+msgstr "Монтажер"
 
-#: models.py:67
-msgid "Composer"
-msgstr ""
+#: models.py:68
+msgid "Music composer"
+msgstr "Композитор"
 
-#: models.py:70
+#: models.py:71
 msgid "Director of photography"
-msgstr ""
+msgstr "Оператор"
 
-#: models.py:74
-msgid "Owner"
-msgstr ""
+#: models.py:73
+msgid "Other credits"
+msgstr "Другие участники"
 
-#: models.py:76
-msgid "Owner's address"
-msgstr ""
-
-#: models.py:78
-msgid "Owner's email"
-msgstr ""
+#: models.py:77
+msgid ""
+"Authorization to use excerpts of the film for promotion (max 10% of the "
+"total length) in television"
+msgstr "Разрешение на использование отрывков фильма для промоушна (не более 10% продолжительности) на телевидении"
 
 #: models.py:80
-msgid "Owner's website"
-msgstr ""
+msgid ""
+"Authorization to include the film in the festival video collection for non-"
+"commercial screenings"
+msgstr "Разрешение на включение фильма в сборник фестиваля для некоммерческих показов"
 
-#: models.py:82
-msgid "Owner's phone number"
-msgstr ""
+#: models.py:83
+msgid ""
+"Authorization to screen the film at film festivals from CinemaPerpetuum "
+"Mobile partner network"
+msgstr "Разрешение на участие и показ фильма в других фестивалях в рамках фестивальной партнёрской сети Cinema Perpetuum Mobile"
 
-#: models.py:87
-msgid "Distributor's address"
-msgstr ""
+#: models.py:98
+msgid "Submission language"
+msgstr "Язык заявки"
 
-#: models.py:89
-msgid "Distributor's email"
-msgstr ""
+#: models.py:109 models.py:118
+msgid "Title"
+msgstr "Название"
 
-#: models.py:91
-msgid "Distributor's website"
-msgstr ""
-
-#: models.py:93
-msgid "Distributor's phone number"
-msgstr ""
-
-#: models.py:97
-msgid "Allow usage in festival TV commercials"
-msgstr ""
-
-#: models.py:100
-msgid "Allow non commercial screenings"
-msgstr ""
-
-#: models.py:103
-msgid "Allow screenings at partner's festivals"
-msgstr ""
-
-#: models.py:108
-msgid "Applicant's address"
-msgstr ""
-
-#: models.py:109
-msgid "Applicant's email"
-msgstr ""
-
-#: models.py:111
-msgid "Applicant's website"
-msgstr ""
-
-#: models.py:114
-msgid "Applicant's phone number"
-msgstr ""
-
-#: models.py:125
+#: models.py:110
 msgid "Short text"
 msgstr ""
 
-#: models.py:126
+#: models.py:111 models.py:119
 msgid "Text"
 msgstr ""
 
 #: validators.py:6
 msgid "Please check if you agree"
-msgstr ""
+msgstr "Пожалуйста, подтвердите, что вы согласны"
 
 #: templates/cpm2013/base.html:25
 msgid "международный фестиваль"
@@ -1295,11 +1259,12 @@ msgid ""
 "artistically interpret the theme and develop their ideas on what the "
 "“perpetuum mobile” is."
 msgstr ""
-"В январе 2013 года пройдет Второй ежегодный фестиваль <strong>Cinema Perpetuum "
-"Mobile</strong>. Показы СРМ-2013 пройдут не только в Минске, но одновременно и в "
-"других областных центрах и крупных городах Беларуси. Мероприятия пройдут "
-"также за пределами страны в рамках партнерского сотрудничества с "
-"белорусскими культурными сообществами и другими кинофестивалями."
+"В январе 2013 года пройдет Второй ежегодный фестиваль <strong>Cinema "
+"Perpetuum Mobile</strong>. Показы СРМ-2013 пройдут не только в Минске, но "
+"одновременно и в других областных центрах и крупных городах Беларуси. "
+"Мероприятия пройдут также за пределами страны в рамках партнерского "
+"сотрудничества с белорусскими культурными сообществами и другими "
+"кинофестивалями."
 
 #: templates/cpm2013/index.html:10
 msgid ""
@@ -1310,10 +1275,11 @@ msgid ""
 msgstr ""
 "Ежегодный международный фестиваль короткометражных фильмов Cinema Perpetuum "
 "Mobile ─ некоммерческое культурное мероприятие, которое нацелено на:"
-"<ol><li>продвижение независимого авторского кинематографа;</li>"
-"<li>поиск новых форм и решений в киноискусстве;</li>"
-"<li>содействие культурному разнообразию в кино;</li>"
-"<li>развитие и укрепление связей между кинематографистами и кинематографическими сообществами по всему миру.</li></ol>"
+"<ol><li>продвижение независимого авторского кинематографа;</li><li>поиск "
+"новых форм и решений в киноискусстве;</li><li>содействие культурному "
+"разнообразию в кино;</li><li>развитие и укрепление связей между "
+"кинематографистами и кинематографическими сообществами по всему миру.</li></"
+"ol>"
 
 #: templates/cpm2013/index.html:12
 msgid ""
@@ -1327,10 +1293,60 @@ msgid ""
 "decentralization, mutual aid."
 msgstr ""
 "Cinema Perpetuum Mobile – <strong>социальный проект</strong>, который "
-"создается людьми на принципах <em>самоорганизации, взаимопомощи, "
-"открытости, прозрачности и децентрализации</em>. Это означает, что любой "
-"человек может принять участие в общем деле по организации фестиваля и "
-"наблюдать как это делают другие."
+"создается людьми на принципах <em>самоорганизации, взаимопомощи, открытости, "
+"прозрачности и децентрализации</em>. Это означает, что любой человек может "
+"принять участие в общем деле по организации фестиваля и наблюдать как это "
+"делают другие."
+
+#: templates/cpm2013/submit.html:40
+msgid "Terms of participation"
+msgstr "Условия участия"
+
+#: templates/cpm2013/submit.html:42
+msgid "You need to complete 3 steps:"
+msgstr "Вам нужно выполнить 3 шага"
+
+#: templates/cpm2013/submit.html:44
+msgid "Make a request (fill in a form on the website)."
+msgstr "Заполнить заявку (заполнить форму на сайте)"
+
+#: templates/cpm2013/submit.html:45
+msgid ""
+"A copy of the application form will be sent via e-mail, you need to print "
+"it, sign and send in the mail."
+msgstr "Копия заявки будет отправлена вам по электронной почте; вам нужно распечатать ее, подписать и отправить почтой."
+
+#: templates/cpm2013/submit.html:46
+msgid ""
+"Transfer a copy of the film (on disk by mail or via the Internet) to the "
+"organizing committee."
+msgstr "Передать копию фильма (на диске почтой или через интернет) организационному комитету"
+
+#: templates/cpm2013/submit.html:49
+msgid ""
+"The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
+"file) should be the film only (without menus, etc.)."
+msgstr "Фильм должен быть отпралвен на DVD почтой или через интернет. На диске (в файле) должен быть только фильм (без меню и пр.)"
+
+#: templates/cpm2013/submit.html:50
+msgid "Film copies and signed application forms are accepted at:"
+msgstr "Копии фильмов и подписанные заявки принимаются по адресу"
+
+#: templates/cpm2013/submit.html:53
+msgid "PO Box 74, Minsk"
+msgstr "а/я 74, Минск"
+
+#: templates/cpm2013/submit_done.html:5
+msgid "Thank you for submission!"
+msgstr "Спасибо за регистрацию!"
+
+#: templates/cpm2013/submit_done.html:7
+#, python-format
+msgid ""
+"\n"
+"Submission form along with further instructions will be sent to %(email)s "
+"soon.\n"
+msgstr "\nФорма заявки вместе с дальнейшими инструкциями будет отправлена на %(email)s в самое ближайшее время.\n"
 
 #: templates/cpm2013/submit_temp.html:5
 msgid "Dear friends!"

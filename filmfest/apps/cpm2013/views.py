@@ -1,15 +1,19 @@
 import io
 import os
+import os.path
+from tex import latex2pdf
 
 from django.http import HttpResponse
 from django.views.generic.create_update import create_object
 from django.shortcuts import render_to_response, get_object_or_404
-from django.template import RequestContext
+from django.template import loader, RequestContext
 from django.utils import translation
+from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
 from apps.cpm2013.models import Submission, NewsEntry, Page
 from apps.cpm2013.forms import SubmissionForm
+from apps.cpm2013.tasks import SendSubmissionEmail
 
 def index(request):
     news = NewsEntry.objects.language().order_by('-added_at')[:10]
@@ -20,15 +24,24 @@ def index(request):
     )
 
 def submit(request):
-    return render_to_response(
-        'cpm2013/submit_temp.html',
-        {},
-        context_instance=RequestContext(request),
-    )
+    form = SubmissionForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        submission = form.save(commit=False)
+        submission.submission_language = translation.get_language()
+        submission.save()
 
-    return create_object(
-        request, model=Submission, form_class=SubmissionForm,
-        template_name='cpm2013/submit.html'
+        #SendSubmissionEmail.apply_async(submission)
+        
+        return render_to_response(
+            'cpm2013/submit_done.html',
+            {'email': submission.applicant_email},
+            context_instance=RequestContext(request),
+        )
+        
+    return render_to_response(
+        'cpm2013/submit.html',
+        {'form': form},
+        context_instance=RequestContext(request),
     )
 
 def page(request, slug):
@@ -72,23 +85,3 @@ class Rules:
             {'rules': rules},
             context_instance=RequestContext(request),
         )
-
-from django_xhtml2pdf.utils import generate_pdf
-
-def test(request):
-    template_name = 'cpm2013/pdf/submission.html'
-    context = {}
-
-    resp = HttpResponse(content_type='application/pdf')
-
-    from django.template.loader import get_template
-    from django.template.context import Context
-
-    tmpl = get_template(template_name)
-    html = tmpl.render(Context(context))
-
-    from xhtml2pdf import pisa
-    pisa.pisaDocument(html.encode("utf-8"), resp , encoding='utf-8')
-    
-    return resp
-

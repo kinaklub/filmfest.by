@@ -1,0 +1,11 @@
+{% load latex_tags %}
+{% for section, fields in sections %}
+\section{% templatetag openbrace %}{{ section|latexescape }}{% templatetag closebrace %}
+
+  {% for name, value in fields %}
+  \cvitem{% templatetag openbrace %}{{ name|latexescape }}{% templatetag closebrace %}{% templatetag openbrace %}{{ value|latexescape }}{% templatetag closebrace %}
+  {% endfor %}
+
+{% endfor %}
+
+\end{% templatetag openbrace %}document{% templatetag closebrace %}

@@ -1,0 +1,11 @@
+{% extends "cpm2013/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h3>{% trans "Thank you for submission!" %}</h3>
+
+<p>{% blocktrans with email=email %}
+Submission form along with further instructions will be sent to {{ email }} soon.
+{% endblocktrans %}</p>
+
+{% endblock %}

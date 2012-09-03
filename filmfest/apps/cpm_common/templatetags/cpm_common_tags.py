@@ -10,9 +10,13 @@ register = template.Library()
 
 MAINMENU_ITEMS = [
     (_('Home'), reverse('cpm2013:index'), ()),
-    (_('Rules'), reverse('cpm2013:rules'), ()),
-#    (_('Submit your film!'), reverse('cpm2013:submit'), ()),
-    (_('2012: good memories'), reverse('cpm2012:index'), ()),
+    (_('Festival'), '', (
+        (_('2012: good memories'), reverse('cpm2012:index')),
+    )),
+    (_('Participnats'), '', (
+        (_('Rules'), reverse('cpm2013:rules')),
+        (_('Submit your film!'), reverse('cpm2013:submit')),
+    )),
     (_('Volunteers'), '', (
         (_('Memo'), reverse('cpm2013:page', args=['memo_volunteers'])),
         (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire'))
