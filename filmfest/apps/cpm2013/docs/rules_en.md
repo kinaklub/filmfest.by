@@ -31,13 +31,13 @@ The official selection of the festival includes the following sections:
 * ecological films;
 * children and youth films.
 
-The Grand Prix winner is defined by the jury evaluation and the audience’s opinion. Based on the jury’s opinion, The Organizing Committee will choose the best films in the following nominations
-:
-* perpetual motion machine;
-* perpetual love;
-* perpetual freedom;
-* perpetual fight;
-* perpetual art.
+The Grand Prix winner is defined by the jury evaluation and the audience’s opinion. Based on the jury’s opinion, The Organizing Committee will choose the best films in the following nominations:
+
+* Perpetual motion machine;
+* Perpetual love;
+* Perpetual freedom;
+* Perpetual fight;
+* Perpetual art.
 
 Films for the festival program are selected by volunteering viewers and the Organizing Committee members.
 
