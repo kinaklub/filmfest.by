@@ -1,4 +1,4 @@
-{% load i18n cpm_common_tags %}<!DOCTYPE html>
+{% load i18n cpm_common_tags piwik_tags %}<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -52,6 +52,6 @@
     <div id="content-container" class="container">
       {% block content %}{% endblock %}
     </div>
-    {% include "piwik.html" %}
+    {% piwik %}
   </body>
 </html>

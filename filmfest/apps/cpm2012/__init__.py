@@ -4,7 +4,7 @@ def get_urls():
 
     return patterns('',
         url(r'^$', direct_to_template, {'template': 'cpm2012/index.html'}, name='index'),
-        url(r'^cast/$', direct_to_template, {'template': 'cpm2012/cast.html'}, name='casr'),
+        url(r'^cast', direct_to_template, {'template': 'cpm2012/cast.html'}, name='casr'),
     )
 
 urls = (get_urls(), 'cpm2012', 'cpm2012')
