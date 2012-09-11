@@ -30,7 +30,7 @@ def submit(request):
         submission.submission_language = translation.get_language()
         submission.save()
 
-        #SendSubmissionEmail.apply_async(submission)
+        SendSubmissionEmail().apply_async(args=[submission])
         
         return render_to_response(
             'cpm2013/submit_done.html',
@@ -73,11 +73,13 @@ class Rules:
 
     @classmethod
     def translation(cls, lang):
+        if lang is None:
+            lang = translation.get_language()
         return os.path.join(cls.PATH, getattr(cls, lang.upper(), cls.EN))
 
-    def __call__(self, request):
+    def __call__(self, request, lang=None):
         rules = io.open(
-            self.translation(translation.get_language()),
+            self.translation(lang),
             'r', encoding='utf-8'
         ).read()
         return render_to_response(
