@@ -5,7 +5,7 @@ from hvad.admin import TranslatableAdmin
 from apps.cpm2013.models import Submission, NewsEntry, Page
 
 class SubmissionAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'applicant_email']
 class NewsAdmin(TranslatableAdmin):
     pass
 class PageAdmin(TranslatableAdmin):
