@@ -1,36 +1,13 @@
+import io
 import re
 import os.path
+from cStringIO import StringIO
 
 from django.utils.translation import ugettext_lazy as _
+from django.utils import translation
 from django.conf import settings
 
-from tex import latex2pdf
-
 from apps.cpm2013.models import Submission
-
-_REPLACE_RULES = {
-    '#': '\\#',
-    '$': '\\$',
-    '%': '\\%',
-    '&': '\\&',
-    '~': '\\~{}',
-    '_': '\\_',
-    '^': '\\^{}',
-    '\\': '\\textbackslash{}',
-    '{': '\\{',
-    '}': '\\}',
-    '\r': '',
-    '\n': ' ',
-}
-_RE = re.compile(
-    '[%s]' % ''.join(
-        re.escape(key) for key in _REPLACE_RULES.iterkeys()
-    )
-)
-def _escape_latex_symbol(matchobj):
-    return _REPLACE_RULES[matchobj.group(0)]
-def latex_escape(value):
-    return _RE.sub(_escape_latex_symbol, unicode(value))
 
 SUBMIT_CONFIRMATION = [
     (_('Film'), [
@@ -46,25 +23,58 @@ SUBMIT_CONFIRMATION = [
     (_('Applicant'), [
         'applicant', 'applicant_address', 'applicant_email',
         'applicant_site', 'applicant_phone', 'attend']),
-    (_('Permissions'), [
-        'allow_tv', 'allow_noncommercial', 'allow_network']),
 ]
-def _get_confirmation_fields_latex(sections):
-    sections_tex = []
+SUBMIT_CONFIRMATION_PERMISSIONS = [
+    'allow_tv', 'allow_noncommercial', 'allow_network'
+]
+
+SUBMISSION_RST = {
+    'en': 'submission_en.rst',
+    'be': 'submission_be.rst',
+    'ru': 'submission_ru.rst',
+}
+DEFAULT_SUBMISSION_RST = SUBMISSION_RST['en']
+
+def _escape_rst(value):
+    lines = []
+    for line in unicode(value).split('\n'):
+        lines.append(
+            ''.join(
+                '\%s' % c if c != ' ' else c for\
+                c in line.strip()
+            )
+        )
+    return '\n\n'.join(lines)
+
+def _get_rst_fields(sections, permissions):
+    sections_rst = []
     for section, cv_items in sections:
         if not any(value for name, value in cv_items):
             continue
 
-        cv_items_latex = '\n'.join(
-            '\cvitem{%s}{%s}' % (latex_escape(n), latex_escape(v)) \
+        section_rst = '\n'.join(
+            u'* %s\n    %s' % (
+                n,
+                '\n    '.join(_escape_rst(v).split('\n'))
+            ) \
             for n,v in cv_items if not (v is None or v == '')
         )
 
-        sections_tex.append('\section{%s}\n%s' % (
-            latex_escape(section), cv_items_latex
+        sections_rst.append(u'\n%s\n%s\n\n%s' % (
+            section, '-' * len(section), section_rst
         ))
 
-    return '\n'.join(sections_tex)
+    for section, cv_items in permissions:
+        section_rst = '\n\n'.join(
+            '* ' + _escape_rst(name) for name in cv_items
+        )
+        sections_rst.append(u'\n%s\n%s\n\n%s' % (
+            section, '-' * len(section), section_rst
+        ))
+        
+    return {
+        'sections': '\n'.join(sections_rst),
+    }
 
 
 def get_submission_confirmation_report(submission):
@@ -82,11 +92,36 @@ def get_submission_confirmation_report(submission):
 
         sections.append((section, cv_items))
 
+    permissions = []
+    for field in SUBMIT_CONFIRMATION_PERMISSIONS:
+        value = getattr(submission, field)
+        if value != 1:
+            continue
 
-    with open(os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs',
-                           'submission.tex')) as submission_head:
-        latex_data = submission_head.read() % (
-            _get_confirmation_fields_latex(sections),
-        )
+        model_field = Submission._meta.get_field_by_name(field)[0]
+        name = model_field.verbose_name
+        permissions.append(name)
+    if permissions:
+        permissions = [(_('Permissions'), permissions)]
 
-    return latex2pdf(latex_data)
+
+    docs = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs')
+    lang = translation.get_language().lower()
+    submission_rst = os.path.join(
+        docs, SUBMISSION_RST.get(lang, DEFAULT_SUBMISSION_RST))
+    with io.open(submission_rst, encoding='utf-8') as submission_head:
+        rst_data = submission_head.read() % _get_rst_fields(
+            sections, permissions)
+
+    from rst2pdf.createpdf import RstToPdf
+    pdf_creator = RstToPdf(
+        stylesheets=[os.path.join(docs, 'submission2.stylesheet')],
+        font_path=['/usr/share/fonts/TTF/'],
+        breaklevel=0,
+    )
+
+    with io.open('/tmp/cpm.rst', 'w', encoding='utf-8') as w:
+        w.write(rst_data)
+    pdf_content = StringIO()
+    pdf_creator.createPdf(text=rst_data, output=pdf_content)
+    return pdf_content.getvalue()

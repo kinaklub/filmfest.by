@@ -24,14 +24,14 @@ class SendSubmissionEmail(Task):
         )
         
     def run(self, submission):
-        logger.info('SendSubmissionEmail for submission %s %r' % (
-            submission.id, submission
+        logger.info('SendSubmissionEmail for submission %s' % (
+            submission.id
         ))
         try:
             translation.activate(submission.submission_language)
 
             email = EmailMessage(
-                'Cinema Paerpetuum Mobile 2013',
+                'Cinema Perpetuum Mobile 2013',
                 self.get_email_message(submission),
                 'no-reply@filmfest.by',
                 [submission.applicant_email],
