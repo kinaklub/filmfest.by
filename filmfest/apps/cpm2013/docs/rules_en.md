@@ -50,15 +50,18 @@ The festival’s working languages are English, Belarusian and Russian. If a fil
 Films should be sent in the DVD format. Other formats can be used only upon the Organizing Committee’s consent.
 
 In order to take part in the festival, participants are required to submit the following materials:
+
 * a film;
 * a filled in and printed registration form;
 * film screenshots (two or more).
 
 The online registration form can be filled in [here]( http://filmfest.by/2013/submit/ ). Once completed, it is automatically sent to the email address provided in the form. It should be printed, signed and sent along with the DVD to the following address:
 
-Cinema Perpetuum Mobile
-PO Box 74, Minsk
-220050, Belarus 
+>Cinema Perpetuum Mobile
+
+>PO Box 74, Minsk
+
+>220050, Belarus 
 
 Please mark the envelope with the note “No commercial value, for cultural purposes only”. Submitted works are not returnable. 
 

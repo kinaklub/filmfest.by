@@ -2,5 +2,7 @@
 {% load markup %}
 
 {% block content %}
-{{ rules|markdown }}
+<div{% if rtl %} dir="rtl" {% endif %}>
+  {{ rules|markdown }}
+</div>
 {% endblock %}

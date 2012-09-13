@@ -2,7 +2,7 @@ def get_urls():
     from django.conf.urls import patterns, include, url
     from django.views.generic.simple import direct_to_template
 
-    import views
+    from apps.cpm2013 import views
 
     return patterns('',
         url(r'^$', views.index, name='index'),
@@ -10,7 +10,8 @@ def get_urls():
         url(r'^volunteers/questionnaire', direct_to_template,
             {'template': 'cpm2013/volunteers_questionnaire.html'},
             name='volunteers_questionnaire'),
-        url(r'^rules', views.Rules(), name='rules'),
+        url(r'^rules/(?P<lang>\w{2})', views.rules, name='rules_lang'),
+        url(r'^rules', views.rules, name='rules'),
         url(r'^submit', views.submit, name='submit'),
     )
 

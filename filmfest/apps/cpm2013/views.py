@@ -69,21 +69,37 @@ class Rules:
     RU = 'rules_ru.md'
     EN = 'rules_en.md'
 
+    DE = 'rules_de.md'
+    PL = 'rules_pl.md'
+    ES = 'rules_es.md'
+    AR = 'rules_ar.md'
+
+    RTL = set(('AR',))
     PATH = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs')
 
     @classmethod
     def translation(cls, lang):
         if lang is None:
             lang = translation.get_language()
-        return os.path.join(cls.PATH, getattr(cls, lang.upper(), cls.EN))
+        lang = lang.upper()
+
+        rules = os.path.join(cls.PATH, getattr(cls, lang, cls.EN))
+        rtl = lang in cls.RTL
+
+        return rules, rtl
 
     def __call__(self, request, lang=None):
+        rules_filename, rtl = self.translation(lang)
         rules = io.open(
-            self.translation(lang),
+            rules_filename,
             'r', encoding='utf-8'
         ).read()
         return render_to_response(
             'cpm2013/rules.html',
-            {'rules': rules},
+            {
+                'rules': rules,
+                'rtl': rtl
+            },
             context_instance=RequestContext(request),
         )
+rules = Rules()
