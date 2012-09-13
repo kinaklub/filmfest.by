@@ -1,5 +1,5 @@
 {% extends "cpm2013/base.html" %}
-{% load i18n %}
+{% load i18n markup %}
 
 {% block content %}
 <div class="row">
@@ -33,7 +33,7 @@
       <h3>Latest news</h3>
       {% for news_entry in news %}
         <h4>{{ news_entry.title }}</h4>
-	<div>{{ news_entry.short_text|linebreaksbr }}</div>
+	<div>{{ news_entry.short_text|markdown }}</div>
       {% endfor %}
     </div>
   </div>
