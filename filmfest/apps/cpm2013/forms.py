@@ -47,7 +47,7 @@ class SubmissionForm(BetterModelForm):
                 'fields': ['title', 'title_en', 'country', 'language', 'genre',
                            'section', 'synopsis', 'length', 'aspect_ratio',
                            'year', 'premiere', 'film_awards',
-                           'budget', 'backlink'],
+                           'budget', 'film_link', 'backlink'],
                 'legend': _('Film'),
             }),
             ('director', {

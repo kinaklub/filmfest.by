@@ -30,6 +30,11 @@ class Submission(models.Model):
     director_awards = models.TextField(
         verbose_name=_('Director awards'), blank=True)
     budget = models.CharField(verbose_name=_('Film budget'), max_length=1000)
+    film_link = models.CharField(
+        verbose_name=_('Link to download the film (optional)'),
+        max_length=1000, blank=True
+    )
+
     attend = models.IntegerField(
         verbose_name=_('I intend to visit final part of festival'),
         choices=YESNOMAYBE, default=0)
@@ -74,13 +79,13 @@ class Submission(models.Model):
 
     
     allow_tv = models.IntegerField(
-        verbose_name=_('Authorization to use excerpts of the film for promotion (max 10% of the total length) in television'),
+        verbose_name=_('Authorization to use excerpts of the film for promotion (max 10%% of the total length) in television') % {},
         choices=YESNO, default=1)
     allow_noncommercial = models.IntegerField(
         verbose_name=_('Authorization to include the film in the festival video collection for non-commercial screenings'),
         choices=YESNO, default=1)
     allow_network = models.IntegerField(
-        verbose_name=_('Authorization to screen the film at film festivals from CinemaPerpetuum Mobile partner network'),
+        verbose_name=_('Authorization to screen the film at film festivals from Cinema Perpetuum Mobile partner network'),
         choices=YESNO, default=1)
 
     applicant = models.CharField(verbose_name=_('Name'),

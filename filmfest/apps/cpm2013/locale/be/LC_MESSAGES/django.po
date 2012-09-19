@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-19 09:03+0300\n"
+"POT-Creation-Date: 2012-09-19 09:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1154,88 +1154,93 @@ msgid "Film budget"
 msgstr "Бюджэт фільма"
 
 #: models.py:34
+msgid "Link to download the film (optional)"
+msgstr "Спасылка на запампоўку фільма (калі ёсць)"
+
+#: models.py:39
 msgid "I intend to visit final part of festival"
 msgstr "І збіраюся прысутнічаць на фінальнай частцы фестываля"
 
-#: models.py:37
+#: models.py:42
 msgid "The source of information about Cinema Perpetuum Mobile"
 msgstr "Крыніца інфармацыі аб Cinema Perpetuum Mobile"
 
-#: models.py:42 models.py:53 models.py:86
+#: models.py:47 models.py:58 models.py:91
 msgid "Name"
 msgstr "Імя"
 
-#: models.py:44 models.py:55 models.py:88
+#: models.py:49 models.py:60 models.py:93
 msgid "Address"
 msgstr "Адрас"
 
-#: models.py:45 models.py:57 models.py:89
+#: models.py:50 models.py:62 models.py:94
 msgid "Email"
 msgstr ""
 
-#: models.py:47 models.py:59 models.py:91
+#: models.py:52 models.py:64 models.py:96
 msgid "Website"
 msgstr "Вэбсайт"
 
-#: models.py:50 models.py:61 models.py:94
+#: models.py:55 models.py:66 models.py:99
 msgid "Tel."
 msgstr "Тел."
 
-#: models.py:64
+#: models.py:69
 msgid "Script writer"
 msgstr "Сцэнарыст"
 
-#: models.py:66
+#: models.py:71
 msgid "Editor"
 msgstr "Мантажор"
 
-#: models.py:68
+#: models.py:73
 msgid "Music composer"
 msgstr "Кампазытар"
 
-#: models.py:71
+#: models.py:76
 msgid "Director of photography"
 msgstr "Аператар"
 
-#: models.py:73
+#: models.py:78
 msgid "Other credits"
 msgstr "Іншыя ўдзельнікі"
 
-#: models.py:77
+#: models.py:82
+#, python-format
 msgid ""
-"Authorization to use excerpts of the film for promotion (max 10% of the "
+"Authorization to use excerpts of the film for promotion (max 10%% of the "
 "total length) in television"
 msgstr ""
-"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10% даўжыні фільма) па "
+"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10%% даўжыні фільма) па "
 "тэлебачанні"
 
-#: models.py:80
+#: models.py:85
 msgid ""
 "Authorization to include the film in the festival video collection for non-"
 "commercial screenings"
 msgstr "Дазвол уключаць фільм у каллекцыю фестываля для некамерцыйных паказаў"
 
-#: models.py:83
+#: models.py:88
 msgid ""
-"Authorization to screen the film at film festivals from CinemaPerpetuum "
+"Authorization to screen the film at film festivals from Cinema Perpetuum "
 "Mobile partner network"
 msgstr ""
 "Дазвол паказваць фільм на фестывалях з пертнёрскай сеткі Cinema Perpetuum "
 "Mobile"
 
-#: models.py:98
+#: models.py:103
 msgid "Submission language"
 msgstr ""
 
-#: models.py:109 models.py:118
+#: models.py:114 models.py:123
 msgid "Title"
 msgstr ""
 
-#: models.py:110
+#: models.py:115
 msgid "Short text"
 msgstr ""
 
-#: models.py:111 models.py:119
+#: models.py:116 models.py:124
 msgid "Text"
 msgstr ""
 
