@@ -57,7 +57,7 @@ In order to take part in the festival, participants are required to submit the f
 
 The online registration form can be filled in [here]( http://filmfest.by/2013/submit/ ). Once completed, it is automatically sent to the email address provided in the form. It should be printed, signed and sent along with the DVD to the following address:
 
->Cinema Perpetuum Mobile
+>Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
 >PO Box 74, Minsk
 

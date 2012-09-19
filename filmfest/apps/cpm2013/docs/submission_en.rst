@@ -14,7 +14,7 @@ If your film is done in another language different from English, Russian or Bela
 
 Film submission form must be sent with DVD before  November 15, 2011 to 
 
-  “Cinema Perpetuum Mobile ”
+  “Aliaksandr Martyniuk, Cinema Perpetuum Mobile ”
 
   PO Box 74
 

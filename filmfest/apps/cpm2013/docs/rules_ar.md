@@ -76,7 +76,7 @@
 
 يتم ارسال الاستمارة المملوءة تلقائيا الى عنوان البريد الالكتروني المذكور في الاستمارة و يجب ان تكون مطبوعة و موقعة و مرسلة مع القرص دي في دي الى العنوان التالي:
 
->Cinema Perpetuum Mobile
+>Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
 >PO Box 74, Minsk
 

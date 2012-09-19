@@ -61,7 +61,7 @@ Dla uczestnictwa w festiwalu należy przedstawić następne materiały:
 
 Ankieta uczestnika wypełnia się [on-line]( http://filmfest.by/2013/submit/ ). Wypełniona on-line ankieta automatycznie wysyłana pod wskazany w ankiecie elektroniczny adres; ona powinna być wydrukowana, podpisana i wysłana razem z DVD - dyskiem pod następny adres:
 
->Cinema Perpetuum Mobile
+>Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
 >PO Box 74, Minsk
 

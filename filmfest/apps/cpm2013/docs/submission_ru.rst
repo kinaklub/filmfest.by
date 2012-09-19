@@ -14,7 +14,7 @@ Cinema Perpetuum Mobile 2013
 
 Заявка должна быть отправлена вместе с DVD-диском не позднее 15 ноября 2012 года на адрес
 
-  “Cinema Perpetuum Mobile ”
+  “Мартынюку А., Cinema Perpetuum Mobile ”
 
   а/я 74
 

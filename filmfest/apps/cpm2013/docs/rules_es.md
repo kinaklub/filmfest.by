@@ -61,7 +61,7 @@ Para tomar parte en el festival es necesario presentar materials siguientes:
 
 El formulario del participante debe ser rellanado online [referencia](http://filmfest.by/2013/submit/ ). El formulario rellenado online se envía automáticamente a la dirección electrónica indicada en el formulario; él debe ser imprimido, firmado y enviado junto con el disco DVD a la dirección siguiente:
 
->Cinema Perpetuum Mobile
+>Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
 >PO Box 74, Minsk
 

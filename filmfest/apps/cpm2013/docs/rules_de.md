@@ -62,7 +62,7 @@ Zur Teilnahme am Festival müssen Sie die folgenden Materialen vorlegen:
 
 Das Anmeldeformular des Teilnehmers wird online [unter]( http://filmfest.by/2013/submit/ ) ausgefüllt. Das ausgefüllte Anmeldeformular wird automatisch auf von Ihnen angegebene e-Mail Adresse gesendet. Das Anmeldeformular soll ausgedruckt und unterschrieben zusammen mit der DVD geschickt werden an:  
 
->Cinema Perpetuum Mobile
+>Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
 >PO Box 74, Minsk
 
