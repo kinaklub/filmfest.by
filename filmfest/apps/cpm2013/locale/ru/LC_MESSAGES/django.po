@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-19 09:16+0300\n"
+"POT-Creation-Date: 2012-09-19 09:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -239,7 +239,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76 templates/cpm2013/submit.html:54
+#: constants.py:76 templates/cpm2013/submit.html:55
 msgid "Belarus"
 msgstr ""
 
@@ -1369,14 +1369,18 @@ msgid "Aliaksandr Martyniuk"
 msgstr "Александр Мартынюк"
 
 #: templates/cpm2013/submit.html:53
-msgid "PO Box 74, Minsk"
-msgstr "а/я 74, Минск"
+msgid "PO Box 74"
+msgstr "а/я 74"
 
-#: templates/cpm2013/submit.html:56
+#: templates/cpm2013/submit.html:54
+msgid "Minsk"
+msgstr "Минск"
+
+#: templates/cpm2013/submit.html:57
 msgid "Deadline: <strong>November 15, 2012</strong>"
 msgstr "Крайний срок: <strong>15 ноября 2012</strong>"
 
-#: templates/cpm2013/submit.html:57
+#: templates/cpm2013/submit.html:58
 msgid "Complete festival rules can be found here:"
 msgstr "Полный регламент фестиваля можно найти тут:"
 

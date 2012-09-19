@@ -64,9 +64,11 @@ Das Anmeldeformular des Teilnehmers wird online [unter]( http://filmfest.by/2013
 
 >Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
->PO Box 74, Minsk
+>PO Box 74
 
->220050, Belarus 
+>220050, Minsk
+
+>Belarus 
 
 Auf der Verpackung soll “No commercial value, for cultural purposes only” vermerkt sein. Alle angesandten DVDs werden nicht zurückgegeben.
 

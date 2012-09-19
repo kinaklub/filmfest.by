@@ -73,6 +73,7 @@ class Rules:
     PL = 'rules_pl.md'
     ES = 'rules_es.md'
     AR = 'rules_ar.md'
+    IT = 'rules_it.md'
 
     RTL = set(('AR',))
     PATH = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs')

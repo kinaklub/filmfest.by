@@ -63,9 +63,11 @@ El formulario del participante debe ser rellanado online [referencia](http://fil
 
 >Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
->PO Box 74, Minsk
+>PO Box 74
 
->220050, Belarus 
+>220050, Minsk
+
+>Belarus 
 
 Es deseable que escriban Uds. “No commercial value, for cultural purposes only” en un sobre. Los discos enviados no serán devueltos.
 

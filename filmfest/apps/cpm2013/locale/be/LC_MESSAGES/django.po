@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-19 09:16+0300\n"
+"POT-Creation-Date: 2012-09-19 09:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,7 +237,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76 templates/cpm2013/submit.html:54
+#: constants.py:76 templates/cpm2013/submit.html:55
 msgid "Belarus"
 msgstr ""
 
@@ -1211,8 +1211,8 @@ msgid ""
 "Authorization to use excerpts of the film for promotion (max 10%% of the "
 "total length) in television"
 msgstr ""
-"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10%% даўжыні фільма) па "
-"тэлебачанні"
+"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10%% даўжыні фільма) "
+"па тэлебачанні"
 
 #: models.py:85
 msgid ""
@@ -1366,14 +1366,18 @@ msgid "Aliaksandr Martyniuk"
 msgstr "Аляксандр Мартынюк"
 
 #: templates/cpm2013/submit.html:53
-msgid "PO Box 74, Minsk"
-msgstr "а/c 74, Мінск"
+msgid "PO Box 74"
+msgstr "а/c 74"
 
-#: templates/cpm2013/submit.html:56
+#: templates/cpm2013/submit.html:54
+msgid "Minsk"
+msgstr "Мінск"
+
+#: templates/cpm2013/submit.html:57
 msgid "Deadline: <strong>November 15, 2012</strong>"
 msgstr "Крайні тэрмін: <strong>15 лістапада 2012</strong>"
 
-#: templates/cpm2013/submit.html:57
+#: templates/cpm2013/submit.html:58
 msgid "Complete festival rules can be found here:"
 msgstr "Поўны рэгламент фестываля можна знайсці тут:"
 

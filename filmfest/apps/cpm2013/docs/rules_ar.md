@@ -78,9 +78,11 @@
 
 >Aliaksandr Martyniuk, Cinema Perpetuum Mobile
 
->PO Box 74, Minsk
+>PO Box 74
 
->220050, Belarus 
+>220050, Minsk
+
+>Belarus 
 
 
 العلامة المرغوبة على الظرف هي
