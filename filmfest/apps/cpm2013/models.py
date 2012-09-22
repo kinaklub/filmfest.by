@@ -104,6 +104,18 @@ class Submission(models.Model):
         max_length=2, choices=settings.LANGUAGES,
         default=settings.LANGUAGES[0][0])
 
+    comment_email_sent = models.BooleanField(
+        verbose_name=_('E-mail was sent'), default=False)
+    comment_film_received = models.BooleanField(
+        verbose_name=_('Film is received'), default=False)
+    comment_papers_received = models.BooleanField(
+        verbose_name=_('Papers were received'), default=False)
+    comment = models.TextField(
+        verbose_name=_('Comment'), null=True, blank=True)
+    
+    def __unicode__(self):
+        return 'Film %s' % (self.title)
+
     def __repr__(self):
         return '<Film %s>' % (self.title)
 

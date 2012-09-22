@@ -5,6 +5,7 @@ from django.core.mail import EmailMessage
 from django.utils import translation
 from django.template import loader
 
+from apps.cpm2013.models import Submission
 from celery import Task
 
 logger = logging.getLogger('cpm2013.tasks')
@@ -49,3 +50,10 @@ class SendSubmissionEmail(Task):
             raise
         finally:
             translation.deactivate()
+            try:
+                submission = Submission.objects.get(pk=submission.pk)
+            except Submission.DoesNotExist:
+                logger.exception('Failed to update "email sent" status')
+            else:
+                submission.comment_email_sent = True
+                Submission.save()

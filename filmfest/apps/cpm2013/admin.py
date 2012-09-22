@@ -1,15 +1,24 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from django.utils.safestring import mark_for_escaping
+from django.utils.html import escape
+from django.template.defaultfilters import linebreaksbr
 
 from hvad.admin import TranslatableAdmin
 
 from apps.cpm2013.models import Submission, NewsEntry, Page
 
 class SubmissionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'applicant_email', 'display_film_link']
+    list_display = ['title', 'applicant_email', 'display_film_link',
+                    'comment_email_sent', 'comment_film_received',
+                    'comment_papers_received', 'display_comment']
+    list_filter = ['comment_email_sent', 'comment_film_received',
+                   'comment_papers_received']
 
     fieldsets = [
+            (_('Comments'), {
+                'fields': ['comment', 'comment_email_sent',
+                           'comment_film_received', 'comment_papers_received'],
+            }),
             (_('Film'), {
                 'fields': ['title', 'title_en', 'country', 'language', 'genre',
                            'section', 'synopsis', 'length', 'aspect_ratio',
@@ -42,11 +51,16 @@ class SubmissionAdmin(admin.ModelAdmin):
         if not obj.film_link:
             return '---'
         return '<a href="%(link)s">%(link)s</a>' % {
-            'link': mark_for_escaping(obj.film_link)
+            'link': escape(obj.film_link)
         }
     display_film_link.short_description = _('Download link')
     display_film_link.allow_tags = True
 
+    def display_comment(self, obj):
+        return linebreaksbr(obj.comment or '')
+    display_comment.short_description = _('Comment')
+    display_comment.allow_tags = True
+    
 class NewsAdmin(TranslatableAdmin):
     pass
 class PageAdmin(TranslatableAdmin):
