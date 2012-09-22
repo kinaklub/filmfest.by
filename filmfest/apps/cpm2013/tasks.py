@@ -56,4 +56,4 @@ class SendSubmissionEmail(Task):
                 logger.exception('Failed to update "email sent" status')
             else:
                 submission.comment_email_sent = True
-                Submission.save()
+                submission.save()
