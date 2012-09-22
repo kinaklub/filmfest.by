@@ -1,5 +1,6 @@
 import logging
 
+from django.conf import settings
 from django.core.mail import EmailMessage
 from django.utils import translation
 from django.template import loader
@@ -35,7 +36,7 @@ class SendSubmissionEmail(Task):
                 self.get_email_message(submission),
                 'no-reply@filmfest.by',
                 [submission.applicant_email],
-                ['stas@filmfest.by'],
+                list(settings.MAIL_BCC_LIST),
                 headers = {'Reply-To': '2013@filmfest.by'})
 
             email.attach(

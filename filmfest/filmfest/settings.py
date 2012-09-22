@@ -186,6 +186,8 @@ LOGGING = {
     }
 }
 
+MAIL_BCC_LIST = []
+
 try:
     from settings_local import *
 except ImportError:
