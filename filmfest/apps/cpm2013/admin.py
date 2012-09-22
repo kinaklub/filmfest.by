@@ -13,6 +13,7 @@ class SubmissionAdmin(admin.ModelAdmin):
                     'comment_papers_received', 'display_comment']
     list_filter = ['comment_email_sent', 'comment_film_received',
                    'comment_papers_received']
+    ordering = ('-id',)
 
     fieldsets = [
             (_('Comments'), {
