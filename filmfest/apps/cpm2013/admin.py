@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from django.utils.safestring import mark_for_escaping
 
 from hvad.admin import TranslatableAdmin
 
@@ -40,7 +41,9 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_film_link(self, obj):
         if not obj.film_link:
             return '---'
-        return '<a href="%(link)s">%(link)s</a>' % {'link': obj.film_link}
+        return '<a href="%(link)s">%(link)s</a>' % {
+            'link': mark_for_escaping(obj.film_link)
+        }
     display_film_link.short_description = _('Download link')
     display_film_link.allow_tags = True
 
