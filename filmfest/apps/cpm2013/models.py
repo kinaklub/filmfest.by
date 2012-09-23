@@ -79,7 +79,7 @@ class Submission(models.Model):
 
     
     allow_tv = models.IntegerField(
-        verbose_name=_('Authorization to use excerpts of the film for promotion (max 10%% of the total length) in television') % {},
+        verbose_name=_('Authorization to use excerpts of the film for promotion (max 10% of the total length) in television'),
         choices=YESNO, default=1)
     allow_noncommercial = models.IntegerField(
         verbose_name=_('Authorization to include the film in the festival video collection for non-commercial screenings'),

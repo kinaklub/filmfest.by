@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-26 08:46+0300\n"
+"POT-Creation-Date: 2012-09-23 12:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,42 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:19
+msgid "Comments"
+msgstr ""
+
+#: admin.py:23 forms.py:51 pdf.py:13
+msgid "Film"
+msgstr ""
+
+#: admin.py:29 forms.py:57 pdf.py:17
+msgid "Director"
+msgstr ""
+
+#: admin.py:34 forms.py:62 pdf.py:20
+msgid "Producer"
+msgstr ""
+
+#: admin.py:38 forms.py:67
+msgid "Credits"
+msgstr ""
+
+#: admin.py:42 forms.py:72 pdf.py:23
+msgid "Applicant"
+msgstr ""
+
+#: admin.py:46 forms.py:77 pdf.py:105
+msgid "Permissions"
+msgstr ""
+
+#: admin.py:57
+msgid "Download link"
+msgstr ""
+
+#: admin.py:62 models.py:114
+msgid "Comment"
+msgstr ""
 
 #: constants.py:7 constants.py:13
 msgid "Yes"
@@ -237,7 +273,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76
+#: constants.py:76 templates/cpm2013/submit.html:55
 msgid "Belarus"
 msgstr ""
 
@@ -1061,211 +1097,167 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: forms.py:36
-msgid "Film"
+#: forms.py:24
+msgid "I have read the rules of the festival and agree to its terms"
 msgstr ""
 
-#: forms.py:42 models.py:40
-msgid "Director"
-msgstr ""
-
-#: forms.py:47 models.py:51
-msgid "Producer"
-msgstr ""
-
-#: forms.py:52
-msgid "Rights holder"
-msgstr ""
-
-#: forms.py:58 models.py:85
-msgid "Distributor"
-msgstr ""
-
-#: forms.py:63 models.py:106
-msgid "Applicant"
-msgstr ""
-
-#: forms.py:68
-msgid "Permissions"
-msgstr ""
-
-#: models.py:11 models.py:124
-msgid "Title"
+#: forms.py:28
+msgid ""
+"I declare that I am the legal owner of all rights relating to the submitted "
+"movie"
 msgstr ""
 
 #: models.py:12
-msgid "Title in English"
+msgid "Original title"
 msgstr ""
 
-#: models.py:14
-msgid "Country"
+#: models.py:13
+msgid "English title"
 msgstr ""
 
-#: models.py:16
-msgid "Language"
+#: models.py:15
+msgid "Country of production"
 msgstr ""
 
-#: models.py:18
-msgid "Section"
+#: models.py:17
+msgid "Language of original version"
 msgstr ""
 
-#: models.py:20
-msgid "Synopsis"
+#: models.py:19
+msgid "Genre"
 msgstr ""
 
 #: models.py:21
-msgid "Length in minutes"
+msgid "Section"
 msgstr ""
 
-#: models.py:22
-msgid "Aspect ratio"
+#: models.py:23
+msgid "Synopsis"
 msgstr ""
 
 #: models.py:24
-msgid "Year"
+msgid "Runtime (in minutes)"
 msgstr ""
 
 #: models.py:25
-msgid "Premiere"
+msgid "Aspect ratio"
 msgstr ""
 
 #: models.py:27
-msgid "Film awards"
+msgid "Year of production"
+msgstr ""
+
+#: models.py:28
+msgid "Premiere"
 msgstr ""
 
 #: models.py:29
+msgid "Film awards"
+msgstr ""
+
+#: models.py:31
 msgid "Director awards"
 msgstr ""
 
-#: models.py:30
-msgid "Budget"
-msgstr ""
-
 #: models.py:32
-msgid "Are you going to attend the festival?"
+msgid "Film budget"
 msgstr ""
 
-#: models.py:35
-msgid "The source of information about Cinema Perpetuum Mobile"
+#: models.py:34
+msgid "Link to download the film (optional)"
+msgstr ""
+
+#: models.py:39
+msgid "I intend to visit final part of festival"
 msgstr ""
 
 #: models.py:42
-msgid "Director's address"
+msgid "The source of information about Cinema Perpetuum Mobile"
 msgstr ""
 
-#: models.py:43
-msgid "Director's email"
+#: models.py:47 models.py:58 models.py:91
+msgid "Name"
 msgstr ""
 
-#: models.py:45
-msgid "Director's website"
+#: models.py:49 models.py:60 models.py:93
+msgid "Address"
 msgstr ""
 
-#: models.py:48
-msgid "Director's phone number"
+#: models.py:50 models.py:62 models.py:94
+msgid "Email"
 msgstr ""
 
-#: models.py:54
-msgid "Producer's address"
+#: models.py:52 models.py:64 models.py:96
+msgid "Website"
 msgstr ""
 
-#: models.py:56
-msgid "Producer's email"
+#: models.py:55 models.py:66 models.py:99
+msgid "Tel."
 msgstr ""
 
-#: models.py:58
-msgid "Producer's website"
+#: models.py:69
+msgid "Script writer"
 msgstr ""
 
-#: models.py:60
-msgid "Producer's phone number"
-msgstr ""
-
-#: models.py:63
-msgid "Screenwriter"
-msgstr ""
-
-#: models.py:65
+#: models.py:71
 msgid "Editor"
 msgstr ""
 
-#: models.py:67
-msgid "Composer"
-msgstr ""
-
-#: models.py:70
-msgid "Director of photography"
-msgstr ""
-
-#: models.py:74
-msgid "Owner"
+#: models.py:73
+msgid "Music composer"
 msgstr ""
 
 #: models.py:76
-msgid "Owner's address"
+msgid "Director of photography"
 msgstr ""
 
 #: models.py:78
-msgid "Owner's email"
-msgstr ""
-
-#: models.py:80
-msgid "Owner's website"
+msgid "Other credits"
 msgstr ""
 
 #: models.py:82
-msgid "Owner's phone number"
+msgid ""
+"Authorization to use excerpts of the film for promotion (max 10% of the "
+"total length) in television"
 msgstr ""
 
-#: models.py:87
-msgid "Distributor's address"
+#: models.py:85
+msgid ""
+"Authorization to include the film in the festival video collection for non-"
+"commercial screenings"
 msgstr ""
 
-#: models.py:89
-msgid "Distributor's email"
-msgstr ""
-
-#: models.py:91
-msgid "Distributor's website"
-msgstr ""
-
-#: models.py:93
-msgid "Distributor's phone number"
-msgstr ""
-
-#: models.py:97
-msgid "Allow usage in festival TV commercials"
-msgstr ""
-
-#: models.py:100
-msgid "Allow non commercial screenings"
+#: models.py:88
+msgid ""
+"Authorization to screen the film at film festivals from Cinema Perpetuum "
+"Mobile partner network"
 msgstr ""
 
 #: models.py:103
-msgid "Allow screenings at partner's festivals"
+msgid "Submission language"
 msgstr ""
 
 #: models.py:108
-msgid "Applicant's address"
+msgid "E-mail was sent"
 msgstr ""
 
-#: models.py:109
-msgid "Applicant's email"
+#: models.py:110
+msgid "Film is received"
 msgstr ""
 
-#: models.py:111
-msgid "Applicant's website"
+#: models.py:112
+msgid "Papers were received"
 msgstr ""
 
-#: models.py:114
-msgid "Applicant's phone number"
+#: models.py:126 models.py:135
+msgid "Title"
 msgstr ""
 
-#: models.py:125
+#: models.py:127
 msgid "Short text"
 msgstr ""
 
-#: models.py:126
+#: models.py:128 models.py:136
 msgid "Text"
 msgstr ""
 
@@ -1282,40 +1274,119 @@ msgid "короткометражного кино"
 msgstr ""
 
 #: templates/cpm2013/base.html:36
-msgid "updates soon!"
+msgid "submit your film!"
 msgstr ""
 
 #: templates/cpm2013/index.html:8
 msgid ""
-"<strong>“Cinema Perpetuum mobile”</strong> is an international cinema "
-"cooperation festival that gathers independent film makers and their groups "
-"to work under the theme of the perpetual motion. The authors are free to "
-"artistically interpret the theme and develop their ideas on what the "
-"“perpetuum mobile” is."
+"\n"
+"      <p>Welcome to II International Short Film Festival Cinema Perpetuum "
+"Mobile!</p>\n"
+"      <p>We invite you to share our idea of promoting human values through "
+"art and independent cinematography. This idea is not new; however, it still "
+"unites hundreds of underground film-makers around the globe to join efforts "
+"in their sincere endeavor to see our world become a truly better place.</p>\n"
+"      <p>In 2012 Cinema Perpetuum Mobile has managed to show 197 short films "
+"from 35 countries at 8 screening venues. In 2013 Cinema Perpetuum Mobile "
+"will again turn into an international forum to showcase independent film-"
+"makers’ vision of intercultural dialogue in times of globalization, as well "
+"as of social problems we have to face in the 21st century.</p>\n"
+"      <p>As before, Cinema Perpetuum Mobile sticks to its goals to</p>\n"
+"      <ul>\n"
+"\t<li>promote independent film-making throughout the world;</li>\n"
+"\t<li>search for new forms and solutions in cinematography;</li>\n"
+"\t<li>encourage cultural diversity in cinematography;</li>\n"
+"\t<li>develop and strengthen connections between film-makers and film-making "
+"communities all around the world.</li>\n"
+"      </ul>\n"
+"      <p>This time Cinema Perpetuum Mobile will reach the audience not only "
+"in Belarusian regions and cities, but in other countries as well. It is you "
+"who help us bring independent cinema to more and more people, and our "
+"community is growing due to the principles we incorporate in our mission:</"
+"p>\n"
+"      <h3>We are independent</h3>\n"
+"      <p>Cinema Perpetuum Mobile is a non-profit project founded and "
+"promoted solely by volunteers.</p>\n"
+"      <h3>We are open</h3>\n"
+"      <p>Anyone can join our team and contribute to this unique project on "
+"equal terms of cooperation.</p>\n"
+"      <h3>We are transparent</h3>\n"
+"      <p>No leaders, no centralization, no barriers – this is what our "
+"structure is. In this microcosm of Cinema Perpetuum Mobile everyone is "
+"united in sharing enthusiasm.</p>\n"
+"\n"
+"      <p>We are here to make it happen. We believe you are here too.</p>\n"
+"      "
 msgstr ""
 
-#: templates/cpm2013/index.html:10
-msgid ""
-"The project is aimed at cinema cultural diversity and the promotion of "
-"independent auteur movies. Festival co-operation aims to cover all countries "
-"and continents from Scandinavia to the Cape of Good Hope and from Patagonia "
-"to the Aleutian Islands."
+#: templates/cpm2013/submit.html:40
+msgid "Terms of participation"
 msgstr ""
 
-#: templates/cpm2013/index.html:12
+#: templates/cpm2013/submit.html:42
+msgid "You need to complete 3 steps:"
+msgstr ""
+
+#: templates/cpm2013/submit.html:44
+msgid "Make a request (fill in a form on the website)."
+msgstr ""
+
+#: templates/cpm2013/submit.html:45
 msgid ""
-"“Cinema Perpetuum mobile” is a <strong>non-commercial project</strong>, so "
-"the organizers aspire only to cover their expenses on the festival while the "
-"participants whose films are included into a short list, are likely to "
-"receive dividends in case the collection of “Perpetuum Mobile” films is "
-"shown in cinemas after festival. The participation in our cinema cooperation "
-"festival is free. Organizer of the festival is an independent association "
-"«Kinaklub.org», with the following principles: cinemania, self-organization, "
-"decentralization, mutual aid."
+"A copy of the application form will be sent via e-mail, you need to print "
+"it, sign and send in the mail."
+msgstr ""
+
+#: templates/cpm2013/submit.html:46
+msgid ""
+"Transfer a copy of the film (on disk by mail or via the Internet) to the "
+"organizing committee."
+msgstr ""
+
+#: templates/cpm2013/submit.html:49
+msgid ""
+"The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
+"file) should be the film only (without menus, etc.)."
+msgstr ""
+
+#: templates/cpm2013/submit.html:50
+msgid "Film copies and signed application forms are accepted at:"
+msgstr ""
+
+#: templates/cpm2013/submit.html:52
+msgid "Aliaksandr Martyniuk"
+msgstr ""
+
+#: templates/cpm2013/submit.html:53
+msgid "PO Box 74"
+msgstr ""
+
+#: templates/cpm2013/submit.html:54
+msgid "Minsk"
+msgstr ""
+
+#: templates/cpm2013/submit.html:57
+msgid "Deadline: <strong>November 15, 2012</strong>"
+msgstr ""
+
+#: templates/cpm2013/submit.html:58
+msgid "Complete festival rules can be found here:"
+msgstr ""
+
+#: templates/cpm2013/submit_done.html:5
+msgid "Thank you for submission!"
+msgstr ""
+
+#: templates/cpm2013/submit_done.html:7
+#, python-format
+msgid ""
+"\n"
+"Submission form along with further instructions will be sent to %(email)s "
+"soon.\n"
 msgstr ""
 
 #: templates/cpm2013/submit_temp.html:5
-msgid "Dear firends!"
+msgid "Dear friends!"
 msgstr ""
 
 #: templates/cpm2013/submit_temp.html:6

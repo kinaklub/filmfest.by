@@ -1207,12 +1207,11 @@ msgid "Other credits"
 msgstr "Другие участники"
 
 #: models.py:82
-#, python-format
 msgid ""
-"Authorization to use excerpts of the film for promotion (max 10%% of the "
+"Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
 msgstr ""
-"Разрешение на использование отрывков фильма для промоушна (не более 10%% "
+"Разрешение на использование отрывков фильма для промоушна (не более 10% "
 "продолжительности) на телевидении"
 
 #: models.py:85
