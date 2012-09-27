@@ -23,18 +23,12 @@
   </ul>
 
   <ul class="nav pull-right">
-    <li class="dropdown">
-      {% for lang_code, lang, url in languages %}
-        {% if forloop.first %}
-          <a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ lang }} <b class="caret"></b></a>
-	  <ul class="dropdown-menu">
-	{% else %}
-            <li><a href="{{ url }}">{{ lang }}</a></li>
-	    {% if forloop.last %}
-	      </ul>
-	    {% endif %}
-	{% endif %}
-      {% endfor %}
-    </li>
+    {% for lang_code, lang, url, is_active in languages %}
+      {% if is_active %}
+        <li><p id="current-lang" class="navbar-text"><strong>[{{ lang_code }}]</strong></p></li>
+      {% else %}
+        <li><a href="{{ url }}" class="other-lang">[{{ lang_code }}]</a></li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </div>

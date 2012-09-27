@@ -28,14 +28,11 @@ MAINMENU_ITEMS = [
 def mainmenu(request):
     cur_lang = translation.get_language().split('-')[0]
     lang_url = '/%%s%s' % request.get_full_path()
-    languages = [(code, name, lang_url % code) for code, name in sorted(
-        [
-            ('en', 'English'),
-            ('ru', 'Русский'),
-            ('be', 'Беларуская'),
-        ],
-        key=lambda lang: lang[0] != cur_lang
-    )]
+    languages = [(code, name, lang_url % code, code == cur_lang) for code, name in [
+        ('en', 'English'),
+        ('ru', 'Русский'),
+        ('be', 'Беларуская'),
+    ]]
 
     mainmenu_items = []
     for title, url, children in MAINMENU_ITEMS:
@@ -52,5 +49,4 @@ def mainmenu(request):
     return {
         'mainmenu_items': mainmenu_items,
         'languages': languages,
-        'lang': translation.get_language(),
     }

@@ -35,6 +35,15 @@ a, a:hover, a:visited {
     border-bottom-color: #000000;
     border-top-color: #000000;
 }
+#current-lang {
+    color: #000000;
+    display: block;;
+    line-height: 19px;
+    padding: 9px 10px 11px;
+}
+.nav > li > a.other-lang {
+    color: #777777;
+}
 /* header */
 #header {
     margin: 40px 0 50px 50px;
