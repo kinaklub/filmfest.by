@@ -79,7 +79,7 @@ class SubmissionAdmin(admin.ModelAdmin):
     display_comment.allow_tags = True
 
     def display_country(self, obj):
-        return obj.country
+        return obj.get_country_display()
     display_comment.short_description = _('Country')
 
     
