@@ -1,14 +1,17 @@
+from datetime import datetime
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
 from hvad.models import TranslatableModel, TranslatedFields
+from dirtyfields import DirtyFieldsMixin
 
 from constants import YESNO, YESNOMAYBE, COUNTRIES, LANGUAGES,\
      SECTIONS, BACKLINKS
 
 
-class Submission(models.Model):
+class Submission(models.Model, DirtyFieldsMixin):
     title = models.CharField(verbose_name=_('Original title'), max_length=1000)
     title_en = models.CharField(verbose_name=_('English title'),
                                 max_length=1000)
@@ -104,20 +107,52 @@ class Submission(models.Model):
         max_length=2, choices=settings.LANGUAGES,
         default=settings.LANGUAGES[0][0])
 
+    comment = models.TextField(
+        verbose_name=_('Comment'), null=True, blank=True)
     comment_email_sent = models.BooleanField(
         verbose_name=_('E-mail was sent'), default=False)
     comment_film_received = models.BooleanField(
         verbose_name=_('Film is received'), default=False)
     comment_papers_received = models.BooleanField(
         verbose_name=_('Papers were received'), default=False)
-    comment = models.TextField(
-        verbose_name=_('Comment'), null=True, blank=True)
-    
+
+    submitted_at = models.DateTimeField(
+        auto_now_add=True, verbose_name=_('Submitted at'))
+    email_sent_at = models.DateTimeField(
+        null=True, blank=True, verbose_name=_('E-mail sent at'))
+    film_received_at = models.DateTimeField(
+        null=True, blank=True, verbose_name=_('Film received at'))
+    papers_received_at = models.DateTimeField(
+        null=True, blank=True, verbose_name=_('Papers received at'))
+
     def __unicode__(self):
         return 'Film %s' % (self.title)
 
     def __repr__(self):
         return '<Film %s>' % (self.title)
+
+    def _track_facts(self):
+        facts = {
+            'comment_email_sent': 'email_sent_at',
+            'comment_film_received': 'film_received_at',
+            'comment_papers_received': 'papers_received_at',
+        }
+        dirty_fields = self.get_dirty_fields()
+
+        now = datetime.now()
+
+        for comment_field, date_field in facts.iteritems():
+            value = getattr(self, comment_field)
+            if comment_field in dirty_fields:
+                if value == True:
+                    new_datetime = now
+                else:
+                    new_datetime = None
+                setattr(self, date_field, new_datetime)
+
+    def save(self, *args, **kwargs):
+        self._track_facts()
+        return super(Submission, self).save(*args, **kwargs)
 
 class NewsEntry(TranslatableModel):
     added_at = models.DateTimeField(auto_now_add=True)

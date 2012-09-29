@@ -1,3 +1,5 @@
+from itertools import chain, islice
+
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.utils.html import escape
@@ -9,6 +11,7 @@ from apps.cpm2013.models import Submission, NewsEntry, Page
 
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
+                    'submitted_at', 'display_country',
                     'comment_email_sent', 'comment_film_received',
                     'comment_papers_received', 'display_comment']
     list_filter = ['comment_email_sent', 'comment_film_received',
@@ -19,6 +22,10 @@ class SubmissionAdmin(admin.ModelAdmin):
             (_('Comments'), {
                 'fields': ['comment', 'comment_email_sent',
                            'comment_film_received', 'comment_papers_received'],
+            }),
+            (_('Dates'), {
+                'fields': ['submitted_at', 'email_sent_at',
+                           'film_received_at', 'papers_received_at'],
             }),
             (_('Film'), {
                 'fields': ['title', 'title_en', 'country', 'language', 'genre',
@@ -47,6 +54,15 @@ class SubmissionAdmin(admin.ModelAdmin):
                 'fields': ['allow_tv', 'allow_noncommercial', 'allow_network'],
             }),
         ]
+
+    readonly_fields = ['submitted_at']
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return self.readonly_fields
+
+        return list(chain(*(
+            fldst[1]['fields'] for fldst in islice(self.fieldsets, 1, None)
+        )))
     
     def display_film_link(self, obj):
         if not obj.film_link:
@@ -61,6 +77,11 @@ class SubmissionAdmin(admin.ModelAdmin):
         return linebreaksbr(obj.comment or '')
     display_comment.short_description = _('Comment')
     display_comment.allow_tags = True
+
+    def display_country(self, obj):
+        return obj.country
+    display_comment.short_description = _('Country')
+
     
 class NewsAdmin(TranslatableAdmin):
     pass
