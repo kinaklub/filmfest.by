@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.utils.html import escape
 from django.template.defaultfilters import linebreaksbr
+from django.template.defaultfilters import urlizetrunc
 
 from hvad.admin import TranslatableAdmin
 
@@ -67,9 +68,7 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_film_link(self, obj):
         if not obj.film_link:
             return '---'
-        return '<a href="%(link)s">%(link)s</a>' % {
-            'link': escape(obj.film_link)
-        }
+        return urlizetrunc(obj.film_link, 20)
     display_film_link.short_description = _('Download link')
     display_film_link.allow_tags = True
 
@@ -80,7 +79,7 @@ class SubmissionAdmin(admin.ModelAdmin):
 
     def display_country(self, obj):
         return obj.get_country_display()
-    display_comment.short_description = _('Country')
+    display_country.short_description = _('Country')
 
     
 class NewsAdmin(TranslatableAdmin):
