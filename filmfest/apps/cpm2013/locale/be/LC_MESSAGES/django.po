@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-30 13:32+0300\n"
+"POT-Creation-Date: 2012-09-30 14:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1226,6 +1226,7 @@ msgid "Other credits"
 msgstr "Іншыя ўдзельнікі"
 
 #: models.py:85
+#, fuzzy, python-format
 msgid ""
 "Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
@@ -1295,29 +1296,55 @@ msgstr ""
 msgid "Please check if you agree"
 msgstr "Калі ласка, падзвердзіце, што вы згодны"
 
-#: templates/cpm2013/base.html:25 templates/cpm2013/base.html.py:60
+#: templates/cpm2013/base.html:28 templates/cpm2013/base.html.py:63
 msgid "международный фестиваль"
 msgstr ""
 
-#: templates/cpm2013/base.html:25 templates/cpm2013/base.html.py:61
+#: templates/cpm2013/base.html:28 templates/cpm2013/base.html.py:64
 msgid "короткометражного кино"
 msgstr ""
 
-#: templates/cpm2013/base.html:36
+#: templates/cpm2013/base.html:39
 msgid "submit your film!"
 msgstr "дашлі фільм!"
 
-#: templates/cpm2013/base.html:63
+#: templates/cpm2013/base.html:66
 msgid "January 2013"
 msgstr "студзень 2013"
 
-#: templates/cpm2013/base.html:64
+#: templates/cpm2013/base.html:67
 msgid "Minsk, Belarus"
 msgstr "Мінск, Беларусь"
 
-#: templates/cpm2013/base.html:67
+#: templates/cpm2013/base.html:70
 msgid "Links"
 msgstr "Спасылкі"
+
+#: templates/cpm2013/contacts.html:5
+msgid ""
+"If you have any questions, please feel free to contact us via e-mail. You "
+"can also get in touch with any of our coordinators directly."
+msgstr "Калі ў вас ёсць нейкія пытанні, адразу звязвайцесь з намі праз электронную пошту. Вы таксама можаце наўпрост звязацца з любым з нашых каардынатараў."
+
+#: templates/cpm2013/contacts.html:6
+msgid "Festival e-mail"
+msgstr "E-mail фестываля"
+
+#: templates/cpm2013/contacts.html:7
+msgid "Festival coordinators"
+msgstr "Каардынатары фестываля"
+
+#: templates/cpm2013/contacts.html:11
+msgid "Dennis Sheko"
+msgstr "Дзяніс Шэка"
+
+#: templates/cpm2013/contacts.html:19
+msgid "Aleksandr Martyniuk"
+msgstr "Аляксандр Мартынюк"
+
+#: templates/cpm2013/contacts.html:26
+msgid "Darya Efimova"
+msgstr "Дар'я Ефімава"
 
 #: templates/cpm2013/index.html:8
 msgid ""

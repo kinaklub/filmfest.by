@@ -13,6 +13,9 @@ def get_urls():
         url(r'^rules/(?P<lang>\w{2})', views.rules, name='rules_lang'),
         url(r'^rules', views.rules, name='rules'),
         url(r'^submit', views.submit, name='submit'),
+        url(r'^contacts', direct_to_template,
+            {'template': 'cpm2013/contacts.html'},
+            name='contacts'),
     )
 
 urls = (get_urls(), 'cpm2013', 'cpm2013')

@@ -1,0 +1,31 @@
+{% extends "cpm2013/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<p>{% trans "If you have any questions, please feel free to contact us via e-mail. You can also get in touch with any of our coordinators directly." %}
+<h4>{% trans "Festival e-mail" %}: <a href="mailto:2013@filmfest.by"><strong>2013@filmfest.by</strong></a></h4>
+<h4>{% trans "Festival coordinators" %}</h4>
+<div class="row">
+  <div class="span4">
+    <address>
+      <strong>{% trans "Dennis Sheko" %}</strong><br />
+      tel.: +37529 2770790<br />
+      e-mail: <a href="mailto:dzianis.sheka@filmfest.by">dzianis.sheka@filmfest.by</a><br />
+      skype: <a href="skype:denis.sheko?chat">denis.sheko</a>
+    </address>
+  </div>
+  <div class="span4">
+    <address>
+      <strong>{% trans "Aleksandr Martyniuk" %}</strong><br />
+      tel.: +37529 8504050<br />
+      e-mail: <a href="mailto:cinemapm@gmail.com">cinemapm@gmail.com</a><br />
+    </address>
+  </div>
+  <div class="span4">
+    <address>
+      <strong>{% trans "Darya Efimova" %}</strong><br />
+      e-mail: <a href="mailto:artlunatic@gmail.com">artlunatic@gmail.com</a><br />
+    </address>
+  </div>
+</div>
+{% endblock %}

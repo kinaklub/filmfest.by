@@ -22,6 +22,7 @@ MAINMENU_ITEMS = [
         (_('Memo'), reverse('cpm2013:page', args=['memo_volunteers'])),
         (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire'))
     )),
+    (_('Contacts'), reverse('cpm2013:contacts'), ()),
 ]
 
 @register.inclusion_tag('cpm_common/tags/mainmenu.html')
