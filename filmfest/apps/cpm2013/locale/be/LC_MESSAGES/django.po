@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-19 09:38+0300\n"
+"POT-Creation-Date: 2012-09-30 13:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,50 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:23
+msgid "Comments"
+msgstr ""
+
+#: admin.py:27
+msgid "Dates"
+msgstr ""
+
+#: admin.py:31 forms.py:51 pdf.py:13
+msgid "Film"
+msgstr "Фільм"
+
+#: admin.py:37 forms.py:57 pdf.py:17
+msgid "Director"
+msgstr "Рэжысёр"
+
+#: admin.py:42 forms.py:62 pdf.py:20
+msgid "Producer"
+msgstr "Прадусар"
+
+#: admin.py:46 forms.py:67
+msgid "Credits"
+msgstr "Удзельнікі"
+
+#: admin.py:50 forms.py:72 pdf.py:23
+msgid "Applicant"
+msgstr "Заяўнік"
+
+#: admin.py:54 forms.py:77 pdf.py:105
+msgid "Permissions"
+msgstr "Правы і дазволы"
+
+#: admin.py:72
+msgid "Download link"
+msgstr ""
+
+#: admin.py:77 models.py:111
+msgid "Comment"
+msgstr ""
+
+#: admin.py:82
+msgid "Country"
+msgstr ""
 
 #: constants.py:7 constants.py:13
 msgid "Yes"
@@ -1073,153 +1117,129 @@ msgstr ""
 "Я заяўляю, што з'яўляюся легальным уладальнікам усіх правоў, датычных на "
 "адпраўлены фільм"
 
-#: forms.py:51 pdf.py:13
-msgid "Film"
-msgstr "Фільм"
-
-#: forms.py:57 pdf.py:17
-msgid "Director"
-msgstr "Рэжысёр"
-
-#: forms.py:62 pdf.py:20
-msgid "Producer"
-msgstr "Прадусар"
-
-#: forms.py:67
-msgid "Credits"
-msgstr "Удзельнікі"
-
-#: forms.py:72 pdf.py:23
-msgid "Applicant"
-msgstr "Заяўнік"
-
-#: forms.py:77 pdf.py:105
-msgid "Permissions"
-msgstr "Правы і дазволы"
-
-#: models.py:12
+#: models.py:15
 msgid "Original title"
 msgstr "Назва на мове арыгіналу"
 
-#: models.py:13
+#: models.py:16
 msgid "English title"
 msgstr "Ангельская назва"
 
-#: models.py:15
+#: models.py:18
 msgid "Country of production"
 msgstr "Краіна вытворчасці"
 
-#: models.py:17
+#: models.py:20
 msgid "Language of original version"
 msgstr "Мовы арыгінальнай версіі"
 
-#: models.py:19
+#: models.py:22
 msgid "Genre"
 msgstr "Жанр"
 
-#: models.py:21
+#: models.py:24
 msgid "Section"
 msgstr "Секцыя"
 
-#: models.py:23
+#: models.py:26
 msgid "Synopsis"
 msgstr "Сінопсіс"
 
-#: models.py:24
+#: models.py:27
 msgid "Runtime (in minutes)"
 msgstr "Працягласць (у хвілінах)"
 
-#: models.py:25
+#: models.py:28
 msgid "Aspect ratio"
 msgstr "Суадносіны бакоў"
 
-#: models.py:27
+#: models.py:30
 msgid "Year of production"
 msgstr "Год вытворчасці"
 
-#: models.py:28
+#: models.py:31
 msgid "Premiere"
 msgstr "Прэм'ера"
 
-#: models.py:29
+#: models.py:32
 msgid "Film awards"
 msgstr "Узнагароды фільма"
 
-#: models.py:31
+#: models.py:34
 msgid "Director awards"
 msgstr "Узнагароды рэжысёра"
 
-#: models.py:32
+#: models.py:35
 msgid "Film budget"
 msgstr "Бюджэт фільма"
 
-#: models.py:34
+#: models.py:37
 msgid "Link to download the film (optional)"
 msgstr "Спасылка на запампоўку фільма (калі ёсць)"
 
-#: models.py:39
+#: models.py:42
 msgid "I intend to visit final part of festival"
 msgstr "І збіраюся прысутнічаць на фінальнай частцы фестываля"
 
-#: models.py:42
+#: models.py:45
 msgid "The source of information about Cinema Perpetuum Mobile"
 msgstr "Крыніца інфармацыі аб Cinema Perpetuum Mobile"
 
-#: models.py:47 models.py:58 models.py:91
+#: models.py:50 models.py:61 models.py:94
 msgid "Name"
 msgstr "Імя"
 
-#: models.py:49 models.py:60 models.py:93
+#: models.py:52 models.py:63 models.py:96
 msgid "Address"
 msgstr "Адрас"
 
-#: models.py:50 models.py:62 models.py:94
+#: models.py:53 models.py:65 models.py:97
 msgid "Email"
 msgstr ""
 
-#: models.py:52 models.py:64 models.py:96
+#: models.py:55 models.py:67 models.py:99
 msgid "Website"
 msgstr "Вэбсайт"
 
-#: models.py:55 models.py:66 models.py:99
+#: models.py:58 models.py:69 models.py:102
 msgid "Tel."
 msgstr "Тел."
 
-#: models.py:69
+#: models.py:72
 msgid "Script writer"
 msgstr "Сцэнарыст"
 
-#: models.py:71
+#: models.py:74
 msgid "Editor"
 msgstr "Мантажор"
 
-#: models.py:73
+#: models.py:76
 msgid "Music composer"
 msgstr "Кампазытар"
 
-#: models.py:76
+#: models.py:79
 msgid "Director of photography"
 msgstr "Аператар"
 
-#: models.py:78
+#: models.py:81
 msgid "Other credits"
 msgstr "Іншыя ўдзельнікі"
 
-#: models.py:82
+#: models.py:85
 msgid ""
 "Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
 msgstr ""
-"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10% даўжыні фільма) "
-"па тэлебачанні"
+"Дазвол выкарыстоўваць фільм для прамоцыі (не больш за 10% даўжыні фільма) па "
+"тэлебачанні"
 
-#: models.py:85
+#: models.py:88
 msgid ""
 "Authorization to include the film in the festival video collection for non-"
 "commercial screenings"
 msgstr "Дазвол уключаць фільм у каллекцыю фестываля для некамерцыйных паказаў"
 
-#: models.py:88
+#: models.py:91
 msgid ""
 "Authorization to screen the film at film festivals from Cinema Perpetuum "
 "Mobile partner network"
@@ -1227,19 +1247,47 @@ msgstr ""
 "Дазвол паказваць фільм на фестывалях з пертнёрскай сеткі Cinema Perpetuum "
 "Mobile"
 
-#: models.py:103
+#: models.py:106
 msgid "Submission language"
 msgstr ""
 
-#: models.py:114 models.py:123
-msgid "Title"
+#: models.py:113
+msgid "E-mail was sent"
 msgstr ""
 
 #: models.py:115
+msgid "Film is received"
+msgstr ""
+
+#: models.py:117
+msgid "Papers were received"
+msgstr ""
+
+#: models.py:120
+msgid "Submitted at"
+msgstr ""
+
+#: models.py:122
+msgid "E-mail sent at"
+msgstr ""
+
+#: models.py:124
+msgid "Film received at"
+msgstr ""
+
+#: models.py:126
+msgid "Papers received at"
+msgstr ""
+
+#: models.py:161 models.py:170
+msgid "Title"
+msgstr ""
+
+#: models.py:162
 msgid "Short text"
 msgstr ""
 
-#: models.py:116 models.py:124
+#: models.py:163 models.py:171
 msgid "Text"
 msgstr ""
 
@@ -1247,17 +1295,29 @@ msgstr ""
 msgid "Please check if you agree"
 msgstr "Калі ласка, падзвердзіце, што вы згодны"
 
-#: templates/cpm2013/base.html:25
+#: templates/cpm2013/base.html:25 templates/cpm2013/base.html.py:60
 msgid "международный фестиваль"
 msgstr ""
 
-#: templates/cpm2013/base.html:25
+#: templates/cpm2013/base.html:25 templates/cpm2013/base.html.py:61
 msgid "короткометражного кино"
 msgstr ""
 
 #: templates/cpm2013/base.html:36
 msgid "submit your film!"
 msgstr "дашлі фільм!"
+
+#: templates/cpm2013/base.html:63
+msgid "January 2013"
+msgstr "студзень 2013"
+
+#: templates/cpm2013/base.html:64
+msgid "Minsk, Belarus"
+msgstr "Мінск, Беларусь"
+
+#: templates/cpm2013/base.html:67
+msgid "Links"
+msgstr "Спасылкі"
 
 #: templates/cpm2013/index.html:8
 msgid ""
