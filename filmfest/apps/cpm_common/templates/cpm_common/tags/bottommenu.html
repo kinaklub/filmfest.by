@@ -1,0 +1,17 @@
+<ul>
+{% for title, url, submenu in mainmenu_items %}
+  <li>
+  {% if url %}
+    <a href="{{ url }}">{{ title }}</a>{% else %}
+    {{ title }}{% endif %}{% if submenu %}:{% endif %}
+
+  {% if submenu %}
+    <ul class="footer-links">
+      {% for subtitle, suburl in submenu %}
+        <li><a href="{{ suburl }}">{{ subtitle }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>

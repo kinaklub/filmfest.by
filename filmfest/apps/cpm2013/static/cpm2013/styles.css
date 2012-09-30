@@ -1,6 +1,6 @@
 body {
     background: url('fon1.jpg');
-    margin: 20px;
+    margin: 20px 20px 0 20px;
 }
 a, a:hover, a:visited {
     color: #AAAA00;
@@ -142,6 +142,29 @@ a, a:hover, a:visited {
     font-size: 60px;
 }
 /* end header */
+
+/* footer */
+.footer {
+  padding: 20px 0;
+  margin: 20px auto 0 auto;
+  border-top: 1px solid #e5e5e5;
+  background-color: #FFFFFF;
+  width: 960px;
+}
+
+.footer-menu a {
+    text-decoration: underline;
+}
+.footer-links {
+  display: inline;
+  margin-left: 5px;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* end footer */
 
 #submission-form input, #submission-form select, #submission-form textarea {
     width: 500px;

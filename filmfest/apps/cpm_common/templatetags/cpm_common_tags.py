@@ -50,3 +50,9 @@ def mainmenu(request):
         'mainmenu_items': mainmenu_items,
         'languages': languages,
     }
+
+@register.inclusion_tag('cpm_common/tags/bottommenu.html')
+def bottommenu():
+    return {
+        'mainmenu_items': MAINMENU_ITEMS,
+    }
