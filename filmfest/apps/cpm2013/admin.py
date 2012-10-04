@@ -1,10 +1,16 @@
+from functools import update_wrapper
 from itertools import chain, islice
 
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from django.utils import translation
 from django.utils.html import escape
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 from django.template.defaultfilters import linebreaksbr
 from django.template.defaultfilters import urlizetrunc
+from django.core.exceptions import PermissionDenied
+from django.contrib.admin.util import unquote
 
 from hvad.admin import TranslatableAdmin
 
@@ -64,7 +70,23 @@ class SubmissionAdmin(admin.ModelAdmin):
         return list(chain(*(
             fldst[1]['fields'] for fldst in islice(self.fieldsets, 1, None)
         )))
-    
+
+    def get_urls(self):
+        from django.conf.urls import patterns, url
+
+        def wrap(view):
+            def wrapper(*args, **kwargs):
+                return self.admin_site.admin_view(view)(*args, **kwargs)
+            return update_wrapper(wrapper, view)
+
+        info = self.model._meta.app_label, self.model._meta.module_name
+
+        return  patterns('',
+            url(r'^(\d+)/pdf/$',
+                wrap(self.pdf_view),
+                name='%s_%s_pdf' % info),
+        ) + super(SubmissionAdmin, self).get_urls()
+
     def display_film_link(self, obj):
         if not obj.film_link:
             return '---'
@@ -80,6 +102,26 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_country(self, obj):
         return obj.get_country_display()
     display_country.short_description = _('Country')
+
+    def pdf_view(self, request, object_id):
+        obj = get_object_or_404(Submission, pk=unquote(object_id))
+        if not self.has_change_permission(request, obj):
+            raise PermissionDenied
+
+        from apps.cpm2013.pdf import get_submission_confirmation_report
+
+        current_lang = translation.get_language()
+        try:
+            translation.activate(obj.submission_language)
+            pdf = get_submission_confirmation_report(obj)
+        finally:
+            translation.activate(current_lang)
+
+        response = HttpResponse(pdf, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="cpm2013.pdf"'
+
+        return response
+
 
     
 class NewsAdmin(TranslatableAdmin):
