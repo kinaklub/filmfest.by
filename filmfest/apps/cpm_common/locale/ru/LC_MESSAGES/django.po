@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-30 14:15+0300\n"
+"POT-Creation-Date: 2012-10-07 11:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,30 +31,34 @@ msgstr "Фестиваль"
 msgid "2012: good memories"
 msgstr "2012: хорошие воспоминания"
 
-#: templatetags/cpm_common_tags.py:17
+#: templatetags/cpm_common_tags.py:16
+msgid "Festival in media"
+msgstr "Фестиваль в СМИ"
+
+#: templatetags/cpm_common_tags.py:18
 msgid "Participants"
 msgstr "Участникам"
 
-#: templatetags/cpm_common_tags.py:18
+#: templatetags/cpm_common_tags.py:19
 msgid "Regulations"
 msgstr "Регламент"
 
-#: templatetags/cpm_common_tags.py:19
+#: templatetags/cpm_common_tags.py:20
 msgid "Submit your film!"
 msgstr "Отправь свой фильм!"
 
-#: templatetags/cpm_common_tags.py:21
+#: templatetags/cpm_common_tags.py:22
 msgid "Volunteers"
 msgstr "Волонтерам"
 
-#: templatetags/cpm_common_tags.py:22
+#: templatetags/cpm_common_tags.py:23
 msgid "Memo"
 msgstr "Памятка"
 
-#: templatetags/cpm_common_tags.py:23
+#: templatetags/cpm_common_tags.py:24
 msgid "Queistionnaire"
 msgstr "Анкета"
 
-#: templatetags/cpm_common_tags.py:25
+#: templatetags/cpm_common_tags.py:26
 msgid "Contacts"
 msgstr "Контакты"
