@@ -1,5 +1,7 @@
 {% extends "cpm2013/base.html" %}
-{% load markup %}
+{% load markup i18n %}
+
+{% block title %}{% trans "Queistionnaire" %} - {{ block.super }}{% endblock %}
 
 {% block content %}
 <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dEZ2X0hFM0Jac3dBSnhiNUx2MnVVb3c6MQ" width="940" height="2300px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
