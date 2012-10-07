@@ -13,7 +13,7 @@ MAINMENU_ITEMS = [
     (_('Home'), reverse('cpm2013:index'), ()),
     (_('Festival'), '', (
         (_('2012: good memories'), reverse('cpm2012:index')),
-        (_('Festival in media'), reverse('cpm2012:page', args=['media'])),
+        (_('Festival in media'), reverse('cpm2013:page', args=['media'])),
     )),
     (_('Participants'), '', (
         (_('Regulations'), reverse('cpm2013:rules')),
