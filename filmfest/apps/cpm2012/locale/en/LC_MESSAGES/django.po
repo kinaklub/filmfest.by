@@ -300,8 +300,8 @@ msgid "(en)terrados"
 msgstr "(en)terrados"
 
 #: templates/cpm2012/index.html:138
-msgid "Aex Lora, Испания"
-msgstr "Aex Lora, Spain"
+msgid "Alex Lora, Испания"
+msgstr "Alex Lora, Spain"
 
 #: templates/cpm2012/index.html:139
 msgid "In a city… finding an apartment is no longer possible."

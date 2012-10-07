@@ -299,7 +299,7 @@ msgid "(en)terrados"
 msgstr "(en)terrados"
 
 #: templates/cpm2012/index.html:138
-msgid "Aex Lora, Испания"
+msgid "Alex Lora, Испания"
 msgstr "Aлекс Лора, Іспанія"
 
 #: templates/cpm2012/index.html:139
