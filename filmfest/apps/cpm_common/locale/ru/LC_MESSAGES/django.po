@@ -36,7 +36,7 @@ msgid "Participants"
 msgstr "Участникам"
 
 #: templatetags/cpm_common_tags.py:18
-msgid "Rules"
+msgid "Regulations"
 msgstr "Регламент"
 
 #: templatetags/cpm_common_tags.py:19

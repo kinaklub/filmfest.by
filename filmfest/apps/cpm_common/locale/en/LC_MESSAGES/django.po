@@ -22,7 +22,7 @@ msgid "Home"
 msgstr ""
 
 #: templatetags/cpm_common_tags.py:13
-msgid "Rules"
+msgid "Regulations"
 msgstr ""
 
 #: templatetags/cpm_common_tags.py:15
