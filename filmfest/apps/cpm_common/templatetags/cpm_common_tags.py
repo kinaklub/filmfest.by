@@ -21,7 +21,8 @@ MAINMENU_ITEMS = [
     )),
     (_('Volunteers'), '', (
         (_('Memo'), reverse('cpm2013:page', args=['memo_volunteers'])),
-        (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire'))
+        (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire')),
+        (_('Discussion group'), 'http://groups.google.com/group/cpm2013_public'),
     )),
     (_('Contacts'), reverse('cpm2013:contacts'), ()),
 ]
