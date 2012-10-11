@@ -182,3 +182,11 @@ a, a:hover, a:visited {
     line-height: 22px;
     text-align: justify;
 }
+#rules-lang-list {
+    margin: auto;
+    list-style-type: none;
+}
+#rules-lang-list li {
+    float: left;
+    margin: 10px;
+}

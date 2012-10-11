@@ -4,6 +4,16 @@
 {% block title %}{% trans "Regulations" %} - {{ block.super }}{% endblock %}
 
 {% block content %}
+<ul id="rules-lang-list" class="clearfix">
+{% for lang in languages %}
+  {% if lang == current_lang %}
+    <li><strong>[{{ lang }}]</strong></li>
+  {% else %}
+    <li><a href="{% url cpm2013:rules_lang lang %}">{{ lang }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 <div{% if rtl %} dir="rtl" {% endif %}>
   {{ rules|markdown }}
 </div>

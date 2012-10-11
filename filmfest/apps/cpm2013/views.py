@@ -65,32 +65,40 @@ def page(request, slug):
     )
 
 class Rules:
-    BE = 'rules_ru.md'
-    RU = 'rules_ru.md'
-    EN = 'rules_en.md'
+    LANGUAGES = {
+        'be': 'rules_ru.md',
+        'ru': 'rules_ru.md',
+        'en': 'rules_en.md',
 
-    DE = 'rules_de.md'
-    PL = 'rules_pl.md'
-    ES = 'rules_es.md'
-    AR = 'rules_ar.md'
-    IT = 'rules_it.md'
+        'ar': 'rules_ar.md',
+        'cn': 'rules_cn.md',
+        'de': 'rules_de.md',
+        'es': 'rules_es.md',
+        'fr': 'rules_fr.md',
+        'it': 'rules_it.md',
+        'pl': 'rules_pl.md',
+        'pt': 'rules_pt.md',
+    }
+    RTL = set(('ar',))
 
-    RTL = set(('AR',))
     PATH = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs')
 
     @classmethod
     def translation(cls, lang):
         if lang is None:
             lang = translation.get_language()
-        lang = lang.upper()
 
-        rules = os.path.join(cls.PATH, getattr(cls, lang, cls.EN))
+        lang = lang.lower()
+        if lang not in cls.LANGUAGES:
+            lang = 'en'
+
+        rules = os.path.join(cls.PATH, cls.LANGUAGES[lang])
         rtl = lang in cls.RTL
 
-        return rules, rtl
+        return lang, rules, rtl
 
     def __call__(self, request, lang=None):
-        rules_filename, rtl = self.translation(lang)
+        lang, rules_filename, rtl = self.translation(lang)
         rules = io.open(
             rules_filename,
             'r', encoding='utf-8'
@@ -99,7 +107,9 @@ class Rules:
             'cpm2013/rules.html',
             {
                 'rules': rules,
-                'rtl': rtl
+                'rtl': rtl,
+                'current_lang': lang,
+                'languages': sorted(self.LANGUAGES.iterkeys()),
             },
             context_instance=RequestContext(request),
         )
