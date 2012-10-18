@@ -115,6 +115,8 @@ class Submission(models.Model, DirtyFieldsMixin):
         verbose_name=_('Film is received'), default=False)
     comment_papers_received = models.BooleanField(
         verbose_name=_('Papers were received'), default=False)
+    comment_vob_received = models.BooleanField(
+        verbose_name=_('Vob received'), default=False)
 
     submitted_at = models.DateTimeField(
         auto_now_add=True, verbose_name=_('Submitted at'))
@@ -124,6 +126,8 @@ class Submission(models.Model, DirtyFieldsMixin):
         null=True, blank=True, verbose_name=_('Film received at'))
     papers_received_at = models.DateTimeField(
         null=True, blank=True, verbose_name=_('Papers received at'))
+    vob_received_at = models.DateTimeField(
+        null=True, blank=True, verbose_name=_('Vob received at'))
 
     def __unicode__(self):
         return 'Film %s' % (self.title)
@@ -136,6 +140,7 @@ class Submission(models.Model, DirtyFieldsMixin):
             'comment_email_sent': 'email_sent_at',
             'comment_film_received': 'film_received_at',
             'comment_papers_received': 'papers_received_at',
+            'comment_vob_received': 'vob_received_at',
         }
         dirty_fields = self.get_dirty_fields()
 

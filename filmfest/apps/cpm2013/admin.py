@@ -20,15 +20,17 @@ class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
                     'comment_email_sent', 'comment_film_received',
-                    'comment_papers_received', 'display_comment']
+                    'comment_papers_received', 'comment_vob_received',
+                    'display_comment']
     list_filter = ['comment_email_sent', 'comment_film_received',
-                   'comment_papers_received']
+                   'comment_papers_received', 'comment_vob_received']
     ordering = ('-id',)
 
     fieldsets = [
             (_('Comments'), {
                 'fields': ['comment', 'comment_email_sent',
-                           'comment_film_received', 'comment_papers_received'],
+                           'comment_film_received', 'comment_papers_received',
+                           'comment_vob_received'],
             }),
             (_('Dates'), {
                 'fields': ['submitted_at', 'email_sent_at',
