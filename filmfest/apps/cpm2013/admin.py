@@ -19,9 +19,7 @@ from apps.cpm2013.models import Submission, NewsEntry, Page
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
-                    'comment_email_sent', 'comment_film_received',
-                    'comment_papers_received', 'comment_vob_received',
-                    'display_comment']
+                    'display_facts', 'display_comment']
     list_filter = ['comment_email_sent', 'comment_film_received',
                    'comment_papers_received', 'comment_vob_received']
     ordering = ('-id',)
@@ -104,6 +102,22 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_country(self, obj):
         return obj.get_country_display()
     display_country.short_description = _('Country')
+
+    def display_facts(self, obj):
+        fields = ['comment_email_sent', 'comment_film_received',
+                  'comment_papers_received', 'comment_vob_received']
+
+        true_html = '<img alt="True" src="/static/admin/img/icon-yes.gif">'
+        false_html = '<img alt="False" src="/static/admin/img/icon-no.gif">'
+        result = []
+        for field_name in fields:
+            result.append(u'%s: %s' % (
+                obj._meta.get_field_by_name(field_name)[0].verbose_name,
+                getattr(obj, field_name) and true_html or false_html
+            ))
+        return '<br />'.join(result)
+    display_facts.short_description = _('Facts')
+    display_facts.allow_tags = True
 
     def pdf_view(self, request, object_id):
         obj = get_object_or_404(Submission, pk=unquote(object_id))
