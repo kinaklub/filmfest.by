@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-30 14:16+0300\n"
+"POT-Creation-Date: 2012-10-28 13:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,48 +17,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:23
+#: admin.py:28
 msgid "Comments"
 msgstr ""
 
-#: admin.py:27
+#: admin.py:33
 msgid "Dates"
 msgstr ""
 
-#: admin.py:31 forms.py:51 pdf.py:13
+#: admin.py:37 forms.py:51 pdf.py:13
 msgid "Film"
 msgstr "Фільм"
 
-#: admin.py:37 forms.py:57 pdf.py:17
+#: admin.py:43 forms.py:57 pdf.py:17
 msgid "Director"
 msgstr "Рэжысёр"
 
-#: admin.py:42 forms.py:62 pdf.py:20
+#: admin.py:48 forms.py:62 pdf.py:20
 msgid "Producer"
 msgstr "Прадусар"
 
-#: admin.py:46 forms.py:67
+#: admin.py:52 forms.py:67
 msgid "Credits"
 msgstr "Удзельнікі"
 
-#: admin.py:50 forms.py:72 pdf.py:23
+#: admin.py:56 forms.py:72 pdf.py:23
 msgid "Applicant"
 msgstr "Заяўнік"
 
-#: admin.py:54 forms.py:77 pdf.py:105
+#: admin.py:60 forms.py:77 pdf.py:105
 msgid "Permissions"
 msgstr "Правы і дазволы"
 
-#: admin.py:72
+#: admin.py:94
 msgid "Download link"
 msgstr ""
 
-#: admin.py:77 models.py:111
+#: admin.py:99 models.py:111
 msgid "Comment"
 msgstr ""
 
-#: admin.py:82
+#: admin.py:104
 msgid "Country"
+msgstr ""
+
+#: admin.py:119
+msgid "Facts"
 msgstr ""
 
 #: constants.py:7 constants.py:13
@@ -281,7 +285,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76 templates/cpm2013/submit.html:55
+#: constants.py:76 templates/cpm2013/submit.html:57
 msgid "Belarus"
 msgstr ""
 
@@ -1226,7 +1230,6 @@ msgid "Other credits"
 msgstr "Іншыя ўдзельнікі"
 
 #: models.py:85
-#, fuzzy, python-format
 msgid ""
 "Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
@@ -1264,37 +1267,49 @@ msgstr ""
 msgid "Papers were received"
 msgstr ""
 
-#: models.py:120
-msgid "Submitted at"
+#: models.py:119
+msgid "Vob received"
 msgstr ""
 
 #: models.py:122
-msgid "E-mail sent at"
+msgid "Submitted at"
 msgstr ""
 
 #: models.py:124
-msgid "Film received at"
+msgid "E-mail sent at"
 msgstr ""
 
 #: models.py:126
+msgid "Film received at"
+msgstr ""
+
+#: models.py:128
 msgid "Papers received at"
 msgstr ""
 
-#: models.py:161 models.py:170
+#: models.py:130
+msgid "Vob received at"
+msgstr ""
+
+#: models.py:166 models.py:175
 msgid "Title"
 msgstr ""
 
-#: models.py:162
+#: models.py:167
 msgid "Short text"
 msgstr ""
 
-#: models.py:163 models.py:171
+#: models.py:168 models.py:176
 msgid "Text"
 msgstr ""
 
 #: validators.py:6
 msgid "Please check if you agree"
 msgstr "Калі ласка, падзвердзіце, што вы згодны"
+
+#: templates/admin/cpm2013/submission/change_form.html:6
+msgid "Download PDF"
+msgstr ""
 
 #: templates/cpm2013/base.html:28 templates/cpm2013/base.html.py:63
 msgid "международный фестиваль"
@@ -1320,29 +1335,35 @@ msgstr "Мінск, Беларусь"
 msgid "Links"
 msgstr "Спасылкі"
 
-#: templates/cpm2013/contacts.html:5
+#: templates/cpm2013/contacts.html:4
+msgid "Contacts"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:7
 msgid ""
 "If you have any questions, please feel free to contact us via e-mail. You "
 "can also get in touch with any of our coordinators directly."
-msgstr "Калі ў вас ёсць нейкія пытанні, адразу звязвайцесь з намі праз электронную пошту. Вы таксама можаце наўпрост звязацца з любым з нашых каардынатараў."
+msgstr ""
+"Калі ў вас ёсць нейкія пытанні, адразу звязвайцесь з намі праз электронную "
+"пошту. Вы таксама можаце наўпрост звязацца з любым з нашых каардынатараў."
 
-#: templates/cpm2013/contacts.html:6
+#: templates/cpm2013/contacts.html:8
 msgid "Festival e-mail"
 msgstr "E-mail фестываля"
 
-#: templates/cpm2013/contacts.html:7
+#: templates/cpm2013/contacts.html:9
 msgid "Festival coordinators"
 msgstr "Каардынатары фестываля"
 
-#: templates/cpm2013/contacts.html:11
+#: templates/cpm2013/contacts.html:13
 msgid "Dennis Sheko"
 msgstr "Дзяніс Шэка"
 
-#: templates/cpm2013/contacts.html:19
+#: templates/cpm2013/contacts.html:21
 msgid "Aleksandr Martyniuk"
 msgstr "Аляксандр Мартынюк"
 
-#: templates/cpm2013/contacts.html:26
+#: templates/cpm2013/contacts.html:28
 msgid "Darya Efimova"
 msgstr "Дар'я Ефімава"
 
@@ -1407,19 +1428,41 @@ msgstr ""
 "чалавек можа прыняць удзел у агульнай справе па арганізацыі фестывалю і "
 "назіраць як гэта робяць іншыя.</p>"
 
-#: templates/cpm2013/submit.html:40
+#: templates/cpm2013/partners.html:4
+msgid "Partners"
+msgstr "Партнёры"
+
+#: templates/cpm2013/partners.html:8
+msgid ""
+"<em>Cinema Perpetuum Mobile</em> is a non-profit, independent project which "
+"keeps on expenses and aspirations of the organizers. At the same time "
+"international nature of the event, cultural resonance provides fertile "
+"ground for collaboration with business and public organizations."
+msgstr ""
+"<em>Cinema Perpetuum Mobile</em> - некамерцыйны, незалежны праект, які трымаецца на імкненнях і сродках арганізатараў. У той жа час чакаемы культурны рэзананс падзеі, яе міжнародны характар, актыўныя зацікаўленнасці, ствараюць выдатную глебу для супрацоўніцтва з камерцыйнымі і грамадскімі ўстановамі."
+
+
+#: templates/cpm2013/rules.html:4
+msgid "Regulations"
+msgstr ""
+
+#: templates/cpm2013/submit.html:4
+msgid "Submit your film!"
+msgstr "дашлі фільм!"
+
+#: templates/cpm2013/submit.html:42
 msgid "Terms of participation"
 msgstr "Умовы ўдзелу"
 
-#: templates/cpm2013/submit.html:42
+#: templates/cpm2013/submit.html:44
 msgid "You need to complete 3 steps:"
 msgstr "Вам патрэбна прайсці 3 крокі"
 
-#: templates/cpm2013/submit.html:44
+#: templates/cpm2013/submit.html:46
 msgid "Make a request (fill in a form on the website)."
 msgstr "Запоўніць заяўку на сайце"
 
-#: templates/cpm2013/submit.html:45
+#: templates/cpm2013/submit.html:47
 msgid ""
 "A copy of the application form will be sent via e-mail, you need to print "
 "it, sign and send in the mail."
@@ -1427,7 +1470,7 @@ msgstr ""
 "Копія заяўкі будзе адпраўлена вам па электроннай пошце; вам патрэбна "
 "раздрукаваць як, падпісаць і адправіць па пошце."
 
-#: templates/cpm2013/submit.html:46
+#: templates/cpm2013/submit.html:48
 msgid ""
 "Transfer a copy of the film (on disk by mail or via the Internet) to the "
 "organizing committee."
@@ -1435,7 +1478,7 @@ msgstr ""
 "Перадаць копію фільма(на дыске поштай ці праз інтэрнэт) арганізацыйнаму "
 "камітэту."
 
-#: templates/cpm2013/submit.html:49
+#: templates/cpm2013/submit.html:51
 msgid ""
 "The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
 "file) should be the film only (without menus, etc.)."
@@ -1443,27 +1486,27 @@ msgstr ""
 "Фільм павінен быць дасланым на DVD ці праз інтэрнэт. На дыске (у файле) "
 "мусіць быць толькі фільм (без меню і г.д.)"
 
-#: templates/cpm2013/submit.html:50
+#: templates/cpm2013/submit.html:52
 msgid "Film copies and signed application forms are accepted at:"
 msgstr "Копіі фільма і падпісаныя заяўкі прымаюцца па адрэсе"
 
-#: templates/cpm2013/submit.html:52
+#: templates/cpm2013/submit.html:54
 msgid "Aliaksandr Martyniuk"
 msgstr "Аляксандр Мартынюк"
 
-#: templates/cpm2013/submit.html:53
+#: templates/cpm2013/submit.html:55
 msgid "PO Box 74"
 msgstr "а/c 74"
 
-#: templates/cpm2013/submit.html:54
+#: templates/cpm2013/submit.html:56
 msgid "Minsk"
 msgstr "Мінск"
 
-#: templates/cpm2013/submit.html:57
+#: templates/cpm2013/submit.html:59
 msgid "Deadline: <strong>November 15, 2012</strong>"
 msgstr "Крайні тэрмін: <strong>15 лістапада 2012</strong>"
 
-#: templates/cpm2013/submit.html:58
+#: templates/cpm2013/submit.html:60
 msgid "Complete festival rules can be found here:"
 msgstr "Поўны рэгламент фестываля можна знайсці тут:"
 
@@ -1489,6 +1532,10 @@ msgstr "Шаноўныя сябры!"
 #: templates/cpm2013/submit_temp.html:6
 msgid "Submission form opens on September 2, 2012"
 msgstr "Форма падачы заяўкі адчыняецца 2 верасня 2012"
+
+#: templates/cpm2013/volunteers_questionnaire.html:4
+msgid "Queistionnaire"
+msgstr ""
 
 #~ msgid ""
 #~ "<strong>“Cinema Perpetuum mobile”</strong> is an international cinema "

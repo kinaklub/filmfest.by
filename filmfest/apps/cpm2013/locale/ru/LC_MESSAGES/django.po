@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-30 14:16+0300\n"
+"POT-Creation-Date: 2012-10-28 13:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,48 +19,52 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: admin.py:23
+#: admin.py:28
 msgid "Comments"
 msgstr ""
 
-#: admin.py:27
+#: admin.py:33
 msgid "Dates"
 msgstr ""
 
-#: admin.py:31 forms.py:51 pdf.py:13
+#: admin.py:37 forms.py:51 pdf.py:13
 msgid "Film"
 msgstr "Фильм"
 
-#: admin.py:37 forms.py:57 pdf.py:17
+#: admin.py:43 forms.py:57 pdf.py:17
 msgid "Director"
 msgstr "Режиссер"
 
-#: admin.py:42 forms.py:62 pdf.py:20
+#: admin.py:48 forms.py:62 pdf.py:20
 msgid "Producer"
 msgstr "Продюсер"
 
-#: admin.py:46 forms.py:67
+#: admin.py:52 forms.py:67
 msgid "Credits"
 msgstr "Участники"
 
-#: admin.py:50 forms.py:72 pdf.py:23
+#: admin.py:56 forms.py:72 pdf.py:23
 msgid "Applicant"
 msgstr "Заявитель"
 
-#: admin.py:54 forms.py:77 pdf.py:105
+#: admin.py:60 forms.py:77 pdf.py:105
 msgid "Permissions"
 msgstr "Права и разрешения"
 
-#: admin.py:72
+#: admin.py:94
 msgid "Download link"
 msgstr ""
 
-#: admin.py:77 models.py:111
+#: admin.py:99 models.py:111
 msgid "Comment"
 msgstr ""
 
-#: admin.py:82
+#: admin.py:104
 msgid "Country"
+msgstr ""
+
+#: admin.py:119
+msgid "Facts"
 msgstr ""
 
 #: constants.py:7 constants.py:13
@@ -283,7 +287,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76 templates/cpm2013/submit.html:55
+#: constants.py:76 templates/cpm2013/submit.html:57
 msgid "Belarus"
 msgstr ""
 
@@ -1265,37 +1269,49 @@ msgstr ""
 msgid "Papers were received"
 msgstr ""
 
-#: models.py:120
-msgid "Submitted at"
+#: models.py:119
+msgid "Vob received"
 msgstr ""
 
 #: models.py:122
-msgid "E-mail sent at"
+msgid "Submitted at"
 msgstr ""
 
 #: models.py:124
-msgid "Film received at"
+msgid "E-mail sent at"
 msgstr ""
 
 #: models.py:126
+msgid "Film received at"
+msgstr ""
+
+#: models.py:128
 msgid "Papers received at"
 msgstr ""
 
-#: models.py:161 models.py:170
+#: models.py:130
+msgid "Vob received at"
+msgstr ""
+
+#: models.py:166 models.py:175
 msgid "Title"
 msgstr "Название"
 
-#: models.py:162
+#: models.py:167
 msgid "Short text"
 msgstr ""
 
-#: models.py:163 models.py:171
+#: models.py:168 models.py:176
 msgid "Text"
 msgstr ""
 
 #: validators.py:6
 msgid "Please check if you agree"
 msgstr "Пожалуйста, подтвердите, что вы согласны"
+
+#: templates/admin/cpm2013/submission/change_form.html:6
+msgid "Download PDF"
+msgstr ""
 
 #: templates/cpm2013/base.html:28 templates/cpm2013/base.html.py:63
 msgid "международный фестиваль"
@@ -1321,29 +1337,36 @@ msgstr "Минск, Беларусь"
 msgid "Links"
 msgstr "Ссылки"
 
-#: templates/cpm2013/contacts.html:5
+#: templates/cpm2013/contacts.html:4
+msgid "Contacts"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:7
 msgid ""
 "If you have any questions, please feel free to contact us via e-mail. You "
 "can also get in touch with any of our coordinators directly."
-msgstr "Если у вас есть какие-либо вопросы, сразу связывайтесь с нами через электронную почту. Вы также можете напрямую связаться с любым из наших координаторов."
+msgstr ""
+"Если у вас есть какие-либо вопросы, сразу связывайтесь с нами через "
+"электронную почту. Вы также можете напрямую связаться с любым из наших "
+"координаторов."
 
-#: templates/cpm2013/contacts.html:6
+#: templates/cpm2013/contacts.html:8
 msgid "Festival e-mail"
 msgstr "E-mail фестиваля"
 
-#: templates/cpm2013/contacts.html:7
+#: templates/cpm2013/contacts.html:9
 msgid "Festival coordinators"
 msgstr "Координаторы фестиваля"
 
-#: templates/cpm2013/contacts.html:11
+#: templates/cpm2013/contacts.html:13
 msgid "Dennis Sheko"
 msgstr "Денис Шеко"
 
-#: templates/cpm2013/contacts.html:19
+#: templates/cpm2013/contacts.html:21
 msgid "Aleksandr Martyniuk"
 msgstr "Александр Мартынюк"
 
-#: templates/cpm2013/contacts.html:26
+#: templates/cpm2013/contacts.html:28
 msgid "Darya Efimova"
 msgstr "Дарья Ефимова"
 
@@ -1409,19 +1432,40 @@ msgstr ""
 "принять участие в общем деле по организации фестиваля и наблюдать, как это "
 "делают другие.</p>"
 
-#: templates/cpm2013/submit.html:40
+#: templates/cpm2013/partners.html:4
+msgid "Partners"
+msgstr "Партнеры"
+
+#: templates/cpm2013/partners.html:8
+msgid ""
+"<em>Cinema Perpetuum Mobile</em> is a non-profit, independent project which "
+"keeps on expenses and aspirations of the organizers. At the same time "
+"international nature of the event, cultural resonance provides fertile "
+"ground for collaboration with business and public organizations."
+msgstr ""
+"<em>Cinema Perpetuum Mobile</em> - некоммерческий, независимый проект, который держится на устремлениях и расходах организаторов. В то же время международный характер события, его культурный резонанс, заинтересованности, создают благоприятную почву для сотрудничества с коммерческими и общественными организациями."
+
+#: templates/cpm2013/rules.html:4
+msgid "Regulations"
+msgstr ""
+
+#: templates/cpm2013/submit.html:4
+msgid "Submit your film!"
+msgstr "отправь фильм!"
+
+#: templates/cpm2013/submit.html:42
 msgid "Terms of participation"
 msgstr "Условия участия"
 
-#: templates/cpm2013/submit.html:42
+#: templates/cpm2013/submit.html:44
 msgid "You need to complete 3 steps:"
 msgstr "Вам нужно выполнить 3 шага"
 
-#: templates/cpm2013/submit.html:44
+#: templates/cpm2013/submit.html:46
 msgid "Make a request (fill in a form on the website)."
 msgstr "Заполнить заявку (заполнить форму на сайте)"
 
-#: templates/cpm2013/submit.html:45
+#: templates/cpm2013/submit.html:47
 msgid ""
 "A copy of the application form will be sent via e-mail, you need to print "
 "it, sign and send in the mail."
@@ -1429,7 +1473,7 @@ msgstr ""
 "Копия заявки будет отправлена вам по электронной почте; вам нужно "
 "распечатать ее, подписать и отправить почтой."
 
-#: templates/cpm2013/submit.html:46
+#: templates/cpm2013/submit.html:48
 msgid ""
 "Transfer a copy of the film (on disk by mail or via the Internet) to the "
 "organizing committee."
@@ -1437,7 +1481,7 @@ msgstr ""
 "Передать копию фильма (на диске почтой или через интернет) организационному "
 "комитету"
 
-#: templates/cpm2013/submit.html:49
+#: templates/cpm2013/submit.html:51
 msgid ""
 "The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
 "file) should be the film only (without menus, etc.)."
@@ -1445,27 +1489,27 @@ msgstr ""
 "Фильм должен быть отправлен на DVD почтой или через интернет. На диске (в "
 "файле) должен быть только фильм (без меню и пр.)"
 
-#: templates/cpm2013/submit.html:50
+#: templates/cpm2013/submit.html:52
 msgid "Film copies and signed application forms are accepted at:"
 msgstr "Копии фильмов и подписанные заявки принимаются по адресу"
 
-#: templates/cpm2013/submit.html:52
+#: templates/cpm2013/submit.html:54
 msgid "Aliaksandr Martyniuk"
 msgstr "Александр Мартынюк"
 
-#: templates/cpm2013/submit.html:53
+#: templates/cpm2013/submit.html:55
 msgid "PO Box 74"
 msgstr "а/я 74"
 
-#: templates/cpm2013/submit.html:54
+#: templates/cpm2013/submit.html:56
 msgid "Minsk"
 msgstr "Минск"
 
-#: templates/cpm2013/submit.html:57
+#: templates/cpm2013/submit.html:59
 msgid "Deadline: <strong>November 15, 2012</strong>"
 msgstr "Крайний срок: <strong>15 ноября 2012</strong>"
 
-#: templates/cpm2013/submit.html:58
+#: templates/cpm2013/submit.html:60
 msgid "Complete festival rules can be found here:"
 msgstr "Полный регламент фестиваля можно найти тут:"
 
@@ -1491,6 +1535,10 @@ msgstr "Дорогие друзья!"
 #: templates/cpm2013/submit_temp.html:6
 msgid "Submission form opens on September 2, 2012"
 msgstr "Форма подачи заявки открывается 2 сентября 2012"
+
+#: templates/cpm2013/volunteers_questionnaire.html:4
+msgid "Queistionnaire"
+msgstr ""
 
 #~ msgid ""
 #~ "<strong>“Cinema Perpetuum mobile”</strong> is an international cinema "

@@ -24,6 +24,7 @@ MAINMENU_ITEMS = [
         (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire')),
         (_('Discussion group'), 'http://groups.google.com/group/cpm2013_public'),
     )),
+    (_('Partners'), reverse('cpm2013:partners'), ()),
     (_('Contacts'), reverse('cpm2013:contacts'), ()),
 ]
 

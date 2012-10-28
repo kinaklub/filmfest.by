@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import io
 import os
 import os.path
@@ -114,3 +115,32 @@ class Rules:
             context_instance=RequestContext(request),
         )
 rules = Rules()
+
+def partners(request):
+    img_dir = '/static/cpm2013/banners/'
+    banners = [
+        (
+            img_dir + 'lamora.png',
+            'http://la-mora.info/',
+            'Арт-пространство ДК «La мора»'
+        ),        (
+            img_dir + 'bvc.png',
+            'http://www.belvc.by/',
+            'Белорусский видеоцентр'
+        ),
+        (
+            img_dir + 'minsk24dok.png',
+            'http://mtis.tv/',
+            'Минск 24 ДОК'
+        ),
+        (
+            img_dir + 'iysff.png',
+            'http://www.makesilentfilm.com/',
+            'International Youth Silent Film Festival'
+        ),
+    ]
+    return render_to_response(
+        'cpm2013/partners.html',
+        {'banners': banners},
+        context_instance=RequestContext(request),
+    )
