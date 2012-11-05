@@ -78,5 +78,5 @@ Filmy można wysłać jak zwykłą pocztą, tak przez Internet. W tym celu nale�
 
 ### Terminy przedstawienia prac.
 
-Ostatni dzień wysyłki filmu - 15 listopada 2012 roku. Przyjęcie prac po tym terminie będzie realizowane tylko po uzgodnieniu z Komitetem organizacyjnym.
+Ostatni dzień wysyłki filmu - 30 listopada 2012 roku. Przyjęcie prac po tym terminie będzie realizowane tylko po uzgodnieniu z Komitetem organizacyjnym.
 Filmy, wysłane po zaznaczonym terminie, będą uczestniczyć w festiwalu w następnym roku.

@@ -80,6 +80,6 @@ Filme können als per Post, sowie per e-Mail gesendet werden. Dafür muss ein Hi
 
 ### Fristen.
 
-Filme müssen bis zum am 15. November vorliegen. Annahme der Filme nach Ablauf der Frist erfordert nur nach der Vereinbarung mit Organisationskomitee.
+Filme müssen bis zum am 30. November vorliegen. Annahme der Filme nach Ablauf der Frist erfordert nur nach der Vereinbarung mit Organisationskomitee.
 Filme, die nach Ablauf der Frist eintreffen, gelten als eingereicht für nächstes Jahr.
  

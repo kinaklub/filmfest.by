@@ -76,6 +76,6 @@ Les images du films(deux ou plus) doivent être envoyées par la poste ou par in
 
 Vous pouvez d’ailleurs nous faire parvenir vos travaux par internet en envoyant un lien de téléchargement à l'adresse suivante :2013@filmfest.by.,ainsi que par la poste évidemment.
 
-La date limite est le 15 Novembre 2012. Les travaux envoyés passé cette date ne pourront être acceptés que sous réserve du Comité d'Organisation.
+La date limite est le 30 Novembre 2012. Les travaux envoyés passé cette date ne pourront être acceptés que sous réserve du Comité d'Organisation.
 
 Les films envoyés après la date limite seront considérés comme participant au festival de l'année suivante.

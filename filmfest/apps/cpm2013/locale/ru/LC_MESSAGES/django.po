@@ -1506,8 +1506,8 @@ msgid "Minsk"
 msgstr "Минск"
 
 #: templates/cpm2013/submit.html:59
-msgid "Deadline: <strong>November 15, 2012</strong>"
-msgstr "Крайний срок: <strong>15 ноября 2012</strong>"
+msgid "Deadline: <strong>November 30, 2012</strong>"
+msgstr "Крайний срок: <strong>30 ноября 2012</strong>"
 
 #: templates/cpm2013/submit.html:60
 msgid "Complete festival rules can be found here:"

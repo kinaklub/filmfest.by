@@ -79,6 +79,6 @@ Se puede enviar películas por correo o por Internet. Para esto hace falta envia
 
 ### La fecha límite para entregar  las obras.
 
-El último día para enviar la película es el 15 de noviembre de 2012. La aceptación de las obras después de este término puede efectuarse solamente de acuerdo con la Comisión Organizadora.
+El último día para enviar la película es el 30 de noviembre de 2012. La aceptación de las obras después de este término puede efectuarse solamente de acuerdo con la Comisión Organizadora.
 
 Las películas enviadas después del término indicado se consideran entregadas al festival del próximo año.

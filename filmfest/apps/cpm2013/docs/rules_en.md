@@ -73,6 +73,6 @@ Film screenshots (two or more) should be sent to the email 2013@filmfest.by
 
 You can send the materials via both post and the Internet. For this, please send the download link to the email 2013@filmfest.by
 
-The deadline for submitting films is November 15, 2012. The works sent later can be accepted only upon the Organizing Committee’s consent.
+The deadline for submitting films is November 30, 2012. The works sent later can be accepted only upon the Organizing Committee’s consent.
 
 Films sent after the deadline are considered to be submitted for the next year’s festival.

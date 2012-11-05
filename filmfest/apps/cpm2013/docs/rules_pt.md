@@ -77,6 +77,6 @@ No que se refere os filmes, é possível que envie os tanto pelo  correio quanto
 
 ### Prazo final
 
-O prazo final de enviar o filme é 15 do novembro 2012. A questão de enviar o filme depois do prazo final será decidido de accrodo com resolução do comîte da festa.
+O prazo final de enviar o filme é 30 do novembro 2012. A questão de enviar o filme depois do prazo final será decidido de accrodo com resolução do comîte da festa.
 
 Os que serão enviado depois do prazo final considerdao como os participantes da festa do próximo ano.

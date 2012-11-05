@@ -97,5 +97,5 @@ I cortometraggi possono essere inviati sia per posta che tramite internet. In qu
 
 ### Termini di iscrizione. 
 
-L’ultimo giorno per l'invio del filmato è fissato al 15 novembre 2012. L’ammissione al concorso delle opere inviati dopo questa data sarà effettuata solo in accordo con il Comitato Organizzatore. 
+L’ultimo giorno per l'invio del filmato è fissato al 30 novembre 2012. L’ammissione al concorso delle opere inviati dopo questa data sarà effettuata solo in accordo con il Comitato Organizzatore. 
 Le opere inviati dopo la data indicata vengono iscritti al Festival dell’anno prossimo.

@@ -1366,7 +1366,7 @@ msgid "Minsk"
 msgstr ""
 
 #: templates/cpm2013/submit.html:57
-msgid "Deadline: <strong>November 15, 2012</strong>"
+msgid "Deadline: <strong>November 30, 2012</strong>"
 msgstr ""
 
 #: templates/cpm2013/submit.html:58
