@@ -1,6 +1,7 @@
 from functools import update_wrapper
 from itertools import chain, islice
 
+from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
@@ -13,6 +14,7 @@ from django.core.exceptions import PermissionDenied
 from django.contrib.admin.util import unquote
 
 from hvad.admin import TranslatableAdmin
+from hvad.utils import get_translation_aware_manager
 
 from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate
 
@@ -142,9 +144,25 @@ class SubmissionAdmin(admin.ModelAdmin):
 
     
 class NewsAdmin(TranslatableAdmin):
-    pass
+    list_display = ['display_title', 'added_at']
+
+    def queryset(self, request):
+        return get_translation_aware_manager(NewsEntry)
+
+    def display_title(self, obj):
+        return obj.title
+    display_title.short_description = _('Title')
+
 class PageAdmin(TranslatableAdmin):
-    pass
+    list_display = ['slug', 'display_title']
+
+    def queryset(self, request):
+        return get_translation_aware_manager(Page)
+
+    def display_title(self, obj):
+        return obj.title
+    display_title.short_description = _('Title')
+
 
 class LetterTemplateAdmin(TranslatableAdmin):
     def get_readonly_fields(self, request, obj=None):

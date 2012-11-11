@@ -188,6 +188,8 @@ class NewsEntry(TranslatableModel):
         text = models.TextField(verbose_name=_('Text'), max_length=1000),
     )
 
+    __unicode__ = lambda self: self.title
+
 class Page(TranslatableModel):
     slug = models.SlugField(max_length=50)
 
@@ -195,6 +197,8 @@ class Page(TranslatableModel):
         title = models.CharField(verbose_name=_('Title'), max_length=100),
         text = models.TextField(verbose_name=_('Text')),
     )
+
+    __unicode__ = lambda self: self.slug
 
 class LetterTemplate(TranslatableModel):
     code = models.SlugField(max_length=50, unique=True)
