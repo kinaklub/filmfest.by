@@ -26,6 +26,7 @@ Please mark mailing materials with “No commercial value, for cultural purposes
 
 DVD with a film copy is not a subject to return. Please note that in case the film is selected, this signed entry form refrains from withdrawing afterward the film from the festival.
 
+Also, instead of sending the film submission form by mail, you can send a file with a scanned or photographed copy to the e-mail 2013@filmfest.by
 
 I declare that I am the legal owner of all rights relating to the submitted movie ______________ (signature)
 
