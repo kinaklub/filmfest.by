@@ -69,7 +69,7 @@ class SendEmailFromTemplate(Task):
         try:
             translation.activate(submission.submission_language)
 
-            letter = LetterTemplate.objects.language().get(slug=template_code)
+            letter = LetterTemplate.objects.language().get(code=template_code)
             email = EmailMessage(
                 letter.subject,
                 letter.text % {'name': submission.applicant},

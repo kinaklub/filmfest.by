@@ -23,6 +23,7 @@ class SubmissionAdmin(admin.ModelAdmin):
     list_filter = ['comment_email_sent', 'comment_film_received',
                    'comment_papers_received', 'comment_vob_received']
     ordering = ('-id',)
+    save_on_top = True
 
     fieldsets = [
             (_('Comments'), {
@@ -162,7 +163,7 @@ class LetterTemplateAdmin(TranslatableAdmin):
         ]
 
     def has_add_permission(self, request):
-        return request.user.is_superuser
+        return False
 
     def has_delete_permission(self, request, obj=None):
         return False
