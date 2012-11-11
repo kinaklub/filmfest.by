@@ -157,7 +157,27 @@ class Submission(models.Model, DirtyFieldsMixin):
 
     def save(self, *args, **kwargs):
         self._track_facts()
-        return super(Submission, self).save(*args, **kwargs)
+
+        dirty_fields = self.get_dirty_fields().copy()
+        new_fact = lambda fact: getattr(self, fact) and fact in dirty_fields
+
+        res = super(Submission, self).save(*args, **kwargs)
+
+        countdown = 60 * 20  # 20 minutes
+        if new_fact('comment_film_received'):
+            from apps.cpm2013.tasks import SendEmailUpdate
+            SendEmailUpdate().apply_async(
+                args=[self.id, 'comment_film_received'],
+                countdown=countdown
+            )
+        if new_fact('comment_papers_received'):
+            from apps.cpm2013.tasks import SendEmailUpdate
+            SendEmailUpdate().apply_async(
+                args=[self.id, 'comment_papers_received'],
+                countdown=countdown
+            )
+
+        return res
 
 class NewsEntry(TranslatableModel):
     added_at = models.DateTimeField(auto_now_add=True)
@@ -175,3 +195,20 @@ class Page(TranslatableModel):
         title = models.CharField(verbose_name=_('Title'), max_length=100),
         text = models.TextField(verbose_name=_('Text')),
     )
+
+class LetterTemplate(TranslatableModel):
+    code = models.SlugField(max_length=50, unique=True)
+
+    translations = TranslatedFields(
+        subject = models.CharField(verbose_name=_('Subject'), max_length=100),
+        text = models.TextField(verbose_name=_('Text')),
+    )
+
+    def __unicode__(self):
+        return self.code
+
+class ActionRegistry(models.Model):
+    code = models.CharField(verbose_name=_('Action code'), max_length=100,
+                            db_index=True)
+    at = models.DateTimeField(
+        auto_now_add=True, verbose_name=_('At'))

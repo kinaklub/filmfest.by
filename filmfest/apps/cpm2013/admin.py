@@ -14,7 +14,7 @@ from django.contrib.admin.util import unquote
 
 from hvad.admin import TranslatableAdmin
 
-from apps.cpm2013.models import Submission, NewsEntry, Page
+from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate
 
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
@@ -145,6 +145,29 @@ class NewsAdmin(TranslatableAdmin):
 class PageAdmin(TranslatableAdmin):
     pass
 
+class LetterTemplateAdmin(TranslatableAdmin):
+    def get_readonly_fields(self, request, obj=None):
+        if obj is None:
+            return []
+        return ['code']
+
+    def get_fieldsets(self, request, obj=None):
+        return [
+            (None, {
+                'fields': ['code'],
+            }),
+            (_('Template'), {
+                'fields': ['subject', 'text'],
+            }),
+        ]
+
+    def has_add_permission(self, request):
+        return request.user.is_superuser
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 admin.site.register(Submission, SubmissionAdmin)
 admin.site.register(NewsEntry, NewsAdmin)
 admin.site.register(Page, PageAdmin)
+admin.site.register(LetterTemplate, LetterTemplateAdmin)
