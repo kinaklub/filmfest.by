@@ -22,7 +22,7 @@ class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
                     'display_facts', 'display_comment']
-    list_filter = ['comment_email_sent', 'comment_film_received',
+    list_filter = ['section', 'comment_email_sent', 'comment_film_received',
                    'comment_papers_received', 'comment_vob_received']
     ordering = ('-id',)
     save_on_top = True
