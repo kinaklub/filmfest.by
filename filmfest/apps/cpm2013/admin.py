@@ -1,5 +1,8 @@
 from functools import update_wrapper
 from itertools import chain, islice
+import os
+import os.path
+import tempfile
 
 from django.conf import settings
 from django.contrib import admin
@@ -7,16 +10,20 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
 from django.utils.html import escape
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template.defaultfilters import linebreaksbr
 from django.template.defaultfilters import urlizetrunc
+from django.template import RequestContext
 from django.core.exceptions import PermissionDenied
 from django.contrib.admin.util import unquote
 
 from hvad.admin import TranslatableAdmin
 from hvad.utils import get_translation_aware_manager
 
+import openpyxl
+
 from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate
+from apps.cpm2013.forms import FieldsForm
 
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
@@ -88,6 +95,9 @@ class SubmissionAdmin(admin.ModelAdmin):
             url(r'^(\d+)/pdf/$',
                 wrap(self.pdf_view),
                 name='%s_%s_pdf' % info),
+            url(r'^xlsx/$',
+                wrap(self.xlsx_view),
+                name='%s_%s_xlsx' % info),
         ) + super(SubmissionAdmin, self).get_urls()
 
     def display_film_link(self, obj):
@@ -141,6 +151,48 @@ class SubmissionAdmin(admin.ModelAdmin):
 
         return response
 
+    def xlsx_view(self, request):
+        if not self.has_change_permission(request):
+            raise PermissionDenied
+
+        form = FieldsForm(request.POST or None)
+        if request.method == 'POST' and form.is_valid():
+            submissions = Submission.objects.all().order_by('id')
+            xlsx_file = tempfile.mktemp()
+            try:
+                from openpyxl import Workbook
+                wb = Workbook(optimized_write = True)
+                ws = wb.create_sheet()
+
+                ws.append(form.cleaned_data['fields'])
+                for s in submissions:
+                    row = []
+                    for field in form.cleaned_data['fields']:
+                        try:
+                            row.append(getattr(s, 'get_%s_display' % field)())
+                        except AttributeError:
+                            row.append(getattr(s, field))
+                    ws.append(row)
+                wb.save(xlsx_file)
+                with open(xlsx_file, 'r') as f:
+                    xlsx = f.read()
+            finally:
+                if os.path.exists(xlsx_file):
+                    os.unlink(xlsx_file)
+            response = HttpResponse(
+                xlsx,
+                content_type='application/vnd.openxmlformats-officedocument.'\
+                'spreadsheetml.sheet'
+            )
+            response['Content-Disposition'] = 'attachment; '\
+                               'filename="submissions.xlsx"'
+            return response
+
+        return render_to_response(
+            'admin/cpm2013/submission/xlsx.html',
+            {'form': form},
+            context_instance=RequestContext(request),
+        )
 
     
 class NewsAdmin(TranslatableAdmin):
