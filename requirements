@@ -21,3 +21,4 @@ reportlab==2.5
 ssh==1.7.14
 wsgiref==0.1.2
 rst2pdf==0.92
+openpyxl==1.6.1
