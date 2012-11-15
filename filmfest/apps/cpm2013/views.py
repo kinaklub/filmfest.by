@@ -47,7 +47,7 @@ def submit(request):
 
 def page(request, slug):
     base_page = get_object_or_404(Page, slug=slug)
-    pages = base_page._meta.translations_model.objects.all()
+    pages = base_page._meta.translations_model.objects.filter(master=base_page)
     pages = dict((t.language_code, t) for t in pages)
 
     current_lang = translation.get_language()
