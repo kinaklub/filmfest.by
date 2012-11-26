@@ -22,24 +22,13 @@
 
   <body>
     <div id="header-container" class="container">
-      <div class="row">
-	<div class="span6">
-	  <div id="header">
-	    <h2 id="international-festival">{% trans 'международный фестиваль' %}<br />{% trans 'короткометражного кино' %}</h2>
-	    <h1 id="CinemaPerpetuumMobile">
-	      Cinema<br />
-	      <span id="Perpetuum">Perpetuum</span><br />
-	      <span id="Mobile">Mobile</span>
-	    </h1>
-	    <a href="http://filmfest.by" id="filmfest-by">filmfest.by</a>
-	  </div>
-	</div>
-	<div class="span6">
-	  <h3 id="how-2012">
-	    <span class="year">2013</span><br /><small><a href="{% url cpm2013:submit %}">{% trans 'submit your film!' %}</a></small>
-	  </h3>
-	</div>
-      </div>
+      <a href="{% url cpm2013:index %}">
+	<img src="{{ STATIC_URL }}cpm2013/logo2013.png" height="150px" alt="CPM filmfest"/>
+      </a>
+      <a id="header-call" href="http://www.kickstarter.com/projects/minskfilmfest/cinema-perpetuum-mobile-short-film-festival">
+	<div id="line1">{% trans "Say YES" %}</div>
+	<div id="line2">{% trans "to croud funding!" %}</div>
+      </a>
     </div>
 
     <div class="container">

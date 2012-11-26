@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-28 13:14+0300\n"
+"POT-Creation-Date: 2012-11-27 00:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,52 +17,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:28
+#: admin.py:38
 msgid "Comments"
 msgstr ""
 
-#: admin.py:33
+#: admin.py:43
 msgid "Dates"
 msgstr ""
 
-#: admin.py:37 forms.py:51 pdf.py:13
+#: admin.py:47 forms.py:51 pdf.py:13
 msgid "Film"
 msgstr "Фільм"
 
-#: admin.py:43 forms.py:57 pdf.py:17
+#: admin.py:53 forms.py:57 pdf.py:17
 msgid "Director"
 msgstr "Рэжысёр"
 
-#: admin.py:48 forms.py:62 pdf.py:20
+#: admin.py:58 forms.py:62 pdf.py:20
 msgid "Producer"
 msgstr "Прадусар"
 
-#: admin.py:52 forms.py:67
+#: admin.py:62 forms.py:67
 msgid "Credits"
 msgstr "Удзельнікі"
 
-#: admin.py:56 forms.py:72 pdf.py:23
+#: admin.py:66 forms.py:72 pdf.py:23
 msgid "Applicant"
 msgstr "Заяўнік"
 
-#: admin.py:60 forms.py:77 pdf.py:105
+#: admin.py:70 forms.py:77 pdf.py:105
 msgid "Permissions"
 msgstr "Правы і дазволы"
 
-#: admin.py:94
+#: admin.py:107
 msgid "Download link"
 msgstr ""
 
-#: admin.py:99 models.py:111
+#: admin.py:112 models.py:111
 msgid "Comment"
 msgstr ""
 
-#: admin.py:104
+#: admin.py:117
 msgid "Country"
 msgstr ""
 
-#: admin.py:119
+#: admin.py:132
 msgid "Facts"
+msgstr ""
+
+#: admin.py:206 admin.py:216 models.py:186 models.py:197
+msgid "Title"
+msgstr ""
+
+#: admin.py:230
+msgid "Template"
 msgstr ""
 
 #: constants.py:7 constants.py:13
@@ -1291,16 +1299,24 @@ msgstr ""
 msgid "Vob received at"
 msgstr ""
 
-#: models.py:166 models.py:175
-msgid "Title"
-msgstr ""
-
-#: models.py:167
+#: models.py:187
 msgid "Short text"
 msgstr ""
 
-#: models.py:168 models.py:176
+#: models.py:188 models.py:198 models.py:208
 msgid "Text"
+msgstr ""
+
+#: models.py:207
+msgid "Subject"
+msgstr ""
+
+#: models.py:215
+msgid "Action code"
+msgstr ""
+
+#: models.py:218
+msgid "At"
 msgstr ""
 
 #: validators.py:6
@@ -1311,27 +1327,35 @@ msgstr "Калі ласка, падзвердзіце, што вы згодны"
 msgid "Download PDF"
 msgstr ""
 
-#: templates/cpm2013/base.html:28 templates/cpm2013/base.html.py:63
+#: templates/admin/cpm2013/submission/xlsx.html:8
+msgid "Export"
+msgstr ""
+
+#: templates/cpm2013/base.html:29
+msgid "Say YES"
+msgstr "Скажы ТАК"
+
+#: templates/cpm2013/base.html:30
+msgid "to croud funding!"
+msgstr "краўдфандынгу!"
+
+#: templates/cpm2013/base.html:52
 msgid "международный фестиваль"
 msgstr ""
 
-#: templates/cpm2013/base.html:28 templates/cpm2013/base.html.py:64
+#: templates/cpm2013/base.html:53
 msgid "короткометражного кино"
 msgstr ""
 
-#: templates/cpm2013/base.html:39
-msgid "submit your film!"
-msgstr "дашлі фільм!"
-
-#: templates/cpm2013/base.html:66
+#: templates/cpm2013/base.html:55
 msgid "January 2013"
 msgstr "студзень 2013"
 
-#: templates/cpm2013/base.html:67
+#: templates/cpm2013/base.html:56
 msgid "Minsk, Belarus"
 msgstr "Мінск, Беларусь"
 
-#: templates/cpm2013/base.html:70
+#: templates/cpm2013/base.html:59
 msgid "Links"
 msgstr "Спасылкі"
 
@@ -1428,7 +1452,7 @@ msgstr ""
 "чалавек можа прыняць удзел у агульнай справе па арганізацыі фестывалю і "
 "назіраць як гэта робяць іншыя.</p>"
 
-#: templates/cpm2013/partners.html:4
+#: templates/cpm2013/partners.html:4 templates/cpm2013/partners.html.py:7
 msgid "Partners"
 msgstr "Партнёры"
 
@@ -1439,8 +1463,11 @@ msgid ""
 "international nature of the event, cultural resonance provides fertile "
 "ground for collaboration with business and public organizations."
 msgstr ""
-"<em>Cinema Perpetuum Mobile</em> - некамерцыйны, незалежны праект, які трымаецца на імкненнях і сродках арганізатараў. У той жа час чакаемы культурны рэзананс падзеі, яе міжнародны характар, актыўныя зацікаўленнасці, ствараюць выдатную глебу для супрацоўніцтва з камерцыйнымі і грамадскімі ўстановамі."
-
+"<em>Cinema Perpetuum Mobile</em> - некамерцыйны, незалежны праект, які "
+"трымаецца на імкненнях і сродках арганізатараў. У той жа час чакаемы "
+"культурны рэзананс падзеі, яе міжнародны характар, актыўныя зацікаўленнасці, "
+"ствараюць выдатную глебу для супрацоўніцтва з камерцыйнымі і грамадскімі "
+"ўстановамі."
 
 #: templates/cpm2013/rules.html:4
 msgid "Regulations"
@@ -1536,6 +1563,9 @@ msgstr "Форма падачы заяўкі адчыняецца 2 верасн
 #: templates/cpm2013/volunteers_questionnaire.html:4
 msgid "Queistionnaire"
 msgstr ""
+
+#~ msgid "submit your film!"
+#~ msgstr "дашлі фільм!"
 
 #~ msgid ""
 #~ "<strong>“Cinema Perpetuum mobile”</strong> is an international cinema "
