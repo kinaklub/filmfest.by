@@ -1338,7 +1338,7 @@ msgid "Say YES"
 msgstr "Скажи ДА"
 
 #: templates/cpm2013/base.html:30
-msgid "to croud funding!"
+msgid "to crowd funding!"
 msgstr "краудфандингу!"
 
 #: templates/cpm2013/base.html:52
