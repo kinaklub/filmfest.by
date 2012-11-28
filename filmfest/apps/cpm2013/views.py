@@ -134,6 +134,11 @@ def partners(request):
             'Минск 24 ДОК'
         ),
         (
+            img_dir + 'kinolife.png',
+            'http://kinolife.eu/',
+            'Film & TV Online Platform'
+        ),
+        (
             img_dir + 'iysff.png',
             'http://www.makesilentfilm.com/',
             'International Youth Silent Film Festival'
