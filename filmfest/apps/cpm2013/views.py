@@ -143,6 +143,37 @@ def partners(request):
             'http://www.makesilentfilm.com/',
             'International Youth Silent Film Festival'
         ),
+        (
+            img_dir + 'paramonak.png',
+            'http://paramonak.by/',
+            'Креативное агенство Парамонак'
+        ),
+        (
+            img_dir + 'euroradio.png',
+            'http://euroradio.fm/',
+            'Последние новости политики и культуры Беларуси - Euroradio'
+        ),
+        (
+            img_dir + 'bolshoi.png',
+            'http://bolshoi.by/',
+            'Журнал "Большой"'
+        ),
+        (
+            img_dir + 'minchanka.png',
+            'http://www.minchanka.by/',
+            'Минчанка: быть женщиной - это интересно!'
+        ),
+        (
+            img_dir + 'open.png',
+            'http://open.by/',
+            'Интернет-портал OPEN.BY'
+        ),
+        (
+            img_dir + 'mart.png',
+            'http://mart.by/',
+            'Современное белорусское искусство'
+        ),
+
     ]
     return render_to_response(
         'cpm2013/partners.html',
