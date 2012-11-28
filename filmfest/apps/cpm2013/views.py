@@ -173,7 +173,11 @@ def partners(request):
             'http://mart.by/',
             'Современное белорусское искусство'
         ),
-
+        (
+            img_dir + 'relax.png',
+            'http://relax.by/',
+            'relax.by - развлечения в Минске, развлекательные центры столицы'
+        ),
     ]
     return render_to_response(
         'cpm2013/partners.html',
