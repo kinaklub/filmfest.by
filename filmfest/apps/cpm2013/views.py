@@ -129,9 +129,9 @@ def partners(request):
             'Белорусский видеоцентр'
         ),
         (
-            img_dir + 'minsk24dok.png',
-            'http://mtis.tv/',
-            'Минск 24 ДОК'
+            img_dir + 'where.png',
+            'http://www.spn.ru/publishing/whereminsk/',
+            'Where Minsk'
         ),
         (
             img_dir + 'kinolife.png',
@@ -142,6 +142,11 @@ def partners(request):
             img_dir + 'iysff.png',
             'http://www.makesilentfilm.com/',
             'International Youth Silent Film Festival'
+        ),
+        (
+            img_dir + 'minsk24dok.png',
+            'http://mtis.tv/',
+            'Минск 24 ДОК'
         ),
         (
             img_dir + 'paramonak.png',
