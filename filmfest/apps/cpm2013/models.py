@@ -129,6 +129,11 @@ class Submission(models.Model, DirtyFieldsMixin):
     vob_received_at = models.DateTimeField(
         null=True, blank=True, verbose_name=_('Vob received at'))
 
+    preview = models.FloatField(
+        null=True, blank=True, verbose_name=_('Preview result'))
+    previewers = models.IntegerField(
+        null=True, blank=True, verbose_name=_('Previewers count'))
+
     def __unicode__(self):
         return 'Film %s' % (self.title)
 

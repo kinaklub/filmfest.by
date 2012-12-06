@@ -25,12 +25,32 @@ import openpyxl
 from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate
 from apps.cpm2013.forms import FieldsForm
 
+
+class PreviewFilter(admin.SimpleListFilter):
+    title = _('Previewed')
+
+    parameter_name = 'prv'
+
+    def lookups(self, request, model_admin):
+        return (
+            ('1', _('Yes')),
+            ('0', _('No')),
+        )
+
+    def queryset(self, request, queryset):
+        if self.value() == '1':
+            return queryset.filter(preview=None)
+        if self.value() == '0':
+            return queryset.exclude(preview=None)
+
+
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
-                    'display_facts', 'display_comment']
+                    'display_facts', 'display_preview', 'display_comment']
     list_filter = ['section', 'comment_email_sent', 'comment_film_received',
-                   'comment_papers_received', 'comment_vob_received']
+                   'comment_papers_received', 'comment_vob_received',
+                   PreviewFilter]
     ordering = ('-id',)
     save_on_top = True
 
@@ -106,6 +126,16 @@ class SubmissionAdmin(admin.ModelAdmin):
         return urlizetrunc(obj.film_link, 20)
     display_film_link.short_description = _('Download link')
     display_film_link.allow_tags = True
+
+    def display_preview(self, obj):
+        if obj.preview is None:
+            return '---'
+        return '%.1f / %d' % (
+            obj.preview,
+            obj.previewers
+        )
+    display_preview.short_description = 'Prv'
+    display_preview.allow_tags = True
 
     def display_comment(self, obj):
         return linebreaksbr(obj.comment or '')
