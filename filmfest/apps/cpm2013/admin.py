@@ -136,6 +136,7 @@ class SubmissionAdmin(admin.ModelAdmin):
         )
     display_preview.short_description = 'Prv'
     display_preview.allow_tags = True
+    display_preview.admin_order_field = 'preview'
 
     def display_comment(self, obj):
         return linebreaksbr(obj.comment or '')
