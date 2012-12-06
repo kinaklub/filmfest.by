@@ -38,9 +38,9 @@ class PreviewFilter(admin.SimpleListFilter):
         )
 
     def queryset(self, request, queryset):
-        if self.value() == '1':
-            return queryset.filter(preview=None)
         if self.value() == '0':
+            return queryset.filter(preview=None)
+        if self.value() == '1':
             return queryset.exclude(preview=None)
 
 
