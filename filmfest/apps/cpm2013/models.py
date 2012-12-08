@@ -328,5 +328,13 @@ class PreviewMark(models.Model):
         choices=[(n, str(n)) for n in xrange(1, 6)]
     )
 
+    @transaction.commit_on_success
+    def save(self):
+        res = super(Previewer, self).save()
+
+        self.submission.update_preview_mark()
+
+        return res
+
 #    class Meta:
 #        unique_together = ['previewer', 'submission']
