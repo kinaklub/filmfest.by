@@ -3,6 +3,7 @@ from datetime import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
+from django.db import transaction
 
 from hvad.models import TranslatableModel, TranslatedFields
 from dirtyfields import DirtyFieldsMixin
@@ -131,6 +132,8 @@ class Submission(models.Model, DirtyFieldsMixin):
 
     preview = models.FloatField(
         null=True, blank=True, verbose_name=_('Preview result'))
+    preview_average = models.FloatField(
+        null=True, blank=True, verbose_name=_('Preview average result'))
     previewers = models.IntegerField(
         null=True, blank=True, verbose_name=_('Previewers count'))
 
@@ -184,6 +187,37 @@ class Submission(models.Model, DirtyFieldsMixin):
 
         return res
 
+    def update_preview_mark(self):
+        marks = PreviewMark.objects.filter(submission=self)
+        marks = marks.select_related('previewer')
+
+        if len(marks) == 0:
+            return
+
+        nonlinear = {
+            1: 1.00,
+            2: 1.75,
+            3: 2.50,
+            4: 3.50,
+            5: 5.00,
+        }
+
+        res_avg = sum(mark.mark for mark in marks)
+        
+        res_nonlin = sum(
+            nonlinear[mark.mark]*mark.previewer.coefficient \
+            for mark in marks
+        )
+        div_nonlin = sum(
+            mark.previewer.coefficient \
+            for mark in marks
+        )
+
+        self.previewers = 0.0 + len(marks)
+        self.preview_average = res_avg / self.previewers
+        self.preview = res_nonlin / div_nonlin
+        self.save()
+
 class NewsEntry(TranslatableModel):
     added_at = models.DateTimeField(auto_now_add=True)
 
@@ -221,3 +255,78 @@ class ActionRegistry(models.Model):
                             db_index=True)
     at = models.DateTimeField(
         auto_now_add=True, verbose_name=_('At'))
+
+from apps.cpm2013 import previews
+    
+class Previewer(models.Model):
+    name = models.CharField(verbose_name=_('Name'), max_length=100)
+    email = models.CharField(verbose_name=_('email'), max_length=100)
+    age = models.IntegerField(verbose_name=_('Age'), null=True, blank=True)
+    gender = models.IntegerField(verbose_name=_('Gender'),
+                                 choices=previews.GENDER.CHOICES,
+                                 default=previews.GENDER.DEFAULT)
+    occupation_cinema = models.IntegerField(
+        verbose_name=_('Occupation cinema'),
+        choices=previews.YESNO.CHOICES,
+        blank=True, null=True
+    )
+    education = models.IntegerField(
+        verbose_name=_('Education'),
+        choices=previews.EDUCATION.CHOICES,
+        blank=True, null=True
+    )
+    working = models.IntegerField(
+        verbose_name=_('Working'),
+        choices=previews.WORKING.CHOICES,
+        blank=True, null=True
+    )
+    participation_in_film_creation = models.IntegerField(
+        verbose_name=_('Participation in film creation'),
+        choices=previews.PARTICIPATION_IN_FILM_CREATION.CHOICES,
+        blank=True, null=True
+    )
+    how_often_watch = models.IntegerField(
+        verbose_name=_('How often do you watch movies'),
+        choices=previews.HOW_OFTEN.CHOICES,
+        blank=True, null=True
+    )
+    how_often_screenings = models.IntegerField(
+        verbose_name=_('How often do you attend public screenings'),
+        choices=previews.HOW_OFTEN_SCREENINGS.CHOICES,
+        blank=True, null=True
+    )
+    cinephilia = models.IntegerField(
+        verbose_name=_('Cinephilia stage'),
+        choices=previews.CINEPHILIA_STAGE.CHOICES,
+        default=previews.CINEPHILIA_STAGE.DEFAULT
+    )
+    coefficient = models.FloatField(
+        verbose_name=_('Coefficient'),
+#        min_value=0.1,
+#        max_value=5.0,
+        default=1.0,
+    )
+
+    marks = models.ManyToManyField(Submission, through='PreviewMark')
+
+    def __unicode__(self):
+        return '%s (%s)' % (self.name, self.email)
+
+    @transaction.commit_on_success
+    def save(self):
+        res = super(Previewer, self).save()
+
+        for prev_mark in PreviewMark.objects.filter(previewer=self):
+            prev_mark.submission.update_preview_mark()
+
+        return res
+        
+class PreviewMark(models.Model):
+    previewer = models.ForeignKey(Previewer)
+    submission = models.ForeignKey(Submission)
+    mark = models.IntegerField(
+        choices=[(n, str(n)) for n in xrange(1, 6)]
+    )
+
+#    class Meta:
+#        unique_together = ['previewer', 'submission']

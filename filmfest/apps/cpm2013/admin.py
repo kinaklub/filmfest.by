@@ -10,19 +10,22 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
 from django.utils.html import escape
 from django.http import HttpResponse
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template.defaultfilters import linebreaksbr
 from django.template.defaultfilters import urlizetrunc
 from django.template import RequestContext
 from django.core.exceptions import PermissionDenied
 from django.contrib.admin.util import unquote
+from django.db import transaction
+from django.core.urlresolvers import reverse
 
 from hvad.admin import TranslatableAdmin
 from hvad.utils import get_translation_aware_manager
 
 import openpyxl
 
-from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate
+from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate,\
+     Previewer, PreviewMark
 from apps.cpm2013.forms import FieldsForm
 
 
@@ -47,7 +50,8 @@ class PreviewFilter(admin.SimpleListFilter):
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
-                    'display_facts', 'display_preview', 'display_comment']
+                    'display_facts', 'display_preview',
+                    'display_preview_avg', 'display_comment']
     list_filter = ['section', 'comment_email_sent', 'comment_film_received',
                    'comment_papers_received', 'comment_vob_received',
                    PreviewFilter]
@@ -118,6 +122,9 @@ class SubmissionAdmin(admin.ModelAdmin):
             url(r'^xlsx/$',
                 wrap(self.xlsx_view),
                 name='%s_%s_xlsx' % info),
+            url(r'^recalc_marks/$',
+                wrap(self.calculate_view),
+                name='%s_%s_recalc_marks' % info),
         ) + super(SubmissionAdmin, self).get_urls()
 
     def display_film_link(self, obj):
@@ -130,13 +137,21 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_preview(self, obj):
         if obj.preview is None:
             return '---'
-        return '%.1f / %d' % (
-            obj.preview,
-            obj.previewers
-        )
+        return '%.1f' % obj.preview
     display_preview.short_description = 'Prv'
     display_preview.allow_tags = True
     display_preview.admin_order_field = 'preview'
+
+    def display_preview_avg(self, obj):
+        if obj.preview_average is None:
+            return '---'
+        return '%.1f / %d' % (
+            obj.preview_average,
+            obj.previewers
+        )
+    display_preview_avg.short_description = 'Prv avg'
+    display_preview_avg.allow_tags = True
+    display_preview_avg.admin_order_field = 'preview_average'
 
     def display_comment(self, obj):
         return linebreaksbr(obj.comment or '')
@@ -225,7 +240,14 @@ class SubmissionAdmin(admin.ModelAdmin):
             context_instance=RequestContext(request),
         )
 
-    
+    @transaction.commit_on_success
+    def calculate_view(self, request):
+        for submission in Submission.objects.all():
+            submission.update_preview_mark()
+
+
+        return redirect('admin:cpm2013_submission_changelist')
+
 class NewsAdmin(TranslatableAdmin):
     list_display = ['display_title', 'added_at']
 
@@ -269,7 +291,34 @@ class LetterTemplateAdmin(TranslatableAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
+class PreviewerAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email']
+
+class PreviewMarkAdmin(admin.ModelAdmin):
+    list_display = ['mark', 'display_previewer', 'display_submission']
+    list_filter = ['previewer', 'submission', 'mark']
+
+    def queryset(self, request):
+        return super(PreviewMarkAdmin, self).queryset(request).select_related()
+
+    def display_previewer(self, obj):
+        url = reverse('admin:cpm2013_previewer_change',
+                      args=[obj.previewer.id])
+        return '<a href="%s">%s</a>' % (url, obj.previewer.name)
+    display_previewer.short_description = 'Previewer'
+    display_previewer.allow_tags = True
+
+    def display_submission(self, obj):
+        url = reverse('admin:cpm2013_submission_change',
+                      args=[obj.submission.id])
+        return '<a href="%s">%s</a>' % (url, obj.submission.title)
+    display_submission.short_description = 'Submission'
+    display_submission.allow_tags = True
+
+    
 admin.site.register(Submission, SubmissionAdmin)
 admin.site.register(NewsEntry, NewsAdmin)
 admin.site.register(Page, PageAdmin)
 admin.site.register(LetterTemplate, LetterTemplateAdmin)
+admin.site.register(Previewer, PreviewerAdmin)
+admin.site.register(PreviewMark, PreviewMarkAdmin)
