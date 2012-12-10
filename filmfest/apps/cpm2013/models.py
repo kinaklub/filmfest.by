@@ -330,7 +330,7 @@ class PreviewMark(models.Model):
 
     @transaction.commit_on_success
     def save(self):
-        res = super(Previewer, self).save()
+        res = super(PreviewMark, self).save()
 
         self.submission.update_preview_mark()
 
