@@ -17,7 +17,7 @@ MAINMENU_ITEMS = [
     )),
     (_('Participants'), '', (
         (_('Regulations'), reverse('cpm2013:rules')),
-        (_('Submit your film!'), reverse('cpm2013:submit')),
+#        (_('Submit your film!'), reverse('cpm2013:submit')),
     )),
     (_('Volunteers'), '', (
         (_('Memo'), reverse('cpm2013:page', args=['memo_volunteers'])),

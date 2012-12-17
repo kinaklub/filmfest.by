@@ -25,6 +25,11 @@ def index(request):
     )
 
 def submit(request):
+    return render_to_response(
+        'cpm2013/submit_closed.html',
+        context_instance=RequestContext(request),
+    )
+
     form = SubmissionForm(request.POST or None)
     if request.method == 'POST' and form.is_valid():
         submission = form.save(commit=False)
