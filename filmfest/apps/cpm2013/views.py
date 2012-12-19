@@ -123,6 +123,19 @@ rules = Rules()
 
 def partners(request):
     img_dir = '/static/cpm2013/banners/'
+    main_banners = [
+        (
+            img_dir + 'where450.png',
+            'http://www.spn.ru/publishing/whereminsk/',
+            'Where Minsk'
+        ),
+        (
+            img_dir + 'relax450.png',
+            'http://relax.by/',
+            'relax.by - развлечения в Минске, развлекательные центры столицы'
+        ),
+
+    ]
     banners = [
         (
             img_dir + 'lamora.png',
@@ -132,11 +145,6 @@ def partners(request):
             img_dir + 'bvc.png',
             'http://www.belvc.by/',
             'Белорусский видеоцентр'
-        ),
-        (
-            img_dir + 'where.png',
-            'http://www.spn.ru/publishing/whereminsk/',
-            'Where Minsk'
         ),
         (
             img_dir + 'kinolife.png',
@@ -183,14 +191,9 @@ def partners(request):
             'http://mart.by/',
             'Современное белорусское искусство'
         ),
-        (
-            img_dir + 'relax.png',
-            'http://relax.by/',
-            'relax.by - развлечения в Минске, развлекательные центры столицы'
-        ),
     ]
     return render_to_response(
         'cpm2013/partners.html',
-        {'banners': banners},
+        {'main_banners': main_banners, 'banners': banners},
         context_instance=RequestContext(request),
     )
