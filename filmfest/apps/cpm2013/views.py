@@ -191,6 +191,12 @@ def partners(request):
             'http://mart.by/',
             'Современное белорусское искусство'
         ),
+        (
+            img_dir + 'vgomele.png',
+            'http://vgomele.by/',
+            'vGomele.by - гомельский информационно-развлекательный портал'
+        ),
+
     ]
     return render_to_response(
         'cpm2013/partners.html',
