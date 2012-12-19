@@ -188,6 +188,12 @@ def partners(request):
             'http://relax.by/',
             'relax.by - развлечения в Минске, развлекательные центры столицы'
         ),
+        (
+            img_dir + 'vgomele.png',
+            'http://vgomele.by/',
+            'vGomele.by - гомельский информационно-развлекательный портал'
+        ),
+
     ]
     return render_to_response(
         'cpm2013/partners.html',
