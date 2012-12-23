@@ -96,3 +96,6 @@ class FieldsForm(forms.Form):
             data, files, auto_id, prefix, initial, error_class,
             label_suffix, empty_permitted
         )
+
+class XlsxUploadForm(forms.Form):
+    xlsx_file = forms.FileField(required=True)

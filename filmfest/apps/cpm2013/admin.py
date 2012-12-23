@@ -26,7 +26,7 @@ import openpyxl
 
 from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate,\
      Previewer, PreviewMark
-from apps.cpm2013.forms import FieldsForm
+from apps.cpm2013.forms import FieldsForm, XlsxUploadForm
 
 
 class PreviewFilter(admin.SimpleListFilter):
@@ -122,6 +122,9 @@ class SubmissionAdmin(admin.ModelAdmin):
             url(r'^xlsx/$',
                 wrap(self.xlsx_view),
                 name='%s_%s_xlsx' % info),
+            url(r'^xlsx_upload/$',
+                wrap(self.xlsx_upload_view),
+                name='%s_%s_xlsx_upload' % info),
             url(r'^recalc_marks/$',
                 wrap(self.calculate_view),
                 name='%s_%s_recalc_marks' % info),
@@ -203,9 +206,14 @@ class SubmissionAdmin(admin.ModelAdmin):
 
         form = FieldsForm(request.POST or None)
         if request.method == 'POST' and form.is_valid():
-            submissions = Submission.objects.all().order_by('id')
             xlsx_file = tempfile.mktemp()
+            current_lang = translation.get_language()
+
             try:
+                submissions = Submission.objects.all().order_by('id')
+
+                translation.activate('en')
+
                 from openpyxl import Workbook
                 wb = Workbook(optimized_write = True)
                 ws = wb.create_sheet()
@@ -223,6 +231,7 @@ class SubmissionAdmin(admin.ModelAdmin):
                 with open(xlsx_file, 'r') as f:
                     xlsx = f.read()
             finally:
+                translation.activate(current_lang)
                 if os.path.exists(xlsx_file):
                     os.unlink(xlsx_file)
             response = HttpResponse(
@@ -239,6 +248,74 @@ class SubmissionAdmin(admin.ModelAdmin):
             {'form': form},
             context_instance=RequestContext(request),
         )
+
+    @transaction.commit_manually
+    def xlsx_upload_view(self, request):
+        if not self.has_change_permission(request):
+            raise PermissionDenied
+        error = ''
+
+        form = XlsxUploadForm(request.POST or None, request.FILES or None)
+        if request.method == 'POST' and form.is_valid():
+            uploaded_file = form.cleaned_data['xlsx_file']
+
+            try:
+                from openpyxl import load_workbook
+                wb = load_workbook(filename=uploaded_file.temporary_file_path())
+                sheet0 = wb.get_sheet_by_name(wb.get_sheet_names()[0])
+
+                header = sheet0.rows[0]
+                allowed_fields = set(f.name for f in Submission._meta.fields)
+                for field in header:
+                    field = field.value
+                    if not field in allowed_fields:
+                        raise Exception('Invalid field %s' % field)
+
+                if header[0].value != 'id':
+                    raise Exception('First column must be id')
+
+                for index, row in enumerate(sheet0.rows[1:]):
+                    try:
+                        submission = Submission.objects.get(id=row[0].value)
+                    except Submission.DoesNotExist:
+                        raise Exception('Unknown submission %s' % (
+                            row[0]
+                        ))
+
+                    for index_h, field in enumerate(header[1:], 1):
+                        field_name = field.value
+                        field_obj = Submission._meta.get_field_by_name(field_name)[0]
+                        field_val = row[index_h].value
+
+                        if field_obj.choices:
+                            for k, v in field_obj.choices:
+                                if field_val in (k, unicode(v)):
+                                    setattr(submission, field_name, k)
+                                    break
+                            else:
+                                raise Exception('Submission %s: invalid %s' % (
+                                    submission.id, field
+                                ))
+                        else:
+                            setattr(submission, field_name, field_val)
+
+                    submission.save()
+            except Exception as e:
+                error = unicode(e)
+                transaction.rollback()
+            else:
+                transaction.commit()
+                error = 'done'
+
+        return render_to_response(
+            'admin/cpm2013/submission/xlsx_upload.html',
+            {
+                'form': form,
+                'error': error,
+            },
+            context_instance=RequestContext(request),
+        )
+
 
     @transaction.commit_on_success
     def calculate_view(self, request):

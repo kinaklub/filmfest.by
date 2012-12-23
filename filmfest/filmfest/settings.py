@@ -137,6 +137,10 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+FILE_UPLOAD_HANDLERS = (
+    "django.core.files.uploadhandler.TemporaryFileUploadHandler",
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',

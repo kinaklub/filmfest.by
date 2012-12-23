@@ -1,0 +1,19 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+    {% if form.is_multipart %}
+      <form enctype="multipart/form-data" method="post" action="">
+    {% else %}
+      <form method="get" action="">
+    {% endif %}
+    {% csrf_token %}
+    <div>
+      {% if error %}
+        <strong>{{ error }}</strong><br />
+      {% endif %}
+      {{ form }}
+      <input type="submit" value="{% trans "Export" %}" />
+    </div>
+    </form>
+{% endblock %}
