@@ -1,7 +1,11 @@
 from datetime import datetime
+from hashlib import md5
+
+import uuid
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.db import transaction
 
@@ -137,6 +141,16 @@ class Submission(models.Model, DirtyFieldsMixin):
     previewers = models.IntegerField(
         null=True, blank=True, verbose_name=_('Previewers count'))
 
+    received_subtitles = models.BooleanField(default=False)
+    received_screenshots = models.BooleanField(default=False)
+    received_director_photo = models.BooleanField(default=False)
+    received_director_bio = models.BooleanField(default=False)
+    received_producer_photo = models.BooleanField(default=False)
+    received_producer_bio = models.BooleanField(default=False)
+    received_company_info = models.BooleanField(default=False)
+    received_company_logo = models.BooleanField(default=False)
+    received_viza_info = models.BooleanField(default=False)
+    
     def __unicode__(self):
         return 'Film %s' % (self.title)
 
@@ -217,6 +231,14 @@ class Submission(models.Model, DirtyFieldsMixin):
         self.preview_average = res_avg / self.previewers
         self.preview = res_nonlin / div_nonlin
         self.save()
+
+    def get_absolute_url(self):
+        submission_hash = md5('%s%s' % (settings.SECRET_KEY, self.id))
+
+        return reverse('cpm2013:submission_info', args=[
+            str(self.id), submission_hash.hexdigest()
+        ])
+
 
 class NewsEntry(TranslatableModel):
     added_at = models.DateTimeField(auto_now_add=True)

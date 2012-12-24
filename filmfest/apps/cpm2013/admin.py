@@ -62,7 +62,12 @@ class SubmissionAdmin(admin.ModelAdmin):
             (_('Comments'), {
                 'fields': ['comment', 'comment_email_sent',
                            'comment_film_received', 'comment_papers_received',
-                           'comment_vob_received'],
+                           'comment_vob_received',
+                           'received_subtitles', 'received_screenshots',
+                           'received_director_photo', 'received_director_bio',
+                           'received_producer_photo', 'received_producer_bio',
+                           'received_company_info', 'received_company_logo',
+                           'received_viza_info'],
             }),
             (_('Dates'), {
                 'fields': ['submitted_at', 'email_sent_at',

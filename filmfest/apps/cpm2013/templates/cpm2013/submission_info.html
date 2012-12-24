@@ -1,0 +1,111 @@
+{% extends "cpm2013/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ submission.title }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<h2>{{ submission.title }}</h2>
+<h3>{{ submission.director }}</h3>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td>
+	{% trans "Film was received" %}
+      </td>
+      <td>
+	<i class="{% if submission.comment_film_received %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Subtitles were received" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_subtitles %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Screenshots were received" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_screenshots %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Director's photo was received" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_director_photo %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Director's biography was received" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_director_bio %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Producer's photo was received" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_producer_photo %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Producer's biography was received" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_producer_bio %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Company info was received (optional)" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_company_info %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Company logo was received (optional)" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_company_logo %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Information for viza was received (optional)" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_viza_info %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Authorization to include the film in the festival video collection for non-commercial screenings" %}
+      </td>
+      <td>
+	<i class="{% if submission.received_noncommercial == 1 %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	{% trans "Authorization to screen the film at film festivals from Cinema Perpetuum Mobile partner network" %}
+      </td>
+      <td>
+	<i class="{% if submission.allow_network == 1 %}icon-ok{% else %}icon-remove{% endif %}"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

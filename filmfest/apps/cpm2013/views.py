@@ -2,7 +2,7 @@
 import io
 import os
 import os.path
-from tex import latex2pdf
+from hashlib import md5
 
 from django.http import HttpResponse
 from django.views.generic.create_update import create_object
@@ -201,5 +201,18 @@ def partners(request):
     return render_to_response(
         'cpm2013/partners.html',
         {'main_banners': main_banners, 'banners': banners},
+        context_instance=RequestContext(request),
+    )
+
+def submission_info(request, sid, shash):
+    submission = get_object_or_404(Submission, id=sid)
+
+    real_hash = md5('%s%s' % (settings.SECRET_KEY, sid)).hexdigest()
+    if real_hash != shash:
+        return HttpResponse('Forbidden', status=403)
+
+    return render_to_response(
+        'cpm2013/submission_info.html',
+        {'submission': submission},
         context_instance=RequestContext(request),
     )
