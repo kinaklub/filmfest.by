@@ -6,14 +6,17 @@ from hashlib import md5
 
 from django.http import HttpResponse
 from django.views.generic.create_update import create_object
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import loader, RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse
+from django.core.mail import mail_managers
 from django.conf import settings
 
-from apps.cpm2013.models import Submission, NewsEntry, Page
-from apps.cpm2013.forms import SubmissionForm
+from apps.cpm2013.models import Submission, NewsEntry, Page,\
+     SubmissionFileUpload
+from apps.cpm2013.forms import SubmissionForm, FileUploadForm
 from apps.cpm2013.tasks import SendSubmissionEmail
 
 def index(request):
@@ -204,15 +207,73 @@ def partners(request):
         context_instance=RequestContext(request),
     )
 
-def submission_info(request, sid, shash):
-    submission = get_object_or_404(Submission, id=sid)
+def submission_info(request, subm_id, subm_hash):
+    submission = get_object_or_404(Submission, id=subm_id)
 
-    real_hash = md5('%s%s' % (settings.SECRET_KEY, sid)).hexdigest()
-    if real_hash != shash:
+    real_hash = md5('%s%s' % (settings.SECRET_KEY, subm_id)).hexdigest()
+    if real_hash != subm_hash:
         return HttpResponse('Forbidden', status=403)
 
+    file_uploads = SubmissionFileUpload.objects.filter(submission=submission)
+        
     return render_to_response(
         'cpm2013/submission_info.html',
-        {'submission': submission},
+        {
+            'submission': submission,
+            'files': list(file_uploads),
+            'subm_hash': subm_hash
+        },
+        context_instance=RequestContext(request),
+    )
+
+def submission_info_upload(request, subm_id, subm_hash):
+    submission = get_object_or_404(Submission, id=subm_id)
+
+    real_hash = md5('%s%s' % (settings.SECRET_KEY, subm_id)).hexdigest()
+    if real_hash != subm_hash:
+        return HttpResponse('Forbidden', status=403)
+
+    form = FileUploadForm(request.POST or None, request.FILES or None)
+    error = ''
+    if request.method == 'POST' and form.is_valid():
+        uploaded_file = form.cleaned_data['file']
+
+        name, ext = os.path.splitext(uploaded_file.name)
+        real_name = md5(
+            '%s%s' % (settings.SECRET_KEY, uploaded_file.name)
+        ).hexdigest() + ext
+        subm_file_upload = SubmissionFileUpload(
+            submission=submission,
+            display_name=name + ext,
+            real_name=real_name
+        )
+
+        real_path = os.path.join(settings.MEDIA_ROOT, real_name)
+        if not os.path.exists(real_path):
+            with open(real_path, 'w') as f:
+                buf = uploaded_file.read(4096)
+                while buf:
+                    f.write(buf)
+                    buf = uploaded_file.read(4096)
+
+            subm_file_upload.save()
+            mail_managers(
+                'CPM2013: new file upload',
+                '%s at %s' % (
+                    uploaded_file.name,
+                    request.build_absolute_uri(reverse(
+                        'cpm2013:submission_info',
+                        args=[subm_id, subm_hash]
+                    )),
+                )
+            )
+
+            return redirect('cpm2013:submission_info', subm_id, subm_hash)
+
+        error = _('File with such name exists')
+
+    return render_to_response(
+        'cpm2013/submission_info_upload.html',
+        {'submission': submission, 'form': form, 'error': error},
         context_instance=RequestContext(request),
     )

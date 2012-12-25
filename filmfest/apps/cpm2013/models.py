@@ -360,3 +360,10 @@ class PreviewMark(models.Model):
 
 #    class Meta:
 #        unique_together = ['previewer', 'submission']
+
+
+class SubmissionFileUpload(models.Model):
+    submission = models.ForeignKey(Submission)
+
+    display_name = models.CharField(max_length=255)
+    real_name = models.CharField(max_length=355)

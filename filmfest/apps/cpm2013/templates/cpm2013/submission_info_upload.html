@@ -1,0 +1,21 @@
+{% extends "cpm2013/base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h3>
+      {% trans "Upload additional info for submisison "%}
+      {{ submission.title }}
+    </h3>
+
+    <form enctype="multipart/form-data" method="post" action="">
+    {% csrf_token %}
+    <div>
+      {% if error %}
+        <strong>{{ error }}</strong><br />
+      {% endif %}
+      {{ form }}
+      <br />
+      <input type="submit" value="{% trans "Upload" %}" />
+    </div>
+    </form>
+{% endblock %}

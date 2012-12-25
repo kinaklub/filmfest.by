@@ -97,5 +97,5 @@ class FieldsForm(forms.Form):
             label_suffix, empty_permitted
         )
 
-class XlsxUploadForm(forms.Form):
-    xlsx_file = forms.FileField(required=True)
+class FileUploadForm(forms.Form):
+    file = forms.FileField(required=True)

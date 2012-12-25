@@ -26,7 +26,7 @@ import openpyxl
 
 from apps.cpm2013.models import Submission, NewsEntry, Page, LetterTemplate,\
      Previewer, PreviewMark
-from apps.cpm2013.forms import FieldsForm, XlsxUploadForm
+from apps.cpm2013.forms import FieldsForm, FileUploadForm
 
 
 class PreviewFilter(admin.SimpleListFilter):
@@ -260,9 +260,9 @@ class SubmissionAdmin(admin.ModelAdmin):
             raise PermissionDenied
         error = ''
 
-        form = XlsxUploadForm(request.POST or None, request.FILES or None)
+        form = FileUploadForm(request.POST or None, request.FILES or None)
         if request.method == 'POST' and form.is_valid():
-            uploaded_file = form.cleaned_data['xlsx_file']
+            uploaded_file = form.cleaned_data['file']
 
             try:
                 from openpyxl import load_workbook

@@ -108,4 +108,23 @@
   </tbody>
 </table>
 
+{% if files %}
+<h4>{% trans "Uploaded files" %}</h4>
+<table class="table">
+  {% for file_upload in files %}
+    <tr><td>
+	{% if request.user.is_staff %}
+	  <a href="{{ MEDIA_URL }}{{ file_upload.real_name }}">
+	    {{ file_upload.display_name }}
+	  </a>
+	{% else %}
+	  {{ file_upload.display_name }}
+	{% endif %}
+    </td></tr>
+  {% endfor %}
+</table>
+{% endif %}
+<a href="{% url cpm2013:submission_info_upload submission.id subm_hash %}">
+  {% trans "Upload a file" %}
+</a>
 {% endblock %}

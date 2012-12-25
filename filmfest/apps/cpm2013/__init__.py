@@ -17,8 +17,10 @@ def get_urls():
         url(r'^contacts', direct_to_template,
             {'template': 'cpm2013/contacts.html'},
             name='contacts'),
-        url(r'^submission/(?P<sid>[\d]+)/(?P<shash>[\w\d]+)/', views.submission_info, name='submission_info'),
-
+        url(r'^submission/(?P<subm_id>[\d]+)/(?P<subm_hash>[\w\d]+)/$',
+            views.submission_info, name='submission_info'),
+        url(r'^submission/(?P<subm_id>[\d]+)/(?P<subm_hash>[\w\d]+)/upload/',
+            views.submission_info_upload, name='submission_info_upload'),
     )
 
 urls = (get_urls(), 'cpm2013', 'cpm2013')
