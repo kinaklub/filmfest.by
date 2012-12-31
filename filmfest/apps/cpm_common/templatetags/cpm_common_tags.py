@@ -25,6 +25,7 @@ MAINMENU_ITEMS = [
         (_('Discussion group'), 'http://groups.google.com/group/cpm2013_public'),
     )),
     (_('Partners'), reverse('cpm2013:partners'), ()),
+    (_('Press kit'), reverse('cpm2013:press_kit'), ()),
     (_('Contacts'), reverse('cpm2013:contacts'), ()),
 ]
 

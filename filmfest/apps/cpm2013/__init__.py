@@ -17,6 +17,7 @@ def get_urls():
         url(r'^contacts', direct_to_template,
             {'template': 'cpm2013/contacts.html'},
             name='contacts'),
+        url(r'^presskit', views.press_kit, name='press_kit'),
         url(r'^submission/(?P<subm_id>[\d]+)/(?P<subm_hash>[\w\d]+)/$',
             views.submission_info, name='submission_info'),
         url(r'^submission/(?P<subm_id>[\d]+)/(?P<subm_hash>[\w\d]+)/upload/',

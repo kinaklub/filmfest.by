@@ -277,3 +277,9 @@ def submission_info_upload(request, subm_id, subm_hash):
         {'submission': submission, 'form': form, 'error': error},
         context_instance=RequestContext(request),
     )
+
+def press_kit(request):
+    return render_to_response(
+        'cpm2013/press_kit.html', {},
+        context_instance=RequestContext(request),
+    )
