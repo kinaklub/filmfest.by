@@ -150,6 +150,16 @@ def partners(request):
             'Белорусский видеоцентр'
         ),
         (
+            img_dir + 'minsk24dok.png',
+            'http://mtis.tv/',
+            'Минск 24 ДОК'
+        ),
+        (
+            img_dir + 'paramonak.png',
+            'http://paramonak.by/',
+            'Креативное агенство Парамонак'
+        ),
+        (
             img_dir + 'kinolife.png',
             'http://kinolife.eu/',
             'Film & TV Online Platform'
@@ -160,14 +170,9 @@ def partners(request):
             'International Youth Silent Film Festival'
         ),
         (
-            img_dir + 'minsk24dok.png',
-            'http://mtis.tv/',
-            'Минск 24 ДОК'
-        ),
-        (
-            img_dir + 'paramonak.png',
-            'http://paramonak.by/',
-            'Креативное агенство Парамонак'
+            img_dir + 'luma.png',
+            'http://luma.net.my/',
+            'LUMA – a creative hub for the media arts'
         ),
         (
             img_dir + 'euroradio.png',
