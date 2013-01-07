@@ -4,6 +4,28 @@
 {% block content %}
 <div class="row">
   <div class="span7">
+    <div id="schedule">
+      {% for date, screenings in schedule %}
+      <h3>
+	{% if LANGUAGE_CODE == 'en' %}
+  	  {{ date|date:"F j" }}
+	{% else %}
+	  {{ date|date:"j E" }}
+	{% endif %}
+	<small>{{ date|date:"l"|lower }}</small>
+      </h3>
+      <ul>
+	{% for time, program, place in screenings %}
+	<li>
+	  <span class="time">{{ time|date:"G:i" }}</span>
+	  <span class="program">{{ program }}</span>
+	  <span class="place">{{ place }}</span>
+	  <div style="clear: both"></div>
+	</li>
+	{% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
     <div id="index-about">
       {% blocktrans %}
       <p>Welcome to II International Short Film Festival Cinema Perpetuum Mobile!</p>

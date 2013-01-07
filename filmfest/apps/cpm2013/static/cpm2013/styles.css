@@ -114,3 +114,28 @@ a#header-call:hover {
     float: left;
     margin: 10px;
 }
+#schedule {
+    padding: 19px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+}
+#schedule ul{
+    list-style-type: none;
+}
+#schedule .time {
+    line-height: 44px;
+    font-size: 36px;
+    float: left;
+    margin-right: 20px;
+}
+#schedule .program, #schedule .place {
+    float: left;
+    width: 300px;
+}
+#schedule .program {
+    padding-top: 4px;
+}
+#schedule .place {
+    font-size: small;
+}
