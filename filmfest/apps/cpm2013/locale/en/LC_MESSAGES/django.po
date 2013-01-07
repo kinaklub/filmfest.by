@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-07 18:19+0300\n"
+"POT-Creation-Date: 2013-01-07 18:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1486,8 +1486,8 @@ msgid "фильмы БелВидеоЦентра"
 msgstr "films of Belarussian VideoCentre"
 
 #: schedule.py:14
-msgid "клипы"
-msgstr "music video"
+msgid "клипы, презентация KinoLife.com"
+msgstr "musical video, presentation of KinoLife.com"
 
 #: schedule.py:15
 msgid "программа урбанистики"
@@ -1534,12 +1534,12 @@ msgid "конкурсная программа 3"
 msgstr "contest 3"
 
 #: schedule.py:30
-msgid "Карин Брэк"
-msgstr "Carin Brack"
+msgid "ретроспектива Карин Брэк"
+msgstr "Carin Brack retrospective"
 
 #: schedule.py:31
-msgid "Пьер-Люк Вайянкур"
-msgstr "Pierre-Luc Vaillancourt"
+msgid "программа экспериментального кино от Пьер-Люка Вайянкура"
+msgstr "compilation of experimental films by Pierre-Luc Vaillancourt"
 
 #: schedule.py:32
 msgid "экспериментальное кино"
@@ -1862,3 +1862,12 @@ msgstr ""
 #: templates/cpm2013/volunteers_questionnaire.html:4
 msgid "Queistionnaire"
 msgstr ""
+
+#~ msgid "клипы"
+#~ msgstr "music video"
+
+#~ msgid "Карин Брэк"
+#~ msgstr "Carin Brack"
+
+#~ msgid "Пьер-Люк Вайянкур"
+#~ msgstr "Pierre-Luc Vaillancourt"

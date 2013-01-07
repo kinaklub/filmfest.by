@@ -11,7 +11,7 @@ class PROGRAMS:
     DOCUM_INCONV = _(u'неудобная документалистика')
     BELARUS = _(u'беларусское кино')
     BVC = _(u'фильмы БелВидеоЦентра')
-    MUSIC = _(u'клипы')
+    MUSIC = _(u'клипы, презентация KinoLife.com')
     URBAN = _(u'программа урбанистики')
     AWARDS = _(u'награждение победителей')
     INT = _(u'международная программа')
@@ -27,8 +27,8 @@ class PROGRAMS:
     COMPET2 = _(u'конкурсная программа 2')
     COMPET3 = _(u'конкурсная программа 3')
 
-    KARIN = _(u'Карин Брэк')
-    PIERRE_LUC = _(u'Пьер-Люк Вайянкур')
+    KARIN = _(u'ретроспектива Карин Брэк')
+    PIERRE_LUC = _(u'программа экспериментального кино от Пьер-Люка Вайянкура')
     EXPERIMENTAL = _(u'экспериментальное кино')
 
 class PLACES:
@@ -45,7 +45,7 @@ SCHEDULE = [
     (
         date(2013, 1, 12),
         [
-            (time(11, 00), PROGRAMS.ANIMATION, PLACES.DDM),
+            (time(12, 00), PROGRAMS.ANIMATION, PLACES.DDM),
             (time(17, 00), PROGRAMS.YOUNG1, PLACES.DDM),
             (time(18, 40), PROGRAMS.COMPET1, PLACES.CENTER),
             (time(19, 00), PROGRAMS.GENDER1, PLACES.FIALTA),
@@ -93,7 +93,7 @@ SCHEDULE = [
         ]
     ),
     (
-        date(2013, 1, 17),
+        date(2013, 1, 18),
         [
             (time(18, 40), PROGRAMS.INT, PLACES.MUSEUM_ARTS),
             (time(19, 00), PROGRAMS.EXPERIMENTAL, PLACES.MUSEUM_MODERN),
@@ -101,7 +101,7 @@ SCHEDULE = [
         ]
     ),
     (
-        date(2013, 1, 18),
+        date(2013, 1, 19),
         [
             (time(11, 00), PROGRAMS.ANIMATION, PLACES.DDM),
             (time(17, 00), PROGRAMS.URBAN, PLACES.FIALTA),
@@ -110,7 +110,7 @@ SCHEDULE = [
         ]
     ),
     (
-        date(2013, 1, 19),
+        date(2013, 1, 20),
         [
             (time(15, 00), PROGRAMS.URBAN, PLACES.FIALTA),
             (time(18, 40), PROGRAMS.AWARDS, PLACES.MUSEUM_ARTS),
