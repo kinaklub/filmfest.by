@@ -1463,7 +1463,7 @@ msgstr ""
 
 #: schedule.py:8
 msgid "анимационная программа"
-msgstr "animtaion"
+msgstr "animation"
 
 #: schedule.py:9
 msgid "хорошее кино"
@@ -1523,15 +1523,15 @@ msgstr "youth program 2"
 
 #: schedule.py:26
 msgid "конкурсная программа 1"
-msgstr "contest 1"
+msgstr "competion 1"
 
 #: schedule.py:27
 msgid "конкурсная программа 2"
-msgstr "contest 2"
+msgstr "competion 2"
 
 #: schedule.py:28
 msgid "конкурсная программа 3"
-msgstr "contest 3"
+msgstr "competion 3"
 
 #: schedule.py:30
 msgid "ретроспектива Карин Брэк"
