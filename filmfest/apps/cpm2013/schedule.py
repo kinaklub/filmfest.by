@@ -96,7 +96,7 @@ SCHEDULE = [
         date(2013, 1, 17),
         [
             (time(18, 40), PROGRAMS.INT, PLACES.MUSEUM_ARTS),
-            (time(19, 00), PROGRAMS.PIERRE_LUC, PLACES.MUSEUM_MODERN),
+            (time(19, 00), PROGRAMS.EXPERIMENTAL, PLACES.MUSEUM_MODERN),
             (time(21, 10), PROGRAMS.GOOD, PLACES.CENTER),
         ]
     ),
