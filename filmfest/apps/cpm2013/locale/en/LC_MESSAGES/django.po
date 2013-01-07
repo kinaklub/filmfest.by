@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-23 12:55+0300\n"
+"POT-Creation-Date: 2013-01-07 18:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,48 +17,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:19
-msgid "Comments"
+#: admin.py:33
+msgid "Previewed"
 msgstr ""
 
-#: admin.py:23 forms.py:51 pdf.py:13
-msgid "Film"
-msgstr ""
-
-#: admin.py:29 forms.py:57 pdf.py:17
-msgid "Director"
-msgstr ""
-
-#: admin.py:34 forms.py:62 pdf.py:20
-msgid "Producer"
-msgstr ""
-
-#: admin.py:38 forms.py:67
-msgid "Credits"
-msgstr ""
-
-#: admin.py:42 forms.py:72 pdf.py:23
-msgid "Applicant"
-msgstr ""
-
-#: admin.py:46 forms.py:77 pdf.py:105
-msgid "Permissions"
-msgstr ""
-
-#: admin.py:57
-msgid "Download link"
-msgstr ""
-
-#: admin.py:62 models.py:114
-msgid "Comment"
-msgstr ""
-
-#: constants.py:7 constants.py:13
+#: admin.py:39 constants.py:7 constants.py:13
 msgid "Yes"
 msgstr ""
 
-#: constants.py:8 constants.py:14
+#: admin.py:40 constants.py:8 constants.py:14
 msgid "No"
+msgstr ""
+
+#: admin.py:62
+msgid "Comments"
+msgstr ""
+
+#: admin.py:72
+msgid "Dates"
+msgstr ""
+
+#: admin.py:76 forms.py:51 pdf.py:13
+msgid "Film"
+msgstr ""
+
+#: admin.py:82 forms.py:57 pdf.py:17
+msgid "Director"
+msgstr ""
+
+#: admin.py:87 forms.py:62 pdf.py:20
+msgid "Producer"
+msgstr ""
+
+#: admin.py:91 forms.py:67
+msgid "Credits"
+msgstr ""
+
+#: admin.py:95 forms.py:72 pdf.py:23
+msgid "Applicant"
+msgstr ""
+
+#: admin.py:99 forms.py:77 pdf.py:105
+msgid "Permissions"
+msgstr ""
+
+#: admin.py:142
+msgid "Download link"
+msgstr ""
+
+#: admin.py:166 models.py:116
+msgid "Comment"
+msgstr ""
+
+#: admin.py:171
+msgid "Country"
+msgstr ""
+
+#: admin.py:186
+msgid "Facts"
+msgstr ""
+
+#: admin.py:341 admin.py:351 models.py:247 models.py:258
+msgid "Title"
+msgstr ""
+
+#: admin.py:365
+msgid "Template"
 msgstr ""
 
 #: constants.py:12
@@ -109,7 +133,7 @@ msgstr ""
 msgid "vk.com"
 msgstr ""
 
-#: constants.py:32
+#: constants.py:32 models.py:285
 msgid "email"
 msgstr ""
 
@@ -273,7 +297,7 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76 templates/cpm2013/submit.html:55
+#: constants.py:76 templates/cpm2013/submit.html:57
 msgid "Belarus"
 msgstr ""
 
@@ -1107,177 +1131,528 @@ msgid ""
 "movie"
 msgstr ""
 
-#: models.py:12
+#: models.py:20
 msgid "Original title"
 msgstr ""
 
-#: models.py:13
+#: models.py:21
 msgid "English title"
 msgstr ""
 
-#: models.py:15
+#: models.py:23
 msgid "Country of production"
 msgstr ""
 
-#: models.py:17
+#: models.py:25
 msgid "Language of original version"
 msgstr ""
 
-#: models.py:19
+#: models.py:27
 msgid "Genre"
 msgstr ""
 
-#: models.py:21
+#: models.py:29
 msgid "Section"
 msgstr ""
 
-#: models.py:23
+#: models.py:31
 msgid "Synopsis"
 msgstr ""
 
-#: models.py:24
+#: models.py:32
 msgid "Runtime (in minutes)"
 msgstr ""
 
-#: models.py:25
+#: models.py:33
 msgid "Aspect ratio"
 msgstr ""
 
-#: models.py:27
+#: models.py:35
 msgid "Year of production"
 msgstr ""
 
-#: models.py:28
+#: models.py:36
 msgid "Premiere"
 msgstr ""
 
-#: models.py:29
+#: models.py:37
 msgid "Film awards"
 msgstr ""
 
-#: models.py:31
+#: models.py:39
 msgid "Director awards"
 msgstr ""
 
-#: models.py:32
+#: models.py:40
 msgid "Film budget"
 msgstr ""
 
-#: models.py:34
+#: models.py:42
 msgid "Link to download the film (optional)"
 msgstr ""
 
-#: models.py:39
+#: models.py:47
 msgid "I intend to visit final part of festival"
 msgstr ""
 
-#: models.py:42
+#: models.py:50
 msgid "The source of information about Cinema Perpetuum Mobile"
 msgstr ""
 
-#: models.py:47 models.py:58 models.py:91
+#: models.py:55 models.py:66 models.py:99 models.py:284
 msgid "Name"
 msgstr ""
 
-#: models.py:49 models.py:60 models.py:93
+#: models.py:57 models.py:68 models.py:101
 msgid "Address"
 msgstr ""
 
-#: models.py:50 models.py:62 models.py:94
+#: models.py:58 models.py:70 models.py:102
 msgid "Email"
 msgstr ""
 
-#: models.py:52 models.py:64 models.py:96
+#: models.py:60 models.py:72 models.py:104
 msgid "Website"
 msgstr ""
 
-#: models.py:55 models.py:66 models.py:99
+#: models.py:63 models.py:74 models.py:107
 msgid "Tel."
 msgstr ""
 
-#: models.py:69
+#: models.py:77
 msgid "Script writer"
 msgstr ""
 
-#: models.py:71
+#: models.py:79
 msgid "Editor"
 msgstr ""
 
-#: models.py:73
+#: models.py:81
 msgid "Music composer"
 msgstr ""
 
-#: models.py:76
+#: models.py:84
 msgid "Director of photography"
 msgstr ""
 
-#: models.py:78
+#: models.py:86
 msgid "Other credits"
 msgstr ""
 
-#: models.py:82
+#: models.py:90
 msgid ""
 "Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
 msgstr ""
 
-#: models.py:85
+#: models.py:93 templates/cpm2013/submission_info.html:94
 msgid ""
 "Authorization to include the film in the festival video collection for non-"
 "commercial screenings"
 msgstr ""
 
-#: models.py:88
+#: models.py:96 templates/cpm2013/submission_info.html:102
 msgid ""
 "Authorization to screen the film at film festivals from Cinema Perpetuum "
 "Mobile partner network"
 msgstr ""
 
-#: models.py:103
+#: models.py:111
 msgid "Submission language"
 msgstr ""
 
-#: models.py:108
+#: models.py:118
 msgid "E-mail was sent"
 msgstr ""
 
-#: models.py:110
+#: models.py:120
 msgid "Film is received"
 msgstr ""
 
-#: models.py:112
+#: models.py:122
 msgid "Papers were received"
 msgstr ""
 
-#: models.py:126 models.py:135
-msgid "Title"
+#: models.py:124
+msgid "Vob received"
 msgstr ""
 
 #: models.py:127
+msgid "Submitted at"
+msgstr ""
+
+#: models.py:129
+msgid "E-mail sent at"
+msgstr ""
+
+#: models.py:131
+msgid "Film received at"
+msgstr ""
+
+#: models.py:133
+msgid "Papers received at"
+msgstr ""
+
+#: models.py:135
+msgid "Vob received at"
+msgstr ""
+
+#: models.py:138
+msgid "Preview result"
+msgstr ""
+
+#: models.py:140
+msgid "Preview average result"
+msgstr ""
+
+#: models.py:142
+msgid "Previewers count"
+msgstr ""
+
+#: models.py:248
 msgid "Short text"
 msgstr ""
 
-#: models.py:128 models.py:136
+#: models.py:249 models.py:259 models.py:269
 msgid "Text"
 msgstr ""
+
+#: models.py:268
+msgid "Subject"
+msgstr ""
+
+#: models.py:276
+msgid "Action code"
+msgstr ""
+
+#: models.py:279
+msgid "At"
+msgstr ""
+
+#: models.py:286
+msgid "Age"
+msgstr ""
+
+#: models.py:287
+msgid "Gender"
+msgstr ""
+
+#: models.py:291
+msgid "Occupation cinema"
+msgstr ""
+
+#: models.py:296
+msgid "Education"
+msgstr ""
+
+#: models.py:301
+msgid "Working"
+msgstr ""
+
+#: models.py:306
+msgid "Participation in film creation"
+msgstr ""
+
+#: models.py:311
+msgid "How often do you watch movies"
+msgstr ""
+
+#: models.py:316
+msgid "How often do you attend public screenings"
+msgstr ""
+
+#: models.py:321
+msgid "Cinephilia stage"
+msgstr ""
+
+#: models.py:326
+msgid "Coefficient"
+msgstr ""
+
+#: previews.py:11
+msgid "мужской"
+msgstr ""
+
+#: previews.py:12
+msgid "женский"
+msgstr ""
+
+#: previews.py:13
+msgid "другой"
+msgstr ""
+
+#: previews.py:25
+msgid "среднее"
+msgstr ""
+
+#: previews.py:26
+msgid "незаконченное высшее"
+msgstr ""
+
+#: previews.py:27
+msgid "высшее"
+msgstr ""
+
+#: previews.py:38 previews.py:57
+msgid "нет"
+msgstr ""
+
+#: previews.py:39
+msgid "да"
+msgstr ""
+
+#: previews.py:46
+msgid "не работаю"
+msgstr ""
+
+#: previews.py:47
+msgid "работаю"
+msgstr ""
+
+#: previews.py:58
+msgid "да, случайно участвовал(а)"
+msgstr ""
+
+#: previews.py:59
+msgid "да, время от времени участвую"
+msgstr ""
+
+#: previews.py:60
+msgid "да, постоянно участвую"
+msgstr ""
+
+#: previews.py:72
+msgid "несколько раз в неделю"
+msgstr ""
+
+#: previews.py:73
+msgid "несколько раз в месяц"
+msgstr ""
+
+#: previews.py:74
+msgid "несколько раз в полгода"
+msgstr ""
+
+#: previews.py:75
+msgid "несколько раз в год и реже"
+msgstr ""
+
+#: previews.py:83
+msgid "ни разу не посещал"
+msgstr ""
+
+#: previews.py:93
+msgid "Кинолюбитель"
+msgstr ""
+
+#: previews.py:94
+msgid "Продвинутый кинолюбитель"
+msgstr ""
+
+#: previews.py:95
+msgid "Киноман-новичок"
+msgstr ""
+
+#: previews.py:96
+msgid "Киноман с опытом"
+msgstr ""
+
+#: previews.py:97
+msgid "Синефил"
+msgstr ""
+
+#: schedule.py:8
+msgid "анимационная программа"
+msgstr "animtaion"
+
+#: schedule.py:9
+msgid "хорошее кино"
+msgstr "good cinema"
+
+#: schedule.py:10
+msgid "документальное кино"
+msgstr "documentary"
+
+#: schedule.py:11
+msgid "неудобная документалистика"
+msgstr "inconvenient documentary"
+
+#: schedule.py:12
+msgid "беларусское кино"
+msgstr "Belarussian cinema"
+
+#: schedule.py:13
+msgid "фильмы БелВидеоЦентра"
+msgstr "films of Belarussian VideoCentre"
+
+#: schedule.py:14
+msgid "клипы"
+msgstr "music video"
+
+#: schedule.py:15
+msgid "программа урбанистики"
+msgstr "urbanistics"
+
+#: schedule.py:16
+msgid "награждение победителей"
+msgstr "awards ceremony"
+
+#: schedule.py:17
+msgid "международная программа"
+msgstr "international program"
+
+#: schedule.py:19
+msgid "гендерная программа 1"
+msgstr "gender program 1"
+
+#: schedule.py:20
+msgid "гендерная программа 2"
+msgstr "gender program 2"
+
+#: schedule.py:21
+msgid "гендерная программа 3"
+msgstr "gender program 3"
+
+#: schedule.py:23
+msgid "молодежная программа 1"
+msgstr "youth program 1"
+
+#: schedule.py:24
+msgid "молодежная программа 2"
+msgstr "youth program 2"
+
+#: schedule.py:26
+msgid "конкурсная программа 1"
+msgstr "contest 1"
+
+#: schedule.py:27
+msgid "конкурсная программа 2"
+msgstr "contest 2"
+
+#: schedule.py:28
+msgid "конкурсная программа 3"
+msgstr "contest 3"
+
+#: schedule.py:30
+msgid "Карин Брэк"
+msgstr "Carin Brack"
+
+#: schedule.py:31
+msgid "Пьер-Люк Вайянкур"
+msgstr "Pierre-Luc Vaillancourt"
+
+#: schedule.py:32
+msgid "экспериментальное кино"
+msgstr "experimental program"
+
+#: schedule.py:35
+msgid "ДК La мора"
+msgstr "House of culture La mora"
+
+#: schedule.py:36
+msgid "Минский государственный Дворец детей и молодежи"
+msgstr "Minsk State Children and Youth Palace"
+
+#: schedule.py:37
+msgid "кинотеатр Центральный"
+msgstr "Central cinemahall"
+
+#: schedule.py:38
+msgid "Молодежный образовательный центр \"Фиальта\"\""
+msgstr "Youth education cenntre \"Fialta\""
+
+#: schedule.py:39
+msgid "Дом Фишера"
+msgstr "House of Fischer"
+
+#: schedule.py:40
+msgid "Музей кино"
+msgstr "Cinema museum"
+
+#: schedule.py:41
+msgid "Музей современного искусства"
+msgstr "Contemprorary art museum"
+
+#: schedule.py:42
+msgid "Национальный музей"
+msgstr "National museum"
 
 #: validators.py:6
 msgid "Please check if you agree"
 msgstr ""
 
-#: templates/cpm2013/base.html:25
+#: views.py:279
+msgid "File with such name exists"
+msgstr ""
+
+#: templates/admin/cpm2013/submission/change_form.html:6
+msgid "Download PDF"
+msgstr ""
+
+#: templates/admin/cpm2013/submission/xlsx.html:8
+#: templates/admin/cpm2013/submission/xlsx_upload.html:16
+msgid "Export"
+msgstr ""
+
+#: templates/cpm2013/base.html:29
+msgid "January, 12-20"
+msgstr ""
+
+#: templates/cpm2013/base.html:30
+msgid "planet Earth"
+msgstr ""
+
+#: templates/cpm2013/base.html:52
 msgid "международный фестиваль"
 msgstr ""
 
-#: templates/cpm2013/base.html:25
+#: templates/cpm2013/base.html:53
 msgid "короткометражного кино"
 msgstr ""
 
-#: templates/cpm2013/base.html:36
-msgid "submit your film!"
+#: templates/cpm2013/base.html:55
+msgid "January 2013"
 msgstr ""
 
-#: templates/cpm2013/index.html:8
+#: templates/cpm2013/base.html:56
+msgid "Minsk, Belarus"
+msgstr ""
+
+#: templates/cpm2013/base.html:59
+msgid "Links"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:4
+msgid "Contacts"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:7
+msgid ""
+"If you have any questions, please feel free to contact us via e-mail. You "
+"can also get in touch with any of our coordinators directly."
+msgstr ""
+
+#: templates/cpm2013/contacts.html:8
+msgid "Festival e-mail"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:9
+msgid "Festival coordinators"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:13
+msgid "Dennis Sheko"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:21
+msgid "Aleksandr Martyniuk"
+msgstr ""
+
+#: templates/cpm2013/contacts.html:28
+msgid "Darya Efimova"
+msgstr ""
+
+#: templates/cpm2013/index.html:44
 msgid ""
 "\n"
 "      <p>Welcome to II International Short Film Festival Cinema Perpetuum "
@@ -1319,58 +1694,149 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/cpm2013/submit.html:40
-msgid "Terms of participation"
+#: templates/cpm2013/partners.html:4 templates/cpm2013/partners.html.py:7
+msgid "Partners"
+msgstr ""
+
+#: templates/cpm2013/partners.html:8
+msgid ""
+"<em>Cinema Perpetuum Mobile</em> is a non-profit, independent project which "
+"keeps on expenses and aspirations of the organizers. At the same time "
+"international nature of the event, cultural resonance provides fertile "
+"ground for collaboration with business and public organizations."
+msgstr ""
+
+#: templates/cpm2013/press_kit.html:4
+msgid "Press kit"
+msgstr ""
+
+#: templates/cpm2013/rules.html:4
+msgid "Regulations"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:14
+msgid "Film was received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:22
+msgid "Subtitles were received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:30
+msgid "Screenshots were received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:38
+msgid "Director's photo was received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:46
+msgid "Director's biography was received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:54
+msgid "Producer's photo was received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:62
+msgid "Producer's biography was received"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:70
+msgid "Company info was received (optional)"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:78
+msgid "Company logo was received (optional)"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:86
+msgid "Information for viza was received (optional)"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:112
+msgid "Uploaded files"
+msgstr ""
+
+#: templates/cpm2013/submission_info.html:128
+msgid "Upload a file"
+msgstr ""
+
+#: templates/cpm2013/submission_info_upload.html:6
+msgid "Upload additional info for submisison "
+msgstr ""
+
+#: templates/cpm2013/submission_info_upload.html:18
+msgid "Upload"
+msgstr ""
+
+#: templates/cpm2013/submit.html:4
+msgid "Submit your film!"
 msgstr ""
 
 #: templates/cpm2013/submit.html:42
-msgid "You need to complete 3 steps:"
+msgid "Terms of participation"
 msgstr ""
 
 #: templates/cpm2013/submit.html:44
+msgid "You need to complete 3 steps:"
+msgstr ""
+
+#: templates/cpm2013/submit.html:46
 msgid "Make a request (fill in a form on the website)."
 msgstr ""
 
-#: templates/cpm2013/submit.html:45
+#: templates/cpm2013/submit.html:47
 msgid ""
 "A copy of the application form will be sent via e-mail, you need to print "
 "it, sign and send in the mail."
 msgstr ""
 
-#: templates/cpm2013/submit.html:46
+#: templates/cpm2013/submit.html:48
 msgid ""
 "Transfer a copy of the film (on disk by mail or via the Internet) to the "
 "organizing committee."
 msgstr ""
 
-#: templates/cpm2013/submit.html:49
+#: templates/cpm2013/submit.html:51
 msgid ""
 "The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
 "file) should be the film only (without menus, etc.)."
 msgstr ""
 
-#: templates/cpm2013/submit.html:50
+#: templates/cpm2013/submit.html:52
 msgid "Film copies and signed application forms are accepted at:"
 msgstr ""
 
-#: templates/cpm2013/submit.html:52
+#: templates/cpm2013/submit.html:54
 msgid "Aliaksandr Martyniuk"
 msgstr ""
 
-#: templates/cpm2013/submit.html:53
+#: templates/cpm2013/submit.html:55
 msgid "PO Box 74"
 msgstr ""
 
-#: templates/cpm2013/submit.html:54
+#: templates/cpm2013/submit.html:56
 msgid "Minsk"
 msgstr ""
 
-#: templates/cpm2013/submit.html:57
+#: templates/cpm2013/submit.html:59
 msgid "Deadline: <strong>November 30, 2012</strong>"
 msgstr ""
 
-#: templates/cpm2013/submit.html:58
+#: templates/cpm2013/submit.html:60
 msgid "Complete festival rules can be found here:"
+msgstr ""
+
+#: templates/cpm2013/submit_closed.html:5
+msgid "Submission is closed."
+msgstr ""
+
+#: templates/cpm2013/submit_closed.html:7
+msgid ""
+"\n"
+"Dear friend! Submission for CPM 2013 is closed. Submission for CPM 2014 will "
+"be opened approximately in March, 2013.\n"
 msgstr ""
 
 #: templates/cpm2013/submit_done.html:5
@@ -1391,4 +1857,8 @@ msgstr ""
 
 #: templates/cpm2013/submit_temp.html:6
 msgid "Submission form opens on September 2, 2012"
+msgstr ""
+
+#: templates/cpm2013/volunteers_questionnaire.html:4
+msgid "Queistionnaire"
 msgstr ""

@@ -6,7 +6,6 @@ from django.utils.translation import ugettext_lazy as _
 
 class PROGRAMS:
     ANIMATION = _(u'анимационная программа')
-    GENDER1 = _(u'гендерная программа 1')
     GOOD = _(u'хорошее кино')
     DOCUM = _(u'документальное кино')
     DOCUM_INCONV = _(u'неудобная документалистика')
@@ -34,9 +33,9 @@ class PROGRAMS:
 
 class PLACES:
     LAMORA = _(u'ДК La мора')
-    DDM = _(u'МДДиМ')
+    DDM = _(u'Минский государственный Дворец детей и молодежи')
     CENTER = _(u'кинотеатр Центральный')
-    FIALTA = _(u'Фиальта')
+    FIALTA = _(u'Молодежный образовательный центр "Фиальта""')
     FISHER = _(u'Дом Фишера')
     MUSEUM_CIN = _(u'Музей кино')
     MUSEUM_MODERN = _(u'Музей современного искусства')

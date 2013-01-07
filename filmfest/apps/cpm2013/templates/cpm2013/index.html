@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="row">
-  <div class="span7">
+  <div class="span6">
     <div id="schedule">
       {% for date, screenings in schedule %}
       <h3>
@@ -26,6 +26,20 @@
       </ul>
       {% endfor %}
     </div>
+  </div>
+  <div class="span6">
+    <div class="well">
+      <h3>Latest news</h3>
+      {% for news_entry in news %}
+        <h4>{{ news_entry.title }}</h4>
+	<div>{{ news_entry.short_text|markdown }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
     <div id="index-about">
       {% blocktrans %}
       <p>Welcome to II International Short Film Festival Cinema Perpetuum Mobile!</p>
@@ -48,15 +62,6 @@
 
       <p>We are here to make it happen. We believe you are here too.</p>
       {% endblocktrans %}
-    </div>
-  </div>
-  <div class="span5">
-    <div class="well">
-      <h3>Latest news</h3>
-      {% for news_entry in news %}
-        <h4>{{ news_entry.title }}</h4>
-	<div>{{ news_entry.short_text|markdown }}</div>
-      {% endfor %}
     </div>
   </div>
 </div>

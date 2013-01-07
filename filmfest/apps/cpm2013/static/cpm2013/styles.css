@@ -135,7 +135,7 @@ a#header-call:hover {
 }
 #schedule .program, #schedule .place {
     float: left;
-    width: 300px;
+    width: 270px;
 }
 #schedule .program {
     padding-top: 4px;
