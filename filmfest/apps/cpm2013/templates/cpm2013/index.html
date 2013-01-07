@@ -19,7 +19,13 @@
 	{% for time, program, place in screenings %}
 	<li>
 	  <span class="time">{{ time|date:"G:i" }}</span>
-	  <span class="program">{{ program }}</span>
+	  <span class="program">
+	    {% if program.0 %}
+	      <a href="{% url cpm2013:program program.0 %}">{{ program.1 }}</a>
+	    {% else %}
+	      {{ program.1 }}
+	    {% endif %}
+	  </span>
 	  <span class="place">{{ place }}</span>
 	  <div style="clear: both"></div>
 	</li>

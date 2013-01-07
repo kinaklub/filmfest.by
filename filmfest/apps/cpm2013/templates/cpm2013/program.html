@@ -1,0 +1,44 @@
+{% extends "cpm2013/base.html" %}
+{% load i18n markup %}
+
+{% block title %}{{ title }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="hero-unit">
+  <h2>{{ title|linebreaksbr }}</h2>
+  {{ description|markdown }}
+</div>
+
+<table class="table table-bordered table-striped">
+{% for screenings, participants in parts %}  
+  <tr>
+    {% if participants %}
+    <td>
+      {{ participants|linebreaksbr }}
+    </td>
+    {% endif %}
+    <td>
+      {% for screening in screenings %}
+      <dl>
+	<dt>{% trans "Дата" %}</dt>
+  	<dd>
+	  {% if LANGUAGE_CODE == 'en' %}
+  	    {{ screening.0|date:"F j," }}
+	  {% else %}
+	    {{ screening.0|date:"j E," }}
+	  {% endif %}
+	  {{ screening.0|date:"l, G:i"|lower }}
+	</dd>
+	<dt>{% trans "Место" %}</dt>
+  	<dd>{{ screening.1|linebreaksbr }}</dd>
+	{% if screening.2 %}
+	  <dt>{% trans "Стоимость" %}</dt>
+    	  <dd>{{ screening.2 }}</dd>
+	{% endif %}
+      </dl>
+      {% endfor %}
+    </td>
+  </tr>
+{% endfor %}
+</table>
+{% endblock %}

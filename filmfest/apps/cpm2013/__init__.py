@@ -22,6 +22,10 @@ def get_urls():
             views.submission_info, name='submission_info'),
         url(r'^submission/(?P<subm_id>[\d]+)/(?P<subm_hash>[\w\d]+)/upload/',
             views.submission_info_upload, name='submission_info_upload'),
+        url(r'^programs/(?P<program_id>[\w\d_]+)',
+            views.program, name='program'),
+        url(r'^programs',
+            views.programs, name='programs'),
     )
 
 urls = (get_urls(), 'cpm2013', 'cpm2013')

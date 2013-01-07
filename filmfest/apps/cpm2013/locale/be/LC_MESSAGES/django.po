@@ -1602,7 +1602,7 @@ msgstr ""
 
 #: templates/cpm2013/base.html:29
 msgid "January, 12-20"
-msgstr "12-20 студня"
+msgstr "12-20 студзеня"
 
 #: templates/cpm2013/base.html:30
 msgid "planet Earth"

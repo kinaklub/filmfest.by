@@ -4,7 +4,7 @@ import os
 import os.path
 from hashlib import md5
 
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.views.generic.create_update import create_object
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import loader, RequestContext
@@ -285,7 +285,33 @@ def submission_info_upload(request, subm_id, subm_hash):
     )
 
 def press_kit(request):
+    programs
     return render_to_response(
         'cpm2013/press_kit.html', {},
+        context_instance=RequestContext(request),
+    )
+
+def programs(request):
+    from apps.cpm2013.programs import get_programs
+
+    return render_to_response(
+        'cpm2013/programs.html', {'programs': get_programs()},
+        context_instance=RequestContext(request),
+    )
+    
+def program(request, program_id):
+    from apps.cpm2013.programs import get_program
+
+    program = get_program(program_id)
+    if program is None:
+        raise Http404
+    
+    return render_to_response(
+        'cpm2013/program.html',
+        {
+            'title': program.title,
+            'description': program.description,
+            'parts': program.parts,
+        },
         context_instance=RequestContext(request),
     )
