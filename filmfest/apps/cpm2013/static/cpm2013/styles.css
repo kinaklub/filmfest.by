@@ -55,8 +55,12 @@ a, a:hover, a:visited {
     text-align: right;
 }
 #header-call #line1 {
-    font-size: 61px;
-    line-height: 50px;
+    font-size: 41px;
+    line-height: 35px;
+}
+#header-call #line2 {
+    font-size: 48px;
+    line-height: 40px;
 }
 a#header-call, a#header-call:hover, a#header-call:visited {
     color: #FFFFFF;
