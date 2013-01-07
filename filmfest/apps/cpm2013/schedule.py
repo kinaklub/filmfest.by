@@ -103,7 +103,7 @@ SCHEDULE = [
     (
         date(2013, 1, 19),
         [
-            (time(11, 00), PROGRAMS.ANIMATION, PLACES.DDM),
+            (time(12, 00), PROGRAMS.ANIMATION, PLACES.DDM),
             (time(17, 00), PROGRAMS.URBAN, PLACES.FIALTA),
             (time(17, 00), PROGRAMS.YOUNG2, PLACES.DDM),
             (time(21, 10), PROGRAMS.GENDER3, PLACES.CENTER),
