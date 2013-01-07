@@ -607,7 +607,8 @@ _programs = {
     'experimental': _get_program_experimental(),
     'urban': _get_program_urban(),
 }
-    
+programs = sorted(_programs.iteritems(), key=lambda x: x[1][0])
+
 get_program = lambda program_id: _programs.get(program_id)
-get_programs = lambda: sorted(_programs.iteritems(), key=lambda x: x[1][0])
+
 

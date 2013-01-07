@@ -292,10 +292,10 @@ def press_kit(request):
     )
 
 def programs(request):
-    from apps.cpm2013.programs import get_programs
+    from apps.cpm2013.programs import programs
 
     return render_to_response(
-        'cpm2013/programs.html', {'programs': get_programs()},
+        'cpm2013/programs.html', {'programs': programs},
         context_instance=RequestContext(request),
     )
     
