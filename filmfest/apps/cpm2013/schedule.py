@@ -88,10 +88,10 @@ SCHEDULE = [
     (
         date(2013, 1, 17),
         [
-            (time(18, 40), PROGRAMS.KARIN, PLACES.MUSEUM_CIN),
             (time(19, 00), PROGRAMS.PIERRE_LUC, PLACES.MUSEUM_MODERN),
             (time(19, 00), PROGRAMS.MUSIC, PLACES.FISHER),
             (time(19, 00), PROGRAMS.URBAN, PLACES.FIALTA),
+            (time(20, 00), PROGRAMS.KARIN, PLACES.MUSEUM_CIN),
             (time(21, 10), PROGRAMS.BVC, PLACES.CENTER),
         ]
     ),
