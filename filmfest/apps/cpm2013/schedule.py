@@ -5,13 +5,13 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class PROGRAMS:
-    ANIMATION = ('animation', _(u'анимационная программа'))
+    ANIMATION = ('animation', _(u'программа анимации'))
     GOOD = ('good', _(u'хорошее кино'))
     DOCUM = ('docs', _(u'документальное кино'))
     DOCUM_INCONV = (None, _(u'неудобная документалистика'))
     BELARUS = ('bel', _(u'беларусское кино'))
     BVC = (None, _(u'фильмы БелВидеоЦентра'))
-    MUSIC = (None, _(u'клипы,\nпрезентация Международной интерактивной платформы для кинематографистов KinoLife.eu'))
+    MUSIC = (None, _(u'клипы,\nпрезентация Международной интерактивной платформы для кинематографистов KINOLIFE.eu'))
     URBAN = ('urban', _(u'программа урбанистики'))
     AWARDS = (None, _(u'награждение победителей'))
     INT = (None, _(u'международная программа'))
