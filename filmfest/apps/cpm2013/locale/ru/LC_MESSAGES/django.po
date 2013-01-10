@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-07 18:45+0300\n"
+"POT-Creation-Date: 2013-01-11 01:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1471,120 +1471,204 @@ msgid "Синефил"
 msgstr ""
 
 #: schedule.py:8
-msgid "анимационная программа"
+msgid "открытие фестиваля"
 msgstr ""
 
 #: schedule.py:9
-msgid "хорошее кино"
+msgid "закрытие фестиваля"
 msgstr ""
 
 #: schedule.py:10
-msgid "документальное кино"
-msgstr ""
-
-#: schedule.py:11
-msgid "неудобная документалистика"
-msgstr ""
-
-#: schedule.py:12
-msgid "беларусское кино"
-msgstr ""
-
-#: schedule.py:13
-msgid "фильмы БелВидеоЦентра"
-msgstr ""
-
-#: schedule.py:14
-msgid "клипы, презентация KinoLife.com"
-msgstr ""
-
-#: schedule.py:15
-msgid "программа урбанистики"
-msgstr ""
-
-#: schedule.py:16
 msgid "награждение победителей"
 msgstr ""
 
+#: schedule.py:12
+msgid "программа анимации"
+msgstr ""
+
+#: schedule.py:13
+msgid "хорошее кино"
+msgstr ""
+
+#: schedule.py:14
+msgid "документальное кино"
+msgstr ""
+
+#: schedule.py:15
+msgid "неудобная документалистика"
+msgstr ""
+
+#: schedule.py:16
+msgid "беларусское кино"
+msgstr ""
+
 #: schedule.py:17
-msgid "международная программа"
+msgid "фильмы БелВидеоЦентра"
+msgstr ""
+
+#: schedule.py:18
+msgid "клипы"
 msgstr ""
 
 #: schedule.py:19
-msgid "гендерная программа 1"
+msgid ""
+"презентация Международной интерактивной платформы для кинематографистов "
+"KINOLIFE.eu"
 msgstr ""
 
 #: schedule.py:20
-msgid "гендерная программа 2"
+msgid "программа урбанистики"
 msgstr ""
 
 #: schedule.py:21
-msgid "гендерная программа 3"
+msgid "международная программа"
+msgstr ""
+
+#: schedule.py:22
+msgid "экологическая программа"
 msgstr ""
 
 #: schedule.py:23
-msgid "молодежная программа 1"
+msgid "региональная программа"
 msgstr ""
 
 #: schedule.py:24
-msgid "молодежная программа 2"
+msgid "программа для университета золотого века"
 msgstr ""
 
 #: schedule.py:26
-msgid "конкурсная программа 1"
+msgid "гендерная программа 1"
 msgstr ""
 
 #: schedule.py:27
-msgid "конкурсная программа 2"
+msgid "гендерная программа 2"
 msgstr ""
 
 #: schedule.py:28
-msgid "конкурсная программа 3"
+msgid "гендерная программа 3"
 msgstr ""
 
 #: schedule.py:30
-msgid "ретроспектива Карин Брэк"
+msgid "молодежная программа 1"
 msgstr ""
 
 #: schedule.py:31
-msgid "программа экспериментального кино от Пьер-Люка Вайянкура"
+msgid "молодежная программа 2"
 msgstr ""
 
-#: schedule.py:32
-msgid "экспериментальное кино"
+#: schedule.py:33
+msgid "конкурсная программа 1"
+msgstr ""
+
+#: schedule.py:34
+msgid "конкурсная программа 2"
 msgstr ""
 
 #: schedule.py:35
-msgid "ДК La мора"
-msgstr ""
-
-#: schedule.py:36
-msgid "Минский государственный Дворец детей и молодежи"
+msgid "конкурсная программа 3"
 msgstr ""
 
 #: schedule.py:37
-msgid "кинотеатр Центральный"
-msgstr ""
-
-#: schedule.py:38
-msgid "Молодежный образовательный центр \"Фиальта\"\""
-msgstr ""
-
-#: schedule.py:39
-msgid "Дом Фишера"
+msgid "ретроспектива Карин Брэк"
 msgstr ""
 
 #: schedule.py:40
-msgid "Музей кино"
-msgstr ""
-
-#: schedule.py:41
-msgid "Музей современного искусства"
+msgid "программа экспериментального кино от Пьер-Люка Вайянкура"
 msgstr ""
 
 #: schedule.py:42
-msgid "Национальный музей"
+msgid "экспериментальное кино"
 msgstr ""
+
+#: schedule.py:44
+msgid "концерт бардов и рок-групп"
+msgstr ""
+
+#: schedule.py:47
+msgid ""
+"ДК La мора\n"
+"2-ая ул. Щорса, 7а"
+msgstr ""
+
+#: schedule.py:48
+msgid ""
+"Минский государственный Дворец детей и молодежи\n"
+"Старовиленский тракт, 41"
+msgstr ""
+
+#: schedule.py:50
+msgid ""
+"кинотеатр Центральный\n"
+"пр-т Независимости, 13"
+msgstr ""
+
+#: schedule.py:51
+msgid ""
+"Молодежный образовательный центр \"Фиальта\"\n"
+"ул. Мясникова, 35 (вход со двора)"
+msgstr ""
+
+#: schedule.py:53
+msgid ""
+"Дом Фишера7\n"
+"пр-т Независимости, 84А"
+msgstr ""
+
+#: schedule.py:54
+msgid ""
+"Музей кино\n"
+"ул. Свердлова, 4"
+msgstr ""
+
+#: schedule.py:55
+msgid ""
+"Музей современного искусства\n"
+"пр-т Независимости, 47"
+msgstr ""
+
+#: schedule.py:56
+msgid ""
+"Национальный музей\n"
+"ул. Ленина 20"
+msgstr ""
+
+#: schedule.py:138
+msgid ""
+"Кальянная №4\n"
+"ул. К.Марска, 10"
+msgstr ""
+
+#: schedule.py:139
+msgid "Центр \"Третий Сектор\""
+msgstr ""
+
+#: schedule.py:140
+msgid ""
+"Кинотеатр \"Красная звезда\"\n"
+"л. Социалистическая, 4"
+msgstr ""
+
+#: schedule.py:141
+msgid "Биофак ГрГУ"
+msgstr ""
+
+#: schedule.py:197
+msgid ""
+"Лидский государственный историко-художественный музей\n"
+"ул. Победы, З7а, Лида"
+msgstr ""
+
+#: schedule.py:248 templates/cpm2013/submit.html:56
+msgid "Minsk"
+msgstr "Минск"
+
+#: schedule.py:249
+msgid "Hrodna"
+msgstr "Гродно"
+
+#: schedule.py:250
+msgid "Lida"
+msgstr "Лида"
 
 #: validators.py:6
 msgid "Please check if you agree"
@@ -1604,13 +1688,12 @@ msgid "Export"
 msgstr ""
 
 #: templates/cpm2013/base.html:29
-#, fuzzy
 msgid "January, 12-20"
-msgstr "январь 2013"
+msgstr "с 12 по 20 января"
 
 #: templates/cpm2013/base.html:30
 msgid "planet Earth"
-msgstr ""
+msgstr "планета Зямля"
 
 #: templates/cpm2013/base.html:52
 msgid "международный фестиваль"
@@ -1666,10 +1749,11 @@ msgid "Darya Efimova"
 msgstr "Дарья Ефимова"
 
 #: templates/cpm2013/index.html:7
-msgid "Screenings in Minsk, Belarus"
-msgstr "Показы в Минске, Беларусь"
+#, fuzzy
+msgid "Screenings in Belarus"
+msgstr "Показы в Беларуси"
 
-#: templates/cpm2013/index.html:45
+#: templates/cpm2013/index.html:78
 msgid ""
 "\n"
 "      <p>Welcome to II International Short Film Festival Cinema Perpetuum "
@@ -1750,6 +1834,22 @@ msgstr ""
 
 #: templates/cpm2013/press_kit.html:4
 msgid "Press kit"
+msgstr ""
+
+#: templates/cpm2013/program.html:23
+msgid "Дата"
+msgstr ""
+
+#: templates/cpm2013/program.html:32
+msgid "Место"
+msgstr ""
+
+#: templates/cpm2013/program.html:35
+msgid "Стоимость"
+msgstr ""
+
+#: templates/cpm2013/programs.html:4 templates/cpm2013/programs.html.py:7
+msgid "Programs of the festival"
 msgstr ""
 
 #: templates/cpm2013/rules.html:4
@@ -1864,10 +1964,6 @@ msgstr "Александр Мартынюк"
 #: templates/cpm2013/submit.html:55
 msgid "PO Box 74"
 msgstr "а/я 74"
-
-#: templates/cpm2013/submit.html:56
-msgid "Minsk"
-msgstr "Минск"
 
 #: templates/cpm2013/submit.html:59
 msgid "Deadline: <strong>November 30, 2012</strong>"

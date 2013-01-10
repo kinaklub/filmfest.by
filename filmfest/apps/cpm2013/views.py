@@ -18,13 +18,13 @@ from apps.cpm2013.models import Submission, NewsEntry, Page,\
      SubmissionFileUpload
 from apps.cpm2013.forms import SubmissionForm, FileUploadForm
 from apps.cpm2013.tasks import SendSubmissionEmail
-from apps.cpm2013.schedule import SCHEDULE
+from apps.cpm2013.schedule import SCHEDULES
 
 def index(request):
     news = NewsEntry.objects.language().order_by('-added_at')[:10]
     return render_to_response(
         'cpm2013/index.html',
-        {'news': news, 'schedule': SCHEDULE},
+        {'news': news, 'schedules': SCHEDULES},
         context_instance=RequestContext(request),
     )
 

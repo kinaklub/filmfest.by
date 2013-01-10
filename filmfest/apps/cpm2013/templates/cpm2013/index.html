@@ -4,36 +4,61 @@
 {% block content %}
 <div class="row">
   <div class="span6">
-    <h1>{% trans "Screenings in Minsk, Belarus" %}</h1>
+    <h1>{% trans "Screenings in Belarus" %}</h1>
     <div id="schedule">
-      {% for date, screenings in schedule %}
-      <h3>
-	{% if LANGUAGE_CODE == 'en' %}
-  	  {{ date|date:"F j" }}
-	{% else %}
-	  {{ date|date:"j E" }}
-	{% endif %}
-	<small>{{ date|date:"l"|lower }}</small>
-      </h3>
-      <ul>
-	{% for time, program, place in screenings %}
-	<li>
-	  <span class="time">{{ time|date:"G:i" }}</span>
-	  <div class="subprogram">
-	    <div class="program">
-	      {% if program.0 %}
-	      <a href="{% url cpm2013:program program.0 %}">{{ program.1|linebreaksbr }}</a>
-	      {% else %}
-	      {{ program.1|linebreaksbr }}
-	      {% endif %}
-	    </div>
-	    <div class="place">{{ place }}</div>
-	  </div>
-	  <div style="clear: both"></div>
-	</li>
+      <ul class="nav nav-tabs" id="scheduleTabs">
+	{% for city, code, schedule in schedules %}
+	  <li {% if forloop.first %}class="active"{% endif %}>
+	    <a href="#{{ code }}">{{ city }}</a>
+	  </li>
 	{% endfor %}
       </ul>
-      {% endfor %}
+     
+      <div class="tab-content">
+      {% for city, code, schedule in schedules %}
+        <div class="tab-pane {% if forloop.first %}active{% endif %}" id="{{ code }}">
+	  {% for date, screenings in schedule %}
+	  <h3>
+	    {% if LANGUAGE_CODE == 'en' %}
+  	      {{ date|date:"F j" }}
+	    {% else %}
+	      {{ date|date:"j E" }}
+	    {% endif %}
+	    <small>{{ date|date:"l"|lower }}</small>
+	  </h3>
+	  <ul>
+	    {% for time, programs, place in screenings %}
+	    <li>
+	      <span class="time">{{ time|date:"G:i" }}</span>
+	      <div class="subprogram">
+		<div class="program">
+		  {% for program in programs %}
+		    {% if program.0 %}<a href="{% url cpm2013:program program.0 %}">{{ program.1 }}</a>{% else %}{{ program.1 }}{% endif %}{% if not forloop.last %},<br />{% endif %}
+		  {% endfor %}
+		</div>
+		<div class="place">{{ place|linebreaksbr }}</div>
+	      </div>
+	      <div style="clear: both"></div>
+	    </li>
+	    {% endfor %}
+	  </ul>
+	  {% endfor %}
+	</div>
+	{% endfor %}
+      </div>
+
+      <script>
+	$(document).ready(function() {
+	  $('#scheduleTabs a').click(function (e) {
+	    e.preventDefault();
+  	    $(this).tab('show');
+	  });
+ 	  $(function () {
+	    $('#scheduleTabs a:first').tab('show');
+ 	  });
+	});
+      </script>
+
     </div>
   </div>
   <div class="span6">
