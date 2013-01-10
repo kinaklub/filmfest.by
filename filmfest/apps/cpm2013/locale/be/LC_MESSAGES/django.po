@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-07 18:45+0300\n"
+"POT-Creation-Date: 2013-01-10 10:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1468,8 +1468,8 @@ msgid "Синефил"
 msgstr ""
 
 #: schedule.py:8
-msgid "анимационная программа"
-msgstr "анімацыйная праграма"
+msgid "программа анимации"
+msgstr "праграма анімацыі"
 
 #: schedule.py:9
 msgid "хорошее кино"
@@ -1492,8 +1492,12 @@ msgid "фильмы БелВидеоЦентра"
 msgstr "фільмы БелВідэаЦэнтра"
 
 #: schedule.py:14
-msgid "клипы, презентация KinoLife.com"
-msgstr "кліпы, прэзентацыя KinoLife.com"
+msgid ""
+"клипы,\n"
+"презентация Международной интерактивной платформы для кинематографистов "
+"KINOLIFE.eu"
+msgstr "кліпы,\n"
+"прэзентацыя Міжнароднай інтэрактыўнай платформы для кінематаграфістаў KINOLIFE.eu"
 
 #: schedule.py:15
 msgid "программа урбанистики"
@@ -1543,43 +1547,43 @@ msgstr "конкурсная праграма 3"
 msgid "ретроспектива Карин Брэк"
 msgstr ""
 
-#: schedule.py:31
+#: schedule.py:33
 msgid "программа экспериментального кино от Пьер-Люка Вайянкура"
 msgstr "праграма эксперыментальнага кіно ад Пьер-Люка Вайянкура"
 
-#: schedule.py:32
+#: schedule.py:35
 msgid "экспериментальное кино"
 msgstr "эксперыментальная праграма"
 
-#: schedule.py:35
+#: schedule.py:38
 msgid "ДК La мора"
 msgstr "ДК La мора"
 
-#: schedule.py:36
+#: schedule.py:39
 msgid "Минский государственный Дворец детей и молодежи"
 msgstr "Мінскі дзяржаўны Палац дзяцей і моладзі"
 
-#: schedule.py:37
+#: schedule.py:40
 msgid "кинотеатр Центральный"
 msgstr "кінатэатр Цэнтральны"
 
-#: schedule.py:38
+#: schedule.py:41
 msgid "Молодежный образовательный центр \"Фиальта\"\""
 msgstr "Моладзевы адукацыйнй цэнтр \"Фіальта\""
 
-#: schedule.py:39
+#: schedule.py:42
 msgid "Дом Фишера"
 msgstr "Дом Фішара"
 
-#: schedule.py:40
+#: schedule.py:43
 msgid "Музей кино"
 msgstr "Музей кіно"
 
-#: schedule.py:41
+#: schedule.py:44
 msgid "Музей современного искусства"
 msgstr "Музей сучаснага мастацтва"
 
-#: schedule.py:42
+#: schedule.py:45
 msgid "Национальный музей"
 msgstr "Нацыянальный музей"
 
@@ -1589,10 +1593,6 @@ msgstr "Калі ласка, падзвердзіце, што вы згодны"
 
 #: views.py:279
 msgid "File with such name exists"
-msgstr ""
-
-#: templates/admin/cpm2013/submission/change_form.html:6
-msgid "Download PDF"
 msgstr ""
 
 #: templates/admin/cpm2013/submission/xlsx.html:8
@@ -1664,7 +1664,7 @@ msgstr "Дар'я Ефімава"
 msgid "Screenings in Minsk, Belarus"
 msgstr "Паказы ў Мінску, Беларусь"
 
-#: templates/cpm2013/index.html:45
+#: templates/cpm2013/index.html:53
 msgid ""
 "\n"
 "      <p>Welcome to II International Short Film Festival Cinema Perpetuum "
@@ -1744,6 +1744,22 @@ msgstr ""
 
 #: templates/cpm2013/press_kit.html:4
 msgid "Press kit"
+msgstr ""
+
+#: templates/cpm2013/program.html:23
+msgid "Дата"
+msgstr ""
+
+#: templates/cpm2013/program.html:32
+msgid "Место"
+msgstr ""
+
+#: templates/cpm2013/program.html:35
+msgid "Стоимость"
+msgstr ""
+
+#: templates/cpm2013/programs.html:4 templates/cpm2013/programs.html.py:7
+msgid "Programs of the festival"
 msgstr ""
 
 #: templates/cpm2013/rules.html:4
@@ -1911,6 +1927,12 @@ msgstr "Форма падачы заяўкі адчыняецца 2 верасн
 #: templates/cpm2013/volunteers_questionnaire.html:4
 msgid "Queistionnaire"
 msgstr ""
+
+#~ msgid "анимационная программа"
+#~ msgstr "анімацыйная праграма"
+
+#~ msgid "клипы, презентация KinoLife.com"
+#~ msgstr "кліпы, прэзентацыя KinoLife.com"
 
 #~ msgid "Карин Брэк"
 #~ msgstr "Карін Брэк"
