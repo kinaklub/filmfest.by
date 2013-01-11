@@ -1861,7 +1861,7 @@ msgstr ""
 
 #: templates/cpm2013/programs.html:4 templates/cpm2013/programs.html.py:7
 msgid "Programs of the festival"
-msgstr ""
+msgstr "Праграмы фестывалю"
 
 #: templates/cpm2013/rules.html:4
 msgid "Regulations"

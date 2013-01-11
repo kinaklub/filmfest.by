@@ -1693,7 +1693,7 @@ msgstr "с 12 по 20 января"
 
 #: templates/cpm2013/base.html:30
 msgid "planet Earth"
-msgstr "планета Зямля"
+msgstr "планета Земля"
 
 #: templates/cpm2013/base.html:52
 msgid "международный фестиваль"
@@ -1850,7 +1850,7 @@ msgstr ""
 
 #: templates/cpm2013/programs.html:4 templates/cpm2013/programs.html.py:7
 msgid "Programs of the festival"
-msgstr ""
+msgstr "Программы фестиваля"
 
 #: templates/cpm2013/rules.html:4
 msgid "Regulations"
