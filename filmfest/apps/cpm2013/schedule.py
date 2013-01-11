@@ -109,7 +109,7 @@ MINSK = [
     (
         date(2013, 1, 18),
         [
-            (time(18, 40), [PROGRAMS.INT], PLACES_MINSK.MUSEUM_ARTS),
+            (time(19, 00), [PROGRAMS.INT], PLACES_MINSK.MUSEUM_ARTS),
             (time(19, 00), [PROGRAMS.EXPERIMENTAL], PLACES_MINSK.MUSEUM_MODERN),
             (time(21, 10), [PROGRAMS.GOOD], PLACES_MINSK.CENTER),
         ]
@@ -127,7 +127,7 @@ MINSK = [
         date(2013, 1, 20),
         [
             (time(15, 00), [PROGRAMS.URBAN], PLACES_MINSK.FIALTA),
-            (time(18, 40), [PROGRAMS.AWARDS], PLACES_MINSK.MUSEUM_ARTS),
+            (time(19, 00), [PROGRAMS.AWARDS], PLACES_MINSK.MUSEUM_ARTS),
             (time(21, 10), [PROGRAMS.DOCUM_INCONV], PLACES_MINSK.LAMORA),
         ]
     ),
