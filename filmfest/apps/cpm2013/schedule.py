@@ -111,7 +111,7 @@ MINSK = [
         [
             (time(19, 00), [PROGRAMS.INT], PLACES_MINSK.MUSEUM_ARTS),
             (time(19, 00), [PROGRAMS.EXPERIMENTAL], PLACES_MINSK.MUSEUM_MODERN),
-            (time(21, 10), [PROGRAMS.GOOD], PLACES_MINSK.CENTER),
+            (time(21, 10), [PROGRAMS.GENDER3], PLACES_MINSK.CENTER),
         ]
     ),
     (
@@ -120,7 +120,7 @@ MINSK = [
             (time(12, 00), [PROGRAMS.ANIMATION], PLACES_MINSK.DDM),
             (time(17, 00), [PROGRAMS.URBAN], PLACES_MINSK.FIALTA),
             (time(17, 00), [PROGRAMS.YOUNG2], PLACES_MINSK.DDM),
-            (time(21, 10), [PROGRAMS.GENDER3], PLACES_MINSK.CENTER),
+            (time(21, 10), [PROGRAMS.GOOD], PLACES_MINSK.CENTER),
         ]
     ),
     (
