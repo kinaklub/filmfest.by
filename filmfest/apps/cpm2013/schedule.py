@@ -243,9 +243,15 @@ LIDA = [
 ]
 
 
+def get_upcoming_events(city):
+    today = date.today()
+    for date_, places in city:
+        if date_ >= today:
+            yield date_, places
+
 
 SCHEDULES = [
-    (_(u'Minsk'), 'minsk', MINSK),
-    (_(u'Hrodna'), 'hrodna', HRODNA),
-    (_(u'Lida'), 'lida', LIDA),
+    (_(u'Minsk'), 'minsk', list(get_upcoming_events(MINSK))),
+    (_(u'Hrodna'), 'hrodna', list(get_upcoming_events(HRODNA))),
+    (_(u'Lida'), 'lida', list(get_upcoming_events(LIDA))),
 ]
