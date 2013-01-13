@@ -205,7 +205,11 @@ def partners(request):
             'http://vgomele.by/',
             'vGomele.by - гомельский информационно-развлекательный портал'
         ),
-
+        (
+            img_dir + 'belarusdigest.png',
+            'http://belarusdigest.com/',
+            'Беларусы за мяжой'
+        ),
     ]
     return render_to_response(
         'cpm2013/partners.html',
