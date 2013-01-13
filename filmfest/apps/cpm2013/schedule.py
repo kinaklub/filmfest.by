@@ -163,7 +163,7 @@ HRODNA = [
     (
         date(2013, 1, 16),
         [
-            (time(11, 30), [PROGRAMS.ECOLOGICAL], PLACES_HRODNA.BIOFAK),
+            (time(11, 00), [PROGRAMS.ECOLOGICAL], PLACES_HRODNA.BIOFAK),
         ]
     ),
     (
@@ -176,12 +176,6 @@ HRODNA = [
         date(2013, 1, 17),
         [
             (time(18, 00), [PROGRAMS.BELARUS], PLACES_HRODNA.KALYAN),
-        ]
-    ),
-    (
-        date(2013, 1, 18),
-        [
-            (time(18, 00), [PROGRAMS.GOOD, PROGRAMS.KARIN], PLACES_HRODNA.SEKTOR3),
         ]
     ),
     (
