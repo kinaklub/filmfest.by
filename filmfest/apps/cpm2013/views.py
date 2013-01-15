@@ -210,6 +210,11 @@ def partners(request):
             'http://belarusdigest.com/',
             'Беларусы за мяжой'
         ),
+        (
+            img_dir + 'ky.png',
+            'http://kyky.org/',
+            'KYKY.ORG - Культурный портал'
+        ),
     ]
     return render_to_response(
         'cpm2013/partners.html',
