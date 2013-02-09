@@ -214,6 +214,11 @@ def partners(request):
             'http://kyky.org/',
             'KYKY.ORG - Культурный портал'
         ),
+        (
+            img_dir + 'nomadic.png',
+            'http://vagrant.kinaklub.org/',
+            'Nomadic Film Club'
+        ),
     ]
     return render_to_response(
         'cpm2013/partners.html',
