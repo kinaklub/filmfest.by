@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 
 from apps.cpm2012 import urls as cpm2012_urls
 from apps.cpm2013 import urls as cpm2013_urls
+from apps.cpm2014 import urls as cpm2014_urls
 
 from django.contrib import admin
 admin.autodiscover()
@@ -21,6 +22,7 @@ urlpatterns = patterns('',
 
     url(r'^2012/', include(cpm2012_urls)),
     url(r'^2013/', include(cpm2013_urls)),
+    url(r'^2014/', include(cpm2014_urls)),
     url(r'^(?P<lang_code>[\-\w]+)/.*', 'apps.cpm_common.views.set_language', name='cpm_set_language'),
 
     url(r'^$', 'filmfest.views.index', name='index'),

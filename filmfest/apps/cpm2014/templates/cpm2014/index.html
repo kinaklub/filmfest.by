@@ -1,0 +1,88 @@
+{% extends "cpm2014/base.html" %}
+{% load i18n markup %}
+
+{% block content %}
+<div class="row">
+  <div class="span6">
+    <div id="index-about">
+      {% blocktrans %}
+      <p>Welcome to III International Short Film Festival Cinema Perpetuum Mobile!</p>
+      <p>We invite you to share our idea of promoting human values through art and independent cinematography. This idea is not new; however, it still unites hundreds of underground film-makers around the globe to join efforts in their sincere endeavor to see our world become a truly better place.</p>
+      <p>As before, Cinema Perpetuum Mobile sticks to its goals to</p>
+      <ul>
+	<li>promote independent film-making throughout the world;</li>
+	<li>search for new forms and solutions in cinematography;</li>
+	<li>encourage cultural diversity in cinematography;</li>
+	<li>develop and strengthen connections between film-makers and film-making communities all around the world.</li>
+      </ul>
+      <p>This time Cinema Perpetuum Mobile will reach the audience not only in Belarusian regions and cities, but in other countries as well. It is you who help us bring independent cinema to more and more people, and our community is growing due to the principles we incorporate in our mission:</p>
+      <h3>We are independent</h3>
+      <p>Cinema Perpetuum Mobile is a non-profit project founded and promoted solely by volunteers.</p>
+      <h3>We are open</h3>
+      <p>Anyone can join our team and contribute to this unique project on equal terms of cooperation.</p>
+      <h3>We are transparent</h3>
+      <p>No leaders, no centralization, no barriers – this is what our structure is. In this microcosm of Cinema Perpetuum Mobile everyone is united in sharing enthusiasm.</p>
+
+      <p>We are here to make it happen. We believe you are here too.</p>
+      {% endblocktrans %}
+    </div>
+  </div>
+  <div class="span6">
+    <div class="well">
+      <h3>Latest news</h3>
+      {% for news_entry in news %}
+        <h4>{{ news_entry.title }}</h4>
+	<div>{{ news_entry.short_text|markdown }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span4">
+    <div style="background-color: #ffffff"><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FCinema-Perpetuum-Mobile%2F272854246075203&amp;width=250&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;height=290" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:290px;" allowTransparency="true"></iframe></div>
+  </div>
+  <div class="span4">
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 5,
+        interval: 30000,
+        width: 250,
+        height: 250,
+        theme: {
+          shell: {
+            background: '#bda055',
+            color: '#000000'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#000000',
+            links: '#0790eb'
+          }
+        },
+        features: {
+          scrollbar: true,
+          loop: false,
+          live: true,
+          hashtags: true,
+          timestamp: true,
+          avatars: true,
+          behavior: 'all'
+        }
+      }).render().setUser('CinemaPM').start();
+    </script>
+  </div>
+  <div class="span4">
+    <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
+
+    <!-- VK Widget -->
+    <div id="vk_groups"></div>
+    <script type="text/javascript">
+      VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "290"}, 29200596);
+    </script>
+  </div>
+</div>
+{% endblock %}

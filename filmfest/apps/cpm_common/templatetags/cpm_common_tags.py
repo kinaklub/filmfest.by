@@ -10,23 +10,21 @@ register = template.Library()
 
 
 MAINMENU_ITEMS = [
-    (_('Home'), reverse('cpm2013:index'), ()),
+    (_('Home'), reverse('cpm2014:index'), ()),
     (_('Festival'), '', (
         (_('2012: good memories'), reverse('cpm2012:index')),
         (_('Festival in media'), reverse('cpm2013:page', args=['media'])),
     )),
     (_('Participants'), '', (
-        (_('Regulations'), reverse('cpm2013:rules')),
-#        (_('Submit your film!'), reverse('cpm2013:submit')),
+        (_('Regulations'), reverse('cpm2014:rules')),
+        (_('Submit your film!'), reverse('cpm2014:submit')),
     )),
     (_('Volunteers'), '', (
-        (_('Memo'), reverse('cpm2013:page', args=['memo_volunteers'])),
-        (_('Queistionnaire'), reverse('cpm2013:volunteers_questionnaire')),
         (_('Discussion group'), 'http://groups.google.com/group/cpm2013_public'),
     )),
-    (_('Partners'), reverse('cpm2013:partners'), ()),
-    (_('Press kit'), reverse('cpm2013:press_kit'), ()),
-    (_('Contacts'), reverse('cpm2013:contacts'), ()),
+    (_('Partners'), reverse('cpm2014:partners'), ()),
+    (_('Press kit'), reverse('cpm2014:press_kit'), ()),
+    (_('Contacts'), reverse('cpm2014:contacts'), ()),
 ]
 
 @register.inclusion_tag('cpm_common/tags/mainmenu.html')

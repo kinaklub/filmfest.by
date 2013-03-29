@@ -1,0 +1,36 @@
+{% extends "cpm2014/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Partners" %} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<h3>{% trans "Partners" %}</h3>
+<p>{% trans "<em>Cinema Perpetuum Mobile</em> is a non-profit, independent project which keeps on expenses and aspirations of the organizers. At the same time international nature of the event, cultural resonance provides fertile ground for collaboration with business and public organizations." %}</p>
+
+<div class="row">
+  {% for banner_img, banner_url, banner_desc in main_banners %}
+  <div class="span6" style="line-height: 260px">
+    <a href="{{ banner_url }}">
+      <img 
+	 src="{{ banner_img }}"
+	 alt="{{ banner_desc }}"
+	 style="vertical-align: middle" 
+	 />
+    </a>
+  </div>
+  {% endfor %}
+</div>
+<div class="row">
+  {% for banner_img, banner_url, banner_desc in banners %}
+  <div class="span3" style="line-height: 110px">
+    <a href="{{ banner_url }}">
+      <img 
+	 src="{{ banner_img }}"
+	 alt="{{ banner_desc }}"
+	 style="vertical-align: middle" 
+	 />
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
