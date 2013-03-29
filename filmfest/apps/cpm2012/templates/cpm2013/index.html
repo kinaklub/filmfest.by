@@ -1,0 +1,215 @@
+{% load i18n cpm_common_tags piwik_tags %}<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+      <title>{% trans 'как это было' %} - Cinema Perpetuum Mobile 2013</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- favicon -->
+    <link rel="icon" type="image/ico" href="{{ STATIC_URL }}favicon.ico"/>
+
+    <!-- styles -->
+    <link href="{{ STATIC_URL }}cpm2013/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}cpm2013/styles.css?v=7" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}cpm2013/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+          <script type="text/javascript">
+            google.load('visualization', '1', {'packages': ['geochart']});
+            google.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', '{% trans "Страна" %}');
+              data.addColumn('number', '{% trans "Участников" %}');
+              data.addRows([
+                ['{% trans "Сербия" %}', 1],
+                ['{% trans "Тайланд" %}', 1],
+                ['{% trans "Латвия" %}', 1],
+                ['{% trans "Франция" %}', 1],
+                ['{% trans "Азербайджан" %}', 1],
+                ['{% trans "ОАЭ" %}', 1],
+                ['{% trans "Бразилия" %}', 1],
+                ['{% trans "Сирия" %}', 1],
+                ['{% trans "Швеция" %}', 1],
+                ['{% trans "Новая Зеландия" %}', 1],
+                ['{% trans "Австралия" %}', 1],
+                ['{% trans "Бангладеш" %}', 1],
+                ['{% trans "Израиль" %}', 1],
+                ['{% trans "Грузия" %}', 1],
+                ['{% trans "Казахстан" %}', 1],
+                ['{% trans "Канада" %}', 1],
+                ['{% trans "Швейцария" %}', 1],
+                ['{% trans "Финляндия" %}', 1],
+                ['{% trans "Португалия" %}', 1],
+                ['{% trans "Румыния" %}', 1],
+                ['{% trans "Кыргызстан" %}', 2],
+                ['{% trans "Хорватия" %}', 2],
+                ['{% trans "Индия" %}', 2],
+                ['{% trans "Армения" %}', 2],
+                ['{% trans "Чехия" %}', 2],
+                ['{% trans "Эстония" %}', 2],
+                ['{% trans "Италия" %}', 4],
+                ['{% trans "Великобритания" %}', 5],
+                ['{% trans "США" %}', 9],
+                ['{% trans "Украина" %}', 9],
+                ['{% trans "Германия" %}', 10],
+                ['{% trans "Польша" %}', 19],
+                ['{% trans "Испания" %}', 23],
+                ['{% trans "Беларусь" %}', 29],
+                ['{% trans "Россия" %}', 57]
+              ]);
+
+              var options = {colorAxis: {minValue: 0,  colors: ['#FFFF99', '#DDDD00']}};
+
+              var geomap = new google.visualization.GeoChart(document.getElementById('map-chart'));
+              geomap.draw(data, options);
+            };
+          </script>
+  </head>
+
+  <body>
+  <div id="header-container" class="container">
+      <div class="row">
+              <div class="span6">
+                  <div id="header">
+                      <h2 id="international-festival">{% trans 'международный фестиваль' %}<br/>{% trans 'короткометражного
+                          кино' %}</h2>
+
+                      <h1 id="CinemaPerpetuumMobile">
+                          Cinema<br/>
+                          <span id="Perpetuum">Perpetuum</span><br/>
+                          <span id="Mobile">Mobile</span>
+                      </h1>
+                      <a href="http://filmfest.by" id="filmfest-by">filmfest.by</a>
+                  </div>
+              </div>
+              <div class="span6">
+                  <h3 id="how-2013">
+                      <span class="year">2013</span><br/>
+                      <small>{% trans 'как это было' %}</small>
+                  </h3>
+              </div>
+          </div>
+  </div>
+
+  <div class="container">
+      <div class="navbar">
+          <div class="navbar-inner">
+              <div class="container">
+                  {% mainmenu request %}
+              </div>
+          </div>
+          <!-- /navbar-inner -->
+      </div>
+  </div>
+
+  <div id="content-container" class="container">
+  <div class="row">
+      <div class="span9 yellow">
+          <p class="foreword">{% trans 'В <em>январе 2013</em> года состоялось еще одно событие событие для культурной
+              жизни <em>города Минска</em> – был проведен Международный кинофестиваль короткометражного кино <strong>«Cinema
+                  Perpetuum Mobile»</strong>.' %}</p>
+
+          <p class="foreword"></p>
+          {% trans 'На фестиваль было прислано более <em>300-ти авторских фильмов</em> из более чем
+                        <em>40 стран мира</em>. Как в 2012 году, именитое жюри, в которое входили и представители Беларуси, оценивало и выбирало
+                        лучшие фильмы. Показы собирали большую аудиторию заинтересованных зрителей и получили широкую огласку в
+                        прессе.' %}
+          <h3>{% trans 'Победители' %}</h3>
+
+
+      </div>
+      <div class="span3 yellow">
+          <div class="fact underborder">
+              <strong>2013</strong>
+              {% trans 'январь' %}
+          </div>
+          <div class="fact underborder">
+              <strong>8</strong>
+              {% trans 'дней' %}
+          </div>
+          <div class="fact underborder">
+              <strong>42</strong>
+              {% trans 'стран' %}
+          </div>
+          <div class="fact underborder">
+              <strong>320</strong>
+              {% trans 'участников' %}
+          </div>
+          <div class="fact underborder">
+              <strong>$500</strong>
+              {% trans 'бюджет' %}
+          </div>
+          <div class="fact underborder">
+              <strong>9</strong>
+              {% trans 'членов жюри' %}
+          </div>
+          <div class="fact underborder">
+              <strong>150</strong>
+              {% trans 'волонтера' %}
+          </div>
+          <div class="fact">
+              <strong>8</strong>
+              {% trans 'площадок' %}
+          </div>
+          <div class="fact">
+                       <strong>8</strong>
+                       {% trans 'городов в Беларуси' %}
+                   </div>
+          <div class="fact">
+                                 <strong>15</strong>
+                                 {% trans 'стран-удзельнікаў міжнародных паказаў' %}
+                             </div>
+
+          <ul id="places">
+              <li id="place-museum-nat">
+  	      <span>{% trans 'Национальный художественный музей' %},<br/>
+  		<address>{% trans 'ул. Ленина, 20' %}</address>
+  	      </span>
+              </li>
+              <li id="place-museum-cin">
+  	      <span>{% trans 'Музей истории белорусского кино' %},
+  		<address>{% trans 'ул. Свердлова, 4' %}</address>
+  	      </span>
+              </li>
+              <li id="place-ddm">
+  	      <span>{% trans 'Дворец детей и молодежи' %},<br/>
+  		<address>{% trans 'Старовиленский тракт, 41' %}</address>
+  	      </span>
+              </li>
+              <li id="place-la-mora">
+  	      <span>{% trans 'ДК «La мора»' %},
+  		<a href="http://la-mora.info">la-mora.info</a>
+  	      </span>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  <footer class="footer">
+      <div class="container">
+          <div class="row footer-menu">
+              <div class="span4 pagination-centered">
+                  {% trans 'международный фестиваль' %}<br/>
+                  {% trans 'короткометражного кино' %}<br/>
+                  <strong>Cinema Perpetuum Mobile</strong><br/>
+                  {% trans 'January 2013' %}<br/>
+                  {% trans 'Minsk, Belarus' %}
+              </div>
+              <div class="span8">
+                  {% trans "Links" %}:
+                  {% bottommenu %}
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  {% piwik %}
+  </body>
+</html>
