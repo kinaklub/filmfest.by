@@ -20,7 +20,7 @@ MAINMENU_ITEMS = [
         (_('Submit your film!'), reverse('cpm2014:submit')),
     )),
     (_('Volunteers'), '', (
-        (_('Discussion group'), 'http://groups.google.com/group/cpm2013_public'),
+        (_('Discussion group'), 'http://groups.google.com/group/cpm2014'),
     )),
     (_('Partners'), reverse('cpm2014:partners'), ()),
     (_('Press kit'), reverse('cpm2014:press_kit'), ()),
