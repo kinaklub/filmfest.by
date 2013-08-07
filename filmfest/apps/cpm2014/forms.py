@@ -77,3 +77,22 @@ class SubmissionForm(BetterModelForm):
                 'legend': _('Permissions'),
             }),
         ]
+
+
+class FieldsForm(forms.Form):
+    fields = forms.MultipleChoiceField(
+        choices=[(f.name, f.name) for f in Submission._meta.fields],
+        widget=forms.CheckboxSelectMultiple
+    )
+
+    def __init__(self, data=None, files=None, auto_id='id_%s', prefix=None,
+                 initial=None, error_class=ErrorList, label_suffix=':',
+                 empty_permitted=False):
+        if initial is None:
+            initial = {
+                'fields': [f.name for f in Submission._meta.fields]
+            }
+        super(FieldsForm, self).__init__(
+            data, files, auto_id, prefix, initial, error_class,
+            label_suffix, empty_permitted
+        )

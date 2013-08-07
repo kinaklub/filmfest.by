@@ -25,6 +25,7 @@ from hvad.utils import get_translation_aware_manager
 import openpyxl
 
 from apps.cpm2014.models import Submission, NewsEntry
+from apps.cpm2014.forms import FieldsForm
 
 
 class PreviewFilter(admin.SimpleListFilter):
