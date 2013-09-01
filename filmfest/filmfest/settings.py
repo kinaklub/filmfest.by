@@ -155,12 +155,18 @@ INSTALLED_APPS = (
     'south',
     'djcelery',
     'hvad',
+    'rest_framework',
     
     'apps.cpm2012',
     'apps.cpm2013',
     'apps.cpm2014',
     'apps.cpm_common',
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

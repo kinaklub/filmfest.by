@@ -8,8 +8,11 @@ from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
+from rest_framework import viewsets
+
 from apps.cpm2014.models import Submission, NewsEntry
 from apps.cpm2014.forms import SubmissionForm
+from apps.cpm2014.serializers import SubmissionSerializer
 from apps.cpm2014.tasks import SendSubmissionEmail
 
 
@@ -195,3 +198,12 @@ def press_kit(request):
         'cpm2014/press_kit.html', {},
         context_instance=RequestContext(request),
     )
+
+
+
+class SubmissionViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows submissions to be viewed or edited.
+    """
+    queryset = Submission.objects.all()
+    serializer_class = SubmissionSerializer

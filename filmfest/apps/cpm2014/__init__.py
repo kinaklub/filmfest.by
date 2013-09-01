@@ -2,7 +2,12 @@ def get_urls():
     from django.conf.urls import patterns, include, url
     from django.views.generic.simple import direct_to_template
 
+    from rest_framework import routers
+
     from apps.cpm2014 import views
+
+    router = routers.DefaultRouter()
+    router.register(r'submissions', views.SubmissionViewSet)
 
     return patterns('',
         url(r'^$', views.index, name='index'),
@@ -14,6 +19,8 @@ def get_urls():
             {'template': 'cpm2014/contacts.html'},
             name='contacts'),
         url(r'^presskit', views.press_kit, name='press_kit'),
+        url(r'^api/', include(router.urls)),
+        url(r'^api-submissions/', include('rest_framework.urls')),
     )
 
 urls = (get_urls(), 'cpm2014', 'cpm2014')
