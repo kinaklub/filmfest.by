@@ -113,6 +113,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
+
+    # Django CMS
+    'cms.context_processors.media',
+    'sekizai.context_processors.sekizai',
 )
 
 
@@ -122,8 +126,15 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.doc.XViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+
+    # Django CMS
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
 )
 
 ROOT_URLCONF = 'filmfest.urls'
@@ -156,17 +167,37 @@ INSTALLED_APPS = (
     'djcelery',
     'hvad',
     'rest_framework',
-    
+
+    'cpm',
     'apps.cpm2012',
     'apps.cpm2013',
     'apps.cpm2014',
     'apps.cpm_common',
+
+
+    # Django CMS
+    'cms',
+    'mptt',
+    'menus',
+    'south',
+    'sekizai',
+    'cms.plugins.file',
+    'cms.plugins.link',
+    'cms.plugins.picture',
+    'cms.plugins.teaser',
+    'cms.plugins.text',
+    'cms.plugins.video',
+    'cms.plugins.twitter',
 )
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGINATE_BY': 10
 }
+
+CMS_TEMPLATES = (
+    ('cms/template_doc.html', 'Doc'),
+)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
