@@ -1,17 +1,17 @@
 Dear {{ name }},
 
-You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2013.
+You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2014.
 
 You can see the application form cpm2013.pdf attached. But there are still two steps required:
-1. you need to print cpm2013.pdf and sign it, confirming you agree with CPM 2013 rules (http://filmfest.by/2013/rules/);
+1. you need to print cpm2013.pdf and sign it, confirming you agree with CPM 2013 rules (http://filmfest.by/2014/rules/);
 2. you need to send signed application form along with a DVD copy of your film.
 
-Film submission form must be sent before  November 30, 2012 to:
-“Cinema Perpetuum Mobile”,
+Film submission form must be sent before  December 1, 2013 to:
+Martyniuk A., “Cinema Perpetuum Mobile”
 PO Box 74, Minsk
 220050, Belarus
 
-The DVD copy may be also delivered to CPM 2013 organizing committee via Internet; signed form can be mailed or photographed/scanned and sent to the address of the festival: 2013@filmfest.by
+The DVD copy may be also delivered to CPM 2014 organizing committee via Internet; signed form can be mailed or photographed/scanned and sent to the address of the festival: info@filmfest.by
 
 If your film is done in another language different from English, Russian or Belarusian it must be supplied with English, or Belarusian, or Russian subtitles. Attached DVD must be without menu.
 
@@ -20,4 +20,4 @@ Please mark mailing materials with “No commercial value, for cultural purposes
 If you have any questions, don't hesitate to contact us via mail: 2013@filmfest.by
 
 Best regards,
-Cinema Perpetuum Mobile 2013 organizing committee
+Cinema Perpetuum Mobile 2014 organizing committee
