@@ -1,78 +1,103 @@
-REGULATIONS
-===================
-THE ANNUAL INTERNATIONAL SHORT FILM FESTIVAL CINEMA PERPETUUM MOBILE
+R E G U L A T I O N S  
+=====================
+OF THE ANNUAL INTERNATIONAL SHORT FILM FESTIVAL «CINEMA PERPETUUM MOBILE»
 ---------------
 
-The second International Short Film Festival Cinema Perpetuum Mobile is a nonprofit cultural event. It was organized by enthusiasts inspired by the fact that their work contributes to peace, friendship and prosperity of the humankind. 
+The third annual international independent short film festival “Cinema Perpetuum Mobile” is a non-profit cultural event. The Organizing committee was formed by the members of kinaklub.org community, which gathers enthusiasts and film-fans devoted to the values of continual and free cinema art.
 
-The festival is aimed at promotion of independent auteur cinematography; search for new forms and solutions in film art, support of cultural diversity in filmmaking and contribution to appearance and strengthening of ties between cinematographers and international film communities. 
+### Festival’s purposes
 
-The festival is dedicated to developing eternal themes in cinematograph, to new and traditional interpretations of eternal questions, which does not exclude the participation of experimental films. 
+* To promote independent film-making. Short film is a low-budget, and thus affordable democratic method of art expression. This allows to cover any actual and burning issue while staying laconic.
+* To support cultural diversity in cinema and discovering of new forms and methods in film art. 
+* To assist in establishing and consolidating of communication between film-makers and film societies. 
 
-Any person ready to accept the festival rules set forth in the regulations can participate in it irrespective of their age and place of residence. The participation does not require any fees. 
+As reflected in its name, the idea of the festival is to touch upon eternal, perpetual subjects. The measure of how perpetual the subject is, is determined by it’s unquestionable importance and humanistic value. But also, with issues of this kind, a fresh and reasonable view is a needed. That is why, both traditional and innovative approaches in interpretation of perpetual subjects are appreciated, as well as the whole spectrum of different cinematic forms - from silent to experimental.
 
-The festival is organized by the movement “Kinaklub.org”.
+Any interested person, who agrees with principles and ideas presented in the regulations, can become a participant of the festival, no matter what his/her skin color, height, weight, place of residence or age is. The requirement for becoming a participant is a filled-in participant’s entry form and a completed film. 
 
-The final stage of the festival is to be held in spring 2014 at the same time in Minsk and other Belarusian cities, in villages and megalopolises, islands and mountain settlements of various regions and climatic zones of our Planet. This project will unite more and more people that wish Earth peace, prosperity and rescue from ecologic collapse. 
+Festival screenings and selection of winners will take place simultaneously in Minsk and other locations on our planet, in April 2014. They gather more and more people who enjoy watching good films and are not indifferent to the problems of mankind.
 
-### Procedures to determine the winner
+Participance in the festival is free of any charges.
 
-The festival jury consists of famous independent filmmaking representatives from all over the world (one representative from each continent and subcontinent).
 
-The jury will determine the best film of the official selection in each section and the best Belarusian film. The audience’s votes will be summed up. 
+### Film selection and screenings
 
-The official selection of the festival includes the following sections:
+Two factors determine film selection procedure: marks given to the film by audience at pre-screenings (volunteer film-fans who are not indifferent to the principles of kinaklub.org society) and marks given by the organizing committee members.
 
-* fiction films;
-* animation;
-* documentary films;
-* experimental films and video art;
-* musical video;
-* ecological films;
-* children and youth films.
+At pre-screenings, all films are going to be rated on scale from 1 to 10. The resulting mark will be the sum of both committees’s and volunteer viewers’ marks.  
 
-The Grand Prix winner is defined by the jury evaluation and the audience’s opinion. Based on the jury’s opinion, The Organizing Committee will choose the best films in the following nominations:
+The Organizing committee includes films with the highest average marks from volunteer viewers in the contest program, but leaves itself the right to exclude high-rated films, if they do not correspond with festival’s purposes and ideas, as well as include underrated films with high quality and humanistic value.  
 
-* Perpetual motion machine;
-* Perpetual love;
-* Perpetual freedom;
-* Perpetual fight;
-* Perpetual art.
 
-Films for the festival program are selected by volunteering viewers and the Organizing Committee members.
+￼Apart from the contest screenings, the festival program also includes out-of-competition thematic screenings (on ecological, urbanistic, gender issues, and also special screenings for the younger audience). The program of out-of-competition screenings is prepared by the members of the organizing committee. 
 
-The jury evaluation is not disclosed. However, every participating filmmaker can learn his/her evaluation in the preliminary selection groups.
+The festival has a network structure, with screenings going simultaneously not only in different cities of Belarus, but also all around the planet Earth. For screenings in different festival-friendly film societies there will be prepared a special program, which consists of both contest and out-of-competition films with a total runtime of 1 hour 30 minutes.
 
-The films submitted to the festival should be no longer than 20 minutes and be shot not earlier than 2012. Every participant can submit up to three films. Participants guarantee that no copyright on submitted works is infringed. 
+### The procedure of choosing the winner
 
-The festival’s working languages are English, Belarusian and Russian. If a film is shot in any other language (except English), it should be provided with English subtitles. We would be very much obliged if you send the subtitles in a separate file.  
+The contest program of the festival includes the following sections:
 
-Films should be sent in the DVD format. Other formats can be used only upon the Organizing Committee’s consent.
+* feature films section;
+* non-feature films section;
+* animation section.
 
-In order to take part in the festival, participants are required to submit the following materials:
+The jury of the festival consists of representatives of independent filmmaking from all over the world.
+The jury chooses the best work of the contest program in each section, as well as the best Belarusian film. Also, the list of “Audience choice” films is formed. 
 
-* a film;
-* a filled in and printed registration form;
-* film screenshots (two or more).
+The owner of the festival Grand Prix is chosen accordingly to the marks given by the jury and the audience.
 
-The online registration form can be filled in [here]( http://filmfest.by/2014/submit/ ). Once completed, it is automatically sent to the email address provided in the form. It should be printed, signed and sent along with the DVD to the following address:
+The Organizing committee relies on jury’s opinion and awards best films in following nominations:
 
->Aliaksandr Martyniuk, Cinema Perpetuum Mobile
+* Perpetual motion
+* Perpetual love
+* Perpetual freedom
+* Perpetual fight
+* Perpetual art
+
+
+### Requirements for the films
+
+Films that have been produced after January 1st, 2012, with runtime no longer than 35 minutes are allowed to participate in the festival. There is no limit on how many works one participant can send. The participant that sends application must guarantee observance of copyright on the works sent. All responsibility for copyright observance lies on the contestant. 
+
+The working languages are English, Belarusian, Russian. Each work must have a subtitle file attached separately. The subtitles must be in English and in SRT or SUB format. Use of any other format is allowed only after coordination with the organizing committee.
+ 
+Video file must be provided in DVD or MPEG-4 format. Use of any other format is allowed only after coordination with the organizing committee.
+
+To participate in the festival, the participant should provide the organizing committee with the following materials:
+1) the participant's entry-form;
+2) a video file; 
+￼3) a subtitle file.
+
+Materials can be sent via regular post or via Internet. In the latter case, the download link of the film must be sent to the following address: 2014@filmfest.by . 
+
+The participant's entry-form can be filled in online - http://filmfest.by/2014/submit. The filled-in entry-form is automatically sent to the address indicated in the electronic form; it must be printed, signed and sent put with the DVD to the following address:
+
+
+>Мартынюку А., Cinema Perpetuum Mobile
+
+>a/я 74
+
+>220050, Минск
+
+>Беларусь
+
+-----------------
+
+-----------------
+
+>Martyniuk A., Cinema Perpetuum Mobile
 
 >PO Box 74
 
 >220050, Minsk
 
->Belarus 
+>Belarus
 
-Please mark the envelope with the note “No commercial value, for cultural purposes only”. Submitted works are not returnable. 
+“No commercial value, for cultural purposes only” remark on the envelope is advisable. The disks sent will not be returned.
 
-You can send the materials via express post that requires customs clearance by an addressee only upon the Organizing Committee’s consent.
+Shipment of the materials via express-mail that require customs registration by the receiver, must be coordinated with the Organizing committee.
 
-Film screenshots (two or more) should be sent to the email 2014@filmfest.by
+### Deadline for submitting the works
 
-You can send the materials via both post and the Internet. For this, please send the download link to the email 2014@filmfest.by
-
-The deadline for submitting films is December 31, 2013. The works sent later can be accepted only upon the Organizing Committee’s consent.
-
-Films sent after the deadline are considered to be submitted for the next year’s festival.
+The deadline for submitting the film is December 1st, 2013. Submitting works after the 1st of December is possible only via coordination with the Organizing committee.
+Films sent after the mentioned deadline are considered to be submitted for the fourth festival, СРМ-2015.
