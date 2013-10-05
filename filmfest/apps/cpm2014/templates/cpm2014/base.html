@@ -15,6 +15,8 @@
     <!-- styles -->
     <!-- <link href="{{ STATIC_URL }}cpm2014/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="{{ STATIC_URL }}cpm2014/styles.css?v=7" rel="stylesheet"> -->
+    <!-- Custom font loading from google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 
     <link href="{{ STATIC_URL }}frontrow/css/bootstrap.min.css?v=1" rel="stylesheet">
     <link href="{{ STATIC_URL }}frontrow/css/bootstrap-responsive.min.css?v=1" rel="stylesheet">
@@ -47,13 +49,16 @@
       <div class="navbar navbar-fixed-top">
       	 <div class="navbar-inner">
       	  <div class="container">
-            <a class="brand scroller" data-section="html" href="/">Cinema Perpetuum Mobile</a>
-            <div class=" nav-collapse collapse">
-              <div class="nav pull-right">
+            <a class="brand scroller cpm-brand" data-section="html" href="/">
+                <div class="logo-wrapper"><img class="cpm-logo" src="{{ STATIC_URL }}cpm2014/cpm+logo.svg" /></div>
+                <div class="fest-text">
+                    <div class="fest-title"><h2>CPM</h2></div>
+                    <div class="fest-type"><h3>filmfest</h3></div>
+                </div>
+
+            </a>
                 {% mainmenu request %}
-              </div>
-            </div>
-      	    
+
       	  </div>
       	</div><!-- /navbar-inner -->
       </div>

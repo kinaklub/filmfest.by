@@ -1,6 +1,8 @@
 
 /* Setup Styles  */
 
+
+
 body {
 	/* Change the background image here  */
 	background: url('../img/bg2.jpg') #000 top center fixed no-repeat;
@@ -344,3 +346,54 @@ h1 {
 	position:relative;
 	display:none;
 }
+
+/******Custom styles for filmfest2014*******/
+.cpm-brand {
+    height: 10px;
+}
+
+.logo-wrapper, .fest-text {
+    float: left;
+    position: relative;
+}
+
+.logo-wrapper {
+    top: -20px;
+    left: 0px;
+}
+
+.fest-text {
+    top: -15px;
+    margin-left: 10px;
+}
+
+.fest-title h2, .fest-type h3 {
+    margin: 0px;
+    font-family: Helvetica, Arial, sans-serif;;
+}
+
+.fest-title h2 {
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.fest-type h3 {
+    line-height: 25px;
+}
+
+.navbar .nav>li>a {
+    padding: 10px 10px;
+}
+
+.navbar .nav.pull-right.lang-list {
+    margin-left: 15px;
+}
+.navbar .nav.lang-list > li > .lang-item {
+    color: #ccc;
+    padding: 10px 7px;
+}
+.navbar .nav.lang-list > li > .lang-item.lang-item__current {
+    color: #fff;
+}
+
+/******End of custom styles for filmfest2014*******/
