@@ -1,4 +1,4 @@
-{% load i18n cpm_common_tags piwik_tags %}<!DOCTYPE html>
+{% load i18n cpm_common_tags piwik_tags %}{% load sekizai_tags %}<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -33,10 +33,11 @@
     <!-- scripts -->
     <script src="{{ STATIC_URL }}frontrow/js/bootstrap.min.js"></script>
 
-    {% block extrahead %}{% endblock %}
+    {% render_block "css" %}
   </head>
 
   <body>
+    {% block after_body %}{% endblock %}
     <!--div id="header-container" class="container">
       <a href="{% url cpm2014:index %}">
 	       <img src="{{ STATIC_URL }}cpm2014/logo2014.png" height="150px" alt="CPM filmfest"/>
@@ -117,6 +118,7 @@
       <div class="container-fluid" id="team">
         <div class="container dark">
           {% block content %}{% endblock %}
+	  {% render_block "js" %}
         </div>
         
       </div>
