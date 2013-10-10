@@ -1,12 +1,15 @@
+{% extends "cpm2014/base.html" %}
 {% load cms_tags sekizai_tags %}
-<html>
-  <head>
-      {% render_block "css" %}
-  </head>
-  <body>
-      {% cms_toolbar %}
-      {% placeholder base_content %}
-      {% block base_content %}{% endblock %}
-      {% render_block "js" %}
-  </body>
-</html>
+
+{% block extrahead %}
+{{ block.super }}
+{#% render_block "css" %#}
+{% endblock %}
+
+{% block content %}
+{#% cms_toolbar %#}
+{% placeholder base_content %}
+{% block base_content %}{% endblock %}
+{#% render_block "js" %#}
+{% endblock %}
+
