@@ -1,9 +1,9 @@
-{% extends "cpm2014/base.html" %}
+{% extends "cpm/page.html" %}
 {% load markup i18n %}
 
 {% block title %}{% trans "Regulations" %} - {{ block.super }}{% endblock %}
 
-{% block content %}
+{% block main_content %}
 <ul id="rules-lang-list" class="clearfix">
 {% for lang in languages %}
   {% if lang == current_lang %}

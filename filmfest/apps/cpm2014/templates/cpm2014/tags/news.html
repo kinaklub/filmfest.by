@@ -1,0 +1,6 @@
+{% load i18n markup %}
+<h3>Latest news</h3>
+{% for news_entry in news %}
+  <h4>{{ news_entry.title }}</h4>
+  <div>{{ news_entry.short_text|markdown }}</div>
+{% endfor %}
