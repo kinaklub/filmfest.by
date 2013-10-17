@@ -1,0 +1,76 @@
+{% extends "cpm/base.html" %}
+{% load cms_tags sekizai_tags i18n markup %}
+{% load cpm2014_tags %}
+{% load url from future %}
+
+{% block after_body %}
+{% cms_toolbar %}
+{% endblock %}
+
+{% block content %}
+    <div id="content-container" class="main-container">
+      <div class="container-fluid" id="intro">
+        <div class="container">
+          <div class="row span6 center">
+            <h1>Cinema<br />Perpetuum Mobile</h1>
+            <p>International Short Film Festival</p>
+            <a href="{% url 'cpm2014:submit' %}" class="btn btn-xlarge btn-purple">Submit your film!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="about">
+        <div class="container light">
+          <ul class="thumbnails">
+            <li class="span3"><div class="thumbnail">
+		{% placeholder goal_1 %}
+	    </div></li>
+                
+            <li class="span3"><div class="thumbnail">
+		{% placeholder goal_2 %}
+            </div></li>
+                  
+            <li class="span3"><div class="thumbnail">
+		{% placeholder goal_3 %}
+            </div></li>
+                
+	    <li class="span3"><div class="thumbnail">
+		{% placeholder goal_4 %}
+            </div></li>
+          </ul> 
+        </div>
+      </div>
+
+      <div class="container-fluid" id="team">
+        <div class="container dark">
+	  <div class="row">
+	    <div class="span6">
+	      {% placeholder about_festival %}
+	    </div>
+	    <div class="span6">
+	      {% cpm2014_news %}
+	    </div>
+	  </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="contact">
+        <div class="container dark">
+          <ul class="thumbnails">
+            <li class="span4"><div class="thumbnail">
+		{% placeholder mission_1 %}
+	    </div></li>
+                
+            <li class="span4"><div class="thumbnail">
+		{% placeholder mission_2 %}
+            </div></li>
+                  
+            <li class="span4"><div class="thumbnail">
+		{% placeholder mission_3 %}
+            </div></li>
+          </ul> 
+        </div>
+      </div>
+      
+    </div>
+{% endblock %}

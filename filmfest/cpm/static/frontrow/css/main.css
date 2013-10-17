@@ -86,7 +86,6 @@ h1 {
 	background:#202020;
 }
 
-
 /* Navbar Styles  */
 
 .navbar-fixed-top {
@@ -395,5 +394,38 @@ h1 {
 .navbar .nav.lang-list > li > .lang-item.lang-item__current {
     color: #fff;
 }
+#text {
+	background:#fff;
+	padding-top: 90px;
+}
+/* submission form */
+#submission-form input, #submission-form select, #submission-form textarea {
+    width: 500px;
+}
+#submission-form label {
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 140px;
+}
+/* footer */
+.footer {
+  display: none;
+  padding: 20px 0 10px 0;
+  color: #fff;
+  text-shadow: #222 1px 0 0px, #222 0 1px 0px, #222 -1px 0 0px, #222 0 -1px 0px;
+}
 
+.footer-menu a {
+    text-decoration: underline;
+    text-shadow: none;
+}
+.footer-links {
+  display: inline;
+  margin-left: 5px;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
 /******End of custom styles for filmfest2014*******/

@@ -1,0 +1,15 @@
+{% extends "cpm/base.html" %}
+{% load cms_tags sekizai_tags %}
+
+{% block after_body %}
+{% cms_toolbar %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" id="text">
+  <div class="container light">
+    {% placeholder base_content %}
+    {% block base_content %}{% endblock %}	  
+  </div>
+</div>
+{% endblock %}

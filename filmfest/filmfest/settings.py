@@ -15,6 +15,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+INTERNAL_IPS = ('127.0.0.1',)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -130,6 +132,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
 
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
     # Django CMS
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
@@ -143,6 +147,7 @@ ROOT_URLCONF = 'filmfest.urls'
 WSGI_APPLICATION = 'filmfest.wsgi.application'
 
 TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'filmfest', 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -164,6 +169,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'south',
+    'debug_toolbar',
     'djcelery',
     'hvad',
     'rest_framework',
@@ -188,6 +194,8 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
+    # news plugin
+    'cmsplugin_news',
 )
 
 REST_FRAMEWORK = {
@@ -196,6 +204,8 @@ REST_FRAMEWORK = {
 }
 
 CMS_TEMPLATES = (
+    ('cms/template_page.html', 'Page'),
+    ('cms/template_home.html', 'Homepage'),
     ('cms/template_doc.html', 'Doc'),
 )
 

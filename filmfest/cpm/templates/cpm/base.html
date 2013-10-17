@@ -1,0 +1,82 @@
+{% load i18n cpm_common_tags piwik_tags %}{% load sekizai_tags %}<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>{% block title %}Cinema Perpetuum Mobile 2014{% endblock %}</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- favicon -->
+    <link rel="icon" type="image/ico" href="{{ STATIC_URL }}favicon.ico"/>
+
+    <!-- styles -->
+    <!-- <link href="{{ STATIC_URL }}cpm2014/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="{{ STATIC_URL }}cpm2014/styles.css?v=7" rel="stylesheet"> -->
+    <!-- Custom font loading from google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+    <link href="{{ STATIC_URL }}frontrow/css/bootstrap.min.css?v=1" rel="stylesheet">
+    <link href="{{ STATIC_URL }}frontrow/css/bootstrap-responsive.min.css?v=1" rel="stylesheet">
+    <link href="{{ STATIC_URL }}frontrow/css/main.css?v=1" rel="stylesheet">
+
+    <script src="{{ STATIC_URL }}frontrow/js/jquery-1.7.2.min.js"></script>
+    <script src="{{ STATIC_URL }}frontrow/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="{{ STATIC_URL }}frontrow/js/jquery.imagesloaded.min.js"></script>
+    <script src="{{ STATIC_URL }}frontrow/js/video.js"></script>
+    <script src="{{ STATIC_URL }}frontrow/js/modernizr-2.5.3.min.js"></script>
+
+
+
+    <!-- scripts -->
+    <script src="{{ STATIC_URL }}frontrow/js/bootstrap.min.js"></script>
+
+    {% render_block "css" %}
+  </head>
+
+  <body>
+    {% block after_body %}{% endblock %}
+
+      <div class="navbar navbar-fixed-top">
+      	 <div class="navbar-inner">
+      	  <div class="container">
+            <a class="brand scroller cpm-brand" data-section="html" href="/">
+                <div class="logo-wrapper"><img class="cpm-logo" src="{{ STATIC_URL }}cpm/logo.svg" /></div>
+                <div class="fest-text">
+                    <div class="fest-title"><h2>CPM</h2></div>
+                    <div class="fest-type"><h3>filmfest</h3></div>
+                </div>
+
+            </a>
+                {% mainmenu request %}
+
+      	  </div>
+      	</div><!-- /navbar-inner -->
+      </div>
+
+
+      {% block content %}{% endblock %}
+      {% render_block "js" %}
+
+    <footer id="contact" class="footer container-fluid">
+      <div class="container dark">
+	<div class="row footer-menu">
+	  <div class="span4 pagination-centered">
+	    {% trans 'международный фестиваль' %}<br />
+	    {% trans 'короткометражного кино' %}<br />
+	    <strong>Cinema Perpetuum Mobile</strong><br />
+	    {% trans 'Spring 2014' %}<br />
+	    {% trans 'Minsk, Belarus' %}
+	  </div>
+	  <div  class="span8">
+	    {% bottommenu %}
+	  </div>
+	</div>
+      </div>
+    </footer>
+
+    {% piwik %}
+  </body>
+</html>

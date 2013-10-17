@@ -1,9 +1,9 @@
-{% extends "cpm2013/base.html" %}
+{% extends "cpm/page.html" %}
 {% load markup i18n %}
 
 {% block title %}{{ page.title }} - {{ block.super }}{% endblock %}
 
-{% block content %}
+{% block main_content %}
 <h1>{{ page.title }}</h1>
 {{ page.text|markdown }}
 {% endblock %}
