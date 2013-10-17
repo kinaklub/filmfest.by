@@ -194,8 +194,6 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
-    # news plugin
-    'cmsplugin_news',
 )
 
 REST_FRAMEWORK = {
