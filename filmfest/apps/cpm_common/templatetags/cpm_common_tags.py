@@ -65,7 +65,7 @@ def mainmenu(request):
     cur_lang = translation.get_language().split('-')[0]
 
     parts = request.get_full_path().split('/', 2)
-    path = request.get_full_path().split('/', 2)[2] len(parts) > 2 else ''
+    path = parts[2] if len(parts) > 2 else ''
 
     lang_url = '/%%s/%s' % path
     languages = [(code, name, lang_url % code, code == cur_lang) for code, name in [
