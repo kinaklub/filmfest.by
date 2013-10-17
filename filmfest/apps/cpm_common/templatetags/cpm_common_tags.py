@@ -63,7 +63,10 @@ MAINMENU_ITEMS = [
 @register.inclusion_tag('cpm_common/tags/mainmenu.html')
 def mainmenu(request):
     cur_lang = translation.get_language().split('-')[0]
-    path = request.get_full_path().split('/', 2)[2]
+
+    parts = request.get_full_path().split('/', 2)
+    path = request.get_full_path().split('/', 2)[2] len(parts) > 2 else ''
+
     lang_url = '/%%s/%s' % path
     languages = [(code, name, lang_url % code, code == cur_lang) for code, name in [
         ('en', 'English'),
