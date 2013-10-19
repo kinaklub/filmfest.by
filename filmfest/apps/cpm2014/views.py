@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
+from django.views.generic.base import RedirectView
 from django.conf import settings
 
 from rest_framework import viewsets
@@ -16,13 +17,10 @@ from apps.cpm2014.serializers import SubmissionSerializer
 from apps.cpm2014.tasks import SendSubmissionEmail
 
 
-def index(request):
-    news = NewsEntry.objects.language().order_by('-added_at')[:10]
-    return render_to_response(
-        'cpm2014/index.html',
-        {'news': news},
-        context_instance=RequestContext(request),
-    )
+class IndexView(RedirectView):
+    url = '/'
+    permanent = False
+index = IndexView.as_view()
 
 def submit(request):
     form = SubmissionForm(request.POST or None)
@@ -32,13 +30,13 @@ def submit(request):
         submission.save()
 
         SendSubmissionEmail().apply_async(args=[submission])
-        
+
         return render_to_response(
             'cpm2014/submit_done.html',
             {'email': submission.applicant_email},
             context_instance=RequestContext(request),
         )
-        
+
     return render_to_response(
         'cpm2014/submit.html',
         {'form': form},
