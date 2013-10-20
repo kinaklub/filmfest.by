@@ -20,6 +20,8 @@ def get_urls():
             name='contacts'),
         url(r'^presskit', views.press_kit, name='press_kit'),
         url(r'^api/', include(router.urls)),
+
+        url(r'^angular/', 'cpm.views.angular'),
     )
 
 urls = (get_urls(), 'cpm2014', 'cpm2014')
