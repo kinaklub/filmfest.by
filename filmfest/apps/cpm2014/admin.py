@@ -6,6 +6,7 @@ import tempfile
 
 from django.conf import settings
 from django.contrib import admin
+from django.db.models import Count
 from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
 from django.utils.html import escape
@@ -24,7 +25,7 @@ from hvad.utils import get_translation_aware_manager
 
 import openpyxl
 
-from apps.cpm2014.models import Submission, NewsEntry
+from apps.cpm2014.models import Submission, Prescreening, NewsEntry
 from apps.cpm2014.forms import FieldsForm
 
 
@@ -50,7 +51,6 @@ class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
                     'display_facts', 'display_comment']
-    ordering = ('-id',)
     save_on_top = True
 
     fieldsets = [
@@ -100,6 +100,11 @@ class SubmissionAdmin(admin.ModelAdmin):
             fldst[1]['fields'] for fldst in islice(self.fieldsets, 1, None)
         )))
 
+    def queryset(self, request):
+        qs = Submission.objects.all().order_by('-id')
+        qs = qs.annotate(num_prescreenings=Count('prescreening'))
+        return qs
+
     def get_urls(self):
         from django.conf.urls import patterns, url
 
@@ -147,6 +152,10 @@ class SubmissionAdmin(admin.ModelAdmin):
                 obj._meta.get_field_by_name(field_name)[0].verbose_name,
                 getattr(obj, field_name) and true_html or false_html
             ))
+        result.append(u'%s: %s' % (
+            _('Prescreenings'),
+            obj.num_prescreenings and true_html or false_html
+        ))
         return '<br />'.join(result)
     display_facts.short_description = _('Facts')
     display_facts.allow_tags = True
@@ -219,6 +228,11 @@ class SubmissionAdmin(admin.ModelAdmin):
             context_instance=RequestContext(request),
         )
 
+
+class PrescreeningAdmin(admin.ModelAdmin):
+    list_display = ['id', 'datetime']
+    filter_horizontal = ['submissions']
+
 class NewsAdmin(TranslatableAdmin):
     list_display = ['display_title', 'added_at']
 
@@ -229,7 +243,7 @@ class NewsAdmin(TranslatableAdmin):
         return obj.title
     display_title.short_description = _('Title')
 
-    
-admin.site.register(Submission, SubmissionAdmin)
-admin.site.register(NewsEntry, NewsAdmin)
 
+admin.site.register(Submission, SubmissionAdmin)
+admin.site.register(Prescreening, PrescreeningAdmin)
+admin.site.register(NewsEntry, NewsAdmin)

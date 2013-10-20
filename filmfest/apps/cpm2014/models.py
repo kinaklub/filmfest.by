@@ -76,7 +76,7 @@ class Submission(models.Model):
         max_length=1000, blank=True)
     other_credits = models.TextField(verbose_name=_('Other credits'), blank=True)
 
-    
+
     allow_tv = models.IntegerField(
         verbose_name=_('Authorization to use excerpts of the film for promotion (max 10% of the total length) in television'),
         choices=YESNO, default=1)
@@ -131,7 +131,7 @@ class Submission(models.Model):
         null=True, blank=True, verbose_name=_('Preview average result'))
     previewers = models.IntegerField(
         null=True, blank=True, verbose_name=_('Previewers count'))
-    
+
     def __unicode__(self):
         return 'Film %s' % (self.title)
 
@@ -145,6 +145,14 @@ class Submission(models.Model):
         return reverse('cpm2013:submission_info', args=[
             str(self.id), submission_hash.hexdigest()
         ])
+
+
+class Prescreening(models.Model):
+    datetime = models.DateTimeField(verbose_name=_('Date and time'))
+    submissions = models.ManyToManyField(Submission)
+
+    def __unicode__(self):
+        return 'Prescreening %s' % (self.datetime.strftime('%Y-%m-%d %H:%M'),)
 
 
 class NewsEntry(TranslatableModel):
