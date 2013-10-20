@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import RedirectView
 from django.conf import settings
 
@@ -205,3 +206,11 @@ class SubmissionViewSet(viewsets.ModelViewSet):
     """
     queryset = Submission.objects.all()
     serializer_class = SubmissionSerializer
+
+    @csrf_exempt
+    def create(self, request, *args, **kwargs):
+        return super(SubmissionViewSet, self).create(request, *args, **kwargs)
+
+    @csrf_exempt
+    def update(self, request, *args, **kwargs):
+        return super(SubmissionViewSet, self).update(request, *args, **kwargs)
