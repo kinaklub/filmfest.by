@@ -214,3 +214,5 @@ class SubmissionViewSet(viewsets.ModelViewSet):
     @csrf_exempt
     def update(self, request, *args, **kwargs):
         return super(SubmissionViewSet, self).update(request, *args, **kwargs)
+
+    get_paginate_by = lambda self: None
