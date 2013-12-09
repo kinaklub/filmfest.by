@@ -1,0 +1,101 @@
+<p>This is the partial for view 2.</p>
+<!-- Эти стили нужны для сортировки -->
+<style type="text/css">
+    .solo-table-sort-asc > .solo-column-arrow
+    {
+        position: relative;
+        top: 10px;
+        margin-left: 5px;
+        border-color: black transparent;
+        border-style: solid;
+        border-width: 5px 5px 0px 5px;
+        height: 0px;
+        width: 0px;
+    }
+    .solo-table-sort-desc > .solo-column-arrow
+    {
+        position: relative;
+        top: -10px;
+        margin-left: 5px;
+        border-color: black transparent;
+        border-style: solid;
+        border-width: 0px 5px 5px 5px;
+        height: 0px;
+        width: 0px;
+    }
+
+    .solo-table-column-cursor
+    {
+        cursor: pointer;
+    }
+</style>
+<solo-table items-on-page = "10" binddata="submissions" make-sortable>
+    <select ng-model="prefixModel" class="input">
+        <option value="">All</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+
+    </select>
+    <input placeholder="Comment" type="text" name="id" ng-model="filterModel">
+    <!--
+        Эта директива выступает провайдером данных
+        Здесь данные в формате JSON
+     -->
+    <div solo-table-data binddata="submissions">
+    </div>
+    <div>
+        Total length of  selected films: <[totalLength]>m / <[totalLengthInHours + 'h ' + totalLength%60 + 'm']>;
+    </div>
+    <!-- Показываем данные пейджинга: сколько всего страниц, на какой находимся, сколько записей во всей таблице -->
+    <div>Page <[pager.currentPage]> of <[pager.foundPages]>. Total items:  <[pager.found]></div>
+
+    <div>
+        <a href="" ng-click="gotoFirstPage()">First page | </a>
+        <a href="" ng-click="gotoPrevPage()"> &larr;prev | </a>
+        <a href="" ng-click="gotoNextPage()">next &rarr; | </a>
+        <a href="" ng-click="gotoLastPage()">Last page </a>
+    </div>
+
+    <!-- Эта таблица обязательно  должна присутствовать в директиве solo-table, что, в общем то, очевидно. -->
+    <table class="table table-striped table-bordered" make-sortable>
+        <thead>
+        <tr>
+            <th sort-by="id">Id</th>
+            <th>Title</th>
+            <th>Director/Country</th>
+            <th>Section/Genre</th>
+            <th>Length</th>
+            <th>Year</th>
+            <th>Comments</th>
+        </tr>
+        </thead>
+
+        <!--
+
+        В атрибуте контроллера "original" содержатся все данные, предоставленные провайдером solo-table-data.
+        В атрибуте "filtered" - отфильтрованные данные, но т.к. у нас простейший пример и никаких фильтров нет,
+        то filtered идентичен original
+        -->
+        <tr ng-repeat="item in filtered = (original | filter: { year: prefixModel } | filterByFields:filterModel:['comment'])" >
+            <td><[item.id]></td>
+            <td><[ item.title ]> /<br> <b><[ item.title_en ]></b></td>
+            <td><[item.director]> /<br> <[item.country]></td>
+            <td><[item.section]> /<br> <[item.genre]></td>
+            <td><[item.length]></td>
+            <td><[item.year]></td>
+            <td><textarea class="download_films_link_text" readonly rows="3"><[item.comment]></textarea></td>
+            <td><a target="_blank" href="/en/admin/cpm2014/submission/<[item.id]>">Edit</a></td>
+        </tr>
+
+    </table>
+
+    <!-- Здесь реализован переход по страницам -->
+    <div>
+        <a href="" ng-click="gotoFirstPage()">First page | </a>
+        <a href="" ng-click="gotoPrevPage()"> &larr;prev | </a>
+        <a href="" ng-click="gotoNextPage()">next &rarr; | </a>
+        <a href="" ng-click="gotoLastPage()">Last page </a>
+    </div>
+
+</solo-table>

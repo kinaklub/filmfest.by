@@ -1,0 +1,62 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.search_by_id {
+    width: 25px;
+}
+
+.download_films.table td, .download_films.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.download_films_id {
+    width: 30px;
+    font-weight: bold;
+}
+.download_films_title {
+    width: 120px;
+}
+.download_films_director {
+    width: 170px;
+}
+.download_films_link {
+    width: 300px;
+}
+.download_films_link_text {
+    width: 280px;
+}
+.download_films_comments {
+    width: 300px;
+}
+.download_films_comments_text {
+    width: 280px;
+}

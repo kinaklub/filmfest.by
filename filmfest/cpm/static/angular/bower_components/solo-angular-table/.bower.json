@@ -1,0 +1,13 @@
+{
+  "name": "solo-angular-table",
+  "homepage": "https://github.com/solo-framework/solo-angular-table",
+  "_release": "b5b0d8ff66",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "b5b0d8ff669dacedb18d3bd2119ed5bf8bfbf9d1"
+  },
+  "_source": "git@github.com:solo-framework/solo-angular-table.git",
+  "_target": "*",
+  "_direct": true
+}
