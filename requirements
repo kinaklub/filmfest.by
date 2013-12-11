@@ -20,7 +20,7 @@ python-dateutil==1.5
 reportlab==2.5
 ssh==1.7.14
 wsgiref==0.1.2
-rst2pdf==0.92
+#rst2pdf==0.93
 openpyxl==1.6.1
 djangorestframework==2.3.7
 
