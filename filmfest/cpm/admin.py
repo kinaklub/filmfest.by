@@ -16,6 +16,9 @@ class ScreeningPlaceProposalAdmin(admin.ModelAdmin):
     ]
     readonly_fields = fields
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 admin.site.register(ScreeningPlaceProposal,
                     ScreeningPlaceProposalAdmin)
