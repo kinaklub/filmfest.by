@@ -1,0 +1,44 @@
+{% extends "cpm/page.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Propose a screening place!" %} - {{ block.super }}{% endblock %}
+
+{% block main_content %}
+<h2>{% trans "Propose a new screening place" %}</h2>
+
+<div class="row-fluid">
+  <div class="span9">
+
+<form id="submission-form" class="form-horizontal" method="POST">
+{% csrf_token %}
+
+{% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+{% for field in form %}
+    {% if field.is_hidden %}
+      {{ field }}
+    {% else %}
+      <div class="control-group {% if field.errors %}error{% endif %}">
+        {{ field.label_tag }}
+	<div class="controls">
+          {{ field }}
+	  <span class="help-inline">{{ field.errors.as_inline }}</span>
+	</div>
+      </div>
+    {% endif %}
+{% endfor %}
+
+<div class="form-actions">
+<button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</form>
+
+  </div>
+  <div class="span3">
+<p>{% trans "If you want to organize Cinema Perpetuum Mobile screenings in your city, town or village, please fill the form." %}</p>
+
+<p>{% trans "CPM 2013 screenings were held in Belarus, Malaysia, England, Moldova and many more countries." %}</p>
+
+  </div>
+</div>
+
+{% endblock %}
