@@ -123,7 +123,7 @@ msgstr "Колькасць паказаў (прыблізна)"
 
 #: models.py:37
 msgid "Your proposals"
-msgstr "Вашя прапановы"
+msgstr "Вашыя прапановы"
 
 #: templates/cms/base.html:46
 msgid "spring 2014"
