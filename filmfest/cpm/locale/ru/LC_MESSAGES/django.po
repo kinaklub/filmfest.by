@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-26 13:47+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: constants.py:25
+msgid "Individual"
+msgstr "Частное лицо"
+
+#: constants.py:26
+msgid "Community"
+msgstr "Сообщество"
+
+#: constants.py:27
+msgid "Festival"
+msgstr "Фестиваль"
+
+#: constants.py:28
+msgid "Film club"
+msgstr "Киноклуб"
+
+#: constants.py:29
+msgid "Cinema caffe"
+msgstr "Кинокафе"
+
+#: constants.py:30
+msgid "Educational institution"
+msgstr "Образовательное учреждение"
+
+#: constants.py:31
+msgid "Distribution company"
+msgstr "Дистрибьюторская компания"
+
+#: constants.py:32
+msgid "Art space / Gallery / Museum"
+msgstr "Арт пространство / Галерея / Музей"
+
+#: constants.py:33
+msgid "Cinema theatre"
+msgstr "Кинотеатр"
+
+#: constants.py:34 constants.py:60
+msgid "Other"
+msgstr "Другое"
+
+#: constants.py:45
+msgid "< 50 seats"
+msgstr "< 50 мест"
+
+#: constants.py:46
+msgid "50 - 150 seats"
+msgstr "50 - 150 мест"
+
+#: constants.py:47
+msgid "150 - 500 seats"
+msgstr "150 - 500 мест"
+
+#: constants.py:48
+msgid "> 500 seats"
+msgstr "> 500 мест"
+
+#: constants.py:59
+msgid "Free"
+msgstr "Бесплатно"
+
+#: models.py:8
+msgid "Your name or title"
+msgstr "Ваше имя или название"
+
+#: models.py:10
+msgid "Email"
+msgstr "Email"
+
+#: models.py:11
+msgid "Tel."
+msgstr "Тел."
+
+#: models.py:13
+msgid "URL"
+msgstr "URL"
+
+#: models.py:16
+msgid "Country"
+msgstr "Страна"
+
+#: models.py:18
+msgid "City / Town / Village"
+msgstr "Город / Деревня"
+
+#: models.py:20
+msgid "Who you are"
+msgstr "Кто вы"
+
+#: models.py:23
+msgid "Probable venue description"
+msgstr "Описание предполагаемого места показов"
+
+#: models.py:24
+msgid "Venue capacity"
+msgstr "Вместительность места показов"
+
+#: models.py:29
+msgid "Ticket price (estimated)"
+msgstr "Цена билета (примерно)"
+
+#: models.py:33
+msgid "Amount of screenings (estimated)"
+msgstr "Количество показов (примерно)"
+
+#: models.py:37
+msgid "Your proposals"
+msgstr "Ваши предложения"
+
+#: templates/cms/base.html:46
+msgid "spring 2014"
+msgstr "весна 2014"
+
+#: templates/cms/base.html:47
+msgid "planet Earth"
+msgstr "планета Земля"
+
+#: templates/cms/base.html:85 templates/cpm/base.html:68
+msgid "международный фестиваль"
+msgstr "международный фестиваль"
+
+#: templates/cms/base.html:86 templates/cpm/base.html:69
+msgid "короткометражного кино"
+msgstr "короткометражного кино"
+
+#: templates/cms/base.html:88 templates/cpm/base.html:71
+msgid "Spring 2014"
+msgstr "Весна 2014"
+
+#: templates/cms/base.html:89 templates/cpm/base.html:72
+msgid "Minsk, Belarus"
+msgstr "Минск, Беларусь"
+
+#: templates/cms/base.html:92
+msgid "Links"
+msgstr "Ссылки"
+
+#: templates/cpm/new_screening_place.html:4
+msgid "Propose a screening place!"
+msgstr "Предложить место показа!"
+
+#: templates/cpm/new_screening_place.html:7
+msgid "Propose a new screening place"
+msgstr "Предложить новое место показа"
+
+#: templates/cpm/new_screening_place.html:37
+msgid ""
+"If you want to organize Cinema Perpetuum Mobile screenings in your city, "
+"town or village, please fill the form."
+msgstr ""
+"Если вы хотите организовать показы Cinema Perpetuum Mobile в вашем городе "
+"или деревне, пожалуйста заполните форму."
+
+#: templates/cpm/new_screening_place.html:39
+msgid ""
+"CPM 2013 screenings were held in Belarus, Czech Republic, England, Malaysia, "
+"Moldova, South Korea, Switzerland and other countries."
+msgstr ""
+"Показы CPM 2013 прошли в Беларуси, Чехии, Англии, Малайзии, "
+"Молдове, Южной Корее, Швейцарии и других странах."
+
+#: templates/cpm/new_screening_place_done.html:5
+msgid "Thank you for submission!"
+msgstr "Спасибо за ваше преложение"
+
+#: templates/cpm/new_screening_place_done.html:7
+msgid ""
+"\n"
+"It was nice to hear from you. We'll get in touch soon :)\n"
+msgstr ""
+"\n"
+"Было приятно получить ваше предложение. Мы скоро с вами свяжемся :)\n"

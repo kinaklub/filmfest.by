@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-26 13:46+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: constants.py:25
+msgid "Individual"
+msgstr "Прыватная асоба"
+
+#: constants.py:26
+msgid "Community"
+msgstr "Суполка"
+
+#: constants.py:27
+msgid "Festival"
+msgstr "Фестываль"
+
+#: constants.py:28
+msgid "Film club"
+msgstr "Кінаклуб"
+
+#: constants.py:29
+msgid "Cinema caffe"
+msgstr "Кінакавярня"
+
+#: constants.py:30
+msgid "Educational institution"
+msgstr "Адукацыйная установа"
+
+#: constants.py:31
+msgid "Distribution company"
+msgstr "Дыстрыбуцыйная кампанія"
+
+#: constants.py:32
+msgid "Art space / Gallery / Museum"
+msgstr "Арт пляцоўка / Галерэя / Музэй"
+
+#: constants.py:33
+msgid "Cinema theatre"
+msgstr "Кінатэатр"
+
+#: constants.py:34 constants.py:60
+msgid "Other"
+msgstr "Іншае"
+
+#: constants.py:45
+msgid "< 50 seats"
+msgstr "< 50 месцаў"
+
+#: constants.py:46
+msgid "50 - 150 seats"
+msgstr "50 - 150 месцаў"
+
+#: constants.py:47
+msgid "150 - 500 seats"
+msgstr "150 - 500 месцаў"
+
+#: constants.py:48
+msgid "> 500 seats"
+msgstr "> 500 месцаў"
+
+#: constants.py:59
+msgid "Free"
+msgstr "Бясплатна"
+
+#: models.py:8
+msgid "Your name or title"
+msgstr "Вашае імя ці назва"
+
+#: models.py:10
+msgid "Email"
+msgstr "Email"
+
+#: models.py:11
+msgid "Tel."
+msgstr "Тэл."
+
+#: models.py:13
+msgid "URL"
+msgstr "URL"
+
+#: models.py:16
+msgid "Country"
+msgstr "Краіна"
+
+#: models.py:18
+msgid "City / Town / Village"
+msgstr "Горад / Вёска"
+
+#: models.py:20
+msgid "Who you are"
+msgstr "Хто вы"
+
+#: models.py:23
+msgid "Probable venue description"
+msgstr "Апісанне магчымага месца паказу"
+
+#: models.py:24
+msgid "Venue capacity"
+msgstr "Змяшчальнасць месца паказу"
+
+#: models.py:29
+msgid "Ticket price (estimated)"
+msgstr "Кошт квітка (прыблізна)"
+
+#: models.py:33
+msgid "Amount of screenings (estimated)"
+msgstr "Колькасць паказаў (прыблізна)"
+
+#: models.py:37
+msgid "Your proposals"
+msgstr "Вашя прапановы"
+
+#: templates/cms/base.html:46
+msgid "spring 2014"
+msgstr "вясна 2014"
+
+#: templates/cms/base.html:47
+msgid "planet Earth"
+msgstr "планета Зямля"
+
+#: templates/cms/base.html:85 templates/cpm/base.html:68
+msgid "международный фестиваль"
+msgstr "міжнародны фестываль"
+
+#: templates/cms/base.html:86 templates/cpm/base.html:69
+msgid "короткометражного кино"
+msgstr "кароткаметражнага кіно"
+
+#: templates/cms/base.html:88 templates/cpm/base.html:71
+msgid "Spring 2014"
+msgstr "Вясна 2014"
+
+#: templates/cms/base.html:89 templates/cpm/base.html:72
+msgid "Minsk, Belarus"
+msgstr "Мінск, Беларусь"
+
+#: templates/cms/base.html:92
+msgid "Links"
+msgstr "Спасылкі"
+
+#: templates/cpm/new_screening_place.html:4
+msgid "Propose a screening place!"
+msgstr "Прапанаваць месца паказу!"
+
+#: templates/cpm/new_screening_place.html:7
+msgid "Propose a new screening place"
+msgstr "Прапанаць новае месца паказу"
+
+#: templates/cpm/new_screening_place.html:37
+msgid ""
+"If you want to organize Cinema Perpetuum Mobile screenings in your city, "
+"town or village, please fill the form."
+msgstr ""
+"Калі вы хочаце арганізаваць паказы Cinema Perpetuum Mobile у сваім горадзе "
+"ці сваёй вёсцы, калі ласка запоўніце форму"
+
+#: templates/cpm/new_screening_place.html:39
+msgid ""
+"CPM 2013 screenings were held in Belarus, Czech Republic, England, Malaysia, "
+"Moldova, South Korea, Switzerland and other countries."
+msgstr ""
+"Паказы CPM 2013 прайшлі ў Беларусі, Чэхіі, Англіі, Малайзіі, "
+"Малдове, Паўдневай Карэі, Швейцарыі і іншых краінах."
+
+#: templates/cpm/new_screening_place_done.html:5
+msgid "Thank you for submission!"
+msgstr "Дзякуй за вашую прапанову!"
+
+#: templates/cpm/new_screening_place_done.html:7
+msgid ""
+"\n"
+"It was nice to hear from you. We'll get in touch soon :)\n"
+msgstr ""
+"\n"
+"Вельмі прыемна чуь вашую прапанову. Мы хутка з вамі звяжамся :)\n"
