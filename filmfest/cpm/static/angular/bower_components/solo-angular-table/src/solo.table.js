@@ -86,14 +86,14 @@ angular.module("solo.table", [])
 
         var local = window.FILMFEST_PATH + 'submissions/submissions.json';
         $http.get(path).success(function(data) {
-            var results = data.results;
-            console.log('subms number', data.length);
-            //$scope.original = parseSubmissionJson(results);
+            var results = data.results || data;
+            console.log(path);
+            console.log(data);
+            $scope.original = parseSubmissionJson(results);
         });
 
 		$scope.bindData = function(data)
 		{
-            console.log('bind data');
 			$scope.original = data;
 		};
 
@@ -499,7 +499,6 @@ angular.module("solo.table", [])
                         return val.toString().toLowerCase().indexOf(search) !== -1;
                     } else {
 
-                        console.log('undefined value of field');
                         return false;
                     }
 

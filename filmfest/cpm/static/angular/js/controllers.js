@@ -57,15 +57,16 @@ filmfestControllers.controller('SimpleSubmissionsList', [ '$scope', '$http', '$f
         return json;
     }
     $scope.submissions = [];
-    $http
-        .get(window.FILMFEST_PATH + 'submissions/submissions.json')
-        .success(function(data) {
-        console.log('subms number', data.length);
-        $scope.submissions = parseSubmissionJson(data);
-    });
-    console.log('submissions', $scope.submissions);
+//    console.log(window.FILMFEST_PATH + 'submissions/submissions.json');
+//    $http
+//        .get(window.FILMFEST_PATH + 'submissions/submissions.json')
+//        .success(function(data) {
+//        console.log('subms number', data.length);
+//        //$scope.submissions = parseSubmissionJson(data);
+//    });
+//   console.log('submissions', $scope.submissions);
     $scope.filterSubmissions = function () {
-        var parseRecieved = function (string) {
+        var parseRfilteredecieved = function (string) {
             string = string.toLowerCase();
             if (string === 'true') {
                 return true;
@@ -73,7 +74,7 @@ filmfestControllers.controller('SimpleSubmissionsList', [ '$scope', '$http', '$f
 
             return Boolean(string);
         };
-//
+
         var isFiltered = function(subm, query) {
             var propertyMap = {
                 'id':'id',
