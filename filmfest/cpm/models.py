@@ -23,7 +23,7 @@ class ScreeningPlaceProposal(models.Model):
     venue = models.TextField(verbose_name=_(u'Probable venue description'))
     capacity = models.CharField(verbose_name=_(u'Venue capacity'),
                                 choices=CAPACITY.CHOICES,
-                                max_length=2,
+                                max_length=10,
                                 blank=True)
     ticket_price = models.CharField(
         verbose_name=_(u'Ticket price (estimated)'),
