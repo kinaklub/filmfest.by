@@ -26,7 +26,8 @@ urlpatterns = i18n_patterns('',
     url(r'^2012/', include(cpm2012_urls)),
     url(r'^2013/', include(cpm2013_urls)),
 
-    url(r'^2014/propose_screening/$', 'cpm.views.new_screening_place'),
+    url(r'^2014/propose_screening/$', 'cpm.views.new_screening_place',
+        name='new_screening_place_proposal'),
     url(r'^2014/', include(cpm2014_urls)),
 
     url(r'^', include('cms.urls')),

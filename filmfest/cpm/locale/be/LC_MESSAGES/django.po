@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-26 15:13+0300\n"
+"POT-Creation-Date: 2013-12-26 15:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,7 +125,12 @@ msgstr "Колькасць паказаў (прыблізна)"
 msgid "Your proposals"
 msgstr "Вашыя прапановы"
 
-#: templates/cms/base.html:46
+#: models.py:39
+#, fuzzy
+msgid "Comment"
+msgstr "Суполка"
+
+#: templates/cms/base.html:46 templates/cms/template_home.html:18
 msgid "spring 2014"
 msgstr "вясна 2014"
 
@@ -145,7 +150,8 @@ msgstr "кароткаметражнага кіно"
 msgid "Spring 2014"
 msgstr "Вясна 2014"
 
-#: templates/cms/base.html:89 templates/cpm/base.html:72
+#: templates/cms/base.html:89 templates/cms/template_home.html:17
+#: templates/cpm/base.html:72
 msgid "Minsk, Belarus"
 msgstr "Мінск, Беларусь"
 
@@ -153,12 +159,17 @@ msgstr "Мінск, Беларусь"
 msgid "Links"
 msgstr "Спасылкі"
 
+#: templates/cms/template_home.html:16
+msgid "International Short Film Festival"
+msgstr ""
+
+#: templates/cms/template_home.html:19
 #: templates/cpm/new_screening_place.html:4
-msgid "Propose a screening place!"
+msgid "Propose a venue!"
 msgstr "Прапанаваць месца паказу!"
 
 #: templates/cpm/new_screening_place.html:7
-msgid "Propose a new screening place"
+msgid "Propose a new venue"
 msgstr "Прапанаць новае месца паказу"
 
 #: templates/cpm/new_screening_place.html:37
@@ -196,5 +207,5 @@ msgid ""
 "\">info@filmfest.by</a>\n"
 msgstr ""
 "\n"
-"Пішыце нам на <a href=\"mailto:info@filmfest.by"
-"\">info@filmfest.by</a> у любы момант\n"
+"Пішыце нам на <a href=\"mailto:info@filmfest.by\">info@filmfest.by</a> у "
+"любы момант\n"

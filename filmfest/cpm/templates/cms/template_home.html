@@ -13,10 +13,10 @@
         <div class="container">
           <div class="row span6 center">
             <h1>Cinema<br />Perpetuum Mobile</h1>
-            <p>International Short Film Festival<br />
-	      Minsk, Belarus<br />
-	      spring 2014</p>
-            <a href="{% url 'cpm2014:submit' %}" class="btn btn-xlarge btn-purple">Submit your film!</a>
+            <p>{% trans 'International Short Film Festival' %}<br />
+	      {% trans 'Minsk, Belarus' %}<br />
+	      {% trans 'spring 2014' %}</p>
+            <a href="{% url 'new_screening_place_proposal' %}" class="btn btn-xlarge btn-purple">{% trans 'Propose a venue!' %}</a>
           </div>
         </div>
       </div>
