@@ -66,7 +66,7 @@ filmfestControllers.controller('SimpleSubmissionsList', [ '$scope', '$http', '$f
 //    });
 //   console.log('submissions', $scope.submissions);
     $scope.filterSubmissions = function () {
-        var parseRfilteredecieved = function (string) {
+        var parseRecieved = function (string) {
             string = string.toLowerCase();
             if (string === 'true') {
                 return true;
@@ -74,7 +74,7 @@ filmfestControllers.controller('SimpleSubmissionsList', [ '$scope', '$http', '$f
 
             return Boolean(string);
         };
-
+                            $scope.filterSubmissions
         var isFiltered = function(subm, query) {
             var propertyMap = {
                 'id':'id',
