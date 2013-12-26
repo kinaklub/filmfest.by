@@ -35,3 +35,5 @@ class ScreeningPlaceProposal(models.Model):
         blank=True
     )
     proposals = models.TextField(verbose_name=_(u'Your proposals'), blank=True)
+
+    comment = models.TextField(verbose_name=_(u'Comment'), blank=True)

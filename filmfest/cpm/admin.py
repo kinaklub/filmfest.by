@@ -7,14 +7,14 @@ class ScreeningPlaceProposalAdmin(admin.ModelAdmin):
     list_display = [
         'name_or_title', 'email', 'url', 'country', 'city',
         'capacity', 'ticket_price', 'screenings_amount',
-        'proposals',
+        'proposals', 'comment'
     ]
-    fields = [
+    readonly_fields = [
         'name_or_title', 'email', 'phone', 'url', 'country', 'city',
         'kind', 'venue', 'capacity', 'ticket_price', 'screenings_amount',
         'proposals',
     ]
-    readonly_fields = fields
+    fields = readonly_fields + ['comment']
 
     def has_delete_permission(self, request, obj=None):
         return False
