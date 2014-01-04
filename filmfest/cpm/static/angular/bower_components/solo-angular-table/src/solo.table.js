@@ -42,6 +42,16 @@ angular.module("solo.table", [])
                     'comment_email_sent',
                     'comment_film_received',
                     'comment_papers_received'
+                ],
+                convertToEmptyString = [
+                    'comment',
+                    'email_sent_at',
+                    'film_received_at',
+                    'papers_received_at',
+                    'vob_received_at',
+                    'preview',
+                    'preview_average',
+                    'previewers'
                 ];
 
             var parseBoolean = function (string) {
@@ -78,14 +88,19 @@ angular.module("solo.table", [])
                         current[prop] = parseBoolean(current[prop]);
                     }
                 });
+                _.each(convertToEmptyString, function(prop) {
+                    curProp = current[prop];
+                    if (curProp === null || undefined) {
+                        current[prop] = '';
+                    }
+                })
             }
             return json;
         }
 
         var path = '/ru/2014/api/submissions/?format=json';
-
-        var local = window.FILMFEST_PATH + 'submissions/submissions.json';
-        $http.get(path).success(function(data) {
+        var local = window.FILMFEST_PATH + 'submissions/submissions_2013_12_27.json';
+        $http.get(local).success(function(data) {
             var results = data.results || data;
             console.log(path);
             console.log(data);
