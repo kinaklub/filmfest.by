@@ -100,7 +100,7 @@ angular.module("solo.table", [])
 
         var path = '/ru/2014/api/submissions/?format=json';
         var local = window.FILMFEST_PATH + 'submissions/submissions_2013_12_27.json';
-        $http.get(local).success(function(data) {
+        $http.get(path).success(function(data) {
             var results = data.results || data;
             console.log(path);
             console.log(data);
