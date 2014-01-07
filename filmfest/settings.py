@@ -169,6 +169,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'south',
+    'gunicorn',
     'debug_toolbar',
     'djcelery',
     'hvad',
