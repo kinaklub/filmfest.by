@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os.path
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 with open(os.path.join(os.path.dirname(__file__), 'requirements')) as f:
@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'requirements')) as f:
 
 setup(
     name='filmfest',
-    version='1.0.2',
+    version='1.0.3',
     description='filmfest.by, a Django-based project',
     author='Stas Rudakou',
     author_email='stas@garage22.net',
@@ -20,7 +20,7 @@ setup(
     install_requires=install_requires,
     zip_safe=False,
 
-    packages=['apps', 'cpm', 'filmfest'],
+    packages=find_packages(),
     py_modules=['manage'],
     entry_points = {
         'console_scripts': [
