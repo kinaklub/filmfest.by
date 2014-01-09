@@ -13,3 +13,4 @@ recursive-include cpm/locale *
 recursive-include cpm/static *
 recursive-include cpm/templates *
 recursive-include locale *
+include requirements
