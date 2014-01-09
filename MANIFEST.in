@@ -4,8 +4,10 @@ recursive-include apps/cpm2012/templates *
 recursive-include apps/cpm2013/locale *
 recursive-include apps/cpm2013/static *
 recursive-include apps/cpm2013/templates *
+recursive-include apps/cpm2013/docs *
 recursive-include apps/cpm2014/static *
 recursive-include apps/cpm2014/templates *
+recursive-include apps/cpm2014/docs *
 recursive-include apps/cpm_common/locale *
 recursive-include apps/cpm_common/static *
 recursive-include apps/cpm_common/templates *
