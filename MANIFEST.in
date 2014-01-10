@@ -14,5 +14,6 @@ recursive-include apps/cpm_common/templates *
 recursive-include cpm/locale *
 recursive-include cpm/static *
 recursive-include cpm/templates *
-recursive-include cpm/locale *
+recursive-include filmfest/locale *
+recursive-include filmfest/templates *
 include requirements
