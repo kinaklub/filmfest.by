@@ -9,56 +9,61 @@ from django.conf import settings
 register = template.Library()
 
 
-MAINMENU_ITEMS = [
-    (_('Home'), reverse('pages-root',), ()),
-    (
-        _('Festival'),
-        '',
+def get_mainmenu_items():
+    return [
+        (_('Home'), reverse('pages-root',), ()),
         (
-            (_('2012: good memories'), reverse('cpm2012:index')),
+            _('Festival'),
+            '',
             (
-                _('Festival in media'),
-                reverse('pages-details-by-slug', kwargs={'slug': 'media'})
-            ),
-        )
-    ),
-    (
-        _('Participants'),
-        '',
+                (_('2012: good memories'), reverse('cpm2012:index')),
+                (
+                    _('Festival in media'),
+                    reverse('pages-details-by-slug', kwargs={'slug': 'media'})
+                ),
+            )
+        ),
         (
+            _('Participants'),
+            '',
             (
-                _('Regulations'),
-                reverse('pages-details-by-slug', kwargs={'slug': 'rules'})
-            ),
-            (
-                _('Submit your film!'),
-                reverse('cpm2014:submit')
-            ),
-        )
-    ),
-    (
-        _('Volunteers'),
-        '',
+                (
+                    _('Regulations'),
+                    reverse('pages-details-by-slug', kwargs={'slug': 'rules'})
+                ),
+                (
+                    _('Submit your film!'),
+                    reverse('cpm2014:submit')
+                ),
+            )
+        ),
         (
-            (_('Discussion group'), 'http://groups.google.com/group/cpm2014'),
-        )
-    ),
-    (
-        _('Partners'),
-        reverse('cpm2014:partners'),
-        ()
-    ),
-    (
-        _('Press kit'),
-        reverse('pages-details-by-slug', kwargs={'slug': 'press-kit'}),
-        ()
-    ),
-    (
-        _('Contacts'),
-        reverse('cpm2014:contacts'),
-        ()
-    ),
-]
+            _('Volunteers'),
+            '',
+            (
+                (
+                    _('Discussion group'),
+                    'http://groups.google.com/group/cpm2014'
+                ),
+            )
+        ),
+        (
+            _('Partners'),
+            reverse('cpm2014:partners'),
+            ()
+        ),
+        (
+            _('Press kit'),
+            reverse('pages-details-by-slug', kwargs={'slug': 'press-kit'}),
+            ()
+        ),
+        (
+            _('Contacts'),
+            reverse('cpm2014:contacts'),
+            ()
+        ),
+    ]
+
 
 @register.inclusion_tag('cpm_common/tags/mainmenu.html')
 def mainmenu(request):
@@ -75,7 +80,7 @@ def mainmenu(request):
     ]]
 
     mainmenu_items = []
-    for title, url, children in MAINMENU_ITEMS:
+    for title, url, children in get_mainmenu_items():
         active = False
         new_children = []
         for sub_title, sub_url in children:
@@ -91,8 +96,9 @@ def mainmenu(request):
         'languages': languages,
     }
 
+
 @register.inclusion_tag('cpm_common/tags/bottommenu.html')
 def bottommenu():
     return {
-        'mainmenu_items': MAINMENU_ITEMS,
+        'mainmenu_items': get_mainmenu_items(),
     }
