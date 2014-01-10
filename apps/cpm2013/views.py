@@ -14,10 +14,12 @@ from django.core.urlresolvers import reverse
 from django.core.mail import mail_managers
 from django.conf import settings
 
+from apps.cpm2013.constants import APP_ROOT
 from apps.cpm2013.models import Submission, NewsEntry, Page,\
      SubmissionFileUpload
 from apps.cpm2013.forms import SubmissionForm, FileUploadForm
 from apps.cpm2013.tasks import SendSubmissionEmail
+
 
 def index(request):
     news = NewsEntry.objects.language().order_by('-added_at')[:10]
@@ -90,7 +92,7 @@ class Rules:
     }
     RTL = set(('ar',))
 
-    PATH = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2013', 'docs')
+    PATH = os.path.join(APP_ROOT, 'docs')
 
     @classmethod
     def translation(cls, lang):

@@ -2,9 +2,7 @@
 import os.path
 from django.utils.translation import ugettext_lazy as _
 
-PROJECT_ROOT = os.path.normpath(os.path.join(
-    os.path.dirname(__file__), '..'
-))
+PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -147,7 +145,7 @@ ROOT_URLCONF = 'filmfest.urls'
 WSGI_APPLICATION = 'filmfest.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, 'filmfest', 'templates'),
+    os.path.join(PROJECT_ROOT, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

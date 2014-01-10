@@ -12,6 +12,7 @@ from django.conf import settings
 
 from rest_framework import viewsets
 
+from apps.cpm2014.constants import APP_ROOT
 from apps.cpm2014.models import Submission, NewsEntry
 from apps.cpm2014.forms import SubmissionForm
 from apps.cpm2014.serializers import SubmissionSerializer
@@ -54,7 +55,7 @@ class Rules:
     }
     RTL = set(('ar',))
 
-    PATH = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2014', 'docs')
+    PATH = os.path.join(APP_ROOT, 'docs')
 
     @classmethod
     def translation(cls, lang):

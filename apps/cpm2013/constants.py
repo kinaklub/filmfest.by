@@ -1,7 +1,10 @@
+import os.path
+
 from django.utils.translation import ugettext_lazy as _
 from django.conf.global_settings import LANGUAGES
 
 import pycountry
+
 
 YESNO = (
     (1, _('Yes')),
@@ -291,3 +294,7 @@ LANGUAGES = sorted(
     ),
     key=lambda x: x[1]
 )
+
+
+# current Django app root folder
+APP_ROOT = os.path.dirname(__file__)

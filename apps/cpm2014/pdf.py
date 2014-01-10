@@ -7,7 +7,9 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
 from django.conf import settings
 
+from apps.cpm2014.constants import APP_ROOT
 from apps.cpm2014.models import Submission
+
 
 SUBMIT_CONFIRMATION = [
     (_('Film'), [
@@ -71,7 +73,7 @@ def _get_rst_fields(sections, permissions):
         sections_rst.append(u'\n%s\n%s\n\n%s' % (
             section, '-' * len(section), section_rst
         ))
-        
+
     return {
         'sections': '\n'.join(sections_rst),
     }
@@ -105,7 +107,7 @@ def get_submission_confirmation_report(submission):
         permissions = [(_('Permissions'), permissions)]
 
 
-    docs = os.path.join(settings.PROJECT_ROOT, 'apps', 'cpm2014', 'docs')
+    docs = os.path.join(APP_ROOT, 'docs')
     lang = translation.get_language().lower()
     submission_rst = os.path.join(
         docs, SUBMISSION_RST.get(lang, DEFAULT_SUBMISSION_RST))
