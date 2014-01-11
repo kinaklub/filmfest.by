@@ -103,6 +103,8 @@ class Submission(models.Model):
         max_length=2, choices=settings.LANGUAGES,
         default=settings.LANGUAGES[0][0])
 
+    extra_data = models.TextField(
+        verbose_name=_('Structured data'), null=True, blank=True)
     comment = models.TextField(
         verbose_name=_('Comment'), null=True, blank=True)
     comment_email_sent = models.BooleanField(

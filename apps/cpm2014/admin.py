@@ -1,5 +1,6 @@
 from functools import update_wrapper
 from itertools import chain, islice
+import json
 import os
 import os.path
 import tempfile
@@ -50,14 +51,14 @@ class PreviewFilter(admin.SimpleListFilter):
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
-                    'display_facts', 'display_comment']
+                    'display_facts', 'display_comment', 'display_extra_data']
     save_on_top = True
 
     fieldsets = [
             (_('Comments'), {
                 'fields': ['comment', 'comment_email_sent',
                            'comment_film_received', 'comment_papers_received',
-                           'comment_vob_received',]
+                           'comment_vob_received', 'extra_data']
             }),
             (_('Dates'), {
                 'fields': ['submitted_at', 'email_sent_at',
@@ -91,14 +92,15 @@ class SubmissionAdmin(admin.ModelAdmin):
             }),
         ]
 
-    readonly_fields = ['submitted_at']
+    readonly_fields = ['extra_data', 'submitted_at']
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return self.readonly_fields
 
-        return list(chain(*(
+        all_but_comments = (
             fldst[1]['fields'] for fldst in islice(self.fieldsets, 1, None)
-        )))
+        )
+        return list(chain('extra_data', *all_but_comments))
 
     def queryset(self, request):
         qs = Submission.objects.all().order_by('-id')
@@ -139,6 +141,19 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_country(self, obj):
         return obj.get_country_display()
     display_country.short_description = _('Country')
+
+    def display_extra_data(self, obj):
+        if not obj.extra_data:
+            return ''
+
+        try:
+            return linebreaksbr(
+                json.dumps(json.loads(obj.extra_data), indent=0)
+            )
+        except ValueError:
+            return 'error'
+    display_extra_data.short_description = _('Extra data')
+    display_extra_data.allow_tags = True
 
     def display_facts(self, obj):
         fields = ['comment_email_sent', 'comment_film_received',
