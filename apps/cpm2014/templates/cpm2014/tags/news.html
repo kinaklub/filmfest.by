@@ -1,6 +1,28 @@
 {% load i18n markup %}
-<h3>Latest news</h3>
+<h3>{% trans 'Latest news' %} </h3>
 {% for news_entry in news %}
   <h4>{{ news_entry.title }}</h4>
   <div>{{ news_entry.short_text|markdown }}</div>
 {% endfor %}
+<a class="show_news">{% trans 'Show more >>>>>' %} </a><a class="hide_news hide" >{% trans 'Hide <<<<<' %}</a>
+<script>
+    var MAX_VISIBLE_NEWS_ARTICLES = 6;
+
+    $(function() {
+        var $news = $('#news'),
+                $links = $news.find('a'),
+                $hiddenNews = $news.children(':gt(' + MAX_VISIBLE_NEWS_ARTICLES + '):not(a)');
+
+        $hiddenNews.hide();
+
+        $links.on('click', function() {
+            $links.toggleClass('hide');
+            if (!$links.eq(1).hasClass('hide')) {
+                $hiddenNews.show();
+            } else {
+                $hiddenNews.hide();
+            }
+        })
+
+    })
+</script>
