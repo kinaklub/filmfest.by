@@ -9,21 +9,22 @@
 
 3. из корневой папки проекта выполнить
 
-    $ pip install -r requirements
-
-4. перейти в директорию filmfest проекта и выполнить
-
-    $ python manage.py syncdb
-    $ python manage.py migrate
+    $ python setup.py develop
+    $ filmfest_manage syncdb
+    $ filmfest_manage migrate
 
 Запуск:
 -------
 
-1. перейти в директорию filmfest проекта
-
-2. выполнить
+1. из корневой папки проекта выполнить
 
     $ workon filmfest
-    $ python manage.py runserver
+    $ filmfest_manage runserver
 
 3. приложение доступно по адресу http://127.0.0.1:8000/
+
+
+Обновление:
+-----------
+
+    $ fab -H user@host:port update
