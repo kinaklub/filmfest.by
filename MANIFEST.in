@@ -5,6 +5,7 @@ recursive-include apps/cpm2013/locale *
 recursive-include apps/cpm2013/static *
 recursive-include apps/cpm2013/templates *
 recursive-include apps/cpm2013/docs *
+recursive-include apps/cpm2014/locale *
 recursive-include apps/cpm2014/static *
 recursive-include apps/cpm2014/templates *
 recursive-include apps/cpm2014/docs *
