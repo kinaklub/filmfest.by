@@ -7,7 +7,9 @@ FILMFEST_USER = 'filmfest'
 
 def update():
     with settings(sudo_user=FILMFEST_USER):
-        sudo('/var/lib/filmfest/bin/pip install git+git://github.com/kinaklub/filmfest.by')
+        with cd('/var/lib/filmfest'):
+            sudo('/var/lib/filmfest/bin/pip install '
+                 'git+git://github.com/kinaklub/filmfest.by')
         sudo(FILMFEST_MANAGE + 'syncdb --noinput')
         sudo(FILMFEST_MANAGE + 'migrate --noinput')
         sudo(FILMFEST_MANAGE + 'collectstatic --noinput')
