@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-26 15:51+0300\n"
+"POT-Creation-Date: 2014-01-29 22:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgstr "Ваши предложения"
 msgid "Comment"
 msgstr "Сообщество"
 
-#: templates/cms/base.html:46 templates/cms/template_home.html:18
+#: templates/cms/base.html:46
 msgid "spring 2014"
 msgstr "весна 2014"
 
@@ -164,6 +164,10 @@ msgstr "Ссылки"
 #: templates/cms/template_home.html:16
 msgid "International Short Film Festival"
 msgstr ""
+
+#: templates/cms/template_home.html:18
+msgid "April 11-27"
+msgstr "11-27 апреля"
 
 #: templates/cms/template_home.html:19
 #: templates/cpm/new_screening_place.html:4
