@@ -30,14 +30,9 @@
     }
 </style>
 <solo-table items-on-page = "10" binddata="submissions" make-sortable>
-    <select ng-model="prefixModel" class="input">
-        <option value="">All</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
 
-    </select>
-    <input placeholder="Comment" type="text" name="id" ng-model="filterModel">
+    <input placeholder="Id" type="text" name="id" ng-model="idFilter">
+    <input placeholder="Comment" type="text" name="id" ng-model="commentFilter">
     <!--
         Эта директива выступает провайдером данных
         Здесь данные в формате JSON
@@ -77,9 +72,9 @@
         В атрибуте "filtered" - отфильтрованные данные, но т.к. у нас простейший пример и никаких фильтров нет,
         то filtered идентичен original
         -->
-        <tr ng-repeat="item in filtered = (original | filter: { year: prefixModel } | filterByFields:filterModel:['comment'])" >
+        <tr ng-repeat="item in filtered = (original | filter: { id: idFilter } | filterByFields:commentFilter:['comment'] ) " >
             <td><[item.id]></td>
-            <td><[ item.title ]> /<br> <b><[ item.title_en ]></b></td>
+            <td><a href="/2014/angular/#/edit/<[ item.id ]>"><[ item.title ]></a>> /<br> <b><[ item.title_en ]></b></td>
             <td><[item.director]> /<br> <[item.country]></td>
             <td><[item.section]> /<br> <[item.genre]></td>
             <td><[item.length]></td>

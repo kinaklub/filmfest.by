@@ -1,10 +1,1031 @@
 <div>
-    <form action="">
-        <input type="text" value="1"/>
-        <fieldset>
-            <legend>Comments</legend>
-            <label for="comment">Comment</label>
-            <textarea><[subm]></textarea>
-        </fieldset>
-    </form>
+<form class="form-horizontal">
+<fieldset>
+
+<h3 ng-bind="header">
+
+</h3>
+
+<div class="form-actions">
+    <button class="btn btn-primary js-tooltip" ng-click="save()"  name="_method" value="SAVE" data-original-title="Make a PUT request on the Submission Instance resource">SAVE</button>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#status" data-toggle="tab">Status</a></li>
+    <li><a href="#film_info" data-toggle="tab">Film info</a></li>
+    <li><a href="#film_team" data-toggle="tab">Film team</a></li>
+    <li><a href="#others" data-toggle="tab">Others</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane  active" id="status">
+
+
+    <div class="control-group"> <!---->
+        <label for="id_comment" class="control-label">Comment</label>
+        <div class="controls">
+            <textarea id="id_comment" ng-model="subm.comment" rows="10" cols="40" name="comment">Tanya: vob received
+                included in 13</textarea>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_title" class="control-label">Название на языке оригинала</label>
+        <div class="controls">
+            <input type="text" ng-model="subm.title" name="title" value="" id="id_title" data-cip-id="id_title">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_title_en"  class="control-label">Английское название</label>
+        <div class="controls">
+            <input type="text" name="title_en" ng-model="subm.title_en" id="id_title_en" data-cip-id="id_title_en">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_submission_language" class="control-label">Язык заявки</label>
+        <div class="controls">
+            <select name="submission_language" ng-model="subm.submission_language" id="id_submission_language" data-cip-id="cIPJQ342845648">
+                <option value="en" selected="selected">Английский</option>
+                <option value="ru">Русский</option>
+                <option value="be">Belarussian</option>
+            </select>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_allow_noncommercial" class="control-label">Разрешение на включение фильма в сборник фестиваля для некоммерческих показов</label>
+        <div class="controls">
+            <select name="allow_noncommercial" ng-model="subm.allow_noncommercial" id="id_allow_noncommercial" data-cip-id="cIPJQ342845646">
+                <option value="1" selected="selected">Да</option>
+                <option value="2">Нет</option>
+            </select>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_allow_tv" class="control-label">Разрешение на использование отрывков фильма для промоушна (не более 10% продолжительности) на телевидении</label>
+        <div class="controls">
+            <select name="allow_tv" ng-model="subm.allow_tv" id="id_allow_tv" data-cip-id="cIPJQ342845645">
+                <option value="1" selected="selected">Да</option>
+                <option value="2">Нет</option>
+            </select>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+
+
+    <div class="control-group"> <!---->
+        <label for="id_allow_network" class="control-label">Разрешение на участие и показ фильма в других фестивалях в рамках фестивальной партнёрской сети Cinema Perpetuum Mobile</label>
+        <div class="controls">
+            <select name="allow_network" ng-model="subm.allow_network" id="id_allow_network" data-cip-id="cIPJQ342845647">
+                <option value="1" selected="selected">Да</option>
+                <option value="2">Нет</option>
+            </select>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+
+
+
+    <div class="control-group"> <!---->
+        <label for="id_comment_email_sent" class="control-label">E-mail was sent</label>
+        <div class="controls">
+            <input checked="checked" type="checkbox" ng-model="subm.comment_email_sent" name="comment_email_sent" id="id_comment_email_sent">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_comment_film_received" class="control-label">Film is received</label>
+        <div class="controls">
+            <input checked="checked" type="checkbox" ng-model="subm.comment_film_received" name="comment_film_received" id="id_comment_film_received">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_comment_papers_received" class="control-label">Papers were received</label>
+        <div class="controls">
+            <input checked="checked" type="checkbox" ng-model="subm.comment_papers_received" name="comment_papers_received" id="id_comment_papers_received">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_comment_vob_received" class="control-label">Vob received</label>
+        <div class="controls">
+            <input checked="checked" type="checkbox" name="comment_vob_received" ng-model="subm.received" id="id_comment_vob_received">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_email_sent_at" class="control-label">E-mail sent at</label>
+        <div class="controls">
+            <input type="text" name="email_sent_at" id="id_email_sent_at" ng-model="subm.email_sent_at" data-cip-id="id_email_sent_at">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_film_received_at" class="control-label">Film received at</label>
+        <div class="controls">
+            <input type="text" name="film_received_at" id="id_film_received_at" ng-model="subm.film_received_at" data-cip-id="id_film_received_at">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_papers_received_at" class="control-label">Papers received at</label>
+        <div class="controls">
+            <input type="text" name="papers_received_at" id="id_papers_received_at" ng-model="subm.papers_received_at" data-cip-id="id_papers_received_at">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_vob_received_at" class="control-label">Vob received at</label>
+        <div class="controls">
+            <input type="text" name="vob_received_at" id="id_vob_received_at" ng-model="subm.vob_received_at" data-cip-id="id_vob_received_at">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_preview" class="control-label">Preview result</label>
+        <div class="controls">
+            <input type="text" name="preview" ng-model="subm.preview" id="id_preview" data-cip-id="id_preview">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_preview_average" class="control-label">Preview average result</label>
+        <div class="controls">
+            <input type="text" name="preview_average" ng-model="subm.preview_average" id="id_preview_average" data-cip-id="id_preview_average">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <div class="control-group"> <!---->
+        <label for="id_previewers" class="control-label">Previewers count</label>
+        <div class="controls">
+            <input type="text" name="previewers" id="id_previewers" ng-model="subm.previewers" data-cip-id="id_previewers">
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+</div>
+<div class="tab-pane " id="film_info">
+<div class="control-group"> <!---->
+    <label for="id_film_link" class="control-label">Ссылка на скачивание фильма (если есть)</label>
+    <div class="controls">
+        <input type="text" name="film_link" ng-model="subm.film_link" id="id_film_link" data-cip-id="id_film_link">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+
+<div class="control-group"> <!---->
+<label for="id_country" class="control-label">Страна производства</label>
+<div class="controls">
+<select name="country" ng-model="subm.country" id="id_country" data-cip-id="cIPJQ342845639">
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua &amp; Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahama</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="VG">British Virgin Islands</option>
+<option value="BN">Brunei Darussalam</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CK">Cook Iislands</option>
+<option value="CR">Costa Rica</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TP">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands (Malvinas)</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="FX">France, Metropolitan</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE" selected="selected">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard &amp; McDonald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IR">Islamic Republic of Iran</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="CI">Ivory Coast</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KP">Korea, Democratic People's Republic of</option>
+<option value="KR">Korea, Republic of</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Lao People's Democratic Republic</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libyan Arab Jamahiriya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macau</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MD">Moldova, Republic of</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="MS">Monserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="ZZ">Другое</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RE">Reunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="LC">Saint Lucia</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome &amp; Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="GS">South Georgia and the South Sandwich Islands</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SH">St. Helena</option>
+<option value="KN">St. Kitts and Nevis</option>
+<option value="PM">St. Pierre &amp; Miquelon</option>
+<option value="VC">St. Vincent &amp; the Grenadines</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard &amp; Jan Mayen Islands</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syrian Arab Republic</option>
+<option value="TW">Taiwan, Province of China</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania, United Republic of</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad &amp; Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks &amp; Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom (Great Britain)</option>
+<option value="UM">United States Minor Outlying Islands</option>
+<option value="VI">United States Virgin Islands</option>
+<option value="US">United States of America</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican City State (Holy See)</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Viet Nam</option>
+<option value="WF">Wallis &amp; Futuna Islands</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="YU">Yugoslavia</option>
+<option value="ZR">Zaire</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+</select>
+<span class="help-block"></span>
+<!---->
+</div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_language"  class="control-label">Язык оригинала</label>
+    <div class="controls">
+        <select name="language" ng-model="subm.language" id="id_language" data-cip-id="cIPJQ342845640">
+            <option value="ab">Abkhazian</option>
+            <option value="aa">Afar</option>
+            <option value="af">Afrikaans</option>
+            <option value="ak">Akan</option>
+            <option value="sq">Албанский</option>
+            <option value="am">Amharic</option>
+            <option value="ar">Арабский</option>
+            <option value="an">Aragonese</option>
+            <option value="hy">Armenian</option>
+            <option value="as">Assamese</option>
+            <option value="av">Avaric</option>
+            <option value="ae">Avestan</option>
+            <option value="ay">Aymara</option>
+            <option value="az">Азербайджанский</option>
+            <option value="bm">Bambara</option>
+            <option value="ba">Bashkir</option>
+            <option value="eu">Баскский</option>
+            <option value="be">Belarusian</option>
+            <option value="bn">Бенгальский</option>
+            <option value="bh">Bihari languages</option>
+            <option value="bi">Bislama</option>
+            <option value="nb">Bokmål, Norwegian; Norwegian Bokmål</option>
+            <option value="bs">Боснийский</option>
+            <option value="br">Breton</option>
+            <option value="bg">Болгарский</option>
+            <option value="my">Burmese</option>
+            <option value="ca">Catalan; Valencian</option>
+            <option value="km">Central Khmer</option>
+            <option value="ch">Chamorro</option>
+            <option value="ce">Chechen</option>
+            <option value="ny">Chichewa; Chewa; Nyanja</option>
+            <option value="zh">Chinese</option>
+            <option value="cu">Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</option>
+            <option value="cv">Chuvash</option>
+            <option value="kw">Cornish</option>
+            <option value="co">Corsican</option>
+            <option value="cr">Cree</option>
+            <option value="hr">Хорватский</option>
+            <option value="cs">Чешский</option>
+            <option value="da">Датский</option>
+            <option value="dv">Divehi; Dhivehi; Maldivian</option>
+            <option value="nl">Dutch; Flemish</option>
+            <option value="dz">Dzongkha</option>
+            <option value="en">Английский</option>
+            <option value="eo">Esperanto</option>
+            <option value="et">Эстонский</option>
+            <option value="ee">Ewe</option>
+            <option value="fo">Faroese</option>
+            <option value="fj">Fijian</option>
+            <option value="fi">Финский</option>
+            <option value="fr">Французский</option>
+            <option value="ff">Fulah</option>
+            <option value="gd">Gaelic; Scottish Gaelic</option>
+            <option value="gl">Галисийский</option>
+            <option value="lg">Ganda</option>
+            <option value="ka">Грузинский</option>
+            <option value="de" selected="selected">Немецкий</option>
+            <option value="el">Greek, Modern (1453-)</option>
+            <option value="gn">Guarani</option>
+            <option value="gu">Gujarati</option>
+            <option value="ht">Haitian; Haitian Creole</option>
+            <option value="ha">Hausa</option>
+            <option value="he">Иврит</option>
+            <option value="hz">Herero</option>
+            <option value="hi">Хинди</option>
+            <option value="ho">Hiri Motu</option>
+            <option value="hu">Венгерский</option>
+            <option value="is">Исландский</option>
+            <option value="io">Ido</option>
+            <option value="ig">Igbo</option>
+            <option value="id">Индонезийский</option>
+            <option value="ia">Interlingua (International Auxiliary Language Association)</option>
+            <option value="ie">Interlingue; Occidental</option>
+            <option value="iu">Inuktitut</option>
+            <option value="ik">Inupiaq</option>
+            <option value="ga">Ирландский</option>
+            <option value="it">Итальянский</option>
+            <option value="ja">Японский</option>
+            <option value="jv">Javanese</option>
+            <option value="kl">Kalaallisut; Greenlandic</option>
+            <option value="kn">Каннада</option>
+            <option value="kr">Kanuri</option>
+            <option value="ks">Kashmiri</option>
+            <option value="kk">Kazakh</option>
+            <option value="ki">Kikuyu; Gikuyu</option>
+            <option value="rw">Kinyarwanda</option>
+            <option value="ky">Kirghiz; Kyrgyz</option>
+            <option value="kv">Komi</option>
+            <option value="kg">Kongo</option>
+            <option value="ko">Корейский</option>
+            <option value="kj">Kuanyama; Kwanyama</option>
+            <option value="ku">Kurdish</option>
+            <option value="lo">Lao</option>
+            <option value="la">Latin</option>
+            <option value="lv">Латвийский</option>
+            <option value="li">Limburgan; Limburger; Limburgish</option>
+            <option value="ln">Lingala</option>
+            <option value="lt">Литовский</option>
+            <option value="lu">Luba-Katanga</option>
+            <option value="lb">Luxembourgish; Letzeburgesch</option>
+            <option value="mk">Македонский</option>
+            <option value="mg">Malagasy</option>
+            <option value="ms">Malay</option>
+            <option value="ml">Малаялам</option>
+            <option value="mt">Maltese</option>
+            <option value="gv">Manx</option>
+            <option value="mi">Maori</option>
+            <option value="mr">Marathi</option>
+            <option value="mh">Marshallese</option>
+            <option value="mo">Moldavian; Moldovan</option>
+            <option value="mn">Монгольский</option>
+            <option value="na">Nauru</option>
+            <option value="nv">Navajo; Navaho</option>
+            <option value="nd">Ndebele, North; North Ndebele</option>
+            <option value="nr">Ndebele, South; South Ndebele</option>
+            <option value="ng">Ndonga</option>
+            <option value="ne">Nepali</option>
+            <option value="se">Northern Sami</option>
+            <option value="no">Norwegian</option>
+            <option value="nn">Norwegian Nynorsk; Nynorsk, Norwegian</option>
+            <option value="oc">Occitan (post 1500)</option>
+            <option value="oj">Ojibwa</option>
+            <option value="or">Oriya</option>
+            <option value="om">Oromo</option>
+            <option value="os">Ossetian; Ossetic</option>
+            <option value="pi">Pali</option>
+            <option value="pa">Panjabi; Punjabi</option>
+            <option value="fa">Персидский</option>
+            <option value="pl">Польский</option>
+            <option value="pt">Португальский</option>
+            <option value="ps">Pushto; Pashto</option>
+            <option value="qu">Quechua</option>
+            <option value="ro">Румынский</option>
+            <option value="rm">Romansh</option>
+            <option value="rn">Rundi</option>
+            <option value="ru">Русский</option>
+            <option value="sm">Samoan</option>
+            <option value="sg">Sango</option>
+            <option value="sa">Sanskrit</option>
+            <option value="sc">Sardinian</option>
+            <option value="sr">Сербский</option>
+            <option value="sn">Shona</option>
+            <option value="ii">Sichuan Yi; Nuosu</option>
+            <option value="sd">Sindhi</option>
+            <option value="si">Sinhala; Sinhalese</option>
+            <option value="sk">Словацкий</option>
+            <option value="sl">Словенский</option>
+            <option value="so">Somali</option>
+            <option value="st">Sotho, Southern</option>
+            <option value="es">Spanish; Castilian</option>
+            <option value="su">Sundanese</option>
+            <option value="sw">Swahili</option>
+            <option value="ss">Swati</option>
+            <option value="sv">Шведский</option>
+            <option value="tl">Tagalog</option>
+            <option value="ty">Tahitian</option>
+            <option value="tg">Tajik</option>
+            <option value="ta">Тамильский</option>
+            <option value="tt">Tatar</option>
+            <option value="te">Телугу</option>
+            <option value="th">Тайский</option>
+            <option value="bo">Tibetan</option>
+            <option value="ti">Tigrinya</option>
+            <option value="to">Tonga (Tonga Islands)</option>
+            <option value="ts">Tsonga</option>
+            <option value="tn">Tswana</option>
+            <option value="tr">Турецкий</option>
+            <option value="tk">Turkmen</option>
+            <option value="tw">Twi</option>
+            <option value="ug">Uighur; Uyghur</option>
+            <option value="uk">Украинский</option>
+            <option value="ur">Урду</option>
+            <option value="uz">Uzbek</option>
+            <option value="ve">Venda</option>
+            <option value="vi">Вьетнамский</option>
+            <option value="vo">Volapük</option>
+            <option value="wa">Walloon</option>
+            <option value="cy">Уэльский</option>
+            <option value="fy">Western Frisian</option>
+            <option value="wo">Wolof</option>
+            <option value="xh">Xhosa</option>
+            <option value="yi">Yiddish</option>
+            <option value="yo">Yoruba</option>
+            <option value="za">Zhuang; Chuang</option>
+            <option value="zu">Zulu</option>
+        </select>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_genre" class="control-label">Жанр</label>
+    <div class="controls">
+        <input type="text" ng-model="subm.genre" name="genre" value="" id="id_genre" data-cip-id="id_genre">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_section" class="control-label">Секция</label>
+    <div class="controls">
+        <select name="section" ng-model="subm.section" id="id_section" data-cip-id="cIPJQ342845641">
+            <option value="1">Игровой</option>
+            <option value="2">Анимация</option>
+            <option value="3" selected="selected">Документальный</option>
+            <option value="4">Эксперимент</option>
+            <option value="5">Музыкальное видео</option>
+            <option value="6">Экология</option>
+            <option value="7">Детский фильм</option>
+        </select>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_synopsis" class="control-label">Синопсис</label>
+    <div class="controls">
+        <textarea id="id_synopsis" ng-model="subm.synopsis" rows="10" cols="40" name="synopsis">The Berlin Underground has just pulled out as a voice resounds: „Dear ladies and gentlemen, excuse me for interrupting…“ Everybody is watching the homeless woman selling a well-known street newspaper. But what does SHE actually see?
+
+            An experimental documentary about Nicole Y. and a short film about hope.</textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_length" class="control-label">Продолжительность (в минутах)</label>
+    <div class="controls">
+        <input type="text" name="length" ng-model="subm.length" value="" id="id_length" data-cip-id="id_length">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_aspect_ratio" class="control-label">Отношение сторон</label>
+    <div class="controls">
+        <input type="text" name="aspect_ratio" ng-model="subm.aspect_ratio" value="" id="id_aspect_ratio" data-cip-id="id_aspect_ratio">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_year" class="control-label">Год производства</label>
+    <div class="controls">
+        <input type="text" name="year" ng-model="subm.year" value="" id="id_year" data-cip-id="id_year">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_premiere" class="control-label">Премьерный показ</label>
+    <div class="controls">
+        <select name="premiere" id="id_premiere" ng-model="subm.premiere" data-cip-id="cIPJQ342845642">
+            <option value="1">Да</option>
+            <option value="2" selected="selected">Нет</option>
+        </select>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_film_awards" class="control-label">Награды фильма</label>
+    <div class="controls">
+        <textarea id="id_film_awards" rows="10" cols="40" ng-model="subm.film_awards" name="film_awards">* INTERFAK BERLIN (Competition, Germany)*BEST FILM*, 8th CLIPAWRD MANNHEIM (Competition, Germany)*3rd JURY AWARD*
+
+            FESTIVALS.
+            11/2012   * 28th INTERFILM - INTERNATIONAL SHORT FILM FESTIVAL (Berlin Beats, Berlin, Germany)
+            12/2012   * INTERFAK BERLIN (Competition, Germany)
+            *BEST FILM*
+            04/2013   * 8th CLIPAWRD MANNHEIM (Competition, Germany)
+            *3rd JURY AWARD*
+            05/2013   * FILMKUNSTFEST M-V SCHWERIN (Competition, Germany)
+            05/2013   * KURZFILMABEND Z10 E.V. (Karlsruhe, Germany), 06/2013   * FUSION FESTIVAL (KURZFILMROLLE 23rd FILMKUNSTFEST M-V) (Lärz, Germany)
+            08/2013   * BEST-OF-PROGRAMM CLIPAWARD (Zeitraumexit, Mannheim)
+            08/2013   * BEST-OF-PROGRAMM CLIPAWARD (b-ware! Ladenkino, Berlin)
+            09/2013   * 3rd ODERKURZ-FILMSPEKTAKEL (Competition, Germany)
+            10/2013   * EMMENTALER FILMTAGE (Int’l Competition, Switzerland)</textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+</div>
+<div class="tab-pane " id="film_team">
+
+<div class="control-group"> <!---->
+    <label for="id_director_awards" class="control-label" >Награды режиссера</label>
+    <div class="controls">
+        <textarea id="id_director_awards" rows="10" cols="40" ng-model="subm.director_awards" name="director_awards"></textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+
+<div class="control-group"> <!---->
+    <label for="id_applicant" class="control-label">Имя</label>
+    <div class="controls">
+        <input type="text" name="applicant" ng-model="subm.applicant" value="" id="id_applicant" data-cip-id="id_applicant">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_applicant_address" class="control-label">Адрес</label>
+    <div class="controls">
+        <textarea id="id_applicant_address" ng-model="subm.applicant_address" rows="10" cols="40" name="applicant_address">aug&amp;ohr medien
+            Platz der Vereinten Nationen 28
+            10249 Berlin, Germany
+        </textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_applicant_email" class="control-label">Email</label>
+    <div class="controls">
+        <input type="text" name="applicant_email" ng-model="subm.applicant_email" value="" id="id_applicant_email" data-cip-id="id_applicant_email">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_applicant_site" class="control-label">Интернет сайт</label>
+    <div class="controls">
+        <input type="text" name="applicant_site" ng-model="subm.applicant_site" id="id_applicant_site" data-cip-id="id_applicant_site">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_applicant_phone" class="control-label">Тел.</label>
+    <div class="controls">
+        <input type="text" name="applicant_phone" ng-model="subm.applicant_phone"  value="" id="id_applicant_phone" data-cip-id="id_applicant_phone">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+
+<div class="control-group"> <!---->
+    <label for="id_director" class="control-label">Имя</label>
+    <div class="controls">
+        <input type="text" name="director" ng-model="subm.director" value="" id="id_director" data-cip-id="id_director">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_director_address" class="control-label">Адрес</label>
+    <div class="controls">
+        <textarea id="id_director_address" ng-model="subm.director_address" rows="10" cols="40" name="director_address">aug&amp;ohr medien
+            Platz der Vereinten Nationen 28
+            10249 Berlin, Germany
+        </textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_director_email" class="control-label">Email</label>
+    <div class="controls">
+        <input type="text" name="director_email" ng-model="subm.director_email" value="" id="id_director_email" data-cip-id="id_director_email">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_director_site" class="control-label">Интернет сайт</label>
+    <div class="controls">
+        <input type="text" name="director_site" ng-model="subm.director_site" id="id_director_site" data-cip-id="id_director_site">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_director_phone" class="control-label">Тел.</label>
+    <div class="controls">
+        <input type="text" name="director_phone" ng-model="subm.director_phone" value="" id="id_director_phone" data-cip-id="id_director_phone">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_producer" class="control-label">Имя</label>
+    <div class="controls">
+        <input type="text" name="producer" ng-model="subm.producer" value="" id="id_producer" data-cip-id="id_producer">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_producer_address" class="control-label">Адрес</label>
+    <div class="controls">
+        <textarea id="id_producer_address" ng-model="subm.producer_address" rows="10" cols="40" name="producer_address">BEUTH HOCHSCHULE FÜR TECHNIK BERLIN
+            Luxemburger Straße 10
+            13353 Berlin, Germany
+        </textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_producer_email" class="control-label">Email</label>
+    <div class="controls">
+        <input type="text" name="producer_email" ng-model="subm.producer_email" value="" id="id_producer_email" data-cip-id="id_producer_email">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_producer_site" class="control-label">Интернет сайт</label>
+    <div class="controls">
+        <input type="text" name="producer_site" ng-model="subm.producer_site" id="id_producer_site" data-cip-id="id_producer_site">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_producer_phone" class="control-label">Тел.</label>
+    <div class="controls">
+        <input type="text" name="producer_phone" ng-model="subm.producer_phone" id="id_producer_phone" data-cip-id="id_producer_phone">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_screenwriter" class="control-label">Сценарист</label>
+    <div class="controls">
+        <input type="text" name="screenwriter" ng-model="subm.screenwriter" value="" id="id_screenwriter" data-cip-id="id_screenwriter">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_editor" class="control-label">Монтажер</label>
+    <div class="controls">
+        <input type="text" name="editor" ng-model="subm.editor" value="" id="id_editor" data-cip-id="id_editor">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_music" class="control-label">Композитор</label>
+    <div class="controls">
+        <input type="text" name="music" ng-model="subm.music" id="id_music" data-cip-id="id_music">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_director_photography" class="control-label">Оператор</label>
+    <div class="controls">
+        <input type="text" name="director_photography" ng-model="subm.director_photography" value="" id="id_director_photography" data-cip-id="id_director_photography">
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+
+<div class="control-group"> <!---->
+    <label for="id_other_credits" class="control-label">Другие участники</label>
+    <div class="controls">
+        <textarea id="id_other_credits" ng-model="subm.other_credits" rows="10" cols="40" name="other_credits"></textarea>
+        <span class="help-block"></span>
+        <!---->
+    </div>
+</div>
+</div>
+
+<div class="tab-pane " id="others">
+
+
+
+
+    <div class="control-group"> <!---->
+        <label for="id_attend" class="control-label">Я намерен посетить заключительный этап фестиваля</label>
+        <div class="controls">
+            <select name="attend" id="id_attend" ng-model="subm.attend" data-cip-id="cIPJQ342845643">
+                <option value="0" selected="selected">Возможно</option>
+                <option value="1">Да</option>
+                <option value="2">Нет</option>
+            </select>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+
+    <!--backlink-->
+    <div class="control-group"> <!---->
+        <label for="id_backlink" class="control-label">Источник информации о Cinema Perpetuum Mobile</label>
+        <div class="controls">
+            <select name="backlink" id="id_backlink" ng-model="subm.backlink" data-cip-id="cIPJQ342845644">
+                <option value="1">сайт фестиваля</option>
+                <option value="2">Facebook</option>
+                <option value="3">Twitter</option>
+                <option value="4">vk.com</option>
+                <option value="5">email</option>
+                <option value="6">поиск в интернете</option>
+                <option value="7">друзья</option>
+                <option value="8">база фестивалей</option>
+                <option value="9">Я принимал участие в CPM'2012</option>
+                <option value="10">место учебы</option>
+                <option value="11">работа</option>
+                <option value="12" selected="selected">другое</option>
+            </select>
+            <span class="help-block"></span>
+            <!---->
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#status" data-toggle="tab">Status</a></li>
+    <li><a href="#film_info" data-toggle="tab">Film info</a></li>
+    <li><a href="#film_team" data-toggle="tab">Film team</a></li>
+    <li><a href="#others" data-toggle="tab">Others</a></li>
+</ul>
+
+<div class="form-actions">
+    <button class="btn btn-primary js-tooltip" ng-click="save()"  name="_method" value="SAVE" data-original-title="Make a PUT request on the Submission Instance resource">SAVE</button>
+</div>
+</fieldset>
+</form>
 </div>

@@ -8,10 +8,12 @@
 angular.module('filmfestApp.services', []).
   value('version', '0.1');
 
-var filmfestServices = angular.module('filmfestServices', ['ngResource']);
+var filmfestServices = angular.module('filmfestServices', []);
 
-filmfestServices.factory('Submission', ['$resource',
+filmfestServices.factory('Submission', [
     function($resource) {
+
+
         return $resource('/ru/2014/api/submissions/:submId/', {}, {
             query: {
                 method: 'GET',

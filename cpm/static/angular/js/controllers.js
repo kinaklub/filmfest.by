@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var filmfestControllers = angular.module('filmfestControllers', []);
+var filmfestControllers = angular.module('filmfestControllers', ['restangular', 'ngCookies']);
 
 filmfestControllers.controller('SimpleSubmissionsList', [ '$scope', '$http', '$filter',
     function($scope, $http, $filter) {
@@ -168,14 +168,44 @@ filmfestControllers.controller('SimpleSubmissionsList', [ '$scope', '$http', '$f
 filmfestControllers.controller('EditSubmissionCtrl', [
 '$scope',
 '$routeParams',
-'Submission'
-, function($scope, $routeParams, Submission) {
-    $scope.submId = $routeParams.submId;
+'Restangular',
+'$cookies',
+'$location'
+, function($scope, $routeParams, Restangular, $cookies, $location) {
+         var original = {};
+        $scope.subm = {};
 
-    $scope.subm = Submission.get({submId: $routeParams.submId},
-                                 function(subm) {
-                                     console.log(subm);
-                                 })
+        $scope.header = '';
+
+        Restangular.setDefaultHeaders({'X-CSRFToken': $cookies.csrftoken})
+
+        Restangular.one('submissions', $routeParams.submId).get().then(function(subm) {
+            original = subm;
+            window.subm = subm;
+            $scope.subm = Restangular.copy(original);
+            console.log($scope.subm);
+        });
+
+        $scope.$watch('subm', function() {
+            var subm = $scope.subm;
+            $scope.header = subm.id + ' / ' + subm.title + ' / ' + subm.title_en;
+        })
+
+        $scope.isClean = function() {
+            return angular.equals(original, $scope.subm);
+        }
+
+        $scope.destroy = function() {
+            original.remove().then(function() {
+                $location.path('/list');
+            });
+        };
+
+        $scope.save = function() {
+            $scope.subm.put().then(function() {
+                $location.path('/');
+            });
+        };
 
 }]);
 

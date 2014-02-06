@@ -4,9 +4,11 @@
 $(function () {
     angular.module('filmfestApp', [
             'ngRoute',
+            'restangular',
             'filmfestControllers',
             'filmfestServices',
-            'solo.table'
+            'solo.table',
+            'ngCookies'
         ]).
         config(['$routeProvider', function ($routeProvider) {
                 $routeProvider.when('/downloading_films', {
@@ -15,6 +17,7 @@ $(function () {
                 $routeProvider.when('/edit/:submId', {
                     templateUrl: window.FILMFEST_PATH + 'partials/edit_submission.html',
                     controller: 'EditSubmissionCtrl'
+
                 });
                 $routeProvider.otherwise({
                     redirectTo: '/downloading_films'
@@ -26,7 +29,52 @@ $(function () {
                 $interpolateProvider.startSymbol('<[');
                 $interpolateProvider.endSymbol(']>');
             }
-        ]);
+        ]).
+        config(['RestangularProvider', function(RestangularProvider) {
+                       RestangularProvider.setBaseUrl('/ru/2014/api');
+                       //RestangularProvider.setExtraFields(['name']);
+//                       RestangularProvider.setResponseExtractor(function(response, operation) {
+//                           return response.data;
+//                       });
+
+                       RestangularProvider.addElementTransformer('submissions', false, function(subm) {
+                           return subm;
+                       });
+
+                       RestangularProvider.setDefaultHttpFields({cache: false});
+                       RestangularProvider.setMethodOverriders(["put", "patch"]);
+
+
+                       // In this case we are mapping the id of each element to the _id field.
+                       // We also change the Restangular route.
+                       // The default value for parentResource remains the same.
+//                       RestangularProvider.setRestangularFields({
+//                                                                    id: "_id",
+//                                                                    route: "restangularRoute",
+//                                                                    selfLink: "self.href"
+//                                                                });
+
+                       RestangularProvider.setRequestSuffix('/');
+
+//                       Use Request interceptor
+                       RestangularProvider.setRequestInterceptor(function(element, operation, route, url) {
+
+                           element.url = url + '/';
+                           console.log(element.url);
+                           return element;
+                       });
+
+                       // ..or use the full request interceptor, setRequestInterceptor's more powerful brother!
+//                       RestangularProvider.setFullRequestInterceptor(function(element, operation, route, url, headers, params) {
+//                           delete element.name;
+//                           return {
+//                               element: element,
+//                               params: _.extend(params, {single: true}),
+//                               headers: headers
+//                           };
+//                       });
+
+                   }]);;
 
     angular.bootstrap(document, ['filmfestApp']);
 });
