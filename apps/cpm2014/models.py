@@ -5,7 +5,7 @@ from django.conf import settings
 from hvad.models import TranslatableModel, TranslatedFields
 
 from constants import YESNO, YESNOMAYBE, COUNTRIES, LANGUAGES,\
-     SECTIONS, BACKLINKS
+     SECTIONS, BACKLINKS, TRANSLATION_LANGUAGES
 
 class Submission(models.Model):
     title = models.CharField(verbose_name=_('Original title'), max_length=1000)
@@ -167,3 +167,19 @@ class NewsEntry(TranslatableModel):
     )
 
     __unicode__ = lambda self: self.title
+
+
+class SubmissionTranslation(models.Model):
+    submission = models.ForeignKey(Submission)
+    language = models.CharField(max_length=2, choices=TRANSLATION_LANGUAGES)
+
+    title = models.CharField(verbose_name=_('Title'),
+                             max_length=1000, default='')
+    genre = models.CharField(verbose_name=_('Genre'),
+                             max_length=1000, default='')
+    synopsis = models.TextField(verbose_name=_('Synopsis'), default='')
+    director = models.CharField(verbose_name=_('Director'),
+                                max_length=1000, default='')
+
+    class Meta:
+        unique_together = [('submission', 'language')]

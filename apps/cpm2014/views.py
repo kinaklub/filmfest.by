@@ -2,7 +2,9 @@
 import io
 import os.path
 
-from django.shortcuts import render_to_response
+from django.contrib.admin.views.decorators import staff_member_required
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
@@ -13,8 +15,8 @@ from django.conf import settings
 from rest_framework import viewsets
 
 from apps.cpm2014.constants import APP_ROOT
-from apps.cpm2014.models import Submission, NewsEntry
-from apps.cpm2014.forms import SubmissionForm
+from apps.cpm2014.models import Submission, NewsEntry, SubmissionTranslation
+from apps.cpm2014.forms import SubmissionForm, SubmissionTranslationForm
 from apps.cpm2014.serializers import SubmissionSerializer
 from apps.cpm2014.tasks import SendSubmissionEmail
 
@@ -217,3 +219,45 @@ class SubmissionViewSet(viewsets.ModelViewSet):
         return super(SubmissionViewSet, self).update(request, *args, **kwargs)
 
     get_paginate_by = lambda self: None
+
+
+@staff_member_required
+def translation_details(request, submission_id, lang):
+    submission = get_object_or_404(Submission, id=submission_id)
+    translation, created = SubmissionTranslation.objects.get_or_create(
+        submission=submission, language=lang
+    )
+
+    data = [
+        (_(u'Title'), submission.title, translation.title),
+        (_(u'Director'), submission.director, translation.director),
+        (_(u'Genre'), submission.genre, translation.genre),
+        (_(u'Synopsis'), submission.synopsis, translation.synopsis),
+    ]
+    context = {'submission': submission, 'data': data, 'lang': lang}
+    return render_to_response('cpm2014/translation_details.html', context,
+                              context_instance=RequestContext(request))
+
+
+@staff_member_required
+def translation_edit(request, submission_id, lang):
+    submission = get_object_or_404(Submission, id=submission_id)
+    translation, created = SubmissionTranslation.objects.get_or_create(
+        submission=submission, language=lang
+    )
+    form = SubmissionTranslationForm(
+        request.POST or None, instance=translation
+    )
+
+    if form.is_valid():
+        form.save()
+        return redirect('cpm2014:translation_details', submission_id, lang)
+
+    context = {
+        'submission': submission,
+        'translation': translation,
+        'form': form,
+        'lang': lang
+    }
+    return render_to_response('cpm2014/translation_edit.html', context,
+                              context_instance=RequestContext(request))

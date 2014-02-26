@@ -1,7 +1,8 @@
 import os.path
 
-from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 from django.conf.global_settings import LANGUAGES
+from django.utils.translation import ugettext_lazy as _
 
 import pycountry
 
@@ -295,6 +296,7 @@ LANGUAGES = sorted(
     key=lambda x: x[1]
 )
 
+TRANSLATION_LANGUAGES = getattr(settings, 'TRANSLATION_LANGUAGES', settings.LANGUAGES)
 
 # current Django app root folder
 APP_ROOT = os.path.dirname(__file__)

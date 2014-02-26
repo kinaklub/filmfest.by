@@ -4,7 +4,10 @@ def get_urls():
 
     from rest_framework import routers
 
+    from apps.cpm2014 import constants
     from apps.cpm2014 import views
+
+    LANGS = '|'.join(c for c, n in constants.TRANSLATION_LANGUAGES)
 
     router = routers.DefaultRouter()
     router.register(r'submissions', views.SubmissionViewSet)
@@ -20,8 +23,14 @@ def get_urls():
             name='contacts'),
         url(r'^presskit', views.press_kit, name='press_kit'),
         url(r'^api/', include(router.urls)),
-
         url(r'^angular/', 'cpm.views.angular'),
+
+        url(r'^submission/(?P<submission_id>\d+)/'
+            r'translation/(?P<lang>%s)$' % LANGS,
+            views.translation_details, name='translation_details'),
+        url(r'^submission/(?P<submission_id>\d+)/'
+            r'translation/(?P<lang>%s)/edit$' % LANGS,
+            views.translation_edit, name='translation_edit'),
     )
 
 urls = (get_urls(), 'cpm2014', 'cpm2014')

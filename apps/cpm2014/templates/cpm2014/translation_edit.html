@@ -1,0 +1,79 @@
+{% extends "cpm/page.html" %}
+{% load i18n %}
+
+{% block main_content %}
+
+<h2>
+  <a href="{% url admin:cpm2014_submission_change submission.id %}">
+    {{ submission.id }} / {{ submission.title }}
+  </a>:
+  {{ lang }}
+</h2>
+
+<form id="submission-form" class="form-horizontal" method="POST">
+  {% csrf_token %}
+
+  {{ form.non_field_errors }}
+
+  <h4>{% trans "Title" %}</h4>
+  <div class="row">
+    <div class="span6">
+      {{ submission.title }}
+    </div>
+    <div class="span6">
+      <div class="control-group {% if form.title.errors %}error{% endif %}">
+	<span class="help-inline">{{ form.title.errors.as_inline }}</span>
+        {{ form.title }}
+      </div>
+    </div>
+  </div>
+
+  <h4>{% trans "Director" %}</h4>
+  <div class="row">
+    <div class="span6">
+      {{ submission.director }}
+    </div>
+    <div class="span6">
+      <div class="control-group {% if form.director.errors %}error{% endif %}">
+	<span class="help-inline">{{ form.director.errors.as_inline }}</span>
+        {{ form.director }}
+      </div>
+    </div>
+  </div>
+
+  <h4>{% trans "Genre" %}</h4>
+  <div class="row">
+    <div class="span6">
+      {{ submission.genre }}
+    </div>
+    <div class="span6">
+      <div class="control-group {% if form.genre.errors %}error{% endif %}">
+	<span class="help-inline">{{ form.genre.errors.as_inline }}</span>
+        {{ form.genre }}
+      </div>
+    </div>
+  </div>
+
+  <h4>{% trans "Synopsis" %}</h4>
+  <div class="row">
+    <div class="span6">
+      {{ submission.synopsis|linebreaksbr }}
+    </div>
+    <div class="span6">
+      <div class="control-group {% if form.synopsis.errors %}error{% endif %}">
+	<span class="help-inline">{{ form.synopsis.errors.as_inline }}</span>
+        {{ form.synopsis }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="span6 offset6">
+      <span class="pull-right">
+	<button class="btn btn-primary" type="submit">{% trans "Submit" %}</button>
+	  <a href="{% url cpm2014:translation_details submission.id lang %}" class="btn">{% trans 'Cancel' %}</a>
+      <span>
+    </div>
+  </div>
+</form>
+{% endblock %}

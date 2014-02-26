@@ -26,6 +26,7 @@ from hvad.utils import get_translation_aware_manager
 
 import openpyxl
 
+from apps.cpm2014 import constants
 from apps.cpm2014.models import Submission, Prescreening, NewsEntry
 from apps.cpm2014.forms import FieldsForm
 
@@ -51,7 +52,8 @@ class PreviewFilter(admin.SimpleListFilter):
 class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
-                    'display_facts', 'display_comment', 'display_extra_data']
+                    'display_facts', 'display_comment',
+                    'display_extra_data', 'display_translation']
     save_on_top = True
 
     fieldsets = [
@@ -105,6 +107,7 @@ class SubmissionAdmin(admin.ModelAdmin):
     def queryset(self, request):
         qs = Submission.objects.all().order_by('-id')
         qs = qs.annotate(num_prescreenings=Count('prescreening'))
+        qs = qs.prefetch_related('submissiontranslation_set')
         return qs
 
     def get_urls(self):
@@ -154,6 +157,27 @@ class SubmissionAdmin(admin.ModelAdmin):
             return 'error'
     display_extra_data.short_description = _('Extra data')
     display_extra_data.allow_tags = True
+
+    def display_translation(self, obj):
+        langs_set = {
+            translation.language for translation in \
+            obj.submissiontranslation_set.all()
+        }
+
+        def get_links():
+            for lang_code, _lang_name in constants.TRANSLATION_LANGUAGES:
+                url = reverse('cpm2014:translation_details',
+                              args=[obj.id, lang_code])
+
+                html = '<a href="%s">%s</a>' % (url, lang_code)
+                if lang_code in langs_set:
+                    yield html
+                else:
+                    yield '<strike>%s</strike>' % html
+
+        return ' '.join(get_links())
+    display_translation.short_description = _(u'Translation')
+    display_translation.allow_tags = True
 
     def display_facts(self, obj):
         fields = ['comment_email_sent', 'comment_film_received',

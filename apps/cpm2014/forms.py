@@ -4,7 +4,7 @@ from django.forms.util import ErrorList
 
 from form_utils.forms import BetterModelForm
 
-from apps.cpm2014.models import Submission
+from apps.cpm2014.models import Submission, SubmissionTranslation
 from validators import validate_checked
 
 
@@ -96,3 +96,13 @@ class FieldsForm(forms.Form):
             data, files, auto_id, prefix, initial, error_class,
             label_suffix, empty_permitted
         )
+
+
+class SubmissionTranslationForm(forms.ModelForm):
+    class Meta:
+        model = SubmissionTranslation
+        fields = ['title', 'genre', 'synopsis', 'director']
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('error_class', InlineErrorList)
+        super(SubmissionTranslationForm, self).__init__(*args, **kwargs)
