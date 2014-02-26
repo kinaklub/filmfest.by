@@ -13,8 +13,8 @@
   {% for title, original, translated in data %}
   <h3>{{ title }}</h3>
   <div class="row">
-    <div class="span6">{{ original}}</div>
-    <div class="span6">{{ translated }}</div>
+    <div class="span6">{{ original|linebreaksbr }}</div>
+    <div class="span6">{{ translated|linebreaksbr }}</div>
   </div>
   {% endfor %}
 
