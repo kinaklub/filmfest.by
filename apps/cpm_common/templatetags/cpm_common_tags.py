@@ -72,12 +72,19 @@ def mainmenu(request):
     parts = request.get_full_path().split('/', 2)
     path = parts[2] if len(parts) > 2 else ''
 
-    lang_url = '/%%s/%s' % path
-    languages = [(code, name, lang_url % code, code == cur_lang) for code, name in [
-        ('en', 'English'),
-        ('ru', 'Русский'),
-        ('be', 'Беларуская'),
-    ]]
+    lang_url = lambda code: '/%s/%s' % (code, path)
+    languages = [
+        (
+            code,
+            name,
+            lang_url(code),
+            code == cur_lang
+        ) for code, name in [
+            ('en', u'English'),
+            ('ru', u'Русский'),
+            ('be', u'Беларуская'),
+        ]
+    ]
 
     mainmenu_items = []
     for title, url, children in get_mainmenu_items():
