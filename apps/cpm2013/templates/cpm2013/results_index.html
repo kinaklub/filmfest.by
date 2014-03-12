@@ -1,0 +1,551 @@
+{% load i18n cpm_common_tags piwik_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% trans 'как это было' %} - Cinema Perpetuum Mobile 2013
+    </title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+    <!-- favicon -->
+    <link rel="icon" type="image/ico" href="{{ STATIC_URL }}favicon.ico"/>
+
+    <!-- styles -->
+    <link href="{{ STATIC_URL }}cpm2013/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}cpm2013/styles.css?v=7" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+    </script>
+    <script src="{{ STATIC_URL }}cpm2013/bootstrap/js/bootstrap.min.js">
+    </script>
+
+
+</head>
+
+<body>
+<!-- Header block -->
+<div id="header-container" class="container">
+
+    <a href="{% url cpm2013:index %}">
+        <img src="{{ STATIC_URL }}cpm2013/logo2013.png" height="150px" alt="CPM filmfest"/>
+    </a>
+    <a id="header-call" href="{% url cpm2013:index %}">
+        <div id="line1">
+            {% trans "January, 12-20" %}
+        </div>
+        <div id="line2">
+            {% trans "planet Earth" %}
+        </div>
+    </a>
+</div>
+
+<!-- Menu block -->
+<div class="container cpm2013">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                {% mainmenu request %}
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
+</div>
+<!-- Body content block -->
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="span9 yellow">
+            <h2 id="intro">{% trans 'Вступление' %}</h2>
+            <p class="foreworld">
+                {%  trans 'Международный фестиваль короткометражного кино Cinema Perpetuum Mobile - 2013 прошел еще раз.Мы продолжили наши эксперименты с площадками и местами показов: на протяжении 9 дней показы происходили на 8 площадках Минска и одновременно в 10 городах Беларуси, а показы специальной международной программы получилось провести в 15 странах мира.' %}
+            </p>
+
+            <p class="foreworld">
+                {%  trans 'В СРМ - 2013 приняло участие больше 320 фильмов из более чем 40 странах мира. Конкурсная программа состояла из 24 лент, а еще 60 попали в тематические внеконкурсные показы, которые были разбиты на 16 программ.' %}
+            </p>
+
+            <p class="foreworld">
+                {%  trans 'В 2013 году мы продолжили выстраивать нашу партнерскую сеть и поддержали процесс диалога между киногруппами Беларуси и её соседями, так и всего мира.' %}
+            </p>
+
+            <h2 id="winners">{% trans 'Победители' %}</h2>
+            <!-- start of winners block-->
+            <table class="results table table-bordered table-condensed table-hover table-striped">
+                <thead>
+                <tr>
+                    <td> {% trans 'Номинация' %} </td>
+                    <td> {% trans 'Кадр' %} </td>
+                    <td> {% trans 'Номинация' %} </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Гран-при' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/eskimo_puss.png" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Эскимосский поцелуй' %} </span><br><span class="film_director"> {% trans 'Карин Брэк (Швеция, 2012)' %} </span><br><span class="film_duration"> {% trans 'Драма/ 13 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Сын Изы в коме после аварии. Мы следуем за ней через боль и страх, когда она идет к чему-то иному. ' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Номинация Perpetuum amor' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/noise.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Шум ' %} </span><br><span class="film_director"> {% trans 'Татьяна и Ольга Полиектовы (Россия, Санкт-Петербург, 2012)' %} </span><br><span class="film_duration"> {% trans 'Драма/ 10 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Фильм о человеке, шумные мысли которого, мешали ему найти свое счастье.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Номинация Perpetuum adversi' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/revolution_rekjavik.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Революция в Рейкьявике' %} </span><br><span class="film_director"> {% trans 'Изольд Уггадоттир (Исландия, 2012)' %} </span><br><span class="film_duration"> {% trans 'Драма/ 19 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Из-за коллапса исландской экономики Гудфинна (которой 58 лет), восстает против кризиса, чтобы сохранить собственное достоинство.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Номинация Perpetuum arts' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/snepowina.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Нить сновидения' %} </span><br><span class="film_director"> {% trans 'Марта Пайек (Польша, Лодзь, 2011)' %} </span><br><span class="film_duration"> {% trans 'Драма /14 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Фильм “Нить сновидения” раскрывает тему сна. Сон — это место встречи мира цела и разума; это неуловимо для нас и тяжело распозноваемо.  Сны переносят нас в мир, где правилы изменчивы, в то время как Реальный мир, правила которого, очевидно, мы знаем, кажется нам лишенным логики.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Номинация Perpetuum mobile' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/mama.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Мама' %} </span><br><span class="film_director"> {% trans 'Дмитрий Суржиков (Украина, г. Одесса, 2011)' %} </span><br><span class="film_duration"> {% trans 'Драма/ триллер/ 15 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Дети вырастают, и у них начинается своя жизнь. Зачастую это происходит вдали от родного дома. Одиночество и старость — вот что ждет нашу героиню, Маму. Весь ее мир — это однокомнатная квартирка в старом доме, с видом на стройку новой многоэтажки, кроссворды и телевизор. Однажды сосед Мамы просит присмотреть ее за его питомцем — игуаной, которая заменяет ей ребенка. ' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Номинация Perpetuum vita' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/willy.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Висельник' %} </span><br><span class="film_director"> {% trans 'Бартош Круглик (Польша, Варшава, 2012)' %} </span><br><span class="film_duration"> {% trans 'Фантастика, черная комедия/ 15 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Что вы будете делать, если Смерть неожиданно посетит вас? Может ли ваша жизнь быть выторгована в карточной игре? Черная комедия.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Лучший белорусский фильм' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/Horad.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'City' %} </span><br><span class="film_director"> {% trans 'Андрей Баджи Токинданг (Беларусь, Минск, 2012)' %} </span><br><span class="film_duration"> {% trans 'Боевик, пародия, триллер, ужасы/ 4 минуты' %} </span><br><br>
+                        <p class="film_description"> {% trans 'События разворачиваются в столице Республики Беларусь, городе Минске. Музыка группы &quot;RECHA&quot; превращает свирепствующих в городе зомби в обычных людей, что символизирует силу влияния искусства на общество. В финале клипа музыканты уезжают спасать своим творчеством другие города.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Лучший фильм в секции урбанистики' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/squat.jpe" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Сквот — город принадлежит нам' %} </span><br><span class="film_director"> {% trans 'Кристоф Коэльо  (Франция, 2011)' %} </span><br><span class="film_duration"> {% trans 'Документальный/ 94 мин' %} </span><br><br>
+                        <p class="film_description"> {% trans 'История барселонской сети «Miles de Viviendas» (Тысячи домов) — разношерстной группы активистов, которая решительно реагирует на спекуляцию недвижимостью в своем городе: с 2002 г. они вламываются в пустующие квартиры и переделывают их под уютные жилища.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Приз зрительских симпатий' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/82.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans '82' %} </span><br><span class="film_director"> {% trans 'Калум Макдиармид (Великобритания, Лондон, 2012)' %} </span><br><span class="film_duration"> {% trans 'Драма, триллер/ 6 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Почтальон (актер Ник Моран) позволяет нам проникнуть в свой темный мир в тихом пригороде. ' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Приз зрительских симпатий (Минск, Могилев)' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/eskimo_puss.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Эскимосский поцелуй' %} </span><br><span class="film_director"> {% trans 'Карин Брэк (Швеция, 2012)' %} </span><br><span class="film_duration"> {% trans 'Драма/ 13 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Сын Изы в коме после аварии. Мы следуем за ней через боль и страх, когда она идет к чему-то иному. ' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Приз зрительских симпатий (Минск, Могилев)' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/Circus.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Circus' %} </span><br><span class="film_director"> {% trans 'Пабло Ремон (Испания, Мадрид, 2011)' %} </span><br><span class="film_duration"> {% trans 'Комедия/ 8 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Скамейка в парке. Два сотрудника, уволенных из-за экономического кризиса. Революционная идея поможет решить проблему неопределенного будущего.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Приз зрительских симпатий (Лондон)' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/simple_things.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Простыя рэчы' %} </span><br><span class="film_director"> {% trans 'Артем Лобач (Беларусь, Борисов, 2012)' %} </span><br><span class="film_duration"> {% trans 'Документальный/ 11 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Кто такой “белоруский мужик”? Этот фильм про белорусского героя от сохи. Если понять и услышать героя фильма, тогда можно приблизится к пониманию души простого белоруса. ' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Приз зрительских симпатий Джорджтауна (Малайзия)' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/kirland.jpg" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Кирляндия' %} </span><br><span class="film_director"> {% trans 'Илья Божко (Беларусь, Минск, 2012)' %} </span><br><span class="film_duration"> {% trans 'Сатира, фантастическая антутопия/7 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Политическая сатира, фантастическая антиутопия в классической эстетике немого кинематографа.' %} </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="film_prize"> {% trans 'Приз зрительских симпатий  Тирасполя (Молдова) и города Клуй (Румыния)' %} </span></td>
+                    <td><img src="{{ STATIC_URL }}cpm2013/film_stills/second_wind.JPG" class="film_still"></td>
+                    <td><span class="film_title"> {% trans 'Второе дыхание' %} </span><br><span class="film_director"> {% trans 'Сергей Цысс (Россия, Москва, 2012)' %} </span><br><span class="film_duration"> {% trans 'Научная фантастика/ 7 минут' %} </span><br><br>
+                        <p class="film_description"> {% trans 'Каждый день Он должен сделать новый цветок из алюминиевой банки и посадить его в сухую землю. В этом смысл его существования, ведь в мире больше ничего не осталось, кроме металлического шелеста цветов апокалипсиса.' %} </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <div class="span3 facts yellow">
+            <div class="fact underborder">
+                <strong>2013</strong>
+                {% trans 'январь' %}
+            </div>
+            <div class="fact underborder">
+                <strong>8</strong>
+                {% trans 'дней' %}
+            </div>
+            <div class="fact underborder">
+                <strong>42</strong>
+                {% trans 'стран' %}
+            </div>
+            <div class="fact underborder">
+                <strong>320</strong>
+                {% trans 'участников' %}
+            </div>
+            <div class="fact underborder">
+                <strong>$500</strong>
+                {% trans 'бюджет' %}
+            </div>
+            <div class="fact underborder">
+                <strong>9</strong>
+                {% trans 'членов жюри' %}
+            </div>
+            <div class="fact underborder">
+                <strong>150</strong>
+                {% trans 'волонтера' %}
+            </div>
+            <div class="fact">
+                <strong>8</strong>
+                {% trans 'площадок' %}
+            </div>
+            <div class="fact">
+                <strong>
+                    8
+                </strong>
+                {% trans 'городов в Беларуси' %}
+            </div>
+            <div class="fact">
+                <strong>
+                    15
+                </strong>
+                {% trans 'стран-участников <br/> междунарожных показов' %}
+            </div>
+        </div>
+    </div>
+    <h2 id="jury">{% trans 'Жюри' %}</h2>
+    <div class="row">
+    <ul class="jury">
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/mcabee300.jpg);" href="#mcabee" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Кори Макеби ( США ) ' %} </h4> {% trans 'Режиссер' %}
+        </div>
+        <div tabindex="-1" id="mcabee" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Кори Макеби(США)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/mcabee300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Кори Макеби(США)' %} </h4>
+                        <article class="jury_details-text"><p> {% trans 'Кори Макеби родом из Сан-Франциско, штат Калифорния.<br/>' %} </p>
+                            <p> {% trans 'Последние 12 лет живет в Нью-Йорке.' %} </p>
+                            <p> {% trans ' Он писатель, режиссер, актер и композитор таких фильмов, как "Американский астронавт" (2001) и "Stingray Sam" (2009).' %} </p>
+                            <p> {% trans ' В числе его ранних выступлений - роль Понтия Пилата в мюзикле "Jesus Christ Superstar". Его фильмы получили широкое международное признание. Как независимый режиссер и по своей работе в альтернативных формах самопроката, Кори Макеби проводил мастер-классы и читал лекции в университетах и ​​симпозиумах по всему миру.' %} </p>
+                            <p> {% trans ' В настоящее время Макеби работает над коллекцией некоммерческих полнометражных и короткометражных фильмов.' %} </p></article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/lisangvu300.jpg);" href="#lisangvu" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Ли Санг Ву ( Южная Корея ) ' %} </h4> {% trans 'Режиссер, актер, сценарист, продюссер' %}
+        </div>
+        <div tabindex="-1" id="lisangvu" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Ли Санг Ву(Южная Корея)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/lisangvu300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Ли Санг Ву(Южная Корея)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Режиссер, актер, сценарист, продюссер ("Барби", "Моя мать- шлюха", "Мой отец - пес", "Пожар в аду"). Его фильмы участвовали в и выигрывали награды многих международных фестивалей. Лу Санг Ву работал в операторской команде картины "Дыхание" и в режиссерской команде "Время", снятые Ким Ки-Дуком. Профессор режиссуры университета Кёнгки.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/karsten300.jpg);" href="#karsten" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Карстен Вебер  ( Германия ) ' %} </h4> {% trans 'Режиссер, творческий руководитель киногруппы “Chaos”' %}
+        </div>
+        <div tabindex="-1" id="karsten" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Карстен Вебер (Германия)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/karsten300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Карстен Вебер (Германия)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Режиссер, творческий руководитель киногруппы “Chaos”' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/pierre300.jpg);" href="#pierre" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Пьер-Люк Вайянкур ( Канада ) ' %} </h4> {% trans 'Режиссер, со-основатель Института экспериментального кино' %}
+        </div>
+        <div tabindex="-1" id="pierre" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Пьер-Люк Вайянкур(Канада)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/pierre300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Пьер-Люк Вайянкур(Канада)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Режиссер, создатель глубоких работ, сочетающих в себе мифологию и литургию, Пьер-Люк Вайянкур считает, что в кино проявляются антропологические  и иконоборческие мотивы. Он выступает как режиссер фильмов, создает видео-инсталляции, используя проекцию как средство выхода за границы реальности. Со-основатель Института экспериментального кино, он выступил как инициатор Симпозиума Metal Machine Cinema в Канаде. Кроме того, он курировал многочисленные программы, которые были представлены в Музее современного искусства в Загребе, галерее Bunkier Sztuki в Кракове, Центре современного  искусства Art Ujazdów Castle, а также многочисленные оффлайн-сообщества и андеграундный киноклуб.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/gil300.jpg);" href="#gil" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Мацей Гиль ( Польша ) ' %} </h4> {% trans 'Историк кино, президент Польской Федерации киноклубов' %}
+        </div>
+        <div tabindex="-1" id="gil" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Мацей Гиль(Польша)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/gil300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Мацей Гиль(Польша)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Родился в Кракове в 1981 г. Историк кино, организатор различных киномероприятий, менеджер в сфере кинопроизводства, президент Польской Федерации киноклубов, представитель киноклубов Центральной и Восточной Европы в Исполнительном комитете Международной федерации киноклубов, арт-директор кинофестиваля ‘Kino na Granicy’ (Польша-Чехия), соорганизатор Летней Киноакадемии (Letnia Akademia Filmowa, Звежинец, Польша), международного кинофестиваля «Европейский экспресс» (Киев, Украина) и других кинофестивалей. Руководит киноклубом DKF Rozpięci в г. Краков. В качестве члена жюри участвовал в Международном кинофестивале в Карловых Варах, Польском кинофестивале в Гдыне, Краковском кинофестивале, кинофестивале в Циттау (Германия), Международном кинофестивале Jeden svet (Братислава), Международном кинофестивале Etiuda&Anima (Краков). Живет и работает в Центральной Европе.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/rubin300.jpg);" href="#rubin" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Джон Рубин ( CША ) ' %} </h4> {% trans 'Преподаватель, директор Центра онлайн обучения (COIL) при Нью-Йоркском университете (SUNY)' %}
+        </div>
+        <div tabindex="-1" id="rubin" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Джон Рубин(CША)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/rubin300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Джон Рубин(CША)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Директор Центра совместного онлайн обучения (COIL) при Нью-Йоркском университете (SUNY). Профессор в SUNY Purchase College, преподавал кино и новые медиа, разработал кросс-культурный видеокурс, в рамках которого студенты SUNY создавали фильмы совместно со студентами, находящимися в Турции, Мексике, Беларуси и Германии, с помощью Интернета. Стипендиат Фонда  Гуггенхайма, Национального фонда искусств, Фонда Форда и программы Фулбрайт. Его собственные работы были представлены в Музее современного искусства (MOMA) и Музее американского искусства Уитни в Нью-Йорке. Он наиболее известен своим проектом Плавучий кинотеатр (Floating Cinema) - хореографическим действом из образов, движущихся ночью по воде.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/bohdana300.jpg);" href="#bohdana" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Богдана Смирнова  ( Украина ) ' %} </h4> {% trans 'Независимый режиссер и сценарист.' %}
+        </div>
+        <div tabindex="-1" id="bohdana" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Богдана Смирнова (Украина)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/bohdana300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Богдана Смирнова (Украина)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Фильмы Богданы Смирновой побывали почти на 200 показах во многих странах мира, в том числе на фестивалях Роттердам, Клермон-Ферран и Сламденс, и получили почти 20 наград. В течение семи лет ее фильм «Бумажные хлопоты» демонстрировался во французских кинотеатрах. В 2010 году Богдана окончила престижную магистерскую программу по специальности кинорежиссер в Школе Искусств Тиш (Tisch), что в Нью-Йоркском университете. Она также стала первой украинкой, которая попала в престижную Резиденцию Каннского кинофестиваля. В рамках Резиденции Богдана сейчас работает над своей первой полнометражной кинолентой "Манжетка".' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/krasikov300.jpg);" href="#krasikov" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Сергей Красиков ( США ) ' %} </h4> {% trans 'Продюсер, оператор, режиссер.' %}
+        </div>
+        <div tabindex="-1" id="krasikov" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Сергей Красиков(США)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/krasikov300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Сергей Красиков(США)' %} </h4>
+                        <article class="jury_details-text"><p> {% trans 'Сергей Красиков родился в  Минске. В 2004 г., после 2 лет сотрудничества с немецким документальным режиссером Каролой Риттер и легендой американского Движения за гражданские права 1960-х годов Бобом Зеллнером, обосновался в Бруклине и вплотную занялся кинопроизводством. В качестве продюсера, главного оператора, режиссера Сергей реализовал десятки проектов – документальные и независимые игровые картины, концептуальные арт-фильмы и инсталляции. Регулярно сотрудничает с театрами, музыкантами и танцевальными группами. Основные сферы личного и профессионального интереса Сергея – экология, социальная справедливость и искусство.' %} </p>
+                            <p> {% trans 'Многие фильмы Сергея были отмечены призами на престижных кинофестивалях в разных странах мира.' %} </p></article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/igrusha300.jpg);" href="#igrusha" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Юрий Игруша ( Беларусь ) ' %} </h4> {% trans 'Продюсер, режиссер, сценарист.' %}
+        </div>
+        <div tabindex="-1" id="igrusha" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Юрий Игруша(Беларусь)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/igrusha300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Юрий Игруша(Беларусь)' %} </h4>
+                        <article class="jury_details-text"><p> {% trans 'В 1988 г. открыл первую в Беларуси частную видеостудию. Первым организовывал показы белорусского видео-арта на многичисленных фестивалях в Голландии, Германии, Дании, Швеции, России, Польше, Латвии.         Работал Генеральным продюсером телеканала ОНТ, компаний «Око», «Телефильм».' %} </p>
+                            <p> {% trans ' Лауреат и призер многочисленных международных кинотелефестивалей. В настоящее время - директор РУП «Белорусский видеоцентр».' %} </p></article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/ivanov300.jpg);" href="#ivanov" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Павел Иванов  ( Беларусь ) ' %} </h4> {% trans 'Режиссер, профессор Белорусской государственной академии искусств' %}
+        </div>
+        <div tabindex="-1" id="ivanov" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Павел Иванов (Беларусь)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/ivanov300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Павел Иванов (Беларусь)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Работал главным режиссером программ для молодежи на Белорусском телевидении, снял более тысячи телевизионных программ, очерков, портретов, документальных фильмов. Ныне декан факультета экранных искусств, профессор кафедры режиссуры кино и телевидения Белорусской государственной академии искусств, художественный  руководитель творческой мастерской режиссуры ТВ.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/sidorenko300.jpg);" href="#sidorenko" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Антон Сидоренко ( Беларусь ) ' %} </h4> {% trans 'Кинокритик, журналист, обозреватель в сфере кино.' %}
+        </div>
+        <div tabindex="-1" id="sidorenko" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Антон Сидоренко(Беларусь)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/sidorenko300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Антон Сидоренко(Беларусь)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Антон Сидоренко, журналист, обозреватель в сфере кино. Родился и живет в Минске. Застал эпоху кино в кинотеатрах. Пришел в журналистику в конце существования ее традиционной формы. Автор одного за самых долго существующих блогов в белорусском интернете «КиноЧтиво» (kinopark.by), а также множества печатных изданий, в том числе - «Белорусская Деловая газета», «Белорусская газета», «Культура», «Искусство», «Обозреватель». Автор программ и ведущий пяти сезонов клуба «Феномены кино» в минском кинотеатре «Ракета». Бывалый сотрудник Музея истории белорусского кино.Любимый режиссер - Микеланджело Антониони. Сфера интересов на сегодняшний день - документалистика.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/demianova300.jpg);" href="#demianova" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Ирина Демьянова ( Беларусь ) ' %} </h4> {% trans 'Преподаватель, программный директор международного кинофестиваля «Лiстапад», редактор студии «Летопись» Национальной киностудии «Беларусьфильм».' %}
+        </div>
+        <div tabindex="-1" id="demianova" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Ирина Демьянова(Беларусь)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/demianova300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Ирина Демьянова(Беларусь)' %} </h4>
+                        <article class="jury_details-text"><p> {% trans 'Окончила филологический факультет  БГУ в Минске и киноведческий факультет ВГИКа в Москве. Работала редактором в Белтелерадиокомпании, главным редактором в «Белорусском видеоцентре», главным редактором по спецпроектам МТРК «Мир», сегодня работает ведущим редактором студии «Летопись» Национальной киностудии «Беларусьфильм». С  первого конкурса в 2007 году и по настоящее время является программным директором конкурсов документального кино Минского международного кинофестиваля «Лiстапад». ' %} </p>
+                            <p> {% trans 'Преподает в Институте журналистики БГУ и Белорусской государственной академии искусств. ' %} </p>
+                            <p> {% trans 'Член союза кинематографистов.' %} </p></article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    <li class="jury_member span4"><a style="background-image:url({{ STATIC_URL }}cpm2013/jury/dashuk300.jpg);" href="#dashuk" data-toggle="modal" class="jury_photo"></a>
+        <div class="name_wrp">
+            <h4 class="jury_name"> {% trans 'Ольга Дашук ( Беларусь ) ' %} </h4> {% trans 'Киновед, режиссер, преподаватель.' %}
+        </div>
+        <div tabindex="-1" id="dashuk" class="jury_details hide fade modal">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" area-hidden="true" class="close">×</button>
+                <h3> {% trans 'Ольга Дашук(Беларусь)' %} </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="span4"><img src="{{ STATIC_URL }}cpm2013/jury/dashuk300.jpg" class="jury-details-photo"></div>
+                    <div class="span6">
+                        <h4 class="jury_name-details"> {% trans 'Ольга Дашук(Беларусь)' %} </h4>
+                        <article class="jury_details-text"> {% trans 'Окончила Белорусскую академию искусств (1994), аспирантуру Института искусствоведения, этнографии и фольклора Национальной академии наук Беларуси (1998). Стажировалась в продюсерской мастерской при Амстердамском летнем университете (Нидерланды, 1993), в центре FOJO (Кальмар, Швеция, 1999), на факультете Медиа и коммуникации» Academia Istropolitana Nova (Братислава, Словакия, 2000). Работает режиссером на киностудии «Беларусьфильм». Преподает в Белорусском коллегиуме.' %} </article>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" area-hidden="true" class="btn"> {% trans 'Закрыть' %} </button>
+            </div>
+        </div>
+    </li>
+    </ul>
+    </div>
+
+</div>
+</body>
+</html>

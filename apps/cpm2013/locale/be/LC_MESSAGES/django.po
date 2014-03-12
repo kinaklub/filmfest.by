@@ -1,51 +1,51 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Uter Ben, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-11 01:32+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2014-02-15 14:45+0300\n"
+"PO-Revision-Date: 2014-02-15 15:44+0300\n"
+"Last-Translator: Uter Ben\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: admin.py:33
 msgid "Previewed"
-msgstr ""
+msgstr "Адгледжана"
 
-#: admin.py:39 constants.py:7 constants.py:13
+#: admin.py:39 constants.py:10 constants.py:16
 msgid "Yes"
 msgstr "Так"
 
-#: admin.py:40 constants.py:8 constants.py:14
+#: admin.py:40 constants.py:11 constants.py:17
 msgid "No"
 msgstr "Не"
 
 #: admin.py:62
 msgid "Comments"
-msgstr ""
+msgstr "Каментары"
 
 #: admin.py:72
 msgid "Dates"
-msgstr ""
+msgstr "Даты"
 
-#: admin.py:76 forms.py:51 pdf.py:13
+#: admin.py:76 forms.py:51 pdf.py:15
 msgid "Film"
 msgstr "Фільм"
 
-#: admin.py:82 forms.py:57 pdf.py:17
+#: admin.py:82 forms.py:57 pdf.py:19
 msgid "Director"
 msgstr "Рэжысёр"
 
-#: admin.py:87 forms.py:62 pdf.py:20
+#: admin.py:87 forms.py:62 pdf.py:22
 msgid "Producer"
 msgstr "Прадусар"
 
@@ -53,1071 +53,1071 @@ msgstr "Прадусар"
 msgid "Credits"
 msgstr "Удзельнікі"
 
-#: admin.py:95 forms.py:72 pdf.py:23
+#: admin.py:95 forms.py:72 pdf.py:25
 msgid "Applicant"
 msgstr "Заяўнік"
 
-#: admin.py:99 forms.py:77 pdf.py:105
+#: admin.py:99 forms.py:77 pdf.py:107
 msgid "Permissions"
 msgstr "Правы і дазволы"
 
 #: admin.py:142
 msgid "Download link"
-msgstr ""
+msgstr "Спасылка для запампоўкі"
 
 #: admin.py:166 models.py:116
 msgid "Comment"
-msgstr ""
+msgstr "Каментар"
 
 #: admin.py:171
 msgid "Country"
-msgstr ""
+msgstr "Краіна"
 
 #: admin.py:186
 msgid "Facts"
-msgstr ""
+msgstr "Факты"
 
 #: admin.py:341 admin.py:351 models.py:247 models.py:258
 msgid "Title"
-msgstr ""
+msgstr "Назва"
 
 #: admin.py:365
 msgid "Template"
-msgstr ""
+msgstr "Шаблон"
 
-#: constants.py:12
+#: constants.py:15
 msgid "Maybe"
 msgstr "Можа быць"
 
-#: constants.py:18
+#: constants.py:21
 msgid "Fiction"
 msgstr "Гульнявы"
 
-#: constants.py:19
+#: constants.py:22
 msgid "Animation"
 msgstr "Анімацыя"
 
-#: constants.py:20
+#: constants.py:23
 msgid "Documentary"
 msgstr "Дакументальны"
 
-#: constants.py:21
+#: constants.py:24
 msgid "Experimental"
 msgstr "Эксперыментальны"
 
-#: constants.py:22
+#: constants.py:25
 msgid "Musical video"
-msgstr ""
+msgstr "Музыкальнае відэа"
 
-#: constants.py:23
+#: constants.py:26
 msgid "Ecology"
 msgstr "Экалогія"
 
-#: constants.py:24
+#: constants.py:27
 msgid "Children"
 msgstr "Дзіцячы"
 
-#: constants.py:28
+#: constants.py:31
 msgid "festival website"
 msgstr "сайт фестывалю"
 
-#: constants.py:29
+#: constants.py:32
 msgid "Facebook"
-msgstr ""
-
-#: constants.py:30
-msgid "Twitter"
-msgstr ""
-
-#: constants.py:31
-msgid "vk.com"
-msgstr ""
-
-#: constants.py:32 models.py:285
-msgid "email"
-msgstr ""
+msgstr "Фэйсбук"
 
 #: constants.py:33
+msgid "Twitter"
+msgstr "Твітар"
+
+#: constants.py:34
+msgid "vk.com"
+msgstr "УКантакце"
+
+#: constants.py:35 models.py:285
+msgid "email"
+msgstr "імэйл"
+
+#: constants.py:36
 msgid "internet search"
 msgstr "пошук у сеціве"
 
-#: constants.py:34
+#: constants.py:37
 msgid "friends"
 msgstr "сябры"
 
-#: constants.py:35
+#: constants.py:38
 msgid "festivals database"
 msgstr "база фестываляў"
 
-#: constants.py:36
+#: constants.py:39
 msgid "I participated in CPM'2012"
 msgstr "Я быў удзельнікам CPM'2012"
 
-#: constants.py:37
+#: constants.py:40
 msgid "place of study"
 msgstr "месца вучобы"
 
-#: constants.py:38
+#: constants.py:41
 msgid "work"
 msgstr "праца"
 
-#: constants.py:39
+#: constants.py:42
 msgid "other"
 msgstr "іншае"
 
-#: constants.py:43
+#: constants.py:46
 msgid "Andorra"
-msgstr ""
+msgstr "Андора"
 
-#: constants.py:44
+#: constants.py:47
 msgid "United Arab Emirates"
-msgstr ""
+msgstr "Аб'яднаныя Арабскія Эміраты"
 
-#: constants.py:45
+#: constants.py:48
 msgid "Afghanistan"
 msgstr ""
 
-#: constants.py:46
+#: constants.py:49
 msgid "Antigua & Barbuda"
 msgstr ""
 
-#: constants.py:47
+#: constants.py:50
 msgid "Anguilla"
 msgstr ""
 
-#: constants.py:48
+#: constants.py:51
 msgid "Albania"
 msgstr ""
 
-#: constants.py:49
+#: constants.py:52
 msgid "Armenia"
 msgstr ""
 
-#: constants.py:50
+#: constants.py:53
 msgid "Netherlands Antilles"
 msgstr ""
 
-#: constants.py:51
+#: constants.py:54
 msgid "Angola"
 msgstr ""
 
-#: constants.py:52
+#: constants.py:55
 msgid "Antarctica"
 msgstr ""
 
-#: constants.py:53
+#: constants.py:56
 msgid "Argentina"
 msgstr ""
 
-#: constants.py:54
+#: constants.py:57
 msgid "American Samoa"
 msgstr ""
 
-#: constants.py:55
+#: constants.py:58
 msgid "Austria"
 msgstr ""
 
-#: constants.py:56
+#: constants.py:59
 msgid "Australia"
 msgstr ""
 
-#: constants.py:57
+#: constants.py:60
 msgid "Aruba"
 msgstr ""
 
-#: constants.py:58
+#: constants.py:61
 msgid "Azerbaijan"
 msgstr ""
 
-#: constants.py:59
+#: constants.py:62
 msgid "Bosnia and Herzegovina"
 msgstr ""
 
-#: constants.py:60
+#: constants.py:63
 msgid "Barbados"
 msgstr ""
 
-#: constants.py:61
+#: constants.py:64
 msgid "Bangladesh"
 msgstr ""
 
-#: constants.py:62
+#: constants.py:65
 msgid "Belgium"
 msgstr ""
 
-#: constants.py:63
+#: constants.py:66
 msgid "Burkina Faso"
 msgstr ""
 
-#: constants.py:64
+#: constants.py:67
 msgid "Bulgaria"
 msgstr ""
 
-#: constants.py:65
+#: constants.py:68
 msgid "Bahrain"
 msgstr ""
 
-#: constants.py:66
+#: constants.py:69
 msgid "Burundi"
 msgstr ""
 
-#: constants.py:67
+#: constants.py:70
 msgid "Benin"
 msgstr ""
 
-#: constants.py:68
+#: constants.py:71
 msgid "Bermuda"
 msgstr ""
 
-#: constants.py:69
+#: constants.py:72
 msgid "Brunei Darussalam"
 msgstr ""
 
-#: constants.py:70
+#: constants.py:73
 msgid "Bolivia"
 msgstr ""
 
-#: constants.py:71
+#: constants.py:74
 msgid "Brazil"
 msgstr ""
 
-#: constants.py:72
+#: constants.py:75
 msgid "Bahama"
 msgstr ""
 
-#: constants.py:73
+#: constants.py:76
 msgid "Bhutan"
 msgstr ""
 
-#: constants.py:74
+#: constants.py:77
 msgid "Bouvet Island"
 msgstr ""
 
-#: constants.py:75
+#: constants.py:78
 msgid "Botswana"
 msgstr ""
 
-#: constants.py:76 templates/cpm2013/submit.html:57
+#: constants.py:79 templates/cpm2013/submit.html:57
 msgid "Belarus"
 msgstr ""
 
-#: constants.py:77
+#: constants.py:80
 msgid "Belize"
 msgstr ""
 
-#: constants.py:78
+#: constants.py:81
 msgid "Canada"
 msgstr ""
 
-#: constants.py:79
+#: constants.py:82
 msgid "Cocos (Keeling) Islands"
 msgstr ""
 
-#: constants.py:80
+#: constants.py:83
 msgid "Central African Republic"
 msgstr ""
 
-#: constants.py:81
+#: constants.py:84
 msgid "Congo"
 msgstr ""
 
-#: constants.py:82
+#: constants.py:85
 msgid "Switzerland"
 msgstr ""
 
-#: constants.py:83
+#: constants.py:86
 msgid "Ivory Coast"
 msgstr ""
 
-#: constants.py:84
+#: constants.py:87
 msgid "Cook Iislands"
 msgstr ""
 
-#: constants.py:85
+#: constants.py:88
 msgid "Chile"
 msgstr ""
 
-#: constants.py:86
+#: constants.py:89
 msgid "Cameroon"
 msgstr ""
 
-#: constants.py:87
+#: constants.py:90
 msgid "China"
 msgstr ""
 
-#: constants.py:88
+#: constants.py:91
 msgid "Colombia"
 msgstr ""
 
-#: constants.py:89
+#: constants.py:92
 msgid "Costa Rica"
 msgstr ""
 
-#: constants.py:90
+#: constants.py:93
 msgid "Cuba"
 msgstr ""
 
-#: constants.py:91
+#: constants.py:94
 msgid "Cape Verde"
 msgstr ""
 
-#: constants.py:92
+#: constants.py:95
 msgid "Christmas Island"
 msgstr ""
 
-#: constants.py:93
+#: constants.py:96
 msgid "Cyprus"
 msgstr ""
 
-#: constants.py:94
+#: constants.py:97
 msgid "Czech Republic"
 msgstr ""
 
-#: constants.py:95
+#: constants.py:98
 msgid "Germany"
 msgstr ""
 
-#: constants.py:96
+#: constants.py:99
 msgid "Djibouti"
 msgstr ""
 
-#: constants.py:97
+#: constants.py:100
 msgid "Denmark"
 msgstr ""
 
-#: constants.py:98
+#: constants.py:101
 msgid "Dominica"
 msgstr ""
 
-#: constants.py:99
+#: constants.py:102
 msgid "Dominican Republic"
 msgstr ""
 
-#: constants.py:100
+#: constants.py:103
 msgid "Algeria"
 msgstr ""
 
-#: constants.py:101
+#: constants.py:104
 msgid "Ecuador"
 msgstr ""
 
-#: constants.py:102
+#: constants.py:105
 msgid "Estonia"
 msgstr ""
 
-#: constants.py:103
+#: constants.py:106
 msgid "Egypt"
 msgstr ""
 
-#: constants.py:104
+#: constants.py:107
 msgid "Western Sahara"
 msgstr ""
 
-#: constants.py:105
+#: constants.py:108
 msgid "Eritrea"
 msgstr ""
 
-#: constants.py:106
+#: constants.py:109
 msgid "Spain"
 msgstr ""
 
-#: constants.py:107
+#: constants.py:110
 msgid "Ethiopia"
 msgstr ""
 
-#: constants.py:108
+#: constants.py:111
 msgid "Finland"
 msgstr ""
 
-#: constants.py:109
+#: constants.py:112
 msgid "Fiji"
 msgstr ""
 
-#: constants.py:110
+#: constants.py:113
 msgid "Falkland Islands (Malvinas)"
 msgstr ""
 
-#: constants.py:111
+#: constants.py:114
 msgid "Micronesia"
 msgstr ""
 
-#: constants.py:112
+#: constants.py:115
 msgid "Faroe Islands"
 msgstr ""
 
-#: constants.py:113
+#: constants.py:116
 msgid "France"
 msgstr ""
 
-#: constants.py:114
+#: constants.py:117
 msgid "France, Metropolitan"
 msgstr ""
 
-#: constants.py:115
+#: constants.py:118
 msgid "Gabon"
 msgstr ""
 
-#: constants.py:116
+#: constants.py:119
 msgid "United Kingdom (Great Britain)"
 msgstr ""
 
-#: constants.py:117
+#: constants.py:120
 msgid "Grenada"
 msgstr ""
 
-#: constants.py:118
+#: constants.py:121
 msgid "Georgia"
 msgstr ""
 
-#: constants.py:119
+#: constants.py:122
 msgid "French Guiana"
 msgstr ""
 
-#: constants.py:120
+#: constants.py:123
 msgid "Ghana"
 msgstr ""
 
-#: constants.py:121
+#: constants.py:124
 msgid "Gibraltar"
 msgstr ""
 
-#: constants.py:122
+#: constants.py:125
 msgid "Greenland"
 msgstr ""
 
-#: constants.py:123
+#: constants.py:126
 msgid "Gambia"
 msgstr ""
 
-#: constants.py:124
+#: constants.py:127
 msgid "Guinea"
 msgstr ""
 
-#: constants.py:125
+#: constants.py:128
 msgid "Guadeloupe"
 msgstr ""
 
-#: constants.py:126
+#: constants.py:129
 msgid "Equatorial Guinea"
 msgstr ""
 
-#: constants.py:127
+#: constants.py:130
 msgid "Greece"
 msgstr ""
 
-#: constants.py:128
+#: constants.py:131
 msgid "South Georgia and the South Sandwich Islands"
 msgstr ""
 
-#: constants.py:129
+#: constants.py:132
 msgid "Guatemala"
 msgstr ""
 
-#: constants.py:130
+#: constants.py:133
 msgid "Guam"
 msgstr ""
 
-#: constants.py:131
+#: constants.py:134
 msgid "Guinea-Bissau"
 msgstr ""
 
-#: constants.py:132
+#: constants.py:135
 msgid "Guyana"
 msgstr ""
 
-#: constants.py:133
+#: constants.py:136
 msgid "Hong Kong"
 msgstr ""
 
-#: constants.py:134
+#: constants.py:137
 msgid "Heard & McDonald Islands"
 msgstr ""
 
-#: constants.py:135
+#: constants.py:138
 msgid "Honduras"
 msgstr ""
 
-#: constants.py:136
+#: constants.py:139
 msgid "Croatia"
 msgstr ""
 
-#: constants.py:137
+#: constants.py:140
 msgid "Haiti"
 msgstr ""
 
-#: constants.py:138
+#: constants.py:141
 msgid "Hungary"
 msgstr ""
 
-#: constants.py:139
+#: constants.py:142
 msgid "Indonesia"
 msgstr ""
 
-#: constants.py:140
+#: constants.py:143
 msgid "Ireland"
 msgstr ""
 
-#: constants.py:141
+#: constants.py:144
 msgid "Israel"
 msgstr ""
 
-#: constants.py:142
+#: constants.py:145
 msgid "India"
 msgstr ""
 
-#: constants.py:143
+#: constants.py:146
 msgid "British Indian Ocean Territory"
 msgstr ""
 
-#: constants.py:144
+#: constants.py:147
 msgid "Iraq"
 msgstr ""
 
-#: constants.py:145
+#: constants.py:148
 msgid "Islamic Republic of Iran"
 msgstr ""
 
-#: constants.py:146
+#: constants.py:149
 msgid "Iceland"
 msgstr ""
 
-#: constants.py:147
+#: constants.py:150
 msgid "Italy"
 msgstr ""
 
-#: constants.py:148
+#: constants.py:151
 msgid "Jamaica"
 msgstr ""
 
-#: constants.py:149
+#: constants.py:152
 msgid "Jordan"
 msgstr ""
 
-#: constants.py:150
+#: constants.py:153
 msgid "Japan"
 msgstr ""
 
-#: constants.py:151
+#: constants.py:154
 msgid "Kenya"
 msgstr ""
 
-#: constants.py:152
+#: constants.py:155
 msgid "Kyrgyzstan"
 msgstr ""
 
-#: constants.py:153
+#: constants.py:156
 msgid "Cambodia"
 msgstr ""
 
-#: constants.py:154
+#: constants.py:157
 msgid "Kiribati"
 msgstr ""
 
-#: constants.py:155
+#: constants.py:158
 msgid "Comoros"
 msgstr ""
 
-#: constants.py:156
+#: constants.py:159
 msgid "St. Kitts and Nevis"
 msgstr ""
 
-#: constants.py:157
+#: constants.py:160
 msgid "Korea, Democratic People's Republic of"
 msgstr ""
 
-#: constants.py:158
+#: constants.py:161
 msgid "Korea, Republic of"
 msgstr ""
 
-#: constants.py:159
+#: constants.py:162
 msgid "Kuwait"
 msgstr ""
 
-#: constants.py:160
+#: constants.py:163
 msgid "Cayman Islands"
 msgstr ""
 
-#: constants.py:161
+#: constants.py:164
 msgid "Kazakhstan"
 msgstr ""
 
-#: constants.py:162
+#: constants.py:165
 msgid "Lao People's Democratic Republic"
 msgstr ""
 
-#: constants.py:163
+#: constants.py:166
 msgid "Lebanon"
 msgstr ""
 
-#: constants.py:164
+#: constants.py:167
 msgid "Saint Lucia"
 msgstr ""
 
-#: constants.py:165
+#: constants.py:168
 msgid "Liechtenstein"
 msgstr ""
 
-#: constants.py:166
+#: constants.py:169
 msgid "Sri Lanka"
 msgstr ""
 
-#: constants.py:167
+#: constants.py:170
 msgid "Liberia"
 msgstr ""
 
-#: constants.py:168
+#: constants.py:171
 msgid "Lesotho"
 msgstr ""
 
-#: constants.py:169
+#: constants.py:172
 msgid "Lithuania"
 msgstr ""
 
-#: constants.py:170
+#: constants.py:173
 msgid "Luxembourg"
 msgstr ""
 
-#: constants.py:171
+#: constants.py:174
 msgid "Latvia"
 msgstr ""
 
-#: constants.py:172
+#: constants.py:175
 msgid "Libyan Arab Jamahiriya"
 msgstr ""
 
-#: constants.py:173
+#: constants.py:176
 msgid "Morocco"
 msgstr ""
 
-#: constants.py:174
+#: constants.py:177
 msgid "Monaco"
 msgstr ""
 
-#: constants.py:175
+#: constants.py:178
 msgid "Moldova, Republic of"
 msgstr ""
 
-#: constants.py:176
+#: constants.py:179
 msgid "Madagascar"
 msgstr ""
 
-#: constants.py:177
+#: constants.py:180
 msgid "Marshall Islands"
 msgstr ""
 
-#: constants.py:178
+#: constants.py:181
 msgid "Mali"
 msgstr ""
 
-#: constants.py:179
+#: constants.py:182
 msgid "Mongolia"
 msgstr ""
 
-#: constants.py:180
+#: constants.py:183
 msgid "Myanmar"
 msgstr ""
 
-#: constants.py:181
+#: constants.py:184
 msgid "Macau"
 msgstr ""
 
-#: constants.py:182
+#: constants.py:185
 msgid "Northern Mariana Islands"
 msgstr ""
 
-#: constants.py:183
+#: constants.py:186
 msgid "Martinique"
 msgstr ""
 
-#: constants.py:184
+#: constants.py:187
 msgid "Mauritania"
 msgstr ""
 
-#: constants.py:185
+#: constants.py:188
 msgid "Monserrat"
 msgstr ""
 
-#: constants.py:186
+#: constants.py:189
 msgid "Malta"
 msgstr ""
 
-#: constants.py:187
+#: constants.py:190
 msgid "Mauritius"
 msgstr ""
 
-#: constants.py:188
+#: constants.py:191
 msgid "Maldives"
 msgstr ""
 
-#: constants.py:189
+#: constants.py:192
 msgid "Malawi"
 msgstr ""
 
-#: constants.py:190
+#: constants.py:193
 msgid "Mexico"
 msgstr ""
 
-#: constants.py:191
+#: constants.py:194
 msgid "Malaysia"
 msgstr ""
 
-#: constants.py:192
+#: constants.py:195
 msgid "Mozambique"
 msgstr ""
 
-#: constants.py:193
+#: constants.py:196
 msgid "Namibia"
 msgstr ""
 
-#: constants.py:194
+#: constants.py:197
 msgid "New Caledonia"
 msgstr ""
 
-#: constants.py:195
+#: constants.py:198
 msgid "Niger"
 msgstr ""
 
-#: constants.py:196
+#: constants.py:199
 msgid "Norfolk Island"
 msgstr ""
 
-#: constants.py:197
+#: constants.py:200
 msgid "Nigeria"
 msgstr ""
 
-#: constants.py:198
+#: constants.py:201
 msgid "Nicaragua"
 msgstr ""
 
-#: constants.py:199
+#: constants.py:202
 msgid "Netherlands"
 msgstr ""
 
-#: constants.py:200
+#: constants.py:203
 msgid "Norway"
 msgstr ""
 
-#: constants.py:201
+#: constants.py:204
 msgid "Nepal"
 msgstr ""
 
-#: constants.py:202
+#: constants.py:205
 msgid "Nauru"
 msgstr ""
 
-#: constants.py:203
+#: constants.py:206
 msgid "Niue"
 msgstr ""
 
-#: constants.py:204
+#: constants.py:207
 msgid "New Zealand"
 msgstr ""
 
-#: constants.py:205
+#: constants.py:208
 msgid "Oman"
 msgstr ""
 
-#: constants.py:206
+#: constants.py:209
 msgid "Panama"
 msgstr ""
 
-#: constants.py:207
+#: constants.py:210
 msgid "Peru"
 msgstr ""
 
-#: constants.py:208
+#: constants.py:211
 msgid "French Polynesia"
 msgstr ""
 
-#: constants.py:209
+#: constants.py:212
 msgid "Papua New Guinea"
 msgstr ""
 
-#: constants.py:210
+#: constants.py:213
 msgid "Philippines"
 msgstr ""
 
-#: constants.py:211
+#: constants.py:214
 msgid "Pakistan"
 msgstr ""
 
-#: constants.py:212
+#: constants.py:215
 msgid "Poland"
 msgstr ""
 
-#: constants.py:213
+#: constants.py:216
 msgid "St. Pierre & Miquelon"
 msgstr ""
 
-#: constants.py:214
+#: constants.py:217
 msgid "Pitcairn"
 msgstr ""
 
-#: constants.py:215
+#: constants.py:218
 msgid "Puerto Rico"
 msgstr ""
 
-#: constants.py:216
+#: constants.py:219
 msgid "Portugal"
 msgstr ""
 
-#: constants.py:217
+#: constants.py:220
 msgid "Palau"
 msgstr ""
 
-#: constants.py:218
+#: constants.py:221
 msgid "Paraguay"
 msgstr ""
 
-#: constants.py:219
+#: constants.py:222
 msgid "Qatar"
 msgstr ""
 
-#: constants.py:220
+#: constants.py:223
 msgid "Reunion"
 msgstr ""
 
-#: constants.py:221
+#: constants.py:224
 msgid "Romania"
 msgstr ""
 
-#: constants.py:222
+#: constants.py:225
 msgid "Russian Federation"
 msgstr ""
 
-#: constants.py:223
+#: constants.py:226
 msgid "Rwanda"
 msgstr ""
 
-#: constants.py:224
+#: constants.py:227
 msgid "Saudi Arabia"
 msgstr ""
 
-#: constants.py:225
+#: constants.py:228
 msgid "Solomon Islands"
 msgstr ""
 
-#: constants.py:226
+#: constants.py:229
 msgid "Seychelles"
 msgstr ""
 
-#: constants.py:227
+#: constants.py:230
 msgid "Sudan"
 msgstr ""
 
-#: constants.py:228
+#: constants.py:231
 msgid "Sweden"
 msgstr ""
 
-#: constants.py:229
+#: constants.py:232
 msgid "Singapore"
 msgstr ""
 
-#: constants.py:230
+#: constants.py:233
 msgid "St. Helena"
 msgstr ""
 
-#: constants.py:231
+#: constants.py:234
 msgid "Slovenia"
 msgstr ""
 
-#: constants.py:232
+#: constants.py:235
 msgid "Svalbard & Jan Mayen Islands"
 msgstr ""
 
-#: constants.py:233
+#: constants.py:236
 msgid "Slovakia"
 msgstr ""
 
-#: constants.py:234
+#: constants.py:237
 msgid "Sierra Leone"
 msgstr ""
 
-#: constants.py:235
+#: constants.py:238
 msgid "San Marino"
 msgstr ""
 
-#: constants.py:236
+#: constants.py:239
 msgid "Senegal"
 msgstr ""
 
-#: constants.py:237
+#: constants.py:240
 msgid "Somalia"
 msgstr ""
 
-#: constants.py:238
+#: constants.py:241
 msgid "Suriname"
 msgstr ""
 
-#: constants.py:239
+#: constants.py:242
 msgid "Sao Tome & Principe"
 msgstr ""
 
-#: constants.py:240
+#: constants.py:243
 msgid "El Salvador"
 msgstr ""
 
-#: constants.py:241
+#: constants.py:244
 msgid "Syrian Arab Republic"
 msgstr ""
 
-#: constants.py:242
+#: constants.py:245
 msgid "Swaziland"
 msgstr ""
 
-#: constants.py:243
+#: constants.py:246
 msgid "Turks & Caicos Islands"
 msgstr ""
 
-#: constants.py:244
+#: constants.py:247
 msgid "Chad"
 msgstr ""
 
-#: constants.py:245
+#: constants.py:248
 msgid "French Southern Territories"
 msgstr ""
 
-#: constants.py:246
+#: constants.py:249
 msgid "Togo"
 msgstr ""
 
-#: constants.py:247
+#: constants.py:250
 msgid "Thailand"
 msgstr ""
 
-#: constants.py:248
+#: constants.py:251
 msgid "Tajikistan"
 msgstr ""
 
-#: constants.py:249
+#: constants.py:252
 msgid "Tokelau"
 msgstr ""
 
-#: constants.py:250
+#: constants.py:253
 msgid "Turkmenistan"
 msgstr ""
 
-#: constants.py:251
+#: constants.py:254
 msgid "Tunisia"
 msgstr ""
 
-#: constants.py:252
+#: constants.py:255
 msgid "Tonga"
 msgstr ""
 
-#: constants.py:253
+#: constants.py:256
 msgid "East Timor"
 msgstr ""
 
-#: constants.py:254
+#: constants.py:257
 msgid "Turkey"
 msgstr ""
 
-#: constants.py:255
+#: constants.py:258
 msgid "Trinidad & Tobago"
 msgstr ""
 
-#: constants.py:256
+#: constants.py:259
 msgid "Tuvalu"
 msgstr ""
 
-#: constants.py:257
+#: constants.py:260
 msgid "Taiwan, Province of China"
 msgstr ""
 
-#: constants.py:258
+#: constants.py:261
 msgid "Tanzania, United Republic of"
 msgstr ""
 
-#: constants.py:259
+#: constants.py:262
 msgid "Ukraine"
 msgstr ""
 
-#: constants.py:260
+#: constants.py:263
 msgid "Uganda"
 msgstr ""
 
-#: constants.py:261
+#: constants.py:264
 msgid "United States Minor Outlying Islands"
 msgstr ""
 
-#: constants.py:262
+#: constants.py:265
 msgid "United States of America"
 msgstr ""
 
-#: constants.py:263
+#: constants.py:266
 msgid "Uruguay"
 msgstr ""
 
-#: constants.py:264
+#: constants.py:267
 msgid "Uzbekistan"
 msgstr ""
 
-#: constants.py:265
+#: constants.py:268
 msgid "Vatican City State (Holy See)"
 msgstr ""
 
-#: constants.py:266
+#: constants.py:269
 msgid "St. Vincent & the Grenadines"
 msgstr ""
 
-#: constants.py:267
+#: constants.py:270
 msgid "Venezuela"
 msgstr ""
 
-#: constants.py:268
+#: constants.py:271
 msgid "British Virgin Islands"
 msgstr ""
 
-#: constants.py:269
+#: constants.py:272
 msgid "United States Virgin Islands"
 msgstr ""
 
-#: constants.py:270
+#: constants.py:273
 msgid "Viet Nam"
 msgstr ""
 
-#: constants.py:271
+#: constants.py:274
 msgid "Vanuatu"
 msgstr ""
 
-#: constants.py:272
+#: constants.py:275
 msgid "Wallis & Futuna Islands"
 msgstr ""
 
-#: constants.py:273
+#: constants.py:276
 msgid "Samoa"
 msgstr ""
 
-#: constants.py:274
+#: constants.py:277
 msgid "Yemen"
 msgstr ""
 
-#: constants.py:275
+#: constants.py:278
 msgid "Mayotte"
 msgstr ""
 
-#: constants.py:276
+#: constants.py:279
 msgid "Yugoslavia"
 msgstr ""
 
-#: constants.py:277
+#: constants.py:280
 msgid "South Africa"
 msgstr ""
 
-#: constants.py:278
+#: constants.py:281
 msgid "Zambia"
 msgstr ""
 
-#: constants.py:279
+#: constants.py:282
 msgid "Zaire"
 msgstr ""
 
-#: constants.py:280
+#: constants.py:283
 msgid "Zimbabwe"
 msgstr ""
 
-#: constants.py:281
+#: constants.py:284
 msgid "Other"
 msgstr "Іншая"
 
@@ -1242,6 +1242,7 @@ msgid "Other credits"
 msgstr "Іншыя ўдзельнікі"
 
 #: models.py:90
+#, fuzzy, python-format
 msgid ""
 "Authorization to use excerpts of the film for promotion (max 10% of the "
 "total length) in television"
@@ -1265,15 +1266,15 @@ msgstr ""
 
 #: models.py:111
 msgid "Submission language"
-msgstr ""
+msgstr "Мова заяўкі"
 
 #: models.py:118
 msgid "E-mail was sent"
-msgstr ""
+msgstr "Імэйл атрыманы"
 
 #: models.py:120
 msgid "Film is received"
-msgstr ""
+msgstr "Фільм атрыманы"
 
 #: models.py:122
 msgid "Papers were received"
@@ -1595,21 +1596,24 @@ msgstr ""
 msgid ""
 "Минский государственный Дворец детей и молодежи\n"
 "Старовиленский тракт, 41"
-msgstr "Мінскі дзяржаўны Палац дзяцей і моладзі\n"
+msgstr ""
+"Мінскі дзяржаўны Палац дзяцей і моладзі\n"
 "Старавіленскі тракт, 41"
 
 #: schedule.py:50
 msgid ""
 "кинотеатр Центральный\n"
 "пр-т Независимости, 13"
-msgstr "кінатэатр Цэнтральны\n"
+msgstr ""
+"кінатэатр Цэнтральны\n"
 "пр-т Незалежнасці, 13"
 
 #: schedule.py:51
 msgid ""
 "Молодежный образовательный центр \"Фиальта\"\n"
 "ул. Мясникова, 35 (вход со двора)"
-msgstr "Моладзевы адукацыйнй цэнтр \"Фіальта\"\n"
+msgstr ""
+"Моладзевы адукацыйнй цэнтр \"Фіальта\"\n"
 "вул. Мяснікова, 35 (уваход з двара)"
 
 #: schedule.py:53
@@ -1624,21 +1628,24 @@ msgstr ""
 msgid ""
 "Музей кино\n"
 "ул. Свердлова, 4"
-msgstr "Музей кіно\n"
+msgstr ""
+"Музей кіно\n"
 "вул. Свярдлова, 4"
 
 #: schedule.py:55
 msgid ""
 "Музей современного искусства\n"
 "пр-т Независимости, 47"
-msgstr "Музей сучаснага мастацтва\n"
+msgstr ""
+"Музей сучаснага мастацтва\n"
 "пр-т Незалежнасці, 47"
 
 #: schedule.py:56
 msgid ""
 "Национальный музей\n"
 "ул. Ленина 20"
-msgstr "Нацыянальный музей\n"
+msgstr ""
+"Нацыянальный музей\n"
 "вул. Леніна, 20"
 
 #: schedule.py:138
@@ -1665,11 +1672,12 @@ msgstr ""
 msgid "Биофак ГрГУ"
 msgstr "Біяфак ГрДУ"
 
-#: schedule.py:197
+#: schedule.py:191
 msgid ""
 "Лидский государственный историко-художественный музей\n"
 "ул. Победы, З7а, Лида"
-msgstr "Лідскі дзяржаўны гісторыка-мастацкі музей\n"
+msgstr ""
+"Лідскі дзяржаўны гісторыка-мастацкі музей\n"
 "вул. Перамогі, З7а, Ліда"
 
 #: schedule.py:248 templates/cpm2013/submit.html:56
@@ -1688,7 +1696,7 @@ msgstr "Ліда"
 msgid "Please check if you agree"
 msgstr "Калі ласка, падзвердзіце, што вы згодны"
 
-#: views.py:279
+#: views.py:293
 msgid "File with such name exists"
 msgstr ""
 
@@ -1701,11 +1709,11 @@ msgstr ""
 msgid "Export"
 msgstr ""
 
-#: templates/cpm2013/base.html:29
+#: templates/cpm2013/base.html:29 templates/cpm2013/results_index.html:40
 msgid "January, 12-20"
 msgstr "12-20 студзеня"
 
-#: templates/cpm2013/base.html:30
+#: templates/cpm2013/base.html:30 templates/cpm2013/results_index.html:43
 msgid "planet Earth"
 msgstr "планета Зямля"
 
@@ -1761,19 +1769,21 @@ msgstr "Аляксандр Мартынюк"
 msgid "Darya Efimova"
 msgstr "Дар'я Ефімава"
 
-#: templates/cpm2013/index.html:7
-msgid "Screenings in Belarus"
-msgstr "Паказы ў Беларусі"
-
-#: templates/cpm2013/index.html:78
+#: templates/cpm2013/index.html:8
+#, fuzzy
 msgid ""
 "\n"
-"      <p>Welcome to III International Short Film Festival Cinema Perpetuum "
+"      <p>Welcome to II International Short Film Festival Cinema Perpetuum "
 "Mobile!</p>\n"
 "      <p>We invite you to share our idea of promoting human values through "
 "art and independent cinematography. This idea is not new; however, it still "
 "unites hundreds of underground film-makers around the globe to join efforts "
 "in their sincere endeavor to see our world become a truly better place.</p>\n"
+"      <p>In 2012 Cinema Perpetuum Mobile has managed to show 197 short films "
+"from 35 countries at 8 screening venues. In 2013 Cinema Perpetuum Mobile "
+"will again turn into an international forum to showcase independent film-"
+"makers’ vision of intercultural dialogue in times of globalization, as well "
+"as of social problems we have to face in the 21st century.</p>\n"
 "      <p>As before, Cinema Perpetuum Mobile sticks to its goals to</p>\n"
 "      <ul>\n"
 "\t<li>promote independent film-making throughout the world;</li>\n"
@@ -1858,66 +1868,982 @@ msgstr ""
 msgid "Programs of the festival"
 msgstr "Праграмы фестывалю"
 
-#: templates/cpm2013/rules.html:4
-msgid "Regulations"
+#: templates/cpm2013/results_index.html:7
+msgid "как это было"
 msgstr ""
 
+#: templates/cpm2013/results_index.html:62
+msgid "Вступление"
+msgstr ""
+
+#: templates/cpm2013/results_index.html:64
+msgid ""
+"Международный фестиваль короткометражного кино Cinema Perpetuum Mobile - "
+"2013 прошел еще раз.Мы продолжили наши эксперименты с площадками и местами "
+"показов: на протяжении 9 дней показы происходили на 8 площадках Минска и "
+"одновременно в 10 городах Беларуси, а показы специальной международной "
+"программы получилось провести в 15 странах мира."
+msgstr ""
+"Міжнародны фестываль кароткаметражных фільмаў Cinema Perpetuum Mobile - 2013 "
+"яшчэ раз адбыўся. Мы працягнулі нашыя эксперыменты з пляцоўкамі і месцамі "
+"паказаў: на працягу 9 дзён прагляды адбываліся на 8 пляцоўках Мінска і "
+"адначасова  ў 10 гарадах Беларусі, а паказы адмысловай міжнароднай праграмы "
+"здарыліся у 15 краінах міру."
+
+#: templates/cpm2013/results_index.html:68
+msgid ""
+"В СРМ - 2013 приняло участие больше 320 фильмов из более чем 40 странах "
+"мира. Конкурсная программа состояла из 24 лент, а еще 60 попали в "
+"тематические внеконкурсные показы, которые были разбиты на 16 программ."
+msgstr ""
+"У СРМ - 2013 прыняло удзел больш за 320 стужак з больш як 40 краін. "
+"Конкурсная праграма утрымлівала 24 стужкі, а 60 іншых трапілі у тэматычныя "
+"па-за конкурсныя паказы, якія былі разбіты на 16 тэматычных праграм."
+
+#: templates/cpm2013/results_index.html:72
+msgid ""
+"В 2013 году мы продолжили выстраивать нашу партнерскую сеть и поддержали "
+"процесс диалога между киногруппами Беларуси и её соседями, так и всего мира."
+msgstr ""
+"У 2013 годзе мы працягнулі будаваць нашую партнерскую сетку і працягнулі "
+"працэс дыялогу паміж кінасуполкамі Беларусі і яе суседзямі, так і усяго "
+"сусвету. "
+
+#: templates/cpm2013/results_index.html:75
+msgid "Победители"
+msgstr "Пераможцы"
+
+#: templates/cpm2013/results_index.html:80
+#: templates/cpm2013/results_index.html:82
+msgid "Номинация"
+msgstr "Намінацыя"
+
+#: templates/cpm2013/results_index.html:81
+msgid "Кадр"
+msgstr "Кадр"
+
+#: templates/cpm2013/results_index.html:87
+msgid "Гран-при"
+msgstr "Гран-пры"
+
+#: templates/cpm2013/results_index.html:89
+#: templates/cpm2013/results_index.html:152
+msgid "Эскимосский поцелуй"
+msgstr "Эскімосскі пацалунак"
+
+#: templates/cpm2013/results_index.html:89
+#: templates/cpm2013/results_index.html:152
+msgid "Карин Брэк (Швеция, 2012)"
+msgstr "Карын Брэк"
+
+#: templates/cpm2013/results_index.html:89
+#: templates/cpm2013/results_index.html:152
+msgid "Драма/ 13 минут"
+msgstr "Драма/13 хвілін"
+
+#: templates/cpm2013/results_index.html:90
+#: templates/cpm2013/results_index.html:153
+msgid ""
+"Сын Изы в коме после аварии. Мы следуем за ней через боль и страх, когда она "
+"идет к чему-то иному. "
+msgstr ""
+"Сын Ізы ляжыць у коме пасля аварыі. Мы ідзем за ёй, калі яна праходзіць праз "
+"боль і страх да нечага іншага."
+
+#: templates/cpm2013/results_index.html:94
+msgid "Номинация Perpetuum amor"
+msgstr "Намінацыя Perpetuum amor"
+
+#: templates/cpm2013/results_index.html:96
+msgid "Шум "
+msgstr "Шум"
+
+#: templates/cpm2013/results_index.html:96
+msgid "Татьяна и Ольга Полиектовы (Россия, Санкт-Петербург, 2012)"
+msgstr "Таццяна і Вольга Паліектавы (Расія, Санкт-Петэрбург, 2012)"
+
+#: templates/cpm2013/results_index.html:96
+msgid "Драма/ 10 минут"
+msgstr "Драма/ 10 хвілін"
+
+#: templates/cpm2013/results_index.html:97
+msgid "Фильм о человеке, шумные мысли которого, мешали ему найти свое счастье."
+msgstr ""
+"Фільм пра чалавека, чые шумныя думкі перашкаджалі яму знайсці сваё шчасце."
+
+#: templates/cpm2013/results_index.html:101
+msgid "Номинация Perpetuum adversi"
+msgstr "Намінацыя Perpetuum adversi"
+
+#: templates/cpm2013/results_index.html:103
+msgid "Революция в Рейкьявике"
+msgstr "Рэвалюцыя ў Рэйк’явіке"
+
+#: templates/cpm2013/results_index.html:103
+msgid "Изольд Уггадоттир (Исландия, 2012)"
+msgstr "Ізольд Уггадотцір (Ісландыя, 2012)"
+
+#: templates/cpm2013/results_index.html:103
+msgid "Драма/ 19 минут"
+msgstr "Драма/ 19 хвілін"
+
+#: templates/cpm2013/results_index.html:104
+msgid ""
+"Из-за коллапса исландской экономики Гудфинна (которой 58 лет), восстает "
+"против кризиса, чтобы сохранить собственное достоинство."
+msgstr ""
+"З-за калапсу ісландскай эканомікі, Гудфінна (якой 58 год), паўстае супраць "
+"крызісу, каб захаваць ўласную годнасць."
+
+#: templates/cpm2013/results_index.html:108
+msgid "Номинация Perpetuum arts"
+msgstr "Намінацыя Perpetuum arts"
+
+#: templates/cpm2013/results_index.html:110
+msgid "Нить сновидения"
+msgstr "Нітка снення"
+
+#: templates/cpm2013/results_index.html:110
+msgid "Марта Пайек (Польша, Лодзь, 2011)"
+msgstr "Марта Паек (Польшча, 2011)"
+
+#: templates/cpm2013/results_index.html:110
+msgid "Драма /14 минут"
+msgstr "Драма/ 14 хвілін"
+
+#: templates/cpm2013/results_index.html:111
+msgid ""
+"Фильм “Нить сновидения” раскрывает тему сна. Сон — это место встречи мира "
+"цела и разума; это неуловимо для нас и тяжело распозноваемо.  Сны переносят "
+"нас в мир, где правилы изменчивы, в то время как Реальный мир, правила "
+"которого, очевидно, мы знаем, кажется нам лишенным логики."
+msgstr ""
+"Фільм “Нітка снення” падымае тэму сна. Сон — гэта месца сустрэча сусвету цела "
+"і розумы; гэта няўлоўна для нас і цяжка вызначальна. Сны пераносяць нас у "
+"сусвет, дзе правілы могуць змяняцца, у той час як Рэальны сусвет, правілы "
+"якога мы відавочна ведаем, здаецца пазбаўленым логікі."
+
+#: templates/cpm2013/results_index.html:115
+msgid "Номинация Perpetuum mobile"
+msgstr "Намінацыя Perpetuum mobile"
+
+#: templates/cpm2013/results_index.html:117
+msgid "Мама"
+msgstr "Мама"
+
+#: templates/cpm2013/results_index.html:117
+msgid "Дмитрий Суржиков (Украина, г. Одесса, 2011)"
+msgstr "Зміцер Суржыкаў (Украіна, г. Адэса, 2011)"
+
+#: templates/cpm2013/results_index.html:117
+msgid "Драма/ триллер/ 15 минут"
+msgstr "Драма/ трылер/ 15 хвілін"
+
+#: templates/cpm2013/results_index.html:118
+msgid ""
+"Дети вырастают, и у них начинается своя жизнь. Зачастую это происходит вдали "
+"от родного дома. Одиночество и старость — вот что ждет нашу героиню, Маму. "
+"Весь ее мир — это однокомнатная квартирка в старом доме, с видом на стройку "
+"новой многоэтажки, кроссворды и телевизор. Однажды сосед Мамы просит "
+"присмотреть ее за его питомцем — игуаной, которая заменяет ей ребенка. "
+msgstr ""
+"Дзеці вырастаюць, і ў іх пачынаецца сваё жыццё. Часта гэта адбываецца "
+"ўдалечыні ад роднага дома. Адзінота і старасць - вось што чакае нашу гераіню, "
+"Маму. Увесь яе свет - гэта аднапакаёвая кватэра у старым доме, з відам на "
+"будоўлю новага шматпавярховіка. Аднойчы сусед Мамы просіць прыглядзець за яго "
+"гадаванцам - ігуанай, якая замяняе ёй дзіця."
+
+#: templates/cpm2013/results_index.html:122
+msgid "Номинация Perpetuum vita"
+msgstr "Намінацыя Perpetuum vita"
+
+#: templates/cpm2013/results_index.html:124
+msgid "Висельник"
+msgstr "Шыбенік"
+
+#: templates/cpm2013/results_index.html:124
+msgid "Бартош Круглик (Польша, Варшава, 2012)"
+msgstr "Барташ Круглік (Польша, Варшава, 2012)"
+
+#: templates/cpm2013/results_index.html:124
+msgid "Фантастика, черная комедия/ 15 минут"
+msgstr "Фантастыка, чорная камедыя/ 15 хвілін"
+
+#: templates/cpm2013/results_index.html:125
+msgid ""
+"Что вы будете делать, если Смерть неожиданно посетит вас? Может ли ваша "
+"жизнь быть выторгована в карточной игре? Черная комедия."
+msgstr ""
+"Што вы будзеце рабіць, калі Смерць нечакана наведае вас? Ці можа ваша жыццё "
+"быць выгандлевана праз гульню ў карты? Чорная камедыя."
+
+#: templates/cpm2013/results_index.html:129
+msgid "Лучший белорусский фильм"
+msgstr "Лепшы беларускі фільм"
+
+#: templates/cpm2013/results_index.html:131
+msgid "City"
+msgstr "Горад"
+
+#: templates/cpm2013/results_index.html:131
+msgid "Андрей Баджи Токинданг (Беларусь, Минск, 2012)"
+msgstr "Андрэй Баджы Такінданг (Беларусь, Мінск, 2012)"
+
+#: templates/cpm2013/results_index.html:131
+msgid "Боевик, пародия, триллер, ужасы/ 4 минуты"
+msgstr "Баявік, пародыя, трылер, жахі/ 4 хвіліны"
+
+#: templates/cpm2013/results_index.html:132
+msgid ""
+"События разворачиваются в столице Республики Беларусь, городе Минске. Музыка "
+"группы &quot;RECHA&quot; превращает свирепствующих в городе зомби в обычных "
+"людей, что символизирует силу влияния искусства на общество. В финале клипа "
+"музыканты уезжают спасать своим творчеством другие города."
+msgstr ""
+"Падзеі разгортваюцца ў сталіцы Рэспублікі Беларусь, горадзе Мінску. Музыка "
+"гурта \"RECHA\" ператварае зомбі, якія лютуюць у горадзе, у звычайных людзей, "
+"што сімвалізуе сілу ўплыву мастацтва на грамадства. У фінале музыкі едуць "
+"ратаваць праз сваю творчасць іншыя гарады."
+
+#: templates/cpm2013/results_index.html:136
+msgid "Лучший фильм в секции урбанистики"
+msgstr "Лепшы фільм секцыі урбаністыкі"
+
+#: templates/cpm2013/results_index.html:138
+msgid "Сквот — город принадлежит нам"
+msgstr "Сквот - горад належыць нам."
+
+#: templates/cpm2013/results_index.html:138
+msgid "Кристоф Коэльо  (Франция, 2011)"
+msgstr ""
+
+#: templates/cpm2013/results_index.html:138
+msgid "Документальный/ 94 мин"
+msgstr "Дакументальны/ 94 мін"
+
+#: templates/cpm2013/results_index.html:139
+msgid ""
+"История барселонской сети «Miles de Viviendas» (Тысячи домов) — "
+"разношерстной группы активистов, которая решительно реагирует на спекуляцию "
+"недвижимостью в своем городе: с 2002 г. они вламываются в пустующие квартиры "
+"и переделывают их под уютные жилища."
+msgstr ""
+"Гісторыя барселонскай сеткі  «Miles de Viviendas»  (Тысячы дамоў) - якія "
+"спабуюць уплываць на спекуляцыю жыллем шляхам прамога дзеяння."
+
+#: templates/cpm2013/results_index.html:143
+msgid "Приз зрительских симпатий"
+msgstr "Прыз  глядацкіх сімпатый"
+
+#: templates/cpm2013/results_index.html:145
+msgid "82"
+msgstr "82"
+
+#: templates/cpm2013/results_index.html:145
+msgid "Калум Макдиармид (Великобритания, Лондон, 2012)"
+msgstr "Калум Макміармід (Велікабрытанія, Лондан, 2012)"
+
+#: templates/cpm2013/results_index.html:145
+msgid "Драма, триллер/ 6 минут"
+msgstr "Драма, трылер /6 хвілін"
+
+#: templates/cpm2013/results_index.html:146
+msgid ""
+"Почтальон (актер Ник Моран) позволяет нам проникнуть в свой темный мир в "
+"тихом пригороде. "
+msgstr ""
+"Паштальён (акцёр Нік Моран) дазваляе нам увайсці ў яго цёмны свет у ціхім "
+"прыгарадзе."
+
+#: templates/cpm2013/results_index.html:150
+#: templates/cpm2013/results_index.html:157
+msgid "Приз зрительских симпатий (Минск, Могилев)"
+msgstr "Прыз  глядацкіх сімпатый (Мінск, Магілёў)"
+
+#: templates/cpm2013/results_index.html:159
+msgid "Circus"
+msgstr "Цырк"
+
+#: templates/cpm2013/results_index.html:159
+msgid "Пабло Ремон (Испания, Мадрид, 2011)"
+msgstr "Пабла Рэмон (Гішпанія, Мадрыд, 2011)"
+
+#: templates/cpm2013/results_index.html:159
+msgid "Комедия/ 8 минут"
+msgstr "Камедыя/ 8 хвілін"
+
+#: templates/cpm2013/results_index.html:160
+msgid ""
+"Скамейка в парке. Два сотрудника, уволенных из-за экономического кризиса. "
+"Революционная идея поможет решить проблему неопределенного будущего."
+msgstr ""
+"Лаўка ў парку. Два адміністратара, якіх звольнілі з-за эканамічнага крызіса. "
+"З’яўляецца рэвалюцыйная ідэя, якая дапаможа вырашыць праблему няпэўнай "
+"будучыні. "
+
+#: templates/cpm2013/results_index.html:164
+msgid "Приз зрительских симпатий (Лондон)"
+msgstr "Прыз  глядацкіх сімпатый (Лондан)"
+
+#: templates/cpm2013/results_index.html:166
+msgid "Простыя рэчы"
+msgstr "Простыя рэчы"
+
+#: templates/cpm2013/results_index.html:166
+msgid "Артем Лобач (Беларусь, Борисов, 2012)"
+msgstr "Арцём Лобач (Беларусь, Борисов, 2012)"
+
+#: templates/cpm2013/results_index.html:166
+msgid "Документальный/ 11 минут"
+msgstr "Дакументальны/ 11 міны"
+
+#: templates/cpm2013/results_index.html:167
+msgid ""
+"Кто такой “белоруский мужик”? Этот фильм про белорусского героя от сохи. "
+"Если понять и услышать героя фильма, тогда можно приблизится к пониманию "
+"души простого белоруса. "
+msgstr ""
+"Хто такі “беларускі мужык”? Гэты фільм пра беларускага героя ад сахі. Калі "
+"зразумець і пачуць героя фільма, то тады можна наблізіцца да паразумення душы "
+"простага беларуса."
+
+#: templates/cpm2013/results_index.html:171
+msgid "Приз зрительских симпатий Джорджтауна (Малайзия)"
+msgstr "Прыз  глядацкіх сімпатый Джорджтауна (Малазія)"
+
+#: templates/cpm2013/results_index.html:173
+msgid "Кирляндия"
+msgstr "Кірляндыя"
+
+#: templates/cpm2013/results_index.html:173
+msgid "Илья Божко (Беларусь, Минск, 2012)"
+msgstr "Ілля Бажко (Беларусь, Мінск, 2012)"
+
+#: templates/cpm2013/results_index.html:173
+msgid "Сатира, фантастическая антутопия/7 минут"
+msgstr "Сатыра, фантастычная антыутопія/ 7 хвілін"
+
+#: templates/cpm2013/results_index.html:174
+msgid ""
+"Политическая сатира, фантастическая антиутопия в классической эстетике "
+"немого кинематографа."
+msgstr ""
+"Палітычная сатыра, фантастычная антыутопія ў класічнай эстэтыцы нямога "
+"кінематографа. "
+
+#: templates/cpm2013/results_index.html:178
+msgid "Приз зрительских симпатий  Тирасполя (Молдова) и города Клуй (Румыния)"
+msgstr "Прыз  глядацкіх сімпатый Тыраспаля (Малдова) і гораду Клуй (Румынія)"
+
+#: templates/cpm2013/results_index.html:180
+msgid "Второе дыхание"
+msgstr "Другое дыханне"
+
+#: templates/cpm2013/results_index.html:180
+msgid "Сергей Цысс (Россия, Москва, 2012)"
+msgstr "Сяргей Цыс (Расія, Масква, 2012)"
+
+#: templates/cpm2013/results_index.html:180
+msgid "Научная фантастика/ 7 минут"
+msgstr "Навуковая фантастыка/ 7 хвілін"
+
+#: templates/cpm2013/results_index.html:181
+msgid ""
+"Каждый день Он должен сделать новый цветок из алюминиевой банки и посадить "
+"его в сухую землю. В этом смысл его существования, ведь в мире больше ничего "
+"не осталось, кроме металлического шелеста цветов апокалипсиса."
+msgstr ""
+"Кожны дзень ён абавязаны зрабіць кветку з алюмініевай банкі і пасадзіць яе ў "
+"сухую зямлю. У гэтым сэнс яго існавання, бо ў свеце нічога не засталося, "
+"акрамя металічнага шамацення кветак апакаліпсіса."
+
+#: templates/cpm2013/results_index.html:192
+msgid "январь"
+msgstr "студзень"
+
+#: templates/cpm2013/results_index.html:196
+msgid "дней"
+msgstr "дзен"
+
+#: templates/cpm2013/results_index.html:200
+msgid "стран"
+msgstr "стран"
+
+#: templates/cpm2013/results_index.html:204
+msgid "участников"
+msgstr "узельнікаў"
+
+#: templates/cpm2013/results_index.html:208
+msgid "бюджет"
+msgstr "буджэт"
+
+#: templates/cpm2013/results_index.html:212
+msgid "членов жюри"
+msgstr "чальцоў журы"
+
+#: templates/cpm2013/results_index.html:216
+msgid "волонтера"
+msgstr "валантораў"
+
+#: templates/cpm2013/results_index.html:220
+msgid "площадок"
+msgstr "пляцовак"
+
+#: templates/cpm2013/results_index.html:226
+msgid "городов в Беларуси"
+msgstr "гарадоў у Беларусі"
+
+#: templates/cpm2013/results_index.html:232
+msgid "стран-участников <br/> междунарожных показов"
+msgstr "стран-удзельнікаў <br/> міжнародных паказаў"
+
+#: templates/cpm2013/results_index.html:236
+msgid "Жюри"
+msgstr "Журы"
+
+#: templates/cpm2013/results_index.html:241
+msgid "Кори Макеби ( США ) "
+msgstr "Коры Макэбі ( ЗША )"
+
+#: templates/cpm2013/results_index.html:241
+msgid "Режиссер"
+msgstr "Рэжысер"
+
+#: templates/cpm2013/results_index.html:246
+#: templates/cpm2013/results_index.html:252
+msgid "Кори Макеби(США)"
+msgstr "Коры Макебі (ЗША)"
+
+#: templates/cpm2013/results_index.html:253
+msgid "Кори Макеби родом из Сан-Франциско, штат Калифорния.<br/>"
+msgstr "Коры Макебі нарадзіўся ў Сан-Францыска, штат Каліфорнія."
+
+#: templates/cpm2013/results_index.html:254
+msgid "Последние 12 лет живет в Нью-Йорке."
+msgstr "Апошнія 12 год ён жыве ў Нью-Ёрку."
+
+#: templates/cpm2013/results_index.html:255
+msgid ""
+" Он писатель, режиссер, актер и композитор таких фильмов, как \"Американский "
+"астронавт\" (2001) и \"Stingray Sam\" (2009)."
+msgstr "Ён пісьменнік, рэжысёр, акцёр, спявак і кампазітар. "
+
+#: templates/cpm2013/results_index.html:256
+msgid ""
+" В числе его ранних выступлений - роль Понтия Пилата в мюзикле \"Jesus "
+"Christ Superstar\". Его фильмы получили широкое международное признание. Как "
+"независимый режиссер и по своей работе в альтернативных формах самопроката, "
+"Кори Макеби проводил мастер-классы и читал лекции в университетах и ​​"
+"симпозиумах по всему миру."
+msgstr ""
+"Сярод яго ранніх выступаў - роля Понція Пілата ў мюзікле \"Jesus Christ "
+"Superstar\". таксама ён выступиў як акцёр і кампазітар такіх фільмаў, як "
+"“Амерыканскі астранаўт” (2001) і \"Stingray Sam\" (2009).  Яго фільмы "
+"атрымалі шматлікія ўзнагароды міжнароднага узроўню. Як незалежны рэжысёр і па "
+"сваёй рабоце ў альтэнатыўных формах самапракату, Коры Макебі проаводзіў "
+"майстар-класы і чытаў лекцыі ва ўніверсітэтах і сімпозіумах ва ўсім свеце."
+
+#: templates/cpm2013/results_index.html:257
+msgid ""
+" В настоящее время Макеби работает над коллекцией некоммерческих "
+"полнометражных и короткометражных фильмов."
+msgstr ""
+"Зараз Макебі працуе над калекцыяй некамерцыйных поўнаметражных і "
+"кароткаметражных фільмаў."
+
+#: templates/cpm2013/results_index.html:262
+#: templates/cpm2013/results_index.html:285
+#: templates/cpm2013/results_index.html:308
+#: templates/cpm2013/results_index.html:331
+#: templates/cpm2013/results_index.html:354
+#: templates/cpm2013/results_index.html:377
+#: templates/cpm2013/results_index.html:400
+#: templates/cpm2013/results_index.html:424
+#: templates/cpm2013/results_index.html:448
+#: templates/cpm2013/results_index.html:471
+#: templates/cpm2013/results_index.html:494
+#: templates/cpm2013/results_index.html:519
+#: templates/cpm2013/results_index.html:542
+msgid "Закрыть"
+msgstr "Зачыніць"
+
+#: templates/cpm2013/results_index.html:268
+msgid "Ли Санг Ву ( Южная Корея ) "
+msgstr "Лі Санг Ву (Паўднёвая Карэя)"
+
+#: templates/cpm2013/results_index.html:268
+msgid "Режиссер, актер, сценарист, продюссер"
+msgstr "Рэжысёр, актор, сцэнарыст, прадюсэры"
+
+#: templates/cpm2013/results_index.html:273
+#: templates/cpm2013/results_index.html:279
+msgid "Ли Санг Ву(Южная Корея)"
+msgstr "Лі Санг Ву (Паўднёвая Карэя)"
+
+#: templates/cpm2013/results_index.html:280
+msgid ""
+"Режиссер, актер, сценарист, продюссер (\"Барби\", \"Моя мать- шлюха\", \"Мой "
+"отец - пес\", \"Пожар в аду\"). Его фильмы участвовали в и выигрывали "
+"награды многих международных фестивалей. Лу Санг Ву работал в операторской "
+"команде картины \"Дыхание\" и в режиссерской команде \"Время\", снятые Ким "
+"Ки-Дуком. Профессор режиссуры университета Кёнгки."
+msgstr ""
+"Рэжысёр, актор, сцэнарыст, прадюсэр (\"Барбі\", \"Мая маці-шлюха\", \"Мой "
+"тата- пес\", \"Пажар у пеклы\"). Яго фільмы ўдзельнічалі і выйгравалі "
+"ўзнагароды многіх міжнародных фестываляў. Працаваў у аператарскай  камандзе "
+"карціны \"Дыханне\" і ў рэжысёрскай камандзе \"Час\" Кім Кі-Дука. Прафесар "
+"рэжысуры універсітэта Кенгкі."
+
+#: templates/cpm2013/results_index.html:291
+msgid "Карстен Вебер  ( Германия ) "
+msgstr "Карстэн Вебер ( Германія )"
+
+#: templates/cpm2013/results_index.html:291
+#: templates/cpm2013/results_index.html:303
+msgid "Режиссер, творческий руководитель киногруппы “Chaos”"
+msgstr "Рэжысер, творчы кіраўнік кінагрупы \"Хаос\""
+
+#: templates/cpm2013/results_index.html:296
+#: templates/cpm2013/results_index.html:302
+msgid "Карстен Вебер (Германия)"
+msgstr "Карстэн Вебер ( Германія )"
+
+#: templates/cpm2013/results_index.html:314
+msgid "Пьер-Люк Вайянкур ( Канада ) "
+msgstr "П’ер-Люк Ваянкур (Канада)"
+
+#: templates/cpm2013/results_index.html:314
+msgid "Режиссер, со-основатель Института экспериментального кино"
+msgstr "Рэжысер, со-ставаральнік Інстытута эсперыментальнага кіно"
+
+#: templates/cpm2013/results_index.html:319
+#: templates/cpm2013/results_index.html:325
+msgid "Пьер-Люк Вайянкур(Канада)"
+msgstr "П’ер-Люк Ваянкур (Канада)"
+
+#: templates/cpm2013/results_index.html:326
+msgid ""
+"Режиссер, создатель глубоких работ, сочетающих в себе мифологию и литургию, "
+"Пьер-Люк Вайянкур считает, что в кино проявляются антропологические  и "
+"иконоборческие мотивы. Он выступает как режиссер фильмов, создает видео-"
+"инсталляции, используя проекцию как средство выхода за границы реальности. "
+"Со-основатель Института экспериментального кино, он выступил как инициатор "
+"Симпозиума Metal Machine Cinema в Канаде. Кроме того, он курировал "
+"многочисленные программы, которые были представлены в Музее современного "
+"искусства в Загребе, галерее Bunkier Sztuki в Кракове, Центре современного  "
+"искусства Art Ujazdów Castle, а также многочисленные оффлайн-сообщества и "
+"андеграундный киноклуб."
+msgstr ""
+"Рэжысёр, стваральнік глыбокіх работ, спалучаючых ў сабе міфалогію і літургію, "
+"П’ер-Люк Ваянкур лічыць, што ў кіно праяўляюцца антрапалагічныя і "
+"іконаборскія матывы. Ён выступае як рэжысёр фільмаў, стварае "
+"відэа-інсталяцыі, выкарыстоўваючы праекцыю як сродак выхада за межы "
+"рэчаіснасці. Сузаснавальнік Інстытута эксперыментальнага кіно, ён выступіў "
+"ініцыятарам Сімпозіума Metal Machine Cinema ў Канадзе. Акрамя гэтага, ён "
+"курыраваў шматлікія праграмы, якія былі прадстаўленыя ў Музеі сучаснага "
+"мастацтва ў Заграбе, галерэі Bunkier Sztuki ў Кракаве, Цэнтры сучаснага "
+"мастацтва Art Ujazdów Castle, а таксама шматлікія оффлайн-супольнасці і "
+"андэграўндны кінаклуб."
+
+#: templates/cpm2013/results_index.html:337
+msgid "Мацей Гиль ( Польша ) "
+msgstr "Мацей Гіль (Польшча)"
+
+#: templates/cpm2013/results_index.html:337
+msgid "Историк кино, президент Польской Федерации киноклубов"
+msgstr "Гісторык кіно, прэзідэнт Польскай Федэрацыі кінаклубаў"
+
+#: templates/cpm2013/results_index.html:342
+#: templates/cpm2013/results_index.html:348
+msgid "Мацей Гиль(Польша)"
+msgstr "Мацей Гіль (Польшча)"
+
+#: templates/cpm2013/results_index.html:349
+msgid ""
+"Родился в Кракове в 1981 г. Историк кино, организатор различных "
+"киномероприятий, менеджер в сфере кинопроизводства, президент Польской "
+"Федерации киноклубов, представитель киноклубов Центральной и Восточной "
+"Европы в Исполнительном комитете Международной федерации киноклубов, арт-"
+"директор кинофестиваля ‘Kino na Granicy’ (Польша-Чехия), соорганизатор "
+"Летней Киноакадемии (Letnia Akademia Filmowa, Звежинец, Польша), "
+"международного кинофестиваля «Европейский экспресс» (Киев, Украина) и других "
+"кинофестивалей. Руководит киноклубом DKF Rozpięci в г. Краков. В качестве "
+"члена жюри участвовал в Международном кинофестивале в Карловых Варах, "
+"Польском кинофестивале в Гдыне, Краковском кинофестивале, кинофестивале в "
+"Циттау (Германия), Международном кинофестивале Jeden svet (Братислава), "
+"Международном кинофестивале Etiuda&Anima (Краков). Живет и работает в "
+"Центральной Европе."
+msgstr ""
+"Нарадзіўся ў Кракаве ў 1981 г. Гісторык кіно, арганізатар кінамерапрыемстваў, "
+"мэнэджар ў сферы кінавытворчасці, прэзідэнт Польскай Федэрацыі кінаклубаў, "
+"прадстаўнік кінаклубаў Цэнтральнай і Ўсходняй Еўропы у Выканаўчым камітэце "
+"Міжнароднай федэрацыі кінаклубаў, арт-дырэктар кінафестываля ‘Kino na "
+"Granicy’ (Польшча-Чэхія), суарганізатар Летняй Кінаакадэміі (Letnia Akademia "
+"Filmowa, Звежынец, Польшча), міжнароднага кінафестываля «Еўрапейскі экспрэс» "
+"(Кіеў, Украіна) і іншых кінафестываляў. Кіруе кінаклубам DKF Rozpięci ў "
+"Кракаве. У якасці журы ўдзельнічаў у Міжнародным кінафестывалі ў Карлавых "
+"Варах, Польскім кінафестывалі ў Гдыне, Кракаўскім кінафестывалі ў Цыттаў "
+"(Германія), Міжнародным кінафестывалі Jeden svet (Братыслава), Міжнародным "
+"кінафестывалі Etiuda&Anima (Кракаў)."
+"Жыве і працуе ў Цэнтральнай Еўропе."
+
+#: templates/cpm2013/results_index.html:360
+msgid "Джон Рубин ( CША ) "
+msgstr "Джон Рубін (ЗША)"
+
+#: templates/cpm2013/results_index.html:360
+msgid ""
+"Преподаватель, директор Центра онлайн обучения (COIL) при Нью-Йоркском "
+"университете (SUNY)"
+msgstr ""
+"Выкладчык, дырэктар Цэнтру англайн адукацыі (COIL) пры Нью-Йорскім  "
+"універсітэце (SUNY)"
+
+#: templates/cpm2013/results_index.html:365
+#: templates/cpm2013/results_index.html:371
+msgid "Джон Рубин(CША)"
+msgstr "Джон Рубін (ЗША)"
+
+#: templates/cpm2013/results_index.html:372
+msgid ""
+"Директор Центра совместного онлайн обучения (COIL) при Нью-Йоркском "
+"университете (SUNY). Профессор в SUNY Purchase College, преподавал кино и "
+"новые медиа, разработал кросс-культурный видеокурс, в рамках которого "
+"студенты SUNY создавали фильмы совместно со студентами, находящимися в "
+"Турции, Мексике, Беларуси и Германии, с помощью Интернета. Стипендиат Фонда  "
+"Гуггенхайма, Национального фонда искусств, Фонда Форда и программы Фулбрайт. "
+"Его собственные работы были представлены в Музее современного искусства "
+"(MOMA) и Музее американского искусства Уитни в Нью-Йорке. Он наиболее "
+"известен своим проектом Плавучий кинотеатр (Floating Cinema) - "
+"хореографическим действом из образов, движущихся ночью по воде."
+msgstr ""
+"Дырэктар Цэнтра сумеснага онлайн навучання (COIL) пры Нью-Ёркскім "
+"універсітэце (SUNY). Прафесар у SUNY Purchase College, выкладаў кіно і новыя "
+"медыя, распрацаваў крос-культурны відэакурс, у межахах якога студэнты SUNY "
+"стваралі фільмы сумесна са студэнтамі, якія знаходзяцца ў Турцыі, Мексіцы, "
+"Беларусі і Германіі, з дапамогай Інтэрнэту. "
+"Стыпендыят Фонду Гуггенхайма, Нацыянальнага фонду мастацтваў, Фонду Форда і "
+"праграмы Фулбрайт. Яго ўласныя працы былі прадстаўленыя ў Музеі сучаснага "
+"мастацтва (MOMA) і Музеі амерыканскага мастацтва Уітні ў Нью-Ёрку. Ён "
+"найбольш вядомы сваім праектам Плывучы кінатэатр (Floating Cinema) - "
+"харэаграфічным дзействам з вобразаў, якія рухаюцца ноччу па вадзе."
+
+#: templates/cpm2013/results_index.html:383
+msgid "Богдана Смирнова  ( Украина ) "
+msgstr "Багдана Смірнова (Украіна)"
+
+#: templates/cpm2013/results_index.html:383
+msgid "Независимый режиссер и сценарист."
+msgstr "Нежалежны рэжысер і сцэнарыст"
+
+#: templates/cpm2013/results_index.html:388
+#: templates/cpm2013/results_index.html:394
+msgid "Богдана Смирнова (Украина)"
+msgstr "Багдана Смірнова (Украіна)"
+
+#: templates/cpm2013/results_index.html:395
+msgid ""
+"Фильмы Богданы Смирновой побывали почти на 200 показах во многих странах "
+"мира, в том числе на фестивалях Роттердам, Клермон-Ферран и Сламденс, и "
+"получили почти 20 наград. В течение семи лет ее фильм «Бумажные хлопоты» "
+"демонстрировался во французских кинотеатрах. В 2010 году Богдана окончила "
+"престижную магистерскую программу по специальности кинорежиссер в Школе "
+"Искусств Тиш (Tisch), что в Нью-Йоркском университете. Она также стала "
+"первой украинкой, которая попала в престижную Резиденцию Каннского "
+"кинофестиваля. В рамках Резиденции Богдана сейчас работает над своей первой "
+"полнометражной кинолентой \"Манжетка\"."
+msgstr ""
+"Незалежны рэжысёр і сцэнарыст. "
+"Фільмы Багданы Смірновай пабывалі амаль на 200 паказах у шматлікіх краінах "
+"свету, ў тым ліку на фестывалях Роттердам, Клермон-Ферран і Сламденс, і "
+"атрымалі амаль 20 узнагарод."
+"Тягам сямі гадоў яе фільм «Папяровыя клопаты» дэманстраваўся ў французскіх "
+"кінатэатрах. У 2010 годзе Богдана скончыла навучанне па прэстыжнай "
+"магістэрскай праграме па спецыяльнасці кінарэжысёр ў Школе мастацтваў Tish, "
+"што ў Нью-Ёркскім Універсітэце. Яна таксама стала першай украінкай, якая "
+"трапіла ў прэстыжную Рэзідэнцыю Канскага кінафестываля. У межах Рэзідэнцыі "
+"Багдана працуе зараз над сваёй першай паўнаметражнай кінастужкай «Манжэтка»."
+
+#: templates/cpm2013/results_index.html:406
+msgid "Сергей Красиков ( США ) "
+msgstr "Сяргей Красікаў (США)"
+
+#: templates/cpm2013/results_index.html:406
+msgid "Продюсер, оператор, режиссер."
+msgstr "Прадусер, аператар, рэжысер."
+
+#: templates/cpm2013/results_index.html:411
+#: templates/cpm2013/results_index.html:417
+msgid "Сергей Красиков(США)"
+msgstr "Сяргей Красікаў (США)"
+
+#: templates/cpm2013/results_index.html:418
+msgid ""
+"Сергей Красиков родился в  Минске. В 2004 г., после 2 лет сотрудничества с "
+"немецким документальным режиссером Каролой Риттер и легендой американского "
+"Движения за гражданские права 1960-х годов Бобом Зеллнером, обосновался в "
+"Бруклине и вплотную занялся кинопроизводством. В качестве продюсера, "
+"главного оператора, режиссера Сергей реализовал десятки проектов – "
+"документальные и независимые игровые картины, концептуальные арт-фильмы и "
+"инсталляции. Регулярно сотрудничает с театрами, музыкантами и танцевальными "
+"группами. Основные сферы личного и профессионального интереса Сергея – "
+"экология, социальная справедливость и искусство."
+msgstr ""
+"Сяргей Красікаў нарадзіўся ў Мінску. У 2004 г., пасля дзьвух гадоў "
+"супрацоўніцтва з нямецкім дакументальным рэжысёрам Карлай Рыттэр і легендай "
+"амерыканскага руху за грамадзянскія правы 1960-ых Бобам Зеллнерам, пасяліўся "
+"ў Брукліне і ўшчыльную заняўся кінавытворчасцю. У якасці прадзюсэра, "
+"галоўнага аператара/рэжысёра Сяргей рэалізаваў дзесяткі праектаў - "
+"дакументальныя і незалежныя ігравыя карціны, канцэптуальныя арт-фільмы і "
+"інсталяцыі. Рэгулярна супрацоўнічае з тэатрамі і танцавальнымі групамі. "
+"Асноўныя сферы асабістай і прафесіянальнай цікавасці Сяргея - экалогія, "
+"сацыяльная справядлівасць і мастацтва."
+
+#: templates/cpm2013/results_index.html:419
+msgid ""
+"Многие фильмы Сергея были отмечены призами на престижных кинофестивалях в "
+"разных странах мира."
+msgstr ""
+"Многія фільмы Сяргея былі адзначаныпрызамі на прэстыжных кінафестывалях у "
+"розных краінах свету."
+
+#: templates/cpm2013/results_index.html:430
+msgid "Юрий Игруша ( Беларусь ) "
+msgstr "Юрый Ігруша (Беларусь)"
+
+#: templates/cpm2013/results_index.html:430
+msgid "Продюсер, режиссер, сценарист."
+msgstr "Прадзюсер, рэжысёр, сцэнарыст."
+
+#: templates/cpm2013/results_index.html:435
+#: templates/cpm2013/results_index.html:441
+msgid "Юрий Игруша(Беларусь)"
+msgstr "Юрый Ігруша (Беларусь)"
+
+#: templates/cpm2013/results_index.html:442
+msgid ""
+"В 1988 г. открыл первую в Беларуси частную видеостудию. Первым организовывал "
+"показы белорусского видео-арта на многичисленных фестивалях в Голландии, "
+"Германии, Дании, Швеции, России, Польше, Латвии.         Работал Генеральным "
+"продюсером телеканала ОНТ, компаний «Око», «Телефильм»."
+msgstr ""
+"У 1988 г. адчыніў першую ў Беларусі прыватную відэастудыю. Першы арганізоўваў "
+"паказы беларускага відэа-арта на шматлікіх фестывалях ў Галандыі, Германіі, "
+"Даніі, Швецыі, Расіі, Польшчы, Латвіі.  Працаваў генеральным прадзюсерам "
+"тэлеканала АНТ, кампаній «Око», «Телефильм». "
+
+#: templates/cpm2013/results_index.html:443
+msgid ""
+" Лауреат и призер многочисленных международных кинотелефестивалей. В "
+"настоящее время - директор РУП «Белорусский видеоцентр»."
+msgstr ""
+"Лаўрэат і прызёр шматлікіх міжнародных кінафестываляў. У цяперашні час - "
+"дырэктар РУП «Беларускі відэацэнтр»."
+
+#: templates/cpm2013/results_index.html:454
+msgid "Павел Иванов  ( Беларусь ) "
+msgstr "Павел Іваноў (Беларусь)"
+
+#: templates/cpm2013/results_index.html:454
+msgid "Режиссер, профессор Белорусской государственной академии искусств"
+msgstr "Рэжысер, прафесар Беларускай дзяржаўнай акадэміі мастацтваў"
+
+#: templates/cpm2013/results_index.html:459
+#: templates/cpm2013/results_index.html:465
+msgid "Павел Иванов (Беларусь)"
+msgstr "Павел Іваноў (Беларусь)"
+
+#: templates/cpm2013/results_index.html:466
+msgid ""
+"Работал главным режиссером программ для молодежи на Белорусском телевидении, "
+"снял более тысячи телевизионных программ, очерков, портретов, документальных "
+"фильмов. Ныне декан факультета экранных искусств, профессор кафедры "
+"режиссуры кино и телевидения Белорусской государственной академии искусств, "
+"художественный  руководитель творческой мастерской режиссуры ТВ."
+msgstr ""
+"Працаваў галоўным рэжысёрам праграм для моладзі на Белавускім тэлебачанні, "
+"зняў больш за тысячу тэлевезійных праграм, нарысаў, партрэтаў, дакументальных "
+"фільмаў. Зараз дэкан факультэта экранных мастацтваў, прафесар кафедры "
+"рэжысуры кіно і тэлебачання Беларускай дзяржаўнай акадэміі мастацтваў, "
+"мастацкі кіраўнік творчай майстэрні рэжысуры ТБ."
+
+#: templates/cpm2013/results_index.html:477
+msgid "Антон Сидоренко ( Беларусь ) "
+msgstr "Антон Сідарэнка (Беларусь)"
+
+#: templates/cpm2013/results_index.html:477
+msgid "Кинокритик, журналист, обозреватель в сфере кино."
+msgstr "Кінакрытык, журналіст, абазравальнік у сферы кіно."
+
+#: templates/cpm2013/results_index.html:482
+#: templates/cpm2013/results_index.html:488
+msgid "Антон Сидоренко(Беларусь)"
+msgstr "Антон Сідарэнка (Беларусь)"
+
+#: templates/cpm2013/results_index.html:489
+msgid ""
+"Антон Сидоренко, журналист, обозреватель в сфере кино. Родился и живет в "
+"Минске. Застал эпоху кино в кинотеатрах. Пришел в журналистику в конце "
+"существования ее традиционной формы. Автор одного за самых долго "
+"существующих блогов в белорусском интернете «КиноЧтиво» (kinopark.by), а "
+"также множества печатных изданий, в том числе - «Белорусская Деловая "
+"газета», «Белорусская газета», «Культура», «Искусство», «Обозреватель». "
+"Автор программ и ведущий пяти сезонов клуба «Феномены кино» в минском "
+"кинотеатре «Ракета». Бывалый сотрудник Музея истории белорусского кино."
+"Любимый режиссер - Микеланджело Антониони. Сфера интересов на сегодняшний "
+"день - документалистика."
+msgstr ""
+"Антон Сідарэнка, журналіст, аглядальнік у сферы кіно."
+"Нарадзіўся і жыве ў Мінску."
+"Заспеў эпоху кіно ў кінатэатрах."
+"Прыйшоў у журналістыку напрыканцы існавання яе традыцыйнай формы. Аўтар "
+"аднаго за самых доўгаіснуючых блогаў у беларускім інтэрнэце «КиноЧтиво» "
+"(kinopark.by), а таксама мноства друкаваных выданняў, у тым ліку - "
+"«Белорусская Деловая газета», «Белорусская газета», «Культура», «Мастацтва», "
+"«Обозреватель»."
+"Аўтар праграм і вядучы пяці сезонаў клуба «Феномены кіно» ў мінскім "
+"кінатэатры «Ракета». Колішні супрацоўнік Музея гісторыі беларускага кіно."
+"Любімый рэжысёр - Мікеланджэла Антаніоні. Сфера інтарэсаў на сённяшні дзень - "
+"дакументалістыка."
+
+#: templates/cpm2013/results_index.html:500
+msgid "Ирина Демьянова ( Беларусь ) "
+msgstr "Ірына Дзям’янава (Беларусь)"
+
+#: templates/cpm2013/results_index.html:500
+msgid ""
+"Преподаватель, программный директор международного кинофестиваля «Лiстапад», "
+"редактор студии «Летопись» Национальной киностудии «Беларусьфильм»."
+msgstr ""
+"Выкладчык, праграмны дырэктар міжнароднага кінафэстывалю \"Лістапад\", "
+"рэдактар студыі \"Летапіс\" Нацыянальнай кінастудыі \"Беларусьфільм\"."
+
+#: templates/cpm2013/results_index.html:505
+#: templates/cpm2013/results_index.html:511
+msgid "Ирина Демьянова(Беларусь)"
+msgstr "Ірына Дзям’янава (Беларусь)"
+
+#: templates/cpm2013/results_index.html:512
+msgid ""
+"Окончила филологический факультет  БГУ в Минске и киноведческий факультет "
+"ВГИКа в Москве. Работала редактором в Белтелерадиокомпании, главным "
+"редактором в «Белорусском видеоцентре», главным редактором по спецпроектам "
+"МТРК «Мир», сегодня работает ведущим редактором студии «Летопись» "
+"Национальной киностудии «Беларусьфильм». С  первого конкурса в 2007 году и "
+"по настоящее время является программным директором конкурсов документального "
+"кино Минского международного кинофестиваля «Лiстапад». "
+msgstr ""
+"Скончыла філалагічны факультэт БДУ ў Мінску і кіназнаўчы факультэт УДІКа ў "
+"Маскве."
+"Працавала рэдактарам у Белтэлерадыёкампаніі, галоўным рэдактарам у "
+"«Беларускім відэацэнтры», галоўным рэдактарам па спецпраектам МТРК «Мір», "
+"сёння працуе вядучым рэдактарам студыі «Летапіс» Нацыянальнай кінастудыі "
+"«Беларусьфільм»."
+"З першага конкурсу ў 2007 годзе і па цяперашні час з'яўляецца праграмным "
+"дырэктарам конкурсаў дакументальнага кіно Мінскага міжнароднага кінафестывалю "
+"«Лістапад»."
+
+#: templates/cpm2013/results_index.html:513
+msgid ""
+"Преподает в Институте журналистики БГУ и Белорусской государственной "
+"академии искусств. "
+msgstr ""
+"Выкладае ў Інстытуце журналістыкі БДУ і Беларускай дзяржаўнай акадэміі "
+"мастацтваў."
+
+#: templates/cpm2013/results_index.html:514
+msgid "Член союза кинематографистов."
+msgstr "Член саюза кінематаграфістаў."
+
+#: templates/cpm2013/results_index.html:525
+msgid "Ольга Дашук ( Беларусь ) "
+msgstr "Вольга Дашук (Беларусь)"
+
+#: templates/cpm2013/results_index.html:525
+msgid "Киновед, режиссер, преподаватель."
+msgstr "Кіназнаўца, рэжысёр, выкладчык."
+
+#: templates/cpm2013/results_index.html:530
+#: templates/cpm2013/results_index.html:536
+msgid "Ольга Дашук(Беларусь)"
+msgstr "Вольга Дашук (Беларусь)"
+
+#: templates/cpm2013/results_index.html:537
+msgid ""
+"Окончила Белорусскую академию искусств (1994), аспирантуру Института "
+"искусствоведения, этнографии и фольклора Национальной академии наук Беларуси "
+"(1998). Стажировалась в продюсерской мастерской при Амстердамском летнем "
+"университете (Нидерланды, 1993), в центре FOJO (Кальмар, Швеция, 1999), на "
+"факультете Медиа и коммуникации» Academia Istropolitana Nova (Братислава, "
+"Словакия, 2000). Работает режиссером на киностудии «Беларусьфильм». "
+"Преподает в Белорусском коллегиуме."
+msgstr ""
+"Скончыла Беларускую акадэмію мастацтваў (1994), аспірантуру Інстытута "
+"мастацтвазнаўства, этнаграфіі і фальклору Нацыянальнай акадэміі навук "
+"Беларусі (1998). Стажыравалася ў прадзюсерскай майстэрні пры Амстэрдамскім "
+"летнім універсітэце (Нідэрланды, 1993), у цэнтры FOJO (Кальмар, Швецыя, "
+"1999), на факультэце «Медыя і камунікацыі» Academia Istropolitana Nova "
+"(Браціслава, Славакія, 2000). Выкладае ў Беларускім калегіюме."
+
+#: templates/cpm2013/rules.html:4
+msgid "Regulations"
+msgstr "Рэгламент"
+
 #: templates/cpm2013/submission_info.html:14
-#, fuzzy
 msgid "Film was received"
-msgstr "Узнагароды фільма"
+msgstr "Фільм атрыманы"
 
 #: templates/cpm2013/submission_info.html:22
 msgid "Subtitles were received"
-msgstr ""
+msgstr "Субтытры атрыманы"
 
 #: templates/cpm2013/submission_info.html:30
 msgid "Screenshots were received"
-msgstr ""
+msgstr "Скрыншоты атрыманы"
 
 #: templates/cpm2013/submission_info.html:38
 msgid "Director's photo was received"
-msgstr ""
+msgstr "Фота рэжысера атрымана"
 
 #: templates/cpm2013/submission_info.html:46
 msgid "Director's biography was received"
-msgstr ""
+msgstr "Біяграфія рэжысера - атрымана."
 
 #: templates/cpm2013/submission_info.html:54
 msgid "Producer's photo was received"
-msgstr ""
+msgstr "Фота прадусера - атрымана"
 
 #: templates/cpm2013/submission_info.html:62
 msgid "Producer's biography was received"
-msgstr ""
+msgstr "Біяграфія прадусера - атрымана"
 
 #: templates/cpm2013/submission_info.html:70
 msgid "Company info was received (optional)"
-msgstr ""
+msgstr "Інфармацыя пра кампанію - атрымана"
 
 #: templates/cpm2013/submission_info.html:78
 msgid "Company logo was received (optional)"
-msgstr ""
+msgstr "Лога кампаніі атрымана"
 
 #: templates/cpm2013/submission_info.html:86
 msgid "Information for viza was received (optional)"
-msgstr ""
+msgstr "Інфармацыя пра візу - атрымана"
 
 #: templates/cpm2013/submission_info.html:112
 msgid "Uploaded files"
-msgstr ""
+msgstr "Загружаныя файлы"
 
 #: templates/cpm2013/submission_info.html:128
 msgid "Upload a file"
-msgstr ""
+msgstr "Загрузіць файл"
 
 #: templates/cpm2013/submission_info_upload.html:6
 msgid "Upload additional info for submisison "
-msgstr ""
+msgstr "Загрузіць дадатковую інфармацыя для заяўкі"
 
 #: templates/cpm2013/submission_info_upload.html:18
 msgid "Upload"
-msgstr ""
+msgstr "Загрузіць"
 
 #: templates/cpm2013/submit.html:4
 msgid "Submit your film!"
@@ -2018,7 +2944,10 @@ msgstr "Форма падачы заяўкі адчыняецца 2 верасн
 
 #: templates/cpm2013/volunteers_questionnaire.html:4
 msgid "Queistionnaire"
-msgstr ""
+msgstr "Апытанка"
+
+#~ msgid "Screenings in Belarus"
+#~ msgstr "Паказы ў Беларусі"
 
 #~ msgid "ДК La мора"
 #~ msgstr "ДК La мора"
@@ -2034,9 +2963,6 @@ msgstr ""
 
 #~ msgid "клипы, презентация KinoLife.com"
 #~ msgstr "кліпы, прэзентацыя KinoLife.com"
-
-#~ msgid "Карин Брэк"
-#~ msgstr "Карін Брэк"
 
 #~ msgid "Say YES"
 #~ msgstr "Скажы ТАК"
