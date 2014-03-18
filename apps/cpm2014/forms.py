@@ -101,7 +101,7 @@ class FieldsForm(forms.Form):
 class SubmissionTranslationForm(forms.ModelForm):
     class Meta:
         model = SubmissionTranslation
-        fields = ['title', 'genre', 'synopsis', 'director']
+        fields = ['title', 'genre', 'synopsis', 'synopsis_short', 'director']
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('error_class', InlineErrorList)

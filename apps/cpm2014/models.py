@@ -178,6 +178,7 @@ class SubmissionTranslation(models.Model):
     genre = models.CharField(verbose_name=_('Genre'),
                              max_length=1000, default='')
     synopsis = models.TextField(verbose_name=_('Synopsis'), default='')
+    synopsis_short = models.TextField(verbose_name=_('Synopsis (short)'), default='')
     director = models.CharField(verbose_name=_('Director'),
                                 max_length=1000, default='')
 

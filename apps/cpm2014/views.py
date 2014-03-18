@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 import io
 import os.path
@@ -233,6 +234,7 @@ def translation_details(request, submission_id, lang):
         (_(u'Director'), submission.director, translation.director),
         (_(u'Genre'), submission.genre, translation.genre),
         (_(u'Synopsis'), submission.synopsis, translation.synopsis),
+        (_(u'Synopsis (short)'), '', translation.synopsis_short),
     ]
     context = {'submission': submission, 'data': data, 'lang': lang}
     return render_to_response('cpm2014/translation_details.html', context,
