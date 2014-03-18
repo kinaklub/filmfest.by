@@ -1,10 +1,12 @@
 
 # -*- coding: utf-8 -*-
 import io
+import json
 import os.path
+from collections import defaultdict
 
 from django.contrib.admin.views.decorators import staff_member_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
 from django.utils import translation
@@ -263,3 +265,22 @@ def translation_edit(request, submission_id, lang):
     }
     return render_to_response('cpm2014/translation_edit.html', context,
                               context_instance=RequestContext(request))
+
+
+@staff_member_required
+def translations_all_json(request):
+    response_dict = defaultdict(dict)
+
+    for t in SubmissionTranslation.objects.all():
+        response_dict[t.submission_id][t.language] = {
+            'title': t.title,
+            'genre': t.genre,
+            'synopsis': t.synopsis,
+            'synopsis_short': t.synopsis_short,
+            'director': t.director,
+        }
+
+    return HttpResponse(
+        json.dumps(response_dict, indent=2),
+        content_type="application/json"
+    )
