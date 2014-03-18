@@ -22,5 +22,5 @@ class SubmissionSerializer(serializers.HyperlinkedModelSerializer):
             'comment_papers_received', 'comment_vob_received',
             'submitted_at', 'email_sent_at', 'film_received_at',
             'papers_received_at', 'vob_received_at', 'preview',
-            'preview_average', 'previewers'
+            'preview_average', 'previewers', 'extra_data'
         ]
