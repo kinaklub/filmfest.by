@@ -164,8 +164,8 @@ msgid "International Short Film Festival"
 msgstr ""
 
 #: templates/cms/template_home.html:18
-msgid "April 11-27"
-msgstr "11-27 красавіка"
+msgid "April 11 - May 2"
+msgstr "11 красавіка - 2 траўня"
 
 #: templates/cms/template_home.html:19
 #: templates/cpm/new_screening_place.html:4
