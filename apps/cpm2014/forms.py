@@ -4,6 +4,7 @@ from django.forms.util import ErrorList
 
 from form_utils.forms import BetterModelForm
 
+from apps.cpm2014.constants import get_countries
 from apps.cpm2014.models import Submission, SubmissionTranslation
 from validators import validate_checked
 
@@ -32,6 +33,8 @@ class SubmissionForm(BetterModelForm):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('error_class', InlineErrorList)
         super(SubmissionForm, self).__init__(*args, **kwargs)
+
+        self.fields['country'].choices = get_countries()
 
         for field_name in [
             'synopsis', 'film_awards', 'director_awards', 'director_address',

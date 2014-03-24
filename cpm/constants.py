@@ -1,7 +1,7 @@
 from django.utils.translation import ugettext_lazy as _
 
 # TODO: import refactoring
-from apps.cpm2014.constants import COUNTRIES
+from apps.cpm2014.constants import COUNTRIES, get_countries
 
 
 __all__ = ['CAPACITY', 'COUNTRIES', 'KIND', 'TICKET_PRICE']

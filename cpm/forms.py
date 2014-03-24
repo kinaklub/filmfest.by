@@ -2,6 +2,7 @@ from django import forms
 from django.forms.util import ErrorList
 
 from cpm.constants import KIND
+from cpm.constants import get_countries
 from cpm.models import ScreeningPlaceProposal
 
 
@@ -17,6 +18,8 @@ class ScreeningPlaceProposalForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('error_class', InlineErrorList)
         super(ScreeningPlaceProposalForm, self).__init__(*args, **kwargs)
+
+        self.fields['country'].choices = get_countries()
 
         for field_name in ['venue', 'proposals']:
             self.fields[field_name].widget.attrs['rows'] = 4

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-14 20:25+0300\n"
+"POT-Creation-Date: 2014-03-24 08:58+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,1544 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
+#: admin.py:35
+msgid "Previewed"
+msgstr ""
+
+#: admin.py:41 constants.py:11 constants.py:17
+msgid "Yes"
+msgstr ""
+
+#: admin.py:42 constants.py:12 constants.py:18
+msgid "No"
+msgstr ""
+
+#: admin.py:60
+msgid "Comments"
+msgstr ""
+
+#: admin.py:65
+msgid "Dates"
+msgstr ""
+
+#: admin.py:69 forms.py:51 pdf.py:15
+msgid "Film"
+msgstr ""
+
+#: admin.py:75 forms.py:57 models.py:182 pdf.py:19 views.py:236
+#: templates/cpm2014/translation_edit.html:31
+msgid "Director"
+msgstr ""
+
+#: admin.py:80 forms.py:62 pdf.py:22
+msgid "Producer"
+msgstr ""
+
+#: admin.py:84 forms.py:67
+msgid "Credits"
+msgstr ""
+
+#: admin.py:88 forms.py:72 pdf.py:25
+msgid "Applicant"
+msgstr ""
+
+#: admin.py:92 forms.py:77 pdf.py:107
+msgid "Permissions"
+msgstr ""
+
+#: admin.py:136
+msgid "Download link"
+msgstr ""
+
+#: admin.py:141 models.py:109
+msgid "Comment"
+msgstr ""
+
+#: admin.py:146
+msgid "Country"
+msgstr ""
+
+#: admin.py:158
+msgid "Extra data"
+msgstr ""
+
+#: admin.py:179
+msgid "Translation"
+msgstr ""
+
+#: admin.py:195
+msgid "Prescreenings"
+msgstr ""
+
+#: admin.py:199
+msgid "Facts"
+msgstr ""
+
+#: admin.py:283 models.py:164 models.py:176 views.py:235
+#: templates/cpm2014/translation_edit.html:18
+msgid "Title"
+msgstr ""
+
+#: constants.py:16
+msgid "Maybe"
+msgstr ""
+
+#: constants.py:22
+msgid "Fiction"
+msgstr ""
+
+#: constants.py:23
+msgid "Animation"
+msgstr ""
+
+#: constants.py:24
+msgid "Documentary"
+msgstr ""
+
+#: constants.py:25
+msgid "Experimental"
+msgstr ""
+
+#: constants.py:26
+msgid "Musical video"
+msgstr ""
+
+#: constants.py:27
+msgid "Ecology"
+msgstr ""
+
+#: constants.py:28
+#, fuzzy
+msgid "Children"
+msgstr "Чили"
+
+#: constants.py:32
+msgid "festival website"
+msgstr ""
+
+#: constants.py:33
+msgid "Facebook"
+msgstr ""
+
+#: constants.py:34
+msgid "Twitter"
+msgstr ""
+
+#: constants.py:35
+msgid "vk.com"
+msgstr ""
+
+#: constants.py:36
+msgid "email"
+msgstr ""
+
+#: constants.py:37
+msgid "internet search"
+msgstr ""
+
+#: constants.py:38
+msgid "friends"
+msgstr ""
+
+#: constants.py:39
+msgid "festivals database"
+msgstr ""
+
+#: constants.py:40
+msgid "I participated in CPM'2012"
+msgstr ""
+
+#: constants.py:41
+msgid "place of study"
+msgstr ""
+
+#: constants.py:42
+msgid "work"
+msgstr ""
+
+#: constants.py:43
+#, fuzzy
+msgid "other"
+msgstr "Другая"
+
+#: constants.py:47
+msgid "Andorra"
+msgstr "Андорра"
+
+#: constants.py:48
+msgid "United Arab Emirates"
+msgstr "Объединенные Арабские Эмираты"
+
+#: constants.py:49
+msgid "Afghanistan"
+msgstr "Афганистан"
+
+#: constants.py:50
+msgid "Antigua & Barbuda"
+msgstr "Антигуа и Барбуда"
+
+#: constants.py:51
+msgid "Anguilla"
+msgstr "Ангилья"
+
+#: constants.py:52
+msgid "Albania"
+msgstr "Албания"
+
+#: constants.py:53
+msgid "Armenia"
+msgstr "Армения"
+
+#: constants.py:54
+msgid "Netherlands Antilles"
+msgstr "Нидерландские Антильские острова"
+
+#: constants.py:55
+msgid "Angola"
+msgstr "Ангола"
+
+#: constants.py:56
+msgid "Antarctica"
+msgstr "Антарктида"
+
+#: constants.py:57
+msgid "Argentina"
+msgstr "Аргентина"
+
+#: constants.py:58
+msgid "American Samoa"
+msgstr "Американское Самоа"
+
+#: constants.py:59
+msgid "Austria"
+msgstr "Австрия"
+
+#: constants.py:60
+msgid "Australia"
+msgstr "Австралия"
+
+#: constants.py:61
+msgid "Aruba"
+msgstr "Аруба"
+
+#: constants.py:62
+msgid "Azerbaijan"
+msgstr "Азербайджан"
+
+#: constants.py:63
+msgid "Bosnia and Herzegovina"
+msgstr "Босния и Герцеговина"
+
+#: constants.py:64
+msgid "Barbados"
+msgstr "Барбадос"
+
+#: constants.py:65
+msgid "Bangladesh"
+msgstr "Бангладеш"
+
+#: constants.py:66
+msgid "Belgium"
+msgstr "Бельгия"
+
+#: constants.py:67
+msgid "Burkina Faso"
+msgstr "Буркина-Фасо"
+
+#: constants.py:68
+msgid "Bulgaria"
+msgstr "Болгария"
+
+#: constants.py:69
+msgid "Bahrain"
+msgstr "Бахрейн"
+
+#: constants.py:70
+msgid "Burundi"
+msgstr "Бурунди"
+
+#: constants.py:71
+msgid "Benin"
+msgstr "Бенин"
+
+#: constants.py:72
+msgid "Bermuda"
+msgstr "Бермудские острова"
+
+#: constants.py:73
+msgid "Brunei Darussalam"
+msgstr "Бруней-Даруссалам"
+
+#: constants.py:74
+msgid "Bolivia"
+msgstr "Боливия"
+
+#: constants.py:75
+msgid "Brazil"
+msgstr "Бразилия"
+
+#: constants.py:76
+msgid "Bahama"
+msgstr "Багамские острова"
+
+#: constants.py:77
+msgid "Bhutan"
+msgstr "Бутан"
+
+#: constants.py:78
+msgid "Bouvet Island"
+msgstr "Остров Буве"
+
+#: constants.py:79
+msgid "Botswana"
+msgstr "Ботсвана"
+
+#: constants.py:80 templates/cpm2014/submit.html:57
+msgid "Belarus"
+msgstr "Беларусь"
+
+#: constants.py:81
+msgid "Belize"
+msgstr "Белиз"
+
+#: constants.py:82
+msgid "Canada"
+msgstr "Канада"
+
+#: constants.py:83
+msgid "Cocos (Keeling) Islands"
+msgstr "Кокосовые острова"
+
+#: constants.py:84
+msgid "Central African Republic"
+msgstr "Центрально-Африканская Республика"
+
+#: constants.py:85
+msgid "Congo"
+msgstr "Конго"
+
+#: constants.py:86
+msgid "Switzerland"
+msgstr "Швейцария"
+
+#: constants.py:87
+msgid "Ivory Coast"
+msgstr "Берег Слоновой Кости"
+
+#: constants.py:88
+msgid "Cook Iislands"
+msgstr "Острова Кука"
+
+#: constants.py:89
+msgid "Chile"
+msgstr "Чили"
+
+#: constants.py:90
+msgid "Cameroon"
+msgstr "Камерун"
+
+#: constants.py:91
+msgid "China"
+msgstr "Китай"
+
+#: constants.py:92
+msgid "Colombia"
+msgstr "Колумбия"
+
+#: constants.py:93
+msgid "Costa Rica"
+msgstr "Коста-Рика"
+
+#: constants.py:94
+msgid "Cuba"
+msgstr "Куба"
+
+#: constants.py:95
+msgid "Cape Verde"
+msgstr "Кабо-Верде"
+
+#: constants.py:96
+msgid "Christmas Island"
+msgstr "Остров Рождества"
+
+#: constants.py:97
+msgid "Cyprus"
+msgstr "Кипр"
+
+#: constants.py:98
+msgid "Czech Republic"
+msgstr "Чешская республика"
+
+#: constants.py:99
+msgid "Germany"
+msgstr "Германия"
+
+#: constants.py:100
+msgid "Djibouti"
+msgstr "Джибути"
+
+#: constants.py:101
+msgid "Denmark"
+msgstr "Дания"
+
+#: constants.py:102
+msgid "Dominica"
+msgstr "Доминика"
+
+#: constants.py:103
+msgid "Dominican Republic"
+msgstr "Доминиканская Республика"
+
+#: constants.py:104
+msgid "Algeria"
+msgstr "Алжир"
+
+#: constants.py:105
+msgid "Ecuador"
+msgstr "Эквадор"
+
+#: constants.py:106
+msgid "Estonia"
+msgstr "Эстония"
+
+#: constants.py:107
+msgid "Egypt"
+msgstr "Египет"
+
+#: constants.py:108
+msgid "Western Sahara"
+msgstr "Западная Сахара"
+
+#: constants.py:109
+msgid "Eritrea"
+msgstr "Эритрея"
+
+#: constants.py:110
+msgid "Spain"
+msgstr "Испания"
+
+#: constants.py:111
+msgid "Ethiopia"
+msgstr "Эфиопия"
+
+#: constants.py:112
+msgid "Finland"
+msgstr "Финляндия"
+
+#: constants.py:113
+msgid "Fiji"
+msgstr "Фиджи"
+
+#: constants.py:114
+msgid "Falkland Islands (Malvinas)"
+msgstr "Фолклендские острова"
+
+#: constants.py:115
+msgid "Micronesia"
+msgstr "Микронезия"
+
+#: constants.py:116
+msgid "Faroe Islands"
+msgstr "Фарерские острова"
+
+#: constants.py:117
+msgid "France"
+msgstr "Франция"
+
+#: constants.py:118
+msgid "France, Metropolitan"
+msgstr "Франция , митрополит"
+
+#: constants.py:119
+msgid "Gabon"
+msgstr "Габон"
+
+#: constants.py:120
+msgid "United Kingdom (Great Britain)"
+msgstr "Великобритания"
+
+#: constants.py:121
+msgid "Grenada"
+msgstr "Гренада"
+
+#: constants.py:122
+msgid "Georgia"
+msgstr "Грузия"
+
+#: constants.py:123
+msgid "French Guiana"
+msgstr "Французская Гвиана"
+
+#: constants.py:124
+msgid "Ghana"
+msgstr "Гана"
+
+#: constants.py:125
+msgid "Gibraltar"
+msgstr "Гибралтар"
+
+#: constants.py:126
+msgid "Greenland"
+msgstr "Гренландия"
+
+#: constants.py:127
+msgid "Gambia"
+msgstr "Гамбия"
+
+#: constants.py:128
+msgid "Guinea"
+msgstr "Гвинея"
+
+#: constants.py:129
+msgid "Guadeloupe"
+msgstr "Гваделупа"
+
+#: constants.py:130
+msgid "Equatorial Guinea"
+msgstr "Экваториальная Гвинея"
+
+#: constants.py:131
+msgid "Greece"
+msgstr "Греция"
+
+#: constants.py:132
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Южная Георгия и Южные Сандвичевы острова"
+
+#: constants.py:133
+msgid "Guatemala"
+msgstr "Гватемала"
+
+#: constants.py:134
+msgid "Guam"
+msgstr "Гуам"
+
+#: constants.py:135
+msgid "Guinea-Bissau"
+msgstr "Гвинея-Бисау"
+
+#: constants.py:136
+msgid "Guyana"
+msgstr "Гайана"
+
+#: constants.py:137
+msgid "Hong Kong"
+msgstr "Гонконг"
+
+#: constants.py:138
+msgid "Heard & McDonald Islands"
+msgstr "Остров Херд и острова Макдональд"
+
+#: constants.py:139
+msgid "Honduras"
+msgstr "Гондурас"
+
+#: constants.py:140
+msgid "Croatia"
+msgstr "Хорватия"
+
+#: constants.py:141
+msgid "Haiti"
+msgstr "Гаити"
+
+#: constants.py:142
+msgid "Hungary"
+msgstr "Венгрия"
+
+#: constants.py:143
+msgid "Indonesia"
+msgstr "Индонезия"
+
+#: constants.py:144
+msgid "Ireland"
+msgstr "Ирландия"
+
+#: constants.py:145
+msgid "Israel"
+msgstr "Израиль"
+
+#: constants.py:146
+msgid "India"
+msgstr "Индия"
+
+#: constants.py:147
+msgid "British Indian Ocean Territory"
+msgstr "Британская территория Индийского океана"
+
+#: constants.py:148
+msgid "Iraq"
+msgstr "Ирак"
+
+#: constants.py:149
+msgid "Islamic Republic of Iran"
+msgstr "Исламская Республика Иран"
+
+#: constants.py:150
+msgid "Iceland"
+msgstr "Исландия"
+
+#: constants.py:151
+msgid "Italy"
+msgstr "Италия"
+
+#: constants.py:152
+msgid "Jamaica"
+msgstr "Ямайка"
+
+#: constants.py:153
+msgid "Jordan"
+msgstr "Иордания"
+
+#: constants.py:154
+msgid "Japan"
+msgstr "Япония"
+
+#: constants.py:155
+msgid "Kenya"
+msgstr "Кения"
+
+#: constants.py:156
+msgid "Kyrgyzstan"
+msgstr "Киргизия"
+
+#: constants.py:157
+msgid "Cambodia"
+msgstr "Камбоджа"
+
+#: constants.py:158
+msgid "Kiribati"
+msgstr "Кирибати"
+
+#: constants.py:159
+msgid "Comoros"
+msgstr "Коморские острова"
+
+#: constants.py:160
+msgid "St. Kitts and Nevis"
+msgstr "Сент-Китс и Невис"
+
+#: constants.py:161
+msgid "Korea, Democratic People's Republic of"
+msgstr "Корея , Корейская Народно-Демократическая Республика"
+
+#: constants.py:162
+msgid "Korea, Republic of"
+msgstr "Республика Корея"
+
+#: constants.py:163
+msgid "Kuwait"
+msgstr "Кувейт"
+
+#: constants.py:164
+msgid "Cayman Islands"
+msgstr "Каймановы острова"
+
+#: constants.py:165
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+#: constants.py:166
+msgid "Lao People's Democratic Republic"
+msgstr "Лаосская Народно-Демократическая Республика"
+
+#: constants.py:167
+msgid "Lebanon"
+msgstr "Ливан"
+
+#: constants.py:168
+msgid "Saint Lucia"
+msgstr "Сент-Люсия"
+
+#: constants.py:169
+msgid "Liechtenstein"
+msgstr "Лихтенштейн"
+
+#: constants.py:170
+msgid "Sri Lanka"
+msgstr "Шри Ланка"
+
+#: constants.py:171
+msgid "Liberia"
+msgstr "Либерия"
+
+#: constants.py:172
+msgid "Lesotho"
+msgstr "Лесото"
+
+#: constants.py:173
+msgid "Lithuania"
+msgstr "Литва"
+
+#: constants.py:174
+msgid "Luxembourg"
+msgstr "Люксембург"
+
+#: constants.py:175
+msgid "Latvia"
+msgstr "Латвия"
+
+#: constants.py:176
+msgid "Libyan Arab Jamahiriya"
+msgstr "Ливийская Арабская Джамахирия"
+
+#: constants.py:177
+msgid "Morocco"
+msgstr "Марокко"
+
+#: constants.py:178
+msgid "Monaco"
+msgstr "Монако"
+
+#: constants.py:179
+msgid "Moldova, Republic of"
+msgstr "Молдова"
+
+#: constants.py:180
+msgid "Madagascar"
+msgstr "Мадагаскар"
+
+#: constants.py:181
+msgid "Marshall Islands"
+msgstr "Маршалловы острова"
+
+#: constants.py:182
+msgid "Mali"
+msgstr "Мали"
+
+#: constants.py:183
+msgid "Mongolia"
+msgstr "Монголия"
+
+#: constants.py:184
+msgid "Myanmar"
+msgstr "Мьянма"
+
+#: constants.py:185
+msgid "Macau"
+msgstr "Макао"
+
+#: constants.py:186
+msgid "Northern Mariana Islands"
+msgstr "Северные Марианские острова"
+
+#: constants.py:187
+msgid "Martinique"
+msgstr "Мартиника"
+
+#: constants.py:188
+msgid "Mauritania"
+msgstr "Мавритания"
+
+#: constants.py:189
+msgid "Monserrat"
+msgstr "Монсеррат"
+
+#: constants.py:190
+msgid "Malta"
+msgstr "Мальта"
+
+#: constants.py:191
+msgid "Mauritius"
+msgstr "Маврикий"
+
+#: constants.py:192
+msgid "Maldives"
+msgstr "Мальдивы"
+
+#: constants.py:193
+msgid "Malawi"
+msgstr "Малави"
+
+#: constants.py:194
+msgid "Mexico"
+msgstr "Мексика"
+
+#: constants.py:195
+msgid "Malaysia"
+msgstr "Малайзия"
+
+#: constants.py:196
+msgid "Mozambique"
+msgstr "Мозамбик"
+
+#: constants.py:197
+msgid "Namibia"
+msgstr "Намибия"
+
+#: constants.py:198
+msgid "New Caledonia"
+msgstr "Новая Каледония"
+
+#: constants.py:199
+msgid "Niger"
+msgstr "Нигер"
+
+#: constants.py:200
+msgid "Norfolk Island"
+msgstr "Остров Норфолк"
+
+#: constants.py:201
+msgid "Nigeria"
+msgstr "Нигерия"
+
+#: constants.py:202
+msgid "Nicaragua"
+msgstr "Никарагуа"
+
+#: constants.py:203
+msgid "Netherlands"
+msgstr "Нидерланды"
+
+#: constants.py:204
+msgid "Norway"
+msgstr "Норвегия"
+
+#: constants.py:205
+msgid "Nepal"
+msgstr "Непал"
+
+#: constants.py:206
+msgid "Nauru"
+msgstr "Науру"
+
+#: constants.py:207
+msgid "Niue"
+msgstr "Ниуэ"
+
+#: constants.py:208
+msgid "New Zealand"
+msgstr "Новая Зеландия"
+
+#: constants.py:209
+msgid "Oman"
+msgstr "Оман"
+
+#: constants.py:210
+msgid "Panama"
+msgstr "Панама"
+
+#: constants.py:211
+msgid "Peru"
+msgstr "Перу"
+
+#: constants.py:212
+msgid "French Polynesia"
+msgstr "Французская Полинезия"
+
+#: constants.py:213
+msgid "Papua New Guinea"
+msgstr "Папуа-Новая Гвинея"
+
+#: constants.py:214
+msgid "Philippines"
+msgstr "Филиппины"
+
+#: constants.py:215
+msgid "Pakistan"
+msgstr "Пакистан"
+
+#: constants.py:216
+msgid "Poland"
+msgstr "Польша"
+
+#: constants.py:217
+msgid "St. Pierre & Miquelon"
+msgstr "Сен-Пьер и Микелон"
+
+#: constants.py:218
+msgid "Pitcairn"
+msgstr "Питкэрн"
+
+#: constants.py:219
+msgid "Puerto Rico"
+msgstr "Пуэрто-Рико"
+
+#: constants.py:220
+msgid "Portugal"
+msgstr "Португалия"
+
+#: constants.py:221
+msgid "Palau"
+msgstr "Палау"
+
+#: constants.py:222
+msgid "Paraguay"
+msgstr "Парагвай"
+
+#: constants.py:223
+msgid "Qatar"
+msgstr "Катар"
+
+#: constants.py:224
+msgid "Reunion"
+msgstr "Реюньон"
+
+#: constants.py:225
+msgid "Romania"
+msgstr "Румыния"
+
+#: constants.py:226
+msgid "Russian Federation"
+msgstr "Российская Федерация"
+
+#: constants.py:227
+msgid "Rwanda"
+msgstr "Руанда"
+
+#: constants.py:228
+msgid "Saudi Arabia"
+msgstr "Саудовская Аравия"
+
+#: constants.py:229
+msgid "Solomon Islands"
+msgstr "Соломоновы Острова"
+
+#: constants.py:230
+msgid "Seychelles"
+msgstr "Сейшельские острова"
+
+#: constants.py:231
+msgid "Sudan"
+msgstr "Судан"
+
+#: constants.py:232
+msgid "Sweden"
+msgstr "Швеция"
+
+#: constants.py:233
+msgid "Singapore"
+msgstr "Сингапур"
+
+#: constants.py:234
+msgid "St. Helena"
+msgstr "Остров Святой Елены"
+
+#: constants.py:235
+msgid "Slovenia"
+msgstr "Словения"
+
+#: constants.py:236
+msgid "Svalbard & Jan Mayen Islands"
+msgstr "Шпицберген и Ян-Майен"
+
+#: constants.py:237
+msgid "Slovakia"
+msgstr "Словакия"
+
+#: constants.py:238
+msgid "Sierra Leone"
+msgstr "Сьерра-Леоне"
+
+#: constants.py:239
+msgid "San Marino"
+msgstr "Сан - Марино"
+
+#: constants.py:240
+msgid "Senegal"
+msgstr "Сенегал"
+
+#: constants.py:241
+msgid "Somalia"
+msgstr "Сомали"
+
+#: constants.py:242
+msgid "Suriname"
+msgstr "Суринам"
+
+#: constants.py:243
+msgid "Sao Tome & Principe"
+msgstr "Сан-Томе и Принсипи"
+
+#: constants.py:244
+msgid "El Salvador"
+msgstr "Сальвадор"
+
+#: constants.py:245
+msgid "Syrian Arab Republic"
+msgstr "Сирийская Арабская Республика"
+
+#: constants.py:246
+msgid "Swaziland"
+msgstr "Свазиленд"
+
+#: constants.py:247
+msgid "Turks & Caicos Islands"
+msgstr "Теркс и Кайкос"
+
+#: constants.py:248
+msgid "Chad"
+msgstr "Чад"
+
+#: constants.py:249
+msgid "French Southern Territories"
+msgstr "Французские южные территории"
+
+#: constants.py:250
+msgid "Togo"
+msgstr "Того"
+
+#: constants.py:251
+msgid "Thailand"
+msgstr "Таиланд"
+
+#: constants.py:252
+msgid "Tajikistan"
+msgstr "Таджикистан"
+
+#: constants.py:253
+msgid "Tokelau"
+msgstr "Токелау"
+
+#: constants.py:254
+msgid "Turkmenistan"
+msgstr "Туркменистан"
+
+#: constants.py:255
+msgid "Tunisia"
+msgstr "Тунис"
+
+#: constants.py:256
+msgid "Tonga"
+msgstr "Тонга"
+
+#: constants.py:257
+msgid "East Timor"
+msgstr "Восточный Тимор"
+
+#: constants.py:258
+msgid "Turkey"
+msgstr "Турция"
+
+#: constants.py:259
+msgid "Trinidad & Tobago"
+msgstr "Тринидад и Тобаго"
+
+#: constants.py:260
+msgid "Tuvalu"
+msgstr "Тувалу"
+
+#: constants.py:261
+msgid "Taiwan, Province of China"
+msgstr "Тайвань, провинция Китая"
+
+#: constants.py:262
+msgid "Tanzania, United Republic of"
+msgstr "Танзания, Объединенная Республика"
+
+#: constants.py:263
+msgid "Ukraine"
+msgstr "Украина"
+
+#: constants.py:264
+msgid "Uganda"
+msgstr "Уганда"
+
+#: constants.py:265
+msgid "United States Minor Outlying Islands"
+msgstr "Внешние малые острова США"
+
+#: constants.py:266
+msgid "United States of America"
+msgstr "Соединенные Штаты Америки"
+
+#: constants.py:267
+msgid "Uruguay"
+msgstr "Уругвай"
+
+#: constants.py:268
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+#: constants.py:269
+msgid "Vatican City State (Holy See)"
+msgstr "Город-государство Ватикан (Святейший Престол)"
+
+#: constants.py:270
+msgid "St. Vincent & the Grenadines"
+msgstr "Сент-Винсент и Гренадины"
+
+#: constants.py:271
+msgid "Venezuela"
+msgstr "Венесуэла"
+
+#: constants.py:272
+msgid "British Virgin Islands"
+msgstr "Британские Виргинские острова"
+
+#: constants.py:273
+msgid "United States Virgin Islands"
+msgstr "Виргинские Острова (США)"
+
+#: constants.py:274
+msgid "Viet Nam"
+msgstr "Вьетнам"
+
+#: constants.py:275
+msgid "Vanuatu"
+msgstr "Вануату"
+
+#: constants.py:276
+msgid "Wallis & Futuna Islands"
+msgstr "Острова Уоллис и Футуна"
+
+#: constants.py:277
+msgid "Samoa"
+msgstr "Самоа"
+
+#: constants.py:278
+msgid "Yemen"
+msgstr "Йемен"
+
+#: constants.py:279
+msgid "Mayotte"
+msgstr "Майотта"
+
+#: constants.py:280
+msgid "Yugoslavia"
+msgstr "Югославия"
+
+#: constants.py:281
+msgid "South Africa"
+msgstr "ЮАР"
+
+#: constants.py:282
+msgid "Zambia"
+msgstr "Замбия"
+
+#: constants.py:283
+msgid "Zaire"
+msgstr "Заир"
+
+#: constants.py:284
+msgid "Zimbabwe"
+msgstr "Зимбабве"
+
+#: constants.py:285
+msgid "Other"
+msgstr "Другая"
+
+#: forms.py:24
+msgid "I have read the rules of the festival and agree to its terms"
+msgstr ""
+
+#: forms.py:28
+msgid ""
+"I declare that I am the legal owner of all rights relating to the submitted "
+"movie"
+msgstr ""
+
+#: models.py:11
+msgid "Original title"
+msgstr ""
+
+#: models.py:12
+msgid "English title"
+msgstr ""
+
+#: models.py:14
+msgid "Country of production"
+msgstr ""
+
+#: models.py:16
+msgid "Language of original version"
+msgstr ""
+
+#: models.py:18 models.py:178 views.py:237
+#: templates/cpm2014/translation_edit.html:44
+msgid "Genre"
+msgstr ""
+
+#: models.py:20
+msgid "Section"
+msgstr ""
+
+#: models.py:22 models.py:180 views.py:238
+#: templates/cpm2014/translation_edit.html:57
+msgid "Synopsis"
+msgstr ""
+
+#: models.py:23
+msgid "Runtime (in minutes)"
+msgstr ""
+
+#: models.py:24
+msgid "Aspect ratio"
+msgstr ""
+
+#: models.py:26
+msgid "Year of production"
+msgstr ""
+
+#: models.py:27
+msgid "Premiere"
+msgstr ""
+
+#: models.py:28
+msgid "Film awards"
+msgstr ""
+
+#: models.py:30
+msgid "Director awards"
+msgstr ""
+
+#: models.py:31
+msgid "Film budget"
+msgstr ""
+
+#: models.py:33
+msgid "Link to download the film (optional)"
+msgstr ""
+
+#: models.py:38
+msgid "I intend to visit final part of festival"
+msgstr ""
+
+#: models.py:41
+msgid "The source of information about Cinema Perpetuum Mobile"
+msgstr ""
+
+#: models.py:46 models.py:57 models.py:90
+msgid "Name"
+msgstr ""
+
+#: models.py:48 models.py:59 models.py:92
+msgid "Address"
+msgstr ""
+
+#: models.py:49 models.py:61 models.py:93
+msgid "Email"
+msgstr ""
+
+#: models.py:51 models.py:63 models.py:95
+msgid "Website"
+msgstr ""
+
+#: models.py:54 models.py:65 models.py:98
+msgid "Tel."
+msgstr ""
+
+#: models.py:68
+msgid "Script writer"
+msgstr ""
+
+#: models.py:70
+msgid "Editor"
+msgstr ""
+
+#: models.py:72
+msgid "Music composer"
+msgstr ""
+
+#: models.py:75
+msgid "Director of photography"
+msgstr ""
+
+#: models.py:77
+msgid "Other credits"
+msgstr ""
+
+#: models.py:81
+#, python-format
+msgid ""
+"Authorization to use excerpts of the film for promotion (max 10% of the "
+"total length) in television"
+msgstr ""
+
+#: models.py:84
+msgid ""
+"Authorization to include the film in the festival video collection for non-"
+"commercial screenings"
+msgstr ""
+
+#: models.py:87
+msgid ""
+"Authorization to screen the film at film festivals from Cinema Perpetuum "
+"Mobile partner network"
+msgstr ""
+
+#: models.py:102
+msgid "Submission language"
+msgstr ""
+
+#: models.py:107
+msgid "Structured data"
+msgstr ""
+
+#: models.py:111
+msgid "E-mail was sent"
+msgstr ""
+
+#: models.py:113
+msgid "Film is received"
+msgstr ""
+
+#: models.py:115
+msgid "Papers were received"
+msgstr ""
+
+#: models.py:117
+msgid "Vob received"
+msgstr ""
+
+#: models.py:120
+msgid "Submitted at"
+msgstr ""
+
+#: models.py:122
+msgid "E-mail sent at"
+msgstr ""
+
+#: models.py:124
+msgid "Film received at"
+msgstr ""
+
+#: models.py:126
+msgid "Papers received at"
+msgstr ""
+
+#: models.py:128
+msgid "Vob received at"
+msgstr ""
+
+#: models.py:131
+msgid "Preview result"
+msgstr ""
+
+#: models.py:133
+msgid "Preview average result"
+msgstr ""
+
+#: models.py:135
+msgid "Previewers count"
+msgstr ""
+
+#: models.py:153
+msgid "Date and time"
+msgstr ""
+
+#: models.py:165
+msgid "Short text"
+msgstr ""
+
+#: models.py:166
+msgid "Text"
+msgstr ""
+
+#: models.py:181 views.py:239 templates/cpm2014/translation_edit.html:70
+msgid "Synopsis (short)"
+msgstr ""
+
+#: validators.py:6
+msgid "Please check if you agree"
+msgstr ""
+
+#: templates/admin/cpm2014/submission/xlsx.html:8
+msgid "Export"
+msgstr ""
+
+#: templates/cpm2014/base.html:46
+msgid "spring 2014"
+msgstr ""
+
+#: templates/cpm2014/base.html:47
+msgid "planet Earth"
+msgstr ""
+
+#: templates/cpm2014/base.html:164
+msgid "международный фестиваль"
+msgstr ""
+
+#: templates/cpm2014/base.html:165
+msgid "короткометражного кино"
+msgstr ""
+
+#: templates/cpm2014/base.html:167
+msgid "Spring 2014"
+msgstr ""
+
+#: templates/cpm2014/base.html:168
+#, fuzzy
+msgid "Minsk, Belarus"
+msgstr "Беларусь"
+
+#: templates/cpm2014/base.html:171
+msgid "Links"
+msgstr ""
+
+#: templates/cpm2014/contacts.html:4
+msgid "Contacts"
+msgstr ""
+
+#: templates/cpm2014/contacts.html:7
+msgid ""
+"If you have any questions, please feel free to contact us via e-mail. You "
+"can also get in touch with any of our coordinators directly."
+msgstr ""
+
+#: templates/cpm2014/contacts.html:8
+msgid "Festival e-mail"
+msgstr ""
+
+#: templates/cpm2014/contacts.html:9
+msgid "Festival coordinators"
+msgstr ""
+
+#: templates/cpm2014/contacts.html:13
+msgid "Dennis Sheko"
+msgstr ""
+
+#: templates/cpm2014/contacts.html:21
+msgid "Aleksandr Martyniuk"
+msgstr ""
+
+#: templates/cpm2014/contacts.html:28
+msgid "Darya Efimova"
+msgstr ""
+
+#: templates/cpm2014/index.html:8
+msgid ""
+"\n"
+"      <p>Welcome to III International Short Film Festival Cinema Perpetuum "
+"Mobile!</p>\n"
+"      <p>We invite you to share our idea of promoting human values through "
+"art and independent cinematography. This idea is not new; however, it still "
+"unites hundreds of underground film-makers around the globe to join efforts "
+"in their sincere endeavor to see our world become a truly better place.</p>\n"
+"      <p>As before, Cinema Perpetuum Mobile sticks to its goals to</p>\n"
+"      <ul>\n"
+"\t<li>promote independent film-making throughout the world;</li>\n"
+"\t<li>search for new forms and solutions in cinematography;</li>\n"
+"\t<li>encourage cultural diversity in cinematography;</li>\n"
+"\t<li>develop and strengthen connections between film-makers and film-making "
+"communities all around the world.</li>\n"
+"      </ul>\n"
+"      <p>This time Cinema Perpetuum Mobile will reach the audience not only "
+"in Belarusian regions and cities, but in other countries as well. It is you "
+"who help us bring independent cinema to more and more people, and our "
+"community is growing due to the principles we incorporate in our mission:</"
+"p>\n"
+"      <h3>We are independent</h3>\n"
+"      <p>Cinema Perpetuum Mobile is a non-profit project founded and "
+"promoted solely by volunteers.</p>\n"
+"      <h3>We are open</h3>\n"
+"      <p>Anyone can join our team and contribute to this unique project on "
+"equal terms of cooperation.</p>\n"
+"      <h3>We are transparent</h3>\n"
+"      <p>No leaders, no centralization, no barriers – this is what our "
+"structure is. In this microcosm of Cinema Perpetuum Mobile everyone is "
+"united in sharing enthusiasm.</p>\n"
+"\n"
+"      <p>We are here to make it happen. We believe you are here too.</p>\n"
+"      "
+msgstr ""
+
+#: templates/cpm2014/partners.html:4 templates/cpm2014/partners.html.py:7
+msgid "Partners"
+msgstr ""
+
+#: templates/cpm2014/partners.html:8
+msgid ""
+"<em>Cinema Perpetuum Mobile</em> is a non-profit, independent project which "
+"keeps on expenses and aspirations of the organizers. At the same time "
+"international nature of the event, cultural resonance provides fertile "
+"ground for collaboration with business and public organizations."
+msgstr ""
+
+#: templates/cpm2014/press_kit.html:4
+msgid "Press kit"
+msgstr ""
+
+#: templates/cpm2014/rules.html:4
+msgid "Regulations"
+msgstr ""
+
+#: templates/cpm2014/submit.html:4
+msgid "Submit your film!"
+msgstr ""
+
+#: templates/cpm2014/submit.html:42
+msgid "Terms of participation"
+msgstr ""
+
+#: templates/cpm2014/submit.html:44
+msgid "You need to complete 3 steps:"
+msgstr ""
+
+#: templates/cpm2014/submit.html:46
+msgid "Make a request (fill in a form on the website)."
+msgstr ""
+
+#: templates/cpm2014/submit.html:47
+msgid ""
+"A copy of the application form will be sent via e-mail, you need to print "
+"it, sign and send in the mail."
+msgstr ""
+
+#: templates/cpm2014/submit.html:48
+msgid ""
+"Transfer a copy of the film (on disk by mail or via the Internet) to the "
+"organizing committee."
+msgstr ""
+
+#: templates/cpm2014/submit.html:51
+msgid ""
+"The film need to be sent on a DVD by mail or via the Internet. On disk (in a "
+"file) should be the film only (without menus, etc.)."
+msgstr ""
+
+#: templates/cpm2014/submit.html:52
+msgid "Film copies and signed application forms are accepted at:"
+msgstr ""
+
+#: templates/cpm2014/submit.html:54
+msgid "Aliaksandr Martyniuk"
+msgstr ""
+
+#: templates/cpm2014/submit.html:55
+msgid "PO Box 74"
+msgstr ""
+
+#: templates/cpm2014/submit.html:56
+msgid "Minsk"
+msgstr ""
+
+#: templates/cpm2014/submit.html:59
+msgid "Complete festival rules can be found here:"
+msgstr ""
+
+#: templates/cpm2014/submit_done.html:5
+msgid "Thank you for submission!"
+msgstr ""
+
+#: templates/cpm2014/submit_done.html:7
+#, python-format
+msgid ""
+"\n"
+"Submission form along with further instructions will be sent to %(email)s "
+"soon.\n"
+msgstr ""
+
+#: templates/cpm2014/translation_details.html:24
+msgid "Edit"
+msgstr ""
+
+#: templates/cpm2014/translation_edit.html:83
+msgid "Submit"
+msgstr ""
+
+#: templates/cpm2014/translation_edit.html:84
+#, fuzzy
+msgid "Cancel"
+msgstr "Франция"
+
 #: templates/cpm2014/tags/news.html:2
 msgid "Latest news"
 msgstr "Последние новости"
 
-#: templates/cpm2014/tags/news.html:7
+#: templates/cpm2014/tags/news.html:9
 msgid "Show more >>>>>"
 msgstr "Показать еще >>>>>"
 
-#: templates/cpm2014/tags/news.html:7
+#: templates/cpm2014/tags/news.html:9
 msgid "Hide <<<<<"
 msgstr "Спрятать <<<<<"

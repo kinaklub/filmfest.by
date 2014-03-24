@@ -2,6 +2,7 @@ import os.path
 
 from django.conf import settings
 from django.conf.global_settings import LANGUAGES
+from django.utils.functional import lazy
 from django.utils.translation import ugettext_lazy as _
 
 import pycountry
@@ -284,7 +285,7 @@ COUNTRIES = (
     ('ZW', _('Zimbabwe')),
     ('ZZ', _('Other')),
 )
-COUNTRIES = sorted(COUNTRIES, key=lambda x: x[1])
+get_countries = lambda: sorted(COUNTRIES, key=lambda x: x[1])
 
 
 LANGUAGES = sorted(
