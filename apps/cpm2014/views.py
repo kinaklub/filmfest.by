@@ -271,14 +271,19 @@ def translation_edit(request, submission_id, lang):
 def translations_all_json(request):
     response_dict = defaultdict(dict)
 
-    for t in SubmissionTranslation.objects.all():
+    for t in SubmissionTranslation.objects.all().select_related('submission'):
+        translation.activate(t.language)
+
         response_dict[t.submission_id][t.language] = {
             'title': t.title,
             'genre': t.genre,
             'synopsis': t.synopsis,
             'synopsis_short': t.synopsis_short,
             'director': t.director,
+            'language': t.submission.get_language_display(),
         }
+
+    translation.deactivate()
 
     return HttpResponse(
         json.dumps(response_dict, indent=2),
