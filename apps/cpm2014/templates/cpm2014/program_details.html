@@ -1,0 +1,26 @@
+{% extends "cpm/page.html" %}
+{% load i18n %}
+
+{% block main_content %}
+
+<h2>{% trans "Program" %} "{{ translation.name|default_if_none:program.code }}" ({{ program.get_section_display }})</h2>
+
+<p>{{ translation.description }}</p>
+
+<ol>
+{% for screening in screenings %}
+  {# we've got lots of sql queries due to .translation, but who cares #}
+  <li>
+    {{ screening.submission.translation.title|default:screening.submission.title }}
+    <br /><small>
+      {{ screening.submission.translation.synopsis|default:screening.submission.synopsis|linebreaksbr }}
+    </small>
+  </li>
+{% endfor %}
+</ol>
+
+{% if editable %}
+  <a class="btn btn-default pull-right" href="{% url cpm2014:program_edit program_id=program.id %}">{% trans "Edit" %}</a>
+{% endif %}
+
+{% endblock %}

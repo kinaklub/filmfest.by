@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.functional import cached_property
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
@@ -148,6 +149,19 @@ class Submission(models.Model):
             str(self.id), submission_hash.hexdigest()
         ])
 
+    @cached_property
+    def translation(self):
+        from django.utils import translation
+        current_language = translation.get_language()
+
+        return next(
+            (
+                trans for trans in self.submissiontranslation_set.all()
+                if trans.language == current_language
+            ),
+            None
+        )
+
 
 class Prescreening(models.Model):
     datetime = models.DateTimeField(verbose_name=_('Date and time'))
@@ -184,3 +198,32 @@ class SubmissionTranslation(models.Model):
 
     class Meta:
         unique_together = [('submission', 'language')]
+
+
+class Program(models.Model):
+    code = models.SlugField(
+        unique=True, verbose_name=_(u'Code'),
+        help_text=_(u'Unique technical code, e.g. regional_mogilev')
+    )
+    section = models.IntegerField(choices=SECTIONS, verbose_name=_(u'Section'))
+    __unicode__ = lambda self: self.code
+
+
+class ProgramTranslation(models.Model):
+    program = models.ForeignKey(Program)
+    language = models.CharField(max_length=2, choices=TRANSLATION_LANGUAGES)
+    name = models.CharField(verbose_name=_(u'Name'), max_length=1000)
+    description = models.CharField(verbose_name=_(u'Description'),
+                                   max_length=1000)
+
+    class Meta:
+        unique_together = [('language', 'program')]
+
+
+class SubmissionScreening(models.Model):
+    num = models.IntegerField()
+    submission = models.ForeignKey(Submission)
+    program = models.ForeignKey(Program)
+
+    class Meta:
+        unique_together = [('submission', 'program')]

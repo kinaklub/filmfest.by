@@ -6,8 +6,11 @@ import os.path
 from collections import defaultdict
 
 from django.contrib.admin.views.decorators import staff_member_required
+from django.db import transaction
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render_to_response, redirect
+from django.shortcuts import (
+    get_object_or_404, render_to_response, redirect, redirect
+)
 from django.template import RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
@@ -17,9 +20,15 @@ from django.conf import settings
 
 from rest_framework import viewsets
 
-from apps.cpm2014.constants import APP_ROOT
-from apps.cpm2014.models import Submission, NewsEntry, SubmissionTranslation
-from apps.cpm2014.forms import SubmissionForm, SubmissionTranslationForm
+from apps.cpm2014.constants import APP_ROOT, TRANSLATION_LANGUAGES
+from apps.cpm2014.models import (
+    NewsEntry, Program, ProgramTranslation,
+    Submission, SubmissionScreening, SubmissionTranslation
+)
+from apps.cpm2014.forms import (
+    ProgramForm, ProgramTranslationForm,
+    SubmissionForm, SubmissionTranslationForm
+)
 from apps.cpm2014.serializers import SubmissionSerializer
 from apps.cpm2014.tasks import SendSubmissionEmail
 
@@ -289,3 +298,103 @@ def translations_all_json(request):
         json.dumps(response_dict, indent=2),
         content_type="application/json"
     )
+
+
+@staff_member_required
+def program_list(request):
+    programs = Program.objects.all().prefetch_related()
+
+    context = {'programs': programs}
+    return render_to_response('cpm2014/program_list.html', context,
+                              context_instance=RequestContext(request))
+
+
+def program_details(request, program_id):
+    program = get_object_or_404(Program, id=program_id)
+    try:
+        trans = ProgramTranslation.objects.get(
+            language=translation.get_language(), program=program
+        )
+    except ProgramTranslation.DoesNotExist:
+        trans = None
+    screenings_qs = program.submissionscreening_set.all()
+    screenings_qs = screenings_qs.select_related()
+    screenings_qs = screenings_qs.prefetch_related('submission__submissiontranslation_set')
+
+    context = {
+        'program': program,
+        'translation': trans,
+        'screenings': sorted(
+            screenings_qs,
+            key=lambda screening: screening.num
+        ),
+        'editable': request.user.is_staff
+    }
+    return render_to_response('cpm2014/program_details.html', context,
+                              context_instance=RequestContext(request))
+
+
+@staff_member_required
+@transaction.commit_on_success
+def program_edit(request, program_id=None):
+    if program_id is None:
+        program = Program()
+        translations = [
+            ProgramTranslation(
+                language=lang
+            ) for lang, lang_name in TRANSLATION_LANGUAGES
+        ]
+    else:
+        program = get_object_or_404(Program, id=program_id)
+        translations = [
+            ProgramTranslation.objects.get_or_create(
+                language=lang, program=program
+            )[0] for lang, lang_name in TRANSLATION_LANGUAGES
+        ]
+
+    films_initial = '\n'.join(
+        str(scr.submission_id) for scr in program.submissionscreening_set.all()
+    )
+    form = ProgramForm(request.POST or None, instance=program,
+                       initial={'films': films_initial})
+
+    translation_forms = [
+        ProgramTranslationForm(
+            request.POST or None,
+            instance=trans,
+            prefix=trans.language
+        ) for trans in translations
+    ]
+
+    if form.is_valid() and all(f.is_valid() for f in translation_forms):
+        program = form.save(commit=False)
+        program.save()
+
+        SubmissionScreening.objects.filter(program=program).delete()
+        SubmissionScreening.objects.bulk_create(
+            [
+                SubmissionScreening(
+                    num=index,
+                    submission=submission,
+                    program=program
+                )
+                for index, submission in enumerate(
+                    form.cleaned_data['films'], 1
+                )
+            ]
+        )
+
+        for translation_form in translation_forms:
+            trans = translation_form.save(commit=False)
+            trans.program = program
+            trans.save()
+
+        return redirect('cpm2014:program_details', program_id=program.id)
+
+    context = {
+        'program': program,
+        'form': form,
+        'translation_forms': translation_forms
+    }
+    return render_to_response('cpm2014/program_edit.html', context,
+                              context_instance=RequestContext(request))

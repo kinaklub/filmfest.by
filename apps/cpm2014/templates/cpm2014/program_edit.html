@@ -1,0 +1,31 @@
+{% extends "cpm/page.html" %}
+{% load i18n %}
+
+{% block main_content %}
+
+<h2>
+  {% if program.id %}
+    {% trans "Edit program" %} {{ program.id }}
+  {% else %}
+    {% trans "Add new program" %}
+  {% endif %}
+</h2>
+
+<form class="form-horizontal" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <div class="row">
+  {% for trans_form in translation_forms %}
+    <div class="span4">
+      {{ trans_form.prefix|upper }}
+      {{ trans_form.as_p}}
+    </div>
+  {% endfor %}
+  </div>
+
+
+  <button class="btn btn-default" type="submit">{% trans "Submit" %}</button>
+</form>
+
+{% endblock %}

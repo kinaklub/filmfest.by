@@ -33,6 +33,15 @@ def get_urls():
             views.translation_edit, name='translation_edit'),
         url(r'^translations/$',
             views.translations_all_json, name='translations_all_json'),
+
+        url(r'^program/list/$',
+            views.program_list, name='program_list'),
+        url(r'^program/add/$',
+            views.program_edit, name='program_add'),
+        url(r'^program/(?P<program_id>\d+)/$',
+            views.program_details, name='program_details'),
+        url(r'^program/(?P<program_id>\d+)/edit/$',
+            views.program_edit, name='program_edit'),
     )
 
 urls = (get_urls(), 'cpm2014', 'cpm2014')
