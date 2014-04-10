@@ -27,7 +27,10 @@ from hvad.utils import get_translation_aware_manager
 import openpyxl
 
 from apps.cpm2014 import constants
-from apps.cpm2014.models import Submission, Prescreening, NewsEntry
+from apps.cpm2014.models import (
+    Submission, Prescreening, NewsEntry,
+    City, Place, Event
+)
 from apps.cpm2014.forms import FieldsForm
 
 
@@ -283,6 +286,28 @@ class NewsAdmin(TranslatableAdmin):
     display_title.short_description = _('Title')
 
 
+class CityAdmin(TranslatableAdmin):
+    list_display = ['code', 'priority']
+    order_by = ('-priority',)
+
+    queryset = lambda self, request: get_translation_aware_manager(City)
+
+
+class PlaceAdmin(TranslatableAdmin):
+    list_display = ['code', 'city']
+
+    queryset = lambda self, request: get_translation_aware_manager(Place)
+
+
+class EventAdmin(TranslatableAdmin):
+    list_display = ['code', 'place', 'starts_at']
+
+    queryset = lambda self, request: get_translation_aware_manager(Event)
+
+
 admin.site.register(Submission, SubmissionAdmin)
 admin.site.register(Prescreening, PrescreeningAdmin)
 admin.site.register(NewsEntry, NewsAdmin)
+admin.site.register(City, CityAdmin)
+admin.site.register(Place, PlaceAdmin)
+admin.site.register(Event, EventAdmin)

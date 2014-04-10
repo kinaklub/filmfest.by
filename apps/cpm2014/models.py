@@ -227,3 +227,42 @@ class SubmissionScreening(models.Model):
 
     class Meta:
         unique_together = [('submission', 'program')]
+
+
+class City(TranslatableModel):
+    code = models.CharField(verbose_name=_(u'Code'), max_length=1000)
+    priority = models.IntegerField(verbose_name=_(u'Priority'))
+
+    translations = TranslatedFields(
+        name = models.CharField(verbose_name=_(u'Name'), max_length=1000)
+    )
+
+    __unicode__ = lambda self: self.code
+
+    class Meta:
+        verbose_name_plural = 'Cities'
+
+
+class Place(TranslatableModel):
+    code = models.CharField(verbose_name=_(u'Code'), max_length=1000)
+    city = models.ForeignKey(City)
+
+    translations = TranslatedFields(
+        name = models.CharField(verbose_name=_(u'Name'), max_length=1000),
+        address = models.CharField(verbose_name=_(u'Address'), max_length=1000)
+    )
+
+    __unicode__ = lambda self: self.code
+
+
+class Event(TranslatableModel):
+    code = models.CharField(verbose_name=_(u'Code'), max_length=1000)
+    starts_at = models.DateTimeField(verbose_name=_('Starts at'), db_index=True)
+    place = models.ForeignKey(Place)
+
+    translations = TranslatedFields(
+        name = models.CharField(verbose_name=_(u'Name'), max_length=1000),
+        description = models.TextField(verbose_name=_('Description'))
+    )
+
+    __unicode__ = lambda self: self.code
