@@ -3,24 +3,64 @@
 
 {% block main_content %}
 
-<h2>{% trans "Program" %} "{{ translation.name|default_if_none:program.code }}" ({{ program.get_section_display }})</h2>
+<h2>{{ translation.name|default_if_none:program.code }}</h2>
 
 <p>{{ translation.description }}</p>
+<!--table.results.table.table-bordered.table-condensed.table-hover.table-striped-->
+<!--thead-->
+<!--tr-->
+<!--td= t('Номинация')-->
+<!--td= t('Кадр')-->
+<!--td= t('Номинация')-->
+<!--tbody-->
+<!--each film in comp_progs-->
+<!--tr-->
+<!--td-->
+<!--span(class= 'film_prize')!= translate(film.prize)-->
+<!--td-->
+<!--img(src= film.image, class= 'film_still')-->
+<!--td-->
+<!--span(class='film_title')= t(film.title)-->
+<!--br-->
+<!--span(class='film_director' )= t(film.director)-->
+<!--br-->
+<!--span(class='film_duration')= t(film.duration)-->
+<!--br-->
+<!--br-->
+<!--p(class='film_description')= translate(film.description)-->
 
-<ol>
-{% for screening in screenings %}
-  {# we've got lots of sql queries due to .translation, but who cares #}
-  <li>
-    {{ screening.submission.translation.title|default:screening.submission.title }}
-    <br /><small>
-      {{ screening.submission.translation.synopsis|default:screening.submission.synopsis|linebreaksbr }}
-    </small>
-  </li>
-{% endfor %}
-</ol>
+
+<table class="results table table-bordered table-condensed table-hover table-striped">
+    <tbody>
+    {% for screening in screenings %}
+    {# we've got lots of sql queries due to .translation, but who cares #}
+    <tr>
+        <td>
+            <div class="film_screenshot" >
+                <img class="film_still" src="" alt=""/>
+            </div>
+        </td>
+        <td>
+            <span class="film_title">{{ screening.submission.translation.title|default:screening.submission.title }}</span> / <span class="film_director">{{ screening.submission.translation.director|default:screening.submission.director }}</span> ( <span class="film_country">{{ screening.submission.country }}</span>, <span class="film_duration">{{ screening.submission.length }}</span> min)
+            <br/>
+            <br/>
+
+            <p class="fil_description">
+                {{ screening.submission.translation.synopsis_short|default:screening.submission.synopsis|linebreaksbr }}
+            </p>
+        </td>
+
+
+
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
 {% if editable %}
   <a class="btn btn-default pull-right" href="{% url cpm2014:program_edit program_id=program.id %}">{% trans "Edit" %}</a>
 {% endif %}
+
 
 {% endblock %}
