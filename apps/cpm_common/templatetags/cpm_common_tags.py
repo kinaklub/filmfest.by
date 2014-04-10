@@ -17,16 +17,7 @@ def get_mainmenu_items():
             '',
             (
                 (_('2012: good memories'), reverse('cpm2012:index')),
-                (
-                    _('Festival in media'),
-                    reverse('pages-details-by-slug', kwargs={'slug': 'media'})
-                ),
-            )
-        ),
-        (
-            _('Participants'),
-            '',
-            (
+                (_('2013: good memories'), reverse('cpm2013:index')),
                 (
                     _('Regulations'),
                     reverse('pages-details-by-slug', kwargs={'slug': 'rules'})
@@ -42,9 +33,17 @@ def get_mainmenu_items():
             '',
             (
                 (
+                    _('Join in'),
+                    reverse('pages-details-by-slug', kwargs={'slug': 'vklyuchajsya'})
+                ),
+                (
                     _('Discussion group'),
                     'http://groups.google.com/group/cpm2014'
                 ),
+                (
+                    _('Volunteer form'),
+                    'http://filmfest.by/ru/2013/page/volunteer_form'
+                )
             )
         ),
         (
@@ -53,9 +52,19 @@ def get_mainmenu_items():
             ()
         ),
         (
-            _('Press kit'),
-            reverse('pages-details-by-slug', kwargs={'slug': 'press-kit'}),
-            ()
+            _('Press-center'),
+            '',
+            (
+                (
+                    _('Press-kit'),
+                    reverse('pages-details-by-slug', kwargs={'slug': 'press-kit'}),
+                ),
+                (
+                    _('Festival in media'),
+                    reverse('pages-details-by-slug', kwargs={'slug': 'media'})
+                ),
+
+            )
         ),
         (
             _('Contacts'),
