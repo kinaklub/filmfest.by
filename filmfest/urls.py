@@ -31,4 +31,8 @@ urlpatterns = i18n_patterns('',
     url(r'^2014/', include(cpm2014_urls)),
 
     url(r'^', include('cms.urls')),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+) + static(
+    settings.STATIC_URL, document_root=settings.STATIC_ROOT
+) + static(
+    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+)
