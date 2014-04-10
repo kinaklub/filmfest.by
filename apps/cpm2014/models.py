@@ -262,7 +262,8 @@ class Event(TranslatableModel):
 
     translations = TranslatedFields(
         name = models.CharField(verbose_name=_(u'Name'), max_length=1000),
-        description = models.TextField(verbose_name=_('Description'))
+        description = models.TextField(verbose_name=_('Description'),
+                                       blank=True, null=True)
     )
 
     __unicode__ = lambda self: self.code
