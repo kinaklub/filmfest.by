@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'requirements')) as f:
 
 setup(
     name='filmfest',
-    version='1.6.1',
+    version='1.6.2',
     description='filmfest.by, a Django-based project',
     author='Stas Rudakou',
     author_email='stas@garage22.net',
