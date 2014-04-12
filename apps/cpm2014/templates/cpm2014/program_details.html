@@ -37,7 +37,7 @@
     <tr>
         <td>
             <div class="film_screenshot" >
-                <img class="film_still" src="" alt=""/>
+                <img class="film_still img-rounded img-polaroid" src="/media/screenshots/{{screening.submission.id}}.jpg" alt=""/>
             </div>
         </td>
         <td>
@@ -49,10 +49,6 @@
                 {{ screening.submission.translation.synopsis_short|default:screening.submission.synopsis|linebreaksbr }}
             </p>
         </td>
-
-
-
-
     </tr>
     {% endfor %}
     </tbody>
