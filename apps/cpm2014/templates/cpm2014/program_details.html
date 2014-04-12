@@ -41,7 +41,7 @@
             </div>
         </td>
         <td>
-            <span class="film_title">{{ screening.submission.translation.title|default:screening.submission.title }}</span> / <span class="film_director">{{ screening.submission.translation.director|default:screening.submission.director }}</span> ( <span class="film_country">{{ screening.submission.country }}</span>, <span class="film_duration">{{ screening.submission.length }}</span> min)
+            <span class="film_title">{{ screening.submission.translation.title|default:screening.submission.title }}</span> / <span class="film_director">{{ screening.submission.translation.director|default:screening.submission.director }}</span> ( <span class="film_country">{{ screening.submission.get_country_display }}</span>, <span class="film_duration">{{ screening.submission.length }}</span> min)
             <br/>
             <br/>
 
