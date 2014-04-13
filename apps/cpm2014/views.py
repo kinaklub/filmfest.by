@@ -22,7 +22,7 @@ from rest_framework import viewsets
 
 from apps.cpm2014.constants import APP_ROOT, TRANSLATION_LANGUAGES
 from apps.cpm2014.models import (
-    NewsEntry, Program, ProgramTranslation,
+    Event, NewsEntry, Program, ProgramTranslation,
     Submission, SubmissionScreening, SubmissionTranslation
 )
 from apps.cpm2014.forms import (
@@ -397,4 +397,27 @@ def program_edit(request, program_id=None):
         'translation_forms': translation_forms
     }
     return render_to_response('cpm2014/program_edit.html', context,
+                              context_instance=RequestContext(request))
+
+
+def event_details(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+
+    if event.program:
+        screenings_qs = event.program.submissionscreening_set.all()
+        screenings_qs = screenings_qs.select_related()
+        screenings_qs = screenings_qs.prefetch_related(
+            'submission__submissiontranslation_set'
+        )
+    else:
+        screenings_qs = SubmissionScreening.objects.none()
+
+    context = {
+        'event': event,
+        'screenings': sorted(
+            screenings_qs,
+            key=lambda screening: screening.num
+        ),
+    }
+    return render_to_response('cpm2014/event_details.html', context,
                               context_instance=RequestContext(request))

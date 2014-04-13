@@ -42,6 +42,8 @@ def get_urls():
             views.program_details, name='program_details'),
         url(r'^program/(?P<program_id>\d+)/edit/$',
             views.program_edit, name='program_edit'),
+        url(r'^event/(?P<event_id>\d+)/$',
+            views.event_details, name='event_details'),
     )
 
 urls = (get_urls(), 'cpm2014', 'cpm2014')

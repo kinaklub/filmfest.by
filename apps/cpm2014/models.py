@@ -259,6 +259,7 @@ class Event(TranslatableModel):
     code = models.CharField(verbose_name=_(u'Code'), max_length=1000)
     starts_at = models.DateTimeField(verbose_name=_('Starts at'), db_index=True)
     place = models.ForeignKey(Place)
+    program = models.ForeignKey(Program, null=True, blank=True)
 
     translations = TranslatedFields(
         name = models.CharField(verbose_name=_(u'Name'), max_length=1000),

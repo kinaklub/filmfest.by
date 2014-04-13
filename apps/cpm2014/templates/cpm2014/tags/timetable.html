@@ -18,7 +18,14 @@
      <dl class="dl-horizontal">
      {% for event in events %}
        <dt>{{ event.starts_at|date:"H:i" }}</dt>
-       <dd>{{ event.name }}<br /><small>{{ event.place.name }}, {{ event.place.address }}</small></dd>
+       <dd>
+	 {% if event.program_id or event.description.strip %}
+	   <a href="{% url cpm2014:event_details event.id %}">{{ event.name }}</a>
+	 {% else %}
+	   {{ event.name }}
+	 {% endif %}
+	 <br /><small>{{ event.place.name }}, {{ event.place.address }}</small>
+       </dd>
      {% endfor %}
      </dl>
    {% endfor %}
