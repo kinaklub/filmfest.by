@@ -10,7 +10,7 @@
 </h2>
 
 {% if event.description.strip %}
-  <p>{{ event.description|markdown }}</p>
+  {{ event.description|markdown }}
 {% endif %}
 
 {% if screenings %}
