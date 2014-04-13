@@ -302,7 +302,8 @@ def translations_all_json(request):
 
 @staff_member_required
 def program_list(request):
-    programs = Program.objects.all().prefetch_related()
+    programs = Program.objects.all().order_by('id')
+    programs = programs.prefetch_related()
 
     context = {'programs': programs}
     return render_to_response('cpm2014/program_list.html', context,
