@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.functional import cached_property
+from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
@@ -207,6 +208,15 @@ class Program(models.Model):
     )
     section = models.IntegerField(choices=SECTIONS, verbose_name=_(u'Section'))
     __unicode__ = lambda self: self.code
+
+    @cached_property
+    def translation(self):
+        try:
+            return ProgramTranslation.objects.get(
+                program=self, language=translation.get_language()
+            )
+        except ProgramTranslation.DoesNotExist:
+            return None
 
 
 class ProgramTranslation(models.Model):

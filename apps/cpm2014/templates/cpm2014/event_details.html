@@ -11,6 +11,10 @@
 
 {% if event.description.strip %}
   {{ event.description|markdown }}
+{% else %}
+  {% if event.program.translation.description.strip %}
+    <p>{{ event.program.translation.description }}</p>
+  {% endif %}
 {% endif %}
 
 {% if screenings %}
