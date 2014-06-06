@@ -38,7 +38,7 @@ def get_mainmenu_items():
                 ),
                 (
                     _('Discussion group'),
-                    'http://groups.google.com/group/cpm2014'
+                    'http://groups.google.com/group/cpm2015'
                 ),
                 (
                     _('Volunteer form'),
