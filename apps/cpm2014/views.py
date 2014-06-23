@@ -105,104 +105,92 @@ rules = Rules()
 
 def partners(request):
     img_dir = '/static/cpm2014/banners/'
-    main_banners = [
+    banners = [
         (
-            img_dir + 'where450.png',
+            img_dir + 'where.png',
             'http://www.spn.ru/publishing/whereminsk/',
             'Where Minsk'
         ),
         (
-            img_dir + 'relax450.png',
+            img_dir + 'relax.png',
             'http://relax.by/',
             'relax.by - развлечения в Минске, развлекательные центры столицы'
         ),
 
-    ]
-    banners = [
-        (
-            img_dir + 'lamora.png',
-            'http://la-mora.info/',
-            'Арт-пространство ДК «La мора»'
-        ),
-        (
-            img_dir + 'bvc.png',
-            'http://www.belvc.by/',
-            'Белорусский видеоцентр'
-        ),
         (
             img_dir + 'minsk24dok.png',
             'http://mtis.tv/',
             'Минск 24 ДОК'
         ),
         (
-            img_dir + 'paramonak.png',
-            'http://paramonak.by/',
-            'Креативное агенство Парамонак'
-        ),
-        (
-            img_dir + 'kinolife.png',
-            'http://kinolife.eu/',
-            'Film & TV Online Platform'
-        ),
-        (
-            img_dir + 'iysff.png',
-            'http://www.makesilentfilm.com/',
-            'International Youth Silent Film Festival'
-        ),
-        (
-            img_dir + 'luma.png',
-            'http://luma.net.my/',
-            'LUMA – a creative hub for the media arts'
-        ),
-        (
-            img_dir + 'euroradio.png',
-            'http://euroradio.fm/',
-            'Последние новости политики и культуры Беларуси - Euroradio'
-        ),
-        (
-            img_dir + 'bolshoi.png',
-            'http://bolshoi.by/',
-            'Журнал "Большой"'
-        ),
-        (
-            img_dir + 'minchanka.png',
-            'http://www.minchanka.by/',
-            'Минчанка: быть женщиной - это интересно!'
-        ),
-        (
-            img_dir + 'open.png',
-            'http://open.by/',
-            'Интернет-портал OPEN.BY'
-        ),
-        (
-            img_dir + 'mart.png',
-            'http://mart.by/',
-            'Современное белорусское искусство'
-        ),
-        (
-            img_dir + 'vgomele.png',
-            'http://vgomele.by/',
-            'vGomele.by - гомельский информационно-развлекательный портал'
-        ),
-        (
-            img_dir + 'belarusdigest.png',
-            'http://belarusdigest.com/',
-            'Беларусы за мяжой'
-        ),
-        (
-            img_dir + 'ky.png',
-            'http://kyky.org/',
-            'KYKY.ORG - Культурный портал'
-        ),
-        (
             img_dir + 'nomadic.png',
             'http://vagrant.kinaklub.org/',
             'Nomadic Film Club'
         ),
+        (
+            img_dir + 'filmschool.png',
+            'http://filmschool.by/',
+            'Минская Киношкола-студия'
+        ),
+        (
+            img_dir + 'citydog.png',
+            'http://citydog.by/',
+            'citydog.by - журнал о Минске'
+        ),
+        (
+            img_dir + 'kultprosvet.png',
+            'http://kultprosvet.by/',
+            'Культпросвет – интернет-журнал о театрах и синтетических видах искусства'
+        ),
+        (
+            img_dir + 'n_europe.png',
+            'http://n-europe.eu/',
+            'Журнал для тех, кто думает по-европейски'
+        ),
+        (
+            img_dir + 'cinemahall.png',
+            'http://cinemahall.org/',
+            'cinemahall.org'
+        ),
+        (
+            img_dir + 'tokino.png',
+            'http://tokino.lt/',
+            'Беларуско-литовский фестиваль небюджетного кино и видео «toKino»'
+        ),
+        (
+            img_dir + 'makeout.png',
+            'http://makeout.by/',
+            'MAKEOUT — часопіс пра гендар, сэксуальнасць і асаблівасці іх праяваў у Беларусі'
+        ),
+        (
+            img_dir + 'talaka.png',
+            'http://talaka.by/',
+            'Talaka.by – некоммерческая платформа, которая помогает активным людям в Беларуси реализовывать значимые для общества проекты'
+        ),
+        (
+            img_dir + 'minchane.png',
+            'http://minchane.by/',
+            'Минчане'
+        ),
+        (
+            img_dir + 'generationby.png',
+            'http://generation.by/',
+            'Generation.by — інфармацыйны рэсурс пра жыццё і прыгоды беларускага пакалення Y, маладых людзей, якія нарадзіліся ў 80-90 г.г. XX стагоддзя'
+        ),
+        (
+            img_dir + '34.png',
+            'http://34mag.net/',
+            '34mag.net – моладзевы часопіс пра актуальнае і цікавае ў Беларусі і свеце'
+        ),
+        (
+            img_dir + 'maysternia.png',
+            None,
+            'Творческий центр "Майстэрня"'
+        ),
     ]
     return render_to_response(
         'cpm2014/partners.html',
-        {'main_banners': main_banners, 'banners': banners},
+        {'banners': banners},
         context_instance=RequestContext(request),
     )
 
