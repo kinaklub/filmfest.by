@@ -187,6 +187,11 @@ def partners(request):
             None,
             'Творческий центр "Майстэрня"'
         ),
+        (
+            img_dir + 'moviesthatmatter.png',
+            'http://www.moviesthatmatter.nl/',
+            'Movies That Matter'
+        ),
     ]
     return render_to_response(
         'cpm2014/partners.html',
