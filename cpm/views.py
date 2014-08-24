@@ -6,7 +6,7 @@ from cpm.forms import ScreeningPlaceProposalForm
 
 
 def angular(request):
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         return HttpResponseForbidden()
     return render_to_response(
         'cpm/angular.html', {}, context_instance=RequestContext(request)
