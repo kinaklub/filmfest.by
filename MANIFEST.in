@@ -17,4 +17,6 @@ recursive-include cpm/static *
 recursive-include cpm/templates *
 recursive-include filmfest/locale *
 recursive-include filmfest/templates *
+recursive-include submissions/docs *
+recursive-include submissions/templates *
 include requirements
