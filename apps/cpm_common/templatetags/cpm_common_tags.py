@@ -24,7 +24,7 @@ def get_mainmenu_items():
                 ),
                 (
                     _('Submit your film!'),
-                    reverse('cpm2014:submit')
+                    reverse('submissions_submit')
                 ),
             )
         ),

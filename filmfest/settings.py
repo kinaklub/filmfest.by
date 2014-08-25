@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'rest_framework',
 
     'cpm',
+    'submissions',
     'apps.cpm2012',
     'apps.cpm2013',
     'apps.cpm2014',

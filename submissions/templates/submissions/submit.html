@@ -1,0 +1,65 @@
+{% extends "cpm/page.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Submit your film!" %} - {{ block.super }}{% endblock %}
+
+{% block main_content %}
+<div class="row-fluid">
+  <div class="span9">
+
+<form id="submission-form" class="form-horizontal" method="POST">
+{% csrf_token %}
+
+{% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+{% for fieldset in form.fieldsets %}
+  <fieldset class="{{ fieldset.classes }}">
+  {% if fieldset.legend %}
+    <legend>{{ fieldset.legend }}</legend>
+  {% endif %}
+  {% for field in fieldset %}
+    {% if field.is_hidden %}
+      {{ field }}
+    {% else %}
+      <div class="control-group {% if field.errors %}error{% endif %}">
+        {{ field.label_tag }}
+	<div class="controls">
+          {{ field }}
+	  <span class="help-inline">{{ field.errors.as_inline }}</span>
+	</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </fieldset>
+{% endfor %}
+
+<div class="form-actions">
+<button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</form>
+
+  </div>
+  <div class="span3">
+    <h4>{% trans "Terms of participation" %}</h4>
+
+<p>{% trans "You need to complete 3 steps:" %}</p>
+<ol>
+    <li>{% trans "Make a request (fill in a form on the website)." %}.</li>
+    <li>{% trans "A copy of the application form will be sent via e-mail, you need to print it, sign and send in the mail." %}
+    <li>{% trans "Transfer a copy of the film (on disk by mail or via the Internet) to the organizing committee." %}</li>
+</ol>
+
+<p>{% trans "The film need to be sent on a DVD by mail or via the Internet. On disk (in a file) should be the film only (without menus, etc.)." %}</p>
+<p>{% trans "Film copies and signed application forms are accepted at:" %}</p>
+<blockquote>
+  {% trans "Aliaksandr Martyniuk" %}, Cinema Perpetuum Mobile<br />
+  {% trans "PO Box 74" %}<br />
+  220050, , {% trans "Minsk" %}<br />
+  {% trans "Belarus" %}<br />
+</blockquote>
+<p>{% trans "Complete festival rules can be found here:" %} <a href="{% url cpm2014:rules %}">filmfest.by/2014/rules</a></p>
+
+  </div>
+</div>
+
+
+{% endblock %}
