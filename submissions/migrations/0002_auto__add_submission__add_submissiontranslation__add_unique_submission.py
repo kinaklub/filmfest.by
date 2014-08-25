@@ -85,13 +85,13 @@ class Migration(SchemaMigration):
         # Adding unique constraint on 'SubmissionTranslation', fields ['submission', 'language']
         db.create_unique('submissions_submissiontranslation', ['submission_id', 'language'])
 
-    from south.db.postgresql_psycopg2 import DatabaseOperations as PgDbOps
-    if isinstance(db, PgDbOps):
-        next_id = db.execute('select max(id) + 1 from cpm2014_submission')[0][0]
-        db.execute(
-            "alter sequence submissions_submission_id_seq "
-            "restart with %s;" % next_id
-        )
+    #from south.db.postgresql_psycopg2 import DatabaseOperations as PgDbOps
+    #if isinstance(db, PgDbOps):
+    #    next_id = db.execute('select max(id) + 1 from cpm2014_submission')[0][0]
+    #    db.execute(
+    #        "alter sequence submissions_submission_id_seq "
+    #        "restart with %s;" % next_id
+    #    )
 
 
     def backwards(self, orm):
