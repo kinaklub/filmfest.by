@@ -165,6 +165,7 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
+    'cpm_cms_plugin'
 )
 
 REST_FRAMEWORK = {
@@ -176,7 +177,15 @@ CMS_TEMPLATES = (
     ('cms/template_page.html', 'Page'),
     ('cms/template_home.html', 'Homepage'),
     ('cms/template_doc.html', 'Doc'),
+    ('cms/template_contacts.html', 'Contacts'),
 )
+
+CMS_PLACEHOLDER_CONF = {
+    'cms/template_contacts.html contacts': {
+        'plugins': ['ContactPlugin'],
+    },
+}
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
