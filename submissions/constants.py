@@ -26,9 +26,6 @@ SECTIONS = (
     (2, _('Animation')),
     (3, _('Documentary')),
     (4, _('Experimental')),
-    (5, _('Musical video')),
-    (6, _('Ecology')),
-    (7, _('Children')),
 )
 
 BACKLINKS = (
