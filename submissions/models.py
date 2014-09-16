@@ -32,6 +32,10 @@ class Submission(models.Model):
         verbose_name=_('Link to download the film (optional)'),
         max_length=1000, blank=True
     )
+    film_link_pwd = models.CharField(
+        verbose_name=_('Password for the link above (optional)'),
+        max_length=1000, blank=True
+    )
 
     attend = models.IntegerField(
         verbose_name=_('I intend to visit final part of festival'),

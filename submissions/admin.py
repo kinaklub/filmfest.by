@@ -7,6 +7,7 @@ import tempfile
 
 from django.contrib import admin
 from django.db.models import Count
+from django.utils.html import escape
 from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
 from django.http import HttpResponse
@@ -44,8 +45,8 @@ class SubmissionAdmin(admin.ModelAdmin):
             (_('Film'), {
                 'fields': ['title', 'title_en', 'country', 'language', 'genre',
                            'section', 'synopsis', 'length', 'aspect_ratio',
-                           'year', 'premiere', 'film_awards',
-                           'budget', 'film_link', 'backlink'],
+                           'year', 'premiere', 'film_awards', 'budget',
+                           'film_link', 'film_link_pwd', 'backlink'],
             }),
             (_('Director'), {
                 'fields': ['director', 'director_address', 'director_email',
@@ -106,7 +107,13 @@ class SubmissionAdmin(admin.ModelAdmin):
     def display_film_link(self, obj):
         if not obj.film_link:
             return '---'
-        return urlizetrunc(obj.film_link, 20)
+
+        link = urlizetrunc(obj.film_link, 20)
+        if obj.film_link_pwd:
+            link = '%s<br />Password: %s' % (link, escape(obj.film_link_pwd))
+
+        return link
+
     display_film_link.short_description = _('Download link')
     display_film_link.allow_tags = True
 
