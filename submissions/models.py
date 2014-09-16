@@ -30,6 +30,7 @@ class Submission(models.Model):
     budget = models.CharField(verbose_name=_('Film budget'), max_length=1000)
     film_link = models.CharField(
         verbose_name=_('Link to download the film (optional)'),
+        help_text=_(u'DVD, MPEG, MP4 or MOV'),
         max_length=1000, blank=True
     )
     film_link_pwd = models.CharField(
