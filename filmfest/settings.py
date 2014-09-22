@@ -166,7 +166,7 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
-    'cpm_cms_plugin'
+    'cpm_cms_plugins.contacts'
 )
 
 REST_FRAMEWORK = {
