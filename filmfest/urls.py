@@ -22,12 +22,10 @@ urlpatterns = i18n_patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-
     url(r'^2012/', include(cpm2012_urls)),
     url(r'^2013/', include(cpm2013_urls)),
-
     url(r'^2014/', include(cpm2014_urls)),
-
+    url(r'^festhome/', include('festhome_import.urls')),
     url(r'^', include('submissions.urls')),
     url(r'^', include('cms.urls')),
 ) + static(

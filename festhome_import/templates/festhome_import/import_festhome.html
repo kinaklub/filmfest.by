@@ -1,0 +1,36 @@
+{% extends "cpm/page.html" %}
+{% load i18n %}
+
+{% block main_content %}
+
+{% if not submit %}
+  <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form }}
+
+    <div class="form-actions">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+{% else %}
+
+  {% trans "Added" %}:
+  {% for s in new_submissions%}
+    <a href="{% url admin:submissions_submission_change s.submission.id %}">
+      {{ s.festhome_id }}
+    </a>,
+  {% endfor %}
+
+    <br />
+
+  {% trans "Added earlier" %}:
+  {% for s in existing_submissions%}
+    <a href="{% url admin:submissions_submission_change s.submission.id %}">
+      {{ s.festhome_id }}
+    </a>,
+  {% endfor %}
+
+{% endif %}
+
+{% endblock %}
