@@ -31,7 +31,7 @@ def import_festhome(request):
 
     if form.is_valid():
         wb = openpyxl.load_workbook(form.cleaned_data['document'].file)
-        ws = wb[wb.get_sheet_names()[0]]
+        ws = wb.get_sheet_by_name(wb.get_sheet_names()[0])
 
         column_names = [col.value for col in ws.rows[1]]
         submission_rows = ws.rows[2:]
