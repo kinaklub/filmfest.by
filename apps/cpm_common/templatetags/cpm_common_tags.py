@@ -68,7 +68,7 @@ def get_mainmenu_items():
         ),
         (
             _('Contacts'),
-            reverse('cpm2014:contacts'),
+            '/contact/',
             ()
         ),
     ]
