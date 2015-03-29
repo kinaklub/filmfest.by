@@ -5,10 +5,10 @@
 
   <h2>{% trans "Programs" %}</h2>
 
-  <p><a href="{% url cpm2014:program_add %}">{% trans "Add" %}</a></p>
+  <p><a href="{% url events_program_add %}">{% trans "Add" %}</a></p>
   {% for program in programs %}
     <p>
-      {{program.id}}. <a href="{% url cpm2014:program_details program.id %}">{{ program.code}}</a>
+      {{program.id}}. <a href="{% url events_program_details program.id %}">{{ program.code}}</a>
     </p>
   {% endfor %}
 

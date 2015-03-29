@@ -16,7 +16,7 @@ def program_list(request):
     programs = programs.prefetch_related()
 
     context = {'programs': programs}
-    return render_to_response('cpm2014/program_list.html', context,
+    return render_to_response('events/program_list.html', context,
                               context_instance=RequestContext(request))
 
 
@@ -41,7 +41,7 @@ def program_details(request, program_id):
         ),
         'editable': request.user.is_staff
     }
-    return render_to_response('cpm2014/program_details.html', context,
+    return render_to_response('events/program_details.html', context,
                               context_instance=RequestContext(request))
 
 
@@ -100,14 +100,14 @@ def program_edit(request, program_id=None):
             trans.program = program
             trans.save()
 
-        return redirect('cpm2014:program_details', program_id=program.id)
+        return redirect('events_program_details', program_id=program.id)
 
     context = {
         'program': program,
         'form': form,
         'translation_forms': translation_forms
     }
-    return render_to_response('cpm2014/program_edit.html', context,
+    return render_to_response('events/program_edit.html', context,
                               context_instance=RequestContext(request))
 
 
@@ -130,6 +130,6 @@ def event_details(request, event_id):
             key=lambda screening: screening.num
         ),
     }
-    return render_to_response('cpm2014/event_details.html', context,
+    return render_to_response('events/event_details.html', context,
                               context_instance=RequestContext(request))
 # Create your views here.
