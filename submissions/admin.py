@@ -147,7 +147,7 @@ class SubmissionAdmin(admin.ModelAdmin):
 
         def get_links():
             for lang_code, _lang_name in constants.TRANSLATION_LANGUAGES:
-                url = reverse('cpm2014:translation_details',
+                url = reverse('submissions_translation_details',
                               args=[obj.id, lang_code])
 
                 html = '<a href="%s">%s</a>' % (url, lang_code)

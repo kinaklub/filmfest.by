@@ -4,7 +4,7 @@
 {% block main_content %}
 
 <h2>
-  <a href="{% url admin:cpm2014_submission_change submission.id %}">
+  <a href="{% url admin:submissions_submission_change submission.id %}">
     {{ submission.id }} / {{ submission.title }} / {{ submission.title_en }}
   </a>:
   {{ lang }}
@@ -81,7 +81,7 @@
     <div class="span6 offset6">
       <span class="pull-right">
 	<button class="btn btn-primary" type="submit">{% trans "Submit" %}</button>
-	  <a href="{% url cpm2014:translation_details submission.id lang %}" class="btn">{% trans 'Cancel' %}</a>
+	  <a href="{% url submissions_translation_details submission.id lang %}" class="btn">{% trans 'Cancel' %}</a>
       <span>
     </div>
   </div>

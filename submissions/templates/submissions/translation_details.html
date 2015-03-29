@@ -4,7 +4,7 @@
 {% block main_content %}
 
   <h2>
-    <a href="{% url admin:cpm2014_submission_change submission.id %}">
+    <a href="{% url admin:submissions_submission_change submission.id %}">
       {{ submission.id }} / {{ submission.title }} / {{ submission.title_en }}
     </a>:
     {{ lang }}
@@ -18,7 +18,7 @@
   </div>
   {% endfor %}
 
-  <a href="{% url cpm2014:translation_edit submission.id lang %}"
+  <a href="{% url submissions_translation_edit submission.id lang %}"
      class="btn pull-right"
      style="margin-bottom: 30px">
     {% trans 'Edit' %}
