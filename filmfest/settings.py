@@ -151,6 +151,7 @@ INSTALLED_APPS = (
     'apps.cpm2013',
     'apps.cpm2014',
     'apps.cpm_common',
+    'events',
     'festhome_import',
 
 
