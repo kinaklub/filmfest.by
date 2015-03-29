@@ -26,6 +26,7 @@ urlpatterns = i18n_patterns('',
     url(r'^2013/', include(cpm2013_urls)),
     url(r'^2014/', include(cpm2014_urls)),
     url(r'^festhome/', include('festhome_import.urls')),
+    url(r'^', include('events.urls')),
     url(r'^', include('submissions.urls')),
     url(r'^', include('cms.urls')),
 ) + static(
