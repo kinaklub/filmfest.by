@@ -183,19 +183,9 @@ def partners(request):
             '34mag.net – моладзевы часопіс пра актуальнае і цікавае ў Беларусі і свеце'
         ),
         (
-            img_dir + 'maysternia.png',
-            None,
-            'Творческий центр "Майстэрня"'
-        ),
-        (
             img_dir + 'moviesthatmatter.png',
             'http://www.moviesthatmatter.nl/',
             'Movies That Matter'
-        ),
-        (
-            img_dir + 'openby.png',
-            'http://open.by/',
-            'OPEN.BY'
         ),
     ]
     return render_to_response(
