@@ -2,6 +2,7 @@ from django import forms
 from django.forms.util import ErrorList
 from django.utils.translation import ugettext_lazy as _
 
+from submissions.models import Submission
 from events.models import Program, ProgramTranslation
 
 
