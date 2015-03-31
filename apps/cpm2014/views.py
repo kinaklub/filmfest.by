@@ -14,11 +14,8 @@ from django.shortcuts import (
 from django.template import RequestContext
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
-from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import RedirectView
 from django.conf import settings
-
-from rest_framework import viewsets
 
 from apps.cpm2014.constants import APP_ROOT, TRANSLATION_LANGUAGES
 from apps.cpm2014.models import (
@@ -29,7 +26,6 @@ from apps.cpm2014.forms import (
     ProgramForm, ProgramTranslationForm,
     SubmissionForm, SubmissionTranslationForm
 )
-from apps.cpm2014.serializers import SubmissionSerializer
 from apps.cpm2014.tasks import SendSubmissionEmail
 
 
@@ -200,25 +196,6 @@ def press_kit(request):
         'cpm2014/press_kit.html', {},
         context_instance=RequestContext(request),
     )
-
-
-
-class SubmissionViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows submissions to be viewed or edited.
-    """
-    queryset = Submission.objects.all()
-    serializer_class = SubmissionSerializer
-
-    @csrf_exempt
-    def create(self, request, *args, **kwargs):
-        return super(SubmissionViewSet, self).create(request, *args, **kwargs)
-
-    @csrf_exempt
-    def update(self, request, *args, **kwargs):
-        return super(SubmissionViewSet, self).update(request, *args, **kwargs)
-
-    get_paginate_by = lambda self: None
 
 
 @staff_member_required

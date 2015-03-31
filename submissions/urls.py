@@ -1,4 +1,5 @@
-from django.conf.urls import url, patterns
+from django.conf.urls import url, patterns, include
+from rest_framework import routers
 
 from submissions import views
 from submissions.constants import TRANSLATION_LANGUAGES
@@ -6,6 +7,8 @@ from submissions.constants import TRANSLATION_LANGUAGES
 
 LANGS = '|'.join(code for code, name in TRANSLATION_LANGUAGES)
 
+router = routers.DefaultRouter()
+router.register(r'submissions', views.SubmissionViewSet)
 
 urlpatterns = patterns('',
     url(r'^submit/$',
@@ -26,4 +29,5 @@ urlpatterns = patterns('',
     url(r'^translations/$',
         views.translations_all_json,
         name='submissions_translations_all_json'),
+    url( r'^submission/api/', include(router.urls)),
 )

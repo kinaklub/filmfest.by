@@ -6,10 +6,13 @@ from django.template import RequestContext
 from django.http import HttpResponse
 from django.utils import translation
 from django.utils.translation import ugettext_lazy as _
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404, render_to_response, redirect
+from rest_framework import viewsets
 
 from submissions.forms import SubmissionForm, SubmissionTranslationForm
 from submissions.models import Submission, SubmissionTranslation
+from submissions.serializers import SubmissionSerializer
 from submissions.tasks import SendSubmissionEmail
 
 
@@ -103,3 +106,21 @@ def translations_all_json(request):
         json.dumps(response_dict, indent=2),
         content_type="application/json"
     )
+
+
+class SubmissionViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows submissions to be viewed or edited.
+    """
+    queryset = Submission.objects.all()
+    serializer_class = SubmissionSerializer
+
+    @csrf_exempt
+    def create(self, request, *args, **kwargs):
+        return super(SubmissionViewSet, self).create(request, *args, **kwargs)
+
+    @csrf_exempt
+    def update(self, request, *args, **kwargs):
+        return super(SubmissionViewSet, self).update(request, *args, **kwargs)
+
+    get_paginate_by = lambda self: None
