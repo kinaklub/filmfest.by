@@ -2,10 +2,7 @@ def get_urls():
     from django.conf.urls import patterns, include, url
     from django.views.generic.simple import direct_to_template
 
-    from apps.cpm2014 import constants
     from apps.cpm2014 import views
-
-    LANGS = '|'.join(c for c, n in constants.TRANSLATION_LANGUAGES)
 
     return patterns('',
         url(r'^$', views.index, name='index'),
@@ -18,15 +15,6 @@ def get_urls():
             name='contacts'),
         url(r'^presskit', views.press_kit, name='press_kit'),
         url(r'^angular/', 'cpm.views.angular'),
-
-        url(r'^submission/(?P<submission_id>\d+)/'
-            r'translation/(?P<lang>%s)$' % LANGS,
-            views.translation_details, name='translation_details'),
-        url(r'^submission/(?P<submission_id>\d+)/'
-            r'translation/(?P<lang>%s)/edit$' % LANGS,
-            views.translation_edit, name='translation_edit'),
-        url(r'^translations/$',
-            views.translations_all_json, name='translations_all_json'),
     )
 
 urls = (get_urls(), 'cpm2014', 'cpm2014')

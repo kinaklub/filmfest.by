@@ -56,7 +56,7 @@ class SubmissionAdmin(admin.ModelAdmin):
     list_display = ['title', 'applicant_email', 'display_film_link',
                     'submitted_at', 'display_country',
                     'display_facts', 'display_comment',
-                    'display_extra_data', 'display_translation']
+                    'display_extra_data']
     save_on_top = True
 
     fieldsets = [
