@@ -30,6 +30,7 @@
 <!--p(class='film_description')= translate(film.description)-->
 
 
+{% if screenings %}
 <table class="results table table-bordered table-condensed table-hover table-striped">
     <tbody>
     {% for screening in screenings %}
@@ -53,6 +54,7 @@
     {% endfor %}
     </tbody>
 </table>
+{% endif %}
 
 {% if editable %}
   <a class="btn btn-default pull-right" href="{% url events_program_edit program_id=program.id %}">{% trans "Edit" %}</a>

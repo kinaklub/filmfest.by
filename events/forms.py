@@ -16,7 +16,7 @@ class InlineErrorList(ErrorList):
 class ProgramForm(forms.ModelForm):
     films = forms.CharField(
         label=_(u'Films'), help_text=_(u'Submission IDs, one per line'),
-        widget=forms.Textarea
+        widget=forms.Textarea, required=False
     )
 
     class Meta:
