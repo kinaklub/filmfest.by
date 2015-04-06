@@ -183,6 +183,11 @@ def partners(request):
             'http://www.moviesthatmatter.nl/',
             'Movies That Matter'
         ),
+        (
+            img_dir + 'eksperiment.png',
+            'http://md-eksperiment.org/',
+            'md-eksperiment.org'
+        ),
     ]
     return render_to_response(
         'cpm2014/partners.html',
