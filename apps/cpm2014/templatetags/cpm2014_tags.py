@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
-from datetime import datetime, date, time
 
 from django import template
 
-from apps.cpm2014.models import Event, NewsEntry
+from apps.cpm2014.models import NewsEntry
+from events.models import Event
 
 
 register = template.Library()
@@ -18,10 +18,9 @@ def cpm2014_news():
 
 @register.inclusion_tag('cpm2014/tags/timetable.html')
 def cpm2014_timetable():
-    today_12pm = datetime.combine(date.today(), time())
     # this query requires a lot of subqueries later...
     # but I have no time to find a workaround for hvad
-    future_events = Event.objects.language().filter(starts_at__gte=today_12pm)
+    future_events = Event.objects.language().all()
     future_events = future_events.order_by('starts_at')
 
     cities = defaultdict(lambda: defaultdict(list))

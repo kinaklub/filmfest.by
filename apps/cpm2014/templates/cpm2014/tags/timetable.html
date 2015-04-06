@@ -20,7 +20,7 @@
        <dt>{{ event.starts_at|date:"H:i" }}</dt>
        <dd>
 	 {% if event.program_id or event.description.strip %}
-	   <a href="{% url cpm2014:event_details event.id %}">{{ event.name }}</a>
+	   <a href="{% url events_event_details event.id %}">{{ event.name }}</a>
 	 {% else %}
 	   {{ event.name }}
 	 {% endif %}
