@@ -188,6 +188,21 @@ def partners(request):
             'http://md-eksperiment.org/',
             'md-eksperiment.org'
         ),
+        (
+            img_dir + 'cinewest.png',
+            'http://www.cinewest.org/',
+            'Cinewest'
+        ),
+        (
+            img_dir + '100second.png',
+            'http://100fest.com/pages/en/',
+            'International 100 Seconds Film Festival'
+        ),
+        (
+            img_dir + 'videomaker.png',
+            'http://www.videomakerfilmfestival.com/',
+            'VideoMaker Film Festival'
+        ),
     ]
     return render_to_response(
         'cpm2014/partners.html',
