@@ -1,0 +1,25 @@
+db:
+  image: postgres:latest
+  volumes_from:
+    - data
+  ports:
+    - "5432:5432"
+redis:
+  image: redis:latest
+  ports:
+    - "6379:6379"
+data:
+  image: postgres:latest
+  volumes:
+    - /var/lib/postgresql
+  command: "true"
+web:
+  build: .
+  command: runserver 0.0.0.0:8000
+  volumes:
+    - .:/app/src
+  links:
+    - db:db
+    - redis:redis
+  ports:
+    - "8000:8000"
