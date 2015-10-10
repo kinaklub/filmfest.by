@@ -1,30 +1,18 @@
-Подготовка окружения:
----------------------
+Development environment
+-----------------------
 
-1. поставить sqlite, python2.7 и virtualenvwrapper (в Arch Linux это пакеты sqlite, python2, python-virtualenvwrapper)
+1. Install [Docker](https://docs.docker.com/) and [docker-compose](https://docs.docker.com/compose/)
 
-2. создать virtualenv
+2. Don't forget to set DOCKER_HOST environmental variable or add yourself to group `docker`
 
-    $ mkvirtualenv --no-site-packages --python=python2.7 filmfest
+3. Start web contatiner:
 
-3. из корневой папки проекта выполнить
+    docker-compose up web
 
-    $ python setup.py develop
-    $ filmfest_manage syncdb
-    $ filmfest_manage migrate
+4. DB provisioning (should be performed only once from another terminal):
 
-Запуск:
--------
+    docker-compose run web syncdb --noinput
+    docker-compose run web migrate
+    docker-compose run web loaddata data.json
 
-1. из корневой папки проекта выполнить
-
-    $ workon filmfest
-    $ filmfest_manage runserver
-
-3. приложение доступно по адресу http://127.0.0.1:8000/
-
-
-Обновление:
------------
-
-    $ fab -H user@host:port update
+5. Visit http://127.0.0.1:8000/ in your web browser
