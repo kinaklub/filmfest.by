@@ -3,16 +3,16 @@
     Page ###Page### / ###Total###
 
 ============================
-Cinema Perpetuum Mobile 2014
+Cinema Perpetuum Mobile 2016
 ============================
 Film submission form
 --------------------
-Deadline: December 31, 2014
+Deadline: November 15, 2015
 %(sections)s
 
 If your film is done in another language different from English, Russian or Belarusian it must be supplied with English, or Belarusian, or Russian subtitles. Attached DVD must be without menu.
 
-Film submission form must be sent with DVD before  December 31, 2014 to
+Film submission form must be sent with DVD before  November 15, 2015 to
 
   “Aliaksandr Martyniuk, Cinema Perpetuum Mobile ”
 
