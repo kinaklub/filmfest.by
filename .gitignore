@@ -6,3 +6,8 @@
 *.conf
 
 *~
+
+AUTHORS
+ChangeLog
+.eggs
+dist
