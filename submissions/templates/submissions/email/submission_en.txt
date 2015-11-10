@@ -1,10 +1,15 @@
 Dear {{ name }},
 
-You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2015.
+You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2016.
 
-You can see the application form cpm.pdf attached. But there are still two steps required:
-1. you need to print cpm.pdf and sign it, confirming you agree with CPM 2015 rules (http://filmfest.by/rules/);
+You can see the application form cpm.pdf attached. But there are still four steps required:
+1.
 2. you need to send signed application form along with a DVD copy of your film.
+1. you need to print cpm.pdf and sign it, confirming you agree with CPM 2016 rules (http://filmfest.by/rules/);
+2. you need to send signed application form along with a DVD copy of your film.
+Вам необходимо отправить подписанную и отсканированную (или сфотографированную) анкету на почту фестиваля info@filmfest.by.
+3. Прислать электронную копию вашего фильма через сервис wetransfer: https://cpmff.wetransfer.com/, или ссылку на Vimeo, Youtube или другой файлообменник.
+4. Прислать отдельный файл субтитров на английским, русском или беларусском языке.
 
 Film submission form must be sent before  December 1, 2014 to:
 Martyniuk A., “Cinema Perpetuum Mobile”
