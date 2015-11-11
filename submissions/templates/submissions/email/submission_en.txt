@@ -1,23 +1,14 @@
 Dear {{ name }},
 
-You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2015.
+You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2016 (http://filmfest.by/en).
 
-You can see the application form cpm.pdf attached. But there are still two steps required:
-1. you need to print cpm.pdf and sign it, confirming you agree with CPM 2015 rules (http://filmfest.by/rules/);
-2. you need to send signed application form along with a DVD copy of your film.
+You can see the application form cpm.pdf attached. There are further four steps required:
+1. Please print the cpm.pdf file, put your signature confirming you agree with the festival regulations (http://filmfest.by/rules/);
+2. Then you need to scan and send the signed application form to the festival email - info@filmfest.by;
+3. Please send a copy of your film via our wetransfer channel (https://cpmff.wetransfer.com/), or a link to Vimeo, Youtube or any other file transfer service;
+4. Please attach subtitles in English, Russian or Belarusian as a separate file (not embedded).
 
-Film submission form must be sent before  December 1, 2014 to:
-Martyniuk A., “Cinema Perpetuum Mobile”
-PO Box 74, Minsk
-220050, Belarus
-
-The DVD copy may be also delivered to CPM 2015 organizing committee via Internet; signed form can be mailed or photographed/scanned and sent to the address of the festival: info@filmfest.by
-
-If your film is done in another language different from English, Russian or Belarusian it must be supplied with English, or Belarusian, or Russian subtitles. Attached DVD must be without menu.
-
-Please mark mailing materials with “No commercial value, for cultural purposes only”. DVD with a film copy is not a subject to return.
-
-If you have any questions, don't hesitate to contact us via mail: 2013@filmfest.by
+If you have any questions, do not hesitate to contact us via mail: info@filmfest.by
 
 Best regards,
-Cinema Perpetuum Mobile 2015 organizing committee
+Cinema Perpetuum Mobile 2016 organizational team
