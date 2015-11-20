@@ -36,7 +36,8 @@ def import_festhome(request):
         column_names = [col.value for col in ws.rows[1]]
         submission_rows = ws.rows[2:]
 
-        assert column_names == EXPECTED_COLUMN_NAME
+        if column_names[:len(EXPECTED_COLUMN_NAME)] != EXPECTED_COLUMN_NAME:
+            raise Exception('Unexpected column names')
 
         existing_submissions = \
             FesthomeSubmission.objects.filter(
@@ -48,6 +49,7 @@ def import_festhome(request):
         )
 
         for row in submission_rows:
+            row = row[:len(EXPECTED_COLUMN_NAME)]
             festhome_data = FesthomeData(*[col.value for col in row])
             if int(festhome_data.festhome_id) in existing_fethome_ids:
                 continue
