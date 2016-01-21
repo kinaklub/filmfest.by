@@ -161,7 +161,7 @@ msgstr "Спасылкі"
 
 #: templates/cms/template_home.html:16
 msgid "International Short Film Festival"
-msgstr ""
+msgstr "Міжнародны фестываль кароткаметражных фільмаў"
 
 #: templates/cms/template_home.html:18
 msgid "April 11 - May 2"
