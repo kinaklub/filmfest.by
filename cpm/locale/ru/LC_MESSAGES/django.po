@@ -149,8 +149,8 @@ msgid "короткометражного кино"
 msgstr "короткометражного кино"
 
 #: templates/cms/base.html:88 templates/cpm/base.html:71
-msgid "Spring 2014"
-msgstr "Весна 2014"
+msgid "April 8-17"
+msgstr "8-17 апреля"
 
 #: templates/cms/base.html:89 templates/cms/template_home.html:17
 #: templates/cpm/base.html:72
