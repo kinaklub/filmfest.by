@@ -1,4 +1,5 @@
 # Django settings for filmfest project.
+from datetime import datetime
 import os.path
 from django.utils.translation import ugettext_lazy as _
 
@@ -189,6 +190,8 @@ CMS_PLACEHOLDER_CONF = {
     },
 }
 
+# application settings
+CPM_TIMETABLE_STARTS_DT = datetime(2016, 4, 1)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -252,7 +255,6 @@ CELERY_SEND_TASK_ERROR_EMAILS = True
 MAIL_BCC_LIST = [
     # 'somebody@someho.st',
 ]
-
 
 try:
     execfile(os.path.join(os.path.dirname(PROJECT_ROOT), 'filmfest.conf'))
