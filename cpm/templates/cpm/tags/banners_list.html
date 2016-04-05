@@ -1,0 +1,21 @@
+<div class="row">
+  {% for banner_img, banner_url, banner_desc in banners %}
+  <div class="span3" style="line-height: 120px">
+    {% if banner_url %}
+    <a href="{{ banner_url }}">
+      <img 
+	 src="{{ banner_img }}"
+	 alt="{{ banner_desc }}"
+	 style="vertical-align: middle" 
+	 />
+    </a>
+    {% else %}
+    <img 
+       src="{{ banner_img }}"
+       alt="{{ banner_desc }}"
+       style="vertical-align: middle" 
+       />
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

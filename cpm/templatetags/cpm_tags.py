@@ -35,3 +35,8 @@ def cpm_timetable():
     )
 
     return {'timetable': timetable}
+
+
+@register.inclusion_tag('cpm/tags/banners_list.html')
+def banners_list(banners):
+    return {'banners': banners}

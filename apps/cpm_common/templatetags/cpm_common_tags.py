@@ -48,7 +48,7 @@ def get_mainmenu_items():
         ),
         (
             _('Partners'),
-            reverse('cpm2014:partners'),
+            reverse('partners'),
             ()
         ),
         (
