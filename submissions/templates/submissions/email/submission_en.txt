@@ -1,14 +1,14 @@
 Dear {{ name }},
 
-You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile 2016 (http://filmfest.by/en).
+You've just submitted your film «{{ film_title }}» to international short film festival Cinema Perpetuum Mobile (http://filmfest.by/en).
 
 You can see the application form cpm.pdf attached. There are further four steps required:
 1. Please print the cpm.pdf file, put your signature confirming you agree with the festival regulations (http://filmfest.by/rules/);
 2. Then you need to scan and send the signed application form to the festival email - info@filmfest.by;
-3. Please send a copy of your film via our wetransfer channel (https://cpmff.wetransfer.com/), or a link to Vimeo, Youtube or any other file transfer service;
+3. Please send a copy of your film via Vimeo, Youtube, Google Drive, Mega or any other file transfer service with unlimited period of accces;
 4. Please attach subtitles in English, Russian or Belarusian as a separate file (not embedded).
 
 If you have any questions, do not hesitate to contact us via mail: info@filmfest.by
 
 Best regards,
-Cinema Perpetuum Mobile 2016 organizational team
+Cinema Perpetuum Mobile organizational team
