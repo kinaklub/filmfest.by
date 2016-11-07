@@ -16,7 +16,7 @@
             <h1>Cinema<br />Perpetuum Mobile</h1>
             <p>
 	      {% trans 'International Short Film Festival' %}<br />
-	      {% trans 'April 8-17' %}<br />
+	      {% trans 'April 2017' %}<br />
 	      {% trans 'Minsk, Belarus' %}
 	    </p>
 	    <a href="{% url 'submissions_submit' %}" class="btn btn-xlarge btn-purple">{% trans 'Submit your film!' %}</a>
@@ -26,24 +26,24 @@
 
       <div class="container-fluid" id="about">
         <div class="container light">
-	  {% cpm_timetable %}
-          <!-- <ul class="thumbnails"> -->
-          <!--   <li class="span3"><div class="thumbnail"> -->
-	  <!-- 	{% placeholder goal_1 %} -->
-	  <!--   </div></li> -->
+{#	  {% cpm_timetable %}#}
+          <ul class="thumbnails">
+          <li class="span3"><div class="thumbnail">
+	  {% placeholder goal_1 %}
+	    </div></li>
                 
-          <!--   <li class="span3"><div class="thumbnail"> -->
-	  <!-- 	{% placeholder goal_2 %} -->
-          <!--   </div></li> -->
+          <li class="span3"><div class="thumbnail">
+	  {% placeholder goal_2 %}
+          </div></li>
                   
-          <!--   <li class="span3"><div class="thumbnail"> -->
-	  <!-- 	{% placeholder goal_3 %} -->
-          <!--   </div></li> -->
+          <li class="span3"><div class="thumbnail">
+	  {% placeholder goal_3 %}
+          </div></li>
                 
-	  <!--   <li class="span3"><div class="thumbnail"> -->
-	  <!-- 	{% placeholder goal_4 %} -->
-          <!--   </div></li> -->
-          <!-- </ul> -->
+	  <li class="span3"><div class="thumbnail">
+	  {% placeholder goal_4 %}
+          </div></li>
+          </ul>
         </div>
       </div>
 
