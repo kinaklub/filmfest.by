@@ -34,7 +34,7 @@ class SendSubmissionEmail(Task):
             translation.activate(submission.submission_language)
 
             email = EmailMessage(
-                'Cinema Perpetuum Mobile 2015',
+                'Cinema Perpetuum Mobile 2017',
                 self.get_email_message(submission),
                 'no-reply@filmfest.by',
                 [submission.applicant_email],
