@@ -1,0 +1,11 @@
+{% extends "cpm/page.html" %}
+{% load markup %}
+
+{% block title %}{{news_entry.title}} - {{ block.super }}{% endblock %}
+
+{% block main_content %}
+<article>
+    <h4>{{ news_entry.title }}</h4>
+    <div>{{ news_entry.short_text|markdown }} </div>
+</article>
+{% endblock %}

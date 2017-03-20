@@ -2,7 +2,7 @@
 <h3>{% trans 'Latest news' %} </h3>
 {% for news_entry in news %}
         <article>
-            <h4>{{ news_entry.title }} </h4>
+            <h4><a href="{% url news_entry news_entry.id %}">{{ news_entry.title }}</a></h4>
             <div>{{ news_entry.short_text|markdown }} </div>
         </article>
 {% endfor %}

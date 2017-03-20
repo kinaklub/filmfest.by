@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, Http404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
@@ -282,5 +282,19 @@ def partners(request):
             'banners_places': banners_places,
             'banners_fests': banners_fests,
         },
+        context_instance=RequestContext(request),
+    )
+
+
+def news_entry(request, news_id):
+    from apps.cpm2014.models import NewsEntry
+    try:
+        news_entry = NewsEntry.objects.language().get(id=int(news_id))
+    except NewsEntry.DoesNotExist:
+        raise Http404
+
+    return render_to_response(
+        'cpm/news_entry.html',
+        {'news_entry': news_entry},
         context_instance=RequestContext(request),
     )
