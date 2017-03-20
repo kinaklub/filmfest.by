@@ -9,7 +9,8 @@ from django.conf import settings
 register = template.Library()
 
 
-def get_mainmenu_items():
+def get_mainmenu_items(lang):
+    next_prefix = 'http://cpm.filmfest.by/' + lang
     return [
         (_('Home'), reverse('pages-root',), ()),
         (
@@ -48,7 +49,7 @@ def get_mainmenu_items():
         ),
         (
             _('Partners'),
-            reverse('partners'),
+            next_prefix + '/partners/',
             ()
         ),
         (
@@ -96,7 +97,7 @@ def mainmenu(request):
     ]
 
     mainmenu_items = []
-    for title, url, children in get_mainmenu_items():
+    for title, url, children in get_mainmenu_items(cur_lang):
         active = False
         new_children = []
         for sub_title, sub_url in children:
@@ -115,6 +116,7 @@ def mainmenu(request):
 
 @register.inclusion_tag('cpm_common/tags/bottommenu.html')
 def bottommenu():
+    cur_lang = translation.get_language().split('-')[0]
     return {
-        'mainmenu_items': get_mainmenu_items(),
+        'mainmenu_items': get_mainmenu_items(cur_lang),
     }
