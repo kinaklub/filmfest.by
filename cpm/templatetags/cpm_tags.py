@@ -1,9 +1,6 @@
-from collections import defaultdict
-
 from django import template
 from django.conf import settings
-
-from events.models import Event
+from django.utils import translation
 
 
 register = template.Library()
@@ -11,30 +8,13 @@ register = template.Library()
 
 @register.inclusion_tag('cpm/tags/timetable.html')
 def cpm_timetable():
-    # this query requires a lot of subqueries later...
-    # but I have no time to find a workaround for hvad
-    future_events = Event.objects.language().all()
-    future_events = future_events.order_by('starts_at')
-
-    future_starts_at = getattr(settings, 'CPM_TIMETABLE_STARTS_DT', None)
-    if future_starts_at:
-        future_events = future_events.filter(starts_at__gte=future_starts_at)
-
-    cities = defaultdict(lambda: defaultdict(list))
-    for event in future_events:
-        cities[event.place.city][event.starts_at.date()].append(event)
-
-    timetable = sorted(
-        (
-            (
-                city,
-                sorted(days.iteritems(), key=lambda x: x[0])
-            ) for city, days in cities.iteritems()
-        ),
-        key=lambda x: -x[0].priority
-    )
-
-    return {'timetable': timetable}
+    language = translation.get_language().split('-')[0]
+    language = language or 'en'
+    next_url = 'http://next.filmfest.by/%s/timetable/' % language
+    return {
+        'next_url': next_url,
+        'STATIC_URL': settings.STATIC_URL,
+    }
 
 
 @register.inclusion_tag('cpm/tags/banners_list.html')

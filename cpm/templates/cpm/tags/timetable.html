@@ -1,45 +1,10 @@
-{% load i18n %}
-
-{# header with cities list #}
-<ul id="timtable-cities" class="nav nav-tabs">
-{% for city, days in timetable %}
-    <li>
-      <a href="#{{ city.code}}">{{ city.name }}</a>
-    </li>
-{% endfor %}
-</ul>
-
-{# tabs with timetables #}
-<div class="tab-content">
-{% for city, days in timetable %}
- <div class="tab-pane" id="{{ city.code }}">
-   {% for day, events in days %}
-     <h4>{{ day|date:"j E"  }}</h4>
-     <dl class="dl-horizontal">
-     {% for event in events %}
-       <dt>{{ event.starts_at|date:"H:i" }}</dt>
-       <dd>
-	 {% if event.program_id or event.description.strip %}
-	   <a href="{% url events_event_details event.id %}">{{ event.name }}</a>
-	 {% else %}
-	   {{ event.name }}
-	 {% endif %}
-	 <br /><small>{{ event.place.name }}, {{ event.place.address }}</small>
-       </dd>
-     {% endfor %}
-     </dl>
-   {% endfor %}
- </div>
-{% endfor %}
+<div id="timetable" style="padding-top: -80px">
+    <img src="{{ STATIC_URL }}cpm/loading.gif">
 </div>
-
-{# JS to make it work #}
 <script type="text/javascript">
-$(function(){
-    $('#timtable-cities a').click(function (e) {
-      e.preventDefault();
-      $(this).tab('show');
-    });
-    $('#timtable-cities a:first').tab('show');
-});
+ $(function(){
+   $.get("{{ next_url }}", {'legacy': 'true'}, function(data) {
+     $("#timetable").html(data);
+   });
+ });
 </script>
