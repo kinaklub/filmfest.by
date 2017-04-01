@@ -69,6 +69,26 @@ h1 {
 	color:#fff;
 }
 
+.int-fest {
+	background-color: rgba(0, 147, 255, 1);
+	padding: 10px;
+	text-align: left;
+	margin-top: 20px;
+	margin-right: 230px;
+	max-width: 270px;
+	box-shadow: 0px 0px 4px 4px rgb(0, 147, 255);
+	float: right;
+}
+
+.fest-date {
+	background-color: rgba(255, 0, 191, 1);
+	padding: 10px;
+	margin-top: 0px;
+	margin-left: 74px;
+	float: right;
+	box-shadow: 0 0 2px 2px rgb(255, 0, 191);
+}
+
 #intro p {
 	padding:15px 0;
 	color:#fff;
