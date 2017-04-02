@@ -10,7 +10,7 @@ register = template.Library()
 def cpm_timetable():
     language = translation.get_language().split('-')[0]
     language = language or 'en'
-    next_url = 'http://next.filmfest.by/%s/timetable/' % language
+    next_url = 'http://cpm.filmfest.by/%s/timetable/' % language
     return {
         'next_url': next_url,
         'STATIC_URL': settings.STATIC_URL,
