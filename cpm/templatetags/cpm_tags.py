@@ -17,6 +17,15 @@ def cpm_timetable():
     }
 
 
+@register.inclusion_tag('cpm/tags/manifest.html')
+def cpm_manifest():
+    language = translation.get_language().split('-')[0]
+    language = language or 'en'
+    return {
+        'language': language,
+    }
+
+
 @register.inclusion_tag('cpm/tags/banners_list.html')
 def banners_list(banners):
     return {'banners': banners}
